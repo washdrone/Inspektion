@@ -26,37 +26,29 @@ export function FaqAccordion({ headline, items }: FaqAccordionProps) {
 
   return (
     <section className="section-padding">
-      <div className="container-content max-w-3xl">
+      <div className="container-narrow">
         {headline && (
-          <h2 className="mb-8 text-center text-2xl font-bold text-neutral-900 sm:text-3xl">
-            {headline}
-          </h2>
+          <h2 className="mb-10 text-center text-heading-lg sm:text-display">{headline}</h2>
         )}
-        <div className="divide-y divide-neutral-200 rounded-xl border border-neutral-200">
+        <div className="space-y-3">
           {items.map((item, i) => (
-            <div key={i}>
+            <div key={i} className="rounded-2xl border border-dark-100 bg-white transition-shadow hover:shadow-card">
               <button
                 type="button"
                 onClick={() => toggle(i)}
-                className="flex w-full items-center justify-between px-6 py-4 text-left transition-colors hover:bg-neutral-50"
+                className="flex w-full items-center justify-between px-6 py-5 text-left"
                 aria-expanded={openIndex === i}
               >
-                <span className="pr-4 text-base font-medium text-neutral-900">
-                  {item.question}
-                </span>
-                <svg
-                  className={`h-5 w-5 flex-shrink-0 text-neutral-500 transition-transform ${openIndex === i ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                <span className="pr-4 font-semibold text-dark-900">{item.question}</span>
+                <div className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full transition-all ${openIndex === i ? 'bg-brand-500 text-white rotate-180' : 'bg-dark-50 text-dark-500'}`}>
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
               </button>
               {openIndex === i && (
-                <div className="px-6 pb-4">
-                  <p className="text-sm leading-relaxed text-neutral-600">{item.answer}</p>
+                <div className="px-6 pb-5">
+                  <p className="text-sm leading-relaxed text-dark-500">{item.answer}</p>
                 </div>
               )}
             </div>

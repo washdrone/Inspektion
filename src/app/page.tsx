@@ -13,10 +13,11 @@ export default function HomePage() {
         subheadline="Vi hjälper fastighetsägare, förvaltare och byggföretag att inspektera tak, fasader, solceller och industrianläggningar — snabbare och säkrare än traditionella metoder."
         ctaPrimary={{ label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' }}
         ctaSecondary={{ label: 'Se våra tjänster', href: '/inspektioner-med-dronare' }}
-        proofItems={[
-          'Certifierade drönarpilot­er',
-          'Ansvarsförsäkring',
-          'Snabb leverans av rapport',
+        stats={[
+          { value: '48h', label: 'Rapport levererad' },
+          { value: '100%', label: 'EASA-certifierade piloter' },
+          { value: '0', label: 'Arbete på höjd krävs' },
+          { value: 'Hela', label: 'Sverige' },
         ]}
       />
 

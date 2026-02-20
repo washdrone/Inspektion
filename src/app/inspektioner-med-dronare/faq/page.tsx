@@ -89,10 +89,10 @@ export default function FaqPage() {
 
       <section className="section-padding">
         <div className="container-content text-center">
-          <h1 className="text-3xl font-bold text-neutral-900 sm:text-4xl">
+          <h1 className="text-3xl font-bold text-dark-900 sm:text-4xl">
             Vanliga frågor om drönarinspektion
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-neutral-600">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-dark-500">
             Här har vi samlat svar på de vanligaste frågorna vi får om drönarinspektioner.
             Hittar du inte svaret du söker? Kontakta oss direkt.
           </p>

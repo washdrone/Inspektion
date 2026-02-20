@@ -4,8 +4,8 @@ export default function NotFound() {
   return (
     <section className="section-padding">
       <div className="container-content text-center">
-        <h1 className="text-4xl font-bold text-neutral-900">404</h1>
-        <p className="mt-4 text-lg text-neutral-600">
+        <h1 className="text-4xl font-bold text-dark-900">404</h1>
+        <p className="mt-4 text-lg text-dark-500">
           Sidan kunde inte hittas. Den kan ha flyttats eller tagits bort.
         </p>
         <div className="mt-8 flex justify-center gap-4">

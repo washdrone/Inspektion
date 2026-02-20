@@ -68,10 +68,10 @@ export default function ByggplatsdokumentationPage() {
         headline="Byggplatsdokumentation med drönare"
         subheadline="Följ ert byggprojekts framsteg med regelbundna flygbilder. Ge beställare, projektledare och intressenter en tydlig bild av projektets status — rakt uppifrån."
         ctaPrimary={{ label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' }}
-        proofItems={[
-          'Regelbunden dokumentation',
-          'Ortofoto & flygbilder',
-          'Erfarna på aktiva byggplatser',
+        stats={[
+          { value: 'V/2V/M', label: 'Flexibla intervall' },
+          { value: '48h', label: 'Leverans per tillfälle' },
+          { value: '100%', label: 'Täckning uppifrån' },
         ]}
       />
 

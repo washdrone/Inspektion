@@ -68,10 +68,10 @@ export default function IndustriellInspektionPage() {
         headline="Industriell inspektion med drönare"
         subheadline="Inspektera cisterner, skorstenar, master och andra svåråtkomliga strukturer — utan driftstopp, ställningar eller arbete på höjd. Säkrare och mer kostnadseffektivt."
         ctaPrimary={{ label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' }}
-        proofItems={[
-          'Minimal driftstörning',
-          'Erfarenhet av industrimiljöer',
-          'Säkerhetsbedömning ingår',
+        stats={[
+          { value: '0', label: 'Driftstopp krävs' },
+          { value: '0', label: 'Arbete på höjd' },
+          { value: '48h', label: 'Rapport levererad' },
         ]}
       />
 

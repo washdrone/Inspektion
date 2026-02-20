@@ -65,10 +65,10 @@ export default function PriserPage() {
 
       <section className="section-padding">
         <div className="container-content text-center">
-          <h1 className="text-3xl font-bold text-neutral-900 sm:text-4xl">
+          <h1 className="text-3xl font-bold text-dark-900 sm:text-4xl">
             Priser för drönarinspektion
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-neutral-600">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-dark-500">
             Varje uppdrag prissätts utifrån objektets storlek, typ och placering.
             Nedan ser ni våra avtalsmodeller — begär en offert för exakt pris.
           </p>
@@ -80,16 +80,16 @@ export default function PriserPage() {
               key={tier.name}
               className={`rounded-xl border p-6 md:p-8 ${
                 tier.highlighted
-                  ? 'border-primary-300 bg-primary-50 shadow-lg'
-                  : 'border-neutral-200 bg-white'
+                  ? 'border-brand-500/30 bg-brand-500/10 shadow-lg'
+                  : 'border-dark-100 bg-white'
               }`}
             >
-              <h2 className="text-xl font-bold text-neutral-900">{tier.name}</h2>
-              <p className="mt-2 text-sm text-neutral-600">{tier.description}</p>
+              <h2 className="text-xl font-bold text-dark-900">{tier.name}</h2>
+              <p className="mt-2 text-sm text-dark-500">{tier.description}</p>
               <ul className="mt-6 space-y-3">
                 {tier.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2 text-sm text-neutral-700">
-                    <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <li key={feature} className="flex items-start gap-2 text-sm text-dark-700">
+                    <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     {feature}
@@ -101,8 +101,8 @@ export default function PriserPage() {
                   href="/inspektioner-med-dronare/kontakt"
                   className={`block w-full rounded-lg px-6 py-3 text-center text-sm font-semibold transition-colors ${
                     tier.highlighted
-                      ? 'bg-primary-600 text-white hover:bg-primary-700'
-                      : 'border-2 border-primary-600 text-primary-600 hover:bg-primary-50'
+                      ? 'bg-brand-500 text-white hover:bg-dark-900'
+                      : 'border-2 border-brand-500 text-brand-600 hover:bg-brand-500/10'
                   }`}
                 >
                   {tier.cta}
@@ -113,9 +113,9 @@ export default function PriserPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-neutral-50">
+      <section className="section-padding bg-dark-50">
         <div className="container-content max-w-3xl">
-          <h2 className="text-center text-2xl font-bold text-neutral-900">
+          <h2 className="text-center text-2xl font-bold text-dark-900">
             Vad påverkar priset?
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -125,9 +125,9 @@ export default function PriserPage() {
               { title: 'Placering', desc: 'Restid och eventuella tillståndskrav i området kan påverka priset.' },
               { title: 'Antal objekt', desc: 'Fler objekt i samma område ger volymfördelar.' },
             ].map((item) => (
-              <div key={item.title} className="rounded-lg border border-neutral-200 bg-white p-5">
-                <h3 className="font-semibold text-neutral-900">{item.title}</h3>
-                <p className="mt-1 text-sm text-neutral-600">{item.desc}</p>
+              <div key={item.title} className="rounded-lg border border-dark-100 bg-white p-5">
+                <h3 className="font-semibold text-dark-900">{item.title}</h3>
+                <p className="mt-1 text-sm text-dark-500">{item.desc}</p>
               </div>
             ))}
           </div>

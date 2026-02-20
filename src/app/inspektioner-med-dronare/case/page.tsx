@@ -46,10 +46,10 @@ export default function CasePage() {
       <section className="section-padding">
         <div className="container-content">
           <div className="text-center">
-            <h1 className="text-3xl font-bold text-neutral-900 sm:text-4xl">
+            <h1 className="text-3xl font-bold text-dark-900 sm:text-4xl">
               Kundcase
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-neutral-600">
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-dark-500">
               Se hur företag och fastighetsägare har nytta av drönarinspektioner i praktiken.
             </p>
           </div>

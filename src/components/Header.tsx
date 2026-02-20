@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const inspectionLinks = [
   { href: '/inspektioner-med-dronare/takinspektion', label: 'Takinspektion' },
@@ -14,16 +14,36 @@ const inspectionLinks = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur-sm">
-      <nav className="container-content flex h-16 items-center justify-between" aria-label="Huvudnavigering">
-        <Link href="/" className="text-xl font-bold text-primary-700">
-          WashDrone
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-dark-900/95 backdrop-blur-md shadow-lg'
+          : 'bg-transparent'
+      }`}
+    >
+      <nav className="container-content flex h-20 items-center justify-between" aria-label="Huvudnavigering">
+        <Link href="/" className="flex items-center gap-2.5">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-500">
+            <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+          </div>
+          <span className="text-lg font-bold text-white">WashDrone</span>
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden items-center gap-1 md:flex">
+        <div className="hidden items-center gap-1 lg:flex">
           <div
             className="relative"
             onMouseEnter={() => setDropdownOpen(true)}
@@ -31,20 +51,20 @@ export function Header() {
           >
             <Link
               href="/inspektioner-med-dronare"
-              className="rounded-lg px-4 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-neutral-100 hover:text-neutral-900"
+              className="flex items-center gap-1 rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
             >
               Inspektioner
-              <svg className="ml-1 inline-block h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </Link>
             {dropdownOpen && (
-              <div className="absolute left-0 top-full z-50 mt-0 w-64 rounded-lg border border-neutral-200 bg-white py-2 shadow-lg">
+              <div className="absolute left-0 top-full z-50 mt-1 w-60 rounded-2xl border border-white/10 bg-dark-800/95 py-2 shadow-xl backdrop-blur-md">
                 {inspectionLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-primary-600"
+                    className="block px-4 py-2.5 text-sm text-white/70 transition-colors hover:bg-white/5 hover:text-brand-400"
                   >
                     {link.label}
                   </Link>
@@ -52,16 +72,16 @@ export function Header() {
               </div>
             )}
           </div>
-          <Link href="/inspektioner-med-dronare/case" className="rounded-lg px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-100">
+          <Link href="/inspektioner-med-dronare/case" className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
             Kundcase
           </Link>
-          <Link href="/inspektioner-med-dronare/priser" className="rounded-lg px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-100">
+          <Link href="/inspektioner-med-dronare/priser" className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
             Priser
           </Link>
-          <Link href="/inspektioner-med-dronare/faq" className="rounded-lg px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-100">
+          <Link href="/inspektioner-med-dronare/faq" className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
             FAQ
           </Link>
-          <Link href="/inspektioner-med-dronare/kontakt" className="btn-primary ml-4 text-sm">
+          <Link href="/inspektioner-med-dronare/kontakt" className="btn-primary ml-3">
             Begär offert
           </Link>
         </div>
@@ -69,7 +89,7 @@ export function Header() {
         {/* Mobile hamburger */}
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-lg p-2 text-neutral-600 hover:bg-neutral-100 md:hidden"
+          className="inline-flex items-center justify-center rounded-lg p-2 text-white/80 hover:text-white lg:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-expanded={mobileMenuOpen}
           aria-label="Öppna meny"
@@ -88,54 +108,21 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="border-t border-neutral-200 bg-white md:hidden">
-          <div className="container-content space-y-1 py-4">
-            <Link
-              href="/inspektioner-med-dronare"
-              className="block rounded-lg px-3 py-2 text-base font-medium text-neutral-700 hover:bg-neutral-100"
-              onClick={() => setMobileMenuOpen(false)}
-            >
+        <div className="border-t border-white/10 bg-dark-900/98 backdrop-blur-lg lg:hidden">
+          <div className="container-content space-y-1 py-6">
+            <Link href="/inspektioner-med-dronare" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>
               Alla inspektioner
             </Link>
             {inspectionLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="block rounded-lg px-3 py-2 pl-6 text-sm text-neutral-600 hover:bg-neutral-100"
-                onClick={() => setMobileMenuOpen(false)}
-              >
+              <Link key={link.href} href={link.href} className="block rounded-xl px-4 py-2.5 pl-8 text-sm text-white/60 hover:bg-white/5 hover:text-brand-400" onClick={() => setMobileMenuOpen(false)}>
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/inspektioner-med-dronare/case"
-              className="block rounded-lg px-3 py-2 text-base font-medium text-neutral-700 hover:bg-neutral-100"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Kundcase
-            </Link>
-            <Link
-              href="/inspektioner-med-dronare/priser"
-              className="block rounded-lg px-3 py-2 text-base font-medium text-neutral-700 hover:bg-neutral-100"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Priser
-            </Link>
-            <Link
-              href="/inspektioner-med-dronare/faq"
-              className="block rounded-lg px-3 py-2 text-base font-medium text-neutral-700 hover:bg-neutral-100"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              FAQ
-            </Link>
-            <div className="pt-2">
-              <Link
-                href="/inspektioner-med-dronare/kontakt"
-                className="btn-primary block w-full text-center text-sm"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Begär offert
-              </Link>
+            <Link href="/inspektioner-med-dronare/case" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>Kundcase</Link>
+            <Link href="/inspektioner-med-dronare/priser" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>Priser</Link>
+            <Link href="/inspektioner-med-dronare/faq" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
+            <div className="pt-4">
+              <Link href="/inspektioner-med-dronare/kontakt" className="btn-primary block w-full text-center" onClick={() => setMobileMenuOpen(false)}>Begär offert</Link>
             </div>
           </div>
         </div>

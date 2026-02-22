@@ -70,9 +70,10 @@ export default function IndustriellInspektionPage() {
         subheadline="Inspektera cisterner, skorstenar, master och andra svåråtkomliga strukturer — utan driftstopp, ställningar eller arbete på höjd. Säkrare och mer kostnadseffektivt."
         ctaPrimary={{ label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' }}
         stats={[
+          { value: 'Upp till 90%', label: 'Kortare inspektionstid' },
           { value: '0', label: 'Driftstopp krävs' },
+          { value: '48h', label: 'Rapportleverans' },
           { value: '0', label: 'Arbete på höjd' },
-          { value: '48h', label: 'Rapport levererad' },
         ]}
       />
 

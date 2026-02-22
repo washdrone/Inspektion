@@ -74,9 +74,10 @@ export default function TakinspektionPage() {
         subheadline="Identifiera skador, slitage och underhållsbehov på ert tak — snabbt, säkert och utan att någon behöver beträda takytan. Perfekt för fastighetsägare, BRF:er och förvaltare."
         ctaPrimary={{ label: 'Begär offert för takinspektion', href: '/inspektioner-med-dronare/kontakt' }}
         stats={[
-          { value: '48h', label: 'Rapport levererad' },
-          { value: '1–2h', label: 'Inspektion på plats' },
-          { value: 'Inga', label: 'Ställningar krävs' },
+          { value: 'Upp till 50%', label: 'Lägre kostnad vs ställning' },
+          { value: '1–3h', label: 'Inspektion på plats' },
+          { value: '48h', label: 'Rapportleverans' },
+          { value: '0', label: 'Arbete på höjd' },
         ]}
       />
 

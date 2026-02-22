@@ -70,9 +70,10 @@ export default function FasadinspektionPage() {
         subheadline="Dokumentera hela fasadens skick med högupplösta flygbilder. Identifiera sprickor, fuktskador, mögel och slitage — utan byggnadsställningar eller skylift."
         ctaPrimary={{ label: 'Begär offert för fasadinspektion', href: '/inspektioner-med-dronare/kontakt' }}
         stats={[
-          { value: '48h', label: 'Rapport levererad' },
-          { value: '100%', label: 'Fasadtäckning' },
-          { value: 'Inga', label: 'Ställningar krävs' },
+          { value: 'Upp till 50%', label: 'Lägre kostnad vs ställning' },
+          { value: 'Upp till 80%', label: 'Snabbare genomförande' },
+          { value: '48h', label: 'Rapportleverans' },
+          { value: '0', label: 'Arbete på höjd' },
         ]}
       />
 

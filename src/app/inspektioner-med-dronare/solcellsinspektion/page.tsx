@@ -70,9 +70,10 @@ export default function SolcellsinspektionPage() {
         subheadline="Kontrollera era solcellspaneler effektivt och identifiera defekter, nedsmutsning och mekaniska problem som påverkar anläggningens prestanda."
         ctaPrimary={{ label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' }}
         stats={[
-          { value: '500+', label: 'Paneler per dag' },
-          { value: '48h', label: 'Rapport levererad' },
-          { value: '0', label: 'Driftstopp' },
+          { value: 'Upp till 50x', label: 'Snabbare vs manuell kontroll' },
+          { value: '48h', label: 'Rapportleverans' },
+          { value: '0', label: 'Driftstopp krävs' },
+          { value: '0', label: 'Arbete på höjd' },
         ]}
       />
 

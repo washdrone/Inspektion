@@ -70,8 +70,10 @@ export default function ByggplatsdokumentationPage() {
         subheadline="Följ ert byggprojekts framsteg med regelbundna flygbilder. Ge beställare, projektledare och intressenter en tydlig bild av projektets status — rakt uppifrån."
         ctaPrimary={{ label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' }}
         stats={[
-          { value: 'V/2V/M', label: 'Flexibla intervall' },
+          { value: 'Upp till 55%', label: 'Lägre dokumentationskostnad' },
           { value: '48h', label: 'Leverans per tillfälle' },
+          { value: 'V/2V/M', label: 'Flexibla intervall' },
+          { value: '0', label: 'Störning av pågående arbete' },
         ]}
       />
 

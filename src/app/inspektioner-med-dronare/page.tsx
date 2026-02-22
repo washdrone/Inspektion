@@ -48,9 +48,10 @@ export default function InspektionerHubPage() {
         ctaPrimary={{ label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' }}
         ctaSecondary={{ label: 'Se prisguide', href: '/inspektioner-med-dronare/priser' }}
         stats={[
-          { value: '48h', label: 'Rapport levererad' },
+          { value: 'Upp till 50%', label: 'Lägre inspektionskostnad' },
+          { value: 'Upp till 80%', label: 'Snabbare genomförande' },
+          { value: '48h', label: 'Rapportleverans' },
           { value: '0', label: 'Arbete på höjd' },
-          { value: '5', label: 'Tjänsteområden' },
         ]}
       />
 

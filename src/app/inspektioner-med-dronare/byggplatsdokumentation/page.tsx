@@ -8,6 +8,7 @@ import { ProcessSteps } from '@/components/ProcessSteps'
 import { Deliverables } from '@/components/Deliverables'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
+import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
@@ -71,16 +72,14 @@ export default function ByggplatsdokumentationPage() {
         stats={[
           { value: 'V/2V/M', label: 'Flexibla intervall' },
           { value: '48h', label: 'Leverans per tillfälle' },
-          { value: '100%', label: 'Täckning uppifrån' },
         ]}
       />
 
       <TrustBar
         items={[
-          'Certifierade piloter',
-          'Ansvarsförsäkring',
+          'EASA-certifierade fjärrpiloter',
+          'Ansvarsförsäkrade',
           'Erfarenhet av byggprojekt',
-          'Flexibla intervall',
         ]}
       />
 
@@ -169,6 +168,21 @@ export default function ByggplatsdokumentationPage() {
       />
 
       <FaqAccordion headline="Vanliga frågor om byggplatsdokumentation" items={faqItems} />
+
+      <RelatedServices
+        services={[
+          {
+            title: 'Takinspektion',
+            href: '/inspektioner-med-dronare/takinspektion',
+            description: 'Inspektera tak på nyproducerade eller befintliga byggnader.',
+          },
+          {
+            title: 'Fasadinspektion',
+            href: '/inspektioner-med-dronare/fasadinspektion',
+            description: 'Dokumentera fasadens skick med högupplösta flygbilder.',
+          },
+        ]}
+      />
 
       <CtaBand
         headline="Dokumentera ert byggprojekt med drönare"

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { createMetadata } from '@/lib/metadata'
+import { CONTACT } from '@/lib/constants'
 import { ContactForm } from '@/components/ContactForm'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
@@ -48,14 +49,14 @@ export default function KontaktPage() {
                 <div className="mt-4 space-y-4 text-sm text-dark-700">
                   <div>
                     <p className="font-medium text-dark-900">E-post</p>
-                    <a href="mailto:info@washdrone.se" className="text-brand-600 hover:text-brand-700">
-                      info@washdrone.se
+                    <a href={`mailto:${CONTACT.email}`} className="text-brand-600 hover:text-brand-700">
+                      {CONTACT.email}
                     </a>
                   </div>
                   <div>
                     <p className="font-medium text-dark-900">Telefon</p>
-                    <a href="tel:+46XXXXXXXXX" className="text-brand-600 hover:text-brand-700">
-                      +46 (0)XX-XXX XX XX
+                    <a href={`tel:${CONTACT.phone}`} className="text-brand-600 hover:text-brand-700">
+                      {CONTACT.phoneDisplay}
                     </a>
                   </div>
                   <div>

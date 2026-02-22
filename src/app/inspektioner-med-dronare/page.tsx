@@ -46,21 +46,19 @@ export default function InspektionerHubPage() {
         headline="Professionella drönarinspektioner för företag"
         subheadline="Inspektera tak, fasader, solceller och industrianläggningar med drönarteknik. Ni får snabb, säker och kostnadseffektiv dokumentation — utan ställningar, skylift eller arbete på höjd."
         ctaPrimary={{ label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' }}
-        ctaSecondary={{ label: 'Se priser', href: '/inspektioner-med-dronare/priser' }}
+        ctaSecondary={{ label: 'Se prisguide', href: '/inspektioner-med-dronare/priser' }}
         stats={[
           { value: '48h', label: 'Rapport levererad' },
-          { value: '100%', label: 'Certifierade piloter' },
           { value: '0', label: 'Arbete på höjd' },
-          { value: 'Hela', label: 'Sverige' },
+          { value: '5', label: 'Tjänsteområden' },
         ]}
       />
 
       <TrustBar
         items={[
-          'EASA-certifierade piloter',
-          'Fullt ansvarsförsäkrade',
-          'Hela Sverige',
-          'Rapport inom 48 timmar',
+          'EASA-certifierade fjärrpiloter',
+          'Ansvarsförsäkrade',
+          'Verksamma i hela Sverige',
         ]}
       />
 

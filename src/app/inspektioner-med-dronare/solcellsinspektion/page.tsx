@@ -8,6 +8,7 @@ import { ProcessSteps } from '@/components/ProcessSteps'
 import { Deliverables } from '@/components/Deliverables'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
+import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
@@ -77,10 +78,9 @@ export default function SolcellsinspektionPage() {
 
       <TrustBar
         items={[
-          'Certifierade piloter',
-          'Ansvarsförsäkring',
+          'EASA-certifierade fjärrpiloter',
+          'Ansvarsförsäkrade',
           'Alla anläggningsstorlekar',
-          'Rapport inom 48 h',
         ]}
       />
 
@@ -169,6 +169,21 @@ export default function SolcellsinspektionPage() {
       />
 
       <FaqAccordion headline="Vanliga frågor om solcellsinspektion" items={faqItems} />
+
+      <RelatedServices
+        services={[
+          {
+            title: 'Takinspektion',
+            href: '/inspektioner-med-dronare/takinspektion',
+            description: 'Inspektera taket där era solceller är monterade — identifiera skador och slitage.',
+          },
+          {
+            title: 'Industriell inspektion',
+            href: '/inspektioner-med-dronare/industriell-inspektion',
+            description: 'Inspektera svåråtkomliga industrianläggningar utan driftstopp.',
+          },
+        ]}
+      />
 
       <CtaBand
         headline="Optimera era solcellers prestanda"

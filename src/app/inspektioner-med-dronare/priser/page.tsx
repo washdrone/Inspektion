@@ -6,9 +6,9 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Priser för drönarinspektion – Offert och prisguide',
+  title: 'Prisguide för drönarinspektion – Avtalsmodeller och prisexempel',
   description:
-    'Vad kostar en drönarinspektion? Priset beror på objektets storlek och typ. Se vår prisguide och begär en kostnadsfri offert.',
+    'Vad kostar en drönarinspektion? Priset beror på objektets storlek, typ och placering. Se våra avtalsmodeller och begär ett kostnadsfritt prisförslag.',
   path: '/inspektioner-med-dronare/priser',
 })
 
@@ -23,7 +23,7 @@ const pricingTiers = [
       'Digitalt bildarkiv',
       'Leverans inom 48 timmar',
     ],
-    cta: 'Begär offert',
+    cta: 'Begär prisförslag',
   },
   {
     name: 'Flerobjektsavtal',
@@ -35,7 +35,7 @@ const pricingTiers = [
       'Gemensam rapportering',
       'Fast kontaktperson',
     ],
-    cta: 'Begär offert',
+    cta: 'Begär prisförslag',
     highlighted: true,
   },
   {
@@ -48,7 +48,7 @@ const pricingTiers = [
       'Prioriterad hantering',
       'Årsrapport',
     ],
-    cta: 'Begär offert',
+    cta: 'Begär prisförslag',
   },
 ]
 
@@ -59,18 +59,18 @@ export default function PriserPage() {
         items={[
           { name: 'Hem', url: '/' },
           { name: 'Inspektioner med drönare', url: '/inspektioner-med-dronare' },
-          { name: 'Priser', url: '/inspektioner-med-dronare/priser' },
+          { name: 'Prisguide', url: '/inspektioner-med-dronare/priser' },
         ]}
       />
 
       <section className="section-padding">
         <div className="container-content text-center">
           <h1 className="text-3xl font-bold text-dark-900 sm:text-4xl">
-            Priser för drönarinspektion
+            Så prissätts en drönarinspektion
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-dark-500">
-            Varje uppdrag prissätts utifrån objektets storlek, typ och placering.
-            Nedan ser ni våra avtalsmodeller — begär en offert för exakt pris.
+            Priset baseras på objektets storlek, typ och placering. Vi erbjuder tre avtalsmodeller
+            beroende på ert behov. Alla prisförslag är kostnadsfria.
           </p>
         </div>
 
@@ -135,31 +135,31 @@ export default function PriserPage() {
       </section>
 
       <FaqAccordion
-        headline="Vanliga frågor om priser"
+        headline="Vanliga frågor om prissättning"
         items={[
           {
             question: 'Kostar offerten något?',
-            answer: 'Nej, offerten är alltid kostnadsfri och utan förpliktelser.',
+            answer: 'Nej, prisförslaget är alltid kostnadsfritt och utan förpliktelser.',
           },
           {
             question: 'Finns det dolda kostnader?',
             answer: 'Nej. Priset i offerten inkluderar flygning, databearbetning och rapport. Eventuella tillkommande önskemål diskuteras alltid i förväg.',
           },
           {
-            question: 'Erbjuder ni rabatt vid löpande avtal?',
+            question: 'Erbjuder ni bättre villkor vid löpande avtal?',
             answer: 'Ja, löpande avtal med regelbundna inspektioner ger bättre villkor jämfört med enskilda uppdrag.',
           },
           {
-            question: 'Hur snabbt kan ni lämna offert?',
-            answer: 'Vi svarar normalt inom en arbetsdag med en offert baserad på er beskrivning.',
+            question: 'Hur snabbt kan ni lämna prisförslag?',
+            answer: 'Vi svarar normalt inom en arbetsdag med ett prisförslag baserat på er beskrivning.',
           },
         ]}
       />
 
       <CtaBand
-        headline="Begär en kostnadsfri offert"
+        headline="Begär ett kostnadsfritt prisförslag"
         description="Beskriv ert behov så återkommer vi med ett prisförslag inom en arbetsdag."
-        ctaLabel="Begär offert"
+        ctaLabel="Begär prisförslag"
       />
     </>
   )

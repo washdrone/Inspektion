@@ -1,12 +1,17 @@
 import { BASE_URL } from './metadata'
+import { CONTACT } from './constants'
 
 export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'ProfessionalService',
+    '@id': `${BASE_URL}/#organization`,
     name: 'WashDrone',
     url: BASE_URL,
-    description: 'Professionella drönarinspektioner för fastigheter, tak, fasader och industri i Sverige.',
+    description:
+      'Professionella drönarinspektioner av tak, fasader, solceller och industri för företag i Sverige.',
+    email: CONTACT.email,
+    /** MÅSTE VERIFIERAS: Fyll i telefonnummer, adress, org.nummer, logo-URL */
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'SE',
@@ -15,13 +20,15 @@ export function organizationSchema() {
       '@type': 'Country',
       name: 'Sverige',
     },
-    serviceType: [
+    knowsAbout: [
       'Drönarinspektion',
       'Takinspektion',
       'Fasadinspektion',
       'Solcellsinspektion',
       'Byggplatsdokumentation',
       'Industriell inspektion',
+      'UAS',
+      'RPAS',
     ],
   }
 }
@@ -41,7 +48,8 @@ export function serviceSchema({
     name,
     description,
     provider: {
-      '@type': 'LocalBusiness',
+      '@type': 'ProfessionalService',
+      '@id': `${BASE_URL}/#organization`,
       name: 'WashDrone',
       url: BASE_URL,
     },

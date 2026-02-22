@@ -35,20 +35,10 @@
     @apply py-20 md:py-28 lg:py-32;
   }
 
-  .section-padding-sm {
-    @apply py-12 md:py-16;
-  }
-
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-pill bg-brand-500 px-7 py-3.5 text-sm font-semibold text-white
       transition-all duration-200 hover:bg-brand-600 hover:shadow-glow
       focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2;
-  }
-
-  .btn-primary-dark {
-    @apply inline-flex items-center justify-center rounded-pill bg-white px-7 py-3.5 text-sm font-semibold text-dark-900
-      transition-all duration-200 hover:bg-brand-100 hover:shadow-glow
-      focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-dark-900;
   }
 
   .btn-secondary {
@@ -75,10 +65,6 @@
 
   .card-dark {
     @apply rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-brand-500/30 hover:bg-white/10;
-  }
-
-  .gradient-text {
-    @apply bg-gradient-to-r from-brand-400 to-brand-600 bg-clip-text text-transparent;
   }
 
   .section-dark {

@@ -8,6 +8,7 @@ import { ProcessSteps } from '@/components/ProcessSteps'
 import { Deliverables } from '@/components/Deliverables'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
+import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
@@ -75,16 +76,15 @@ export default function TakinspektionPage() {
         stats={[
           { value: '48h', label: 'Rapport levererad' },
           { value: '1–2h', label: 'Inspektion på plats' },
-          { value: '0kr', label: 'Ställningskostnad' },
+          { value: 'Inga', label: 'Ställningar krävs' },
         ]}
       />
 
       <TrustBar
         items={[
-          'Certifierade piloter',
-          'Ansvarsförsäkring',
-          'Alla taktyper & material',
-          'Digital rapport',
+          'EASA-certifierade fjärrpiloter',
+          'Ansvarsförsäkrade',
+          'Alla taktyper och material',
         ]}
       />
 
@@ -173,6 +173,21 @@ export default function TakinspektionPage() {
       />
 
       <FaqAccordion headline="Vanliga frågor om takinspektion" items={faqItems} />
+
+      <RelatedServices
+        services={[
+          {
+            title: 'Fasadinspektion',
+            href: '/inspektioner-med-dronare/fasadinspektion',
+            description: 'Dokumentera fasadens skick och upptäck sprickor, fukt eller skador.',
+          },
+          {
+            title: 'Solcellsinspektion',
+            href: '/inspektioner-med-dronare/solcellsinspektion',
+            description: 'Kontrollera solcellspaneler för defekter och nedsmutsning.',
+          },
+        ]}
+      />
 
       <CtaBand
         headline="Boka takinspektion med drönare"

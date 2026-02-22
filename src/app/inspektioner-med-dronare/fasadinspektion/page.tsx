@@ -8,6 +8,7 @@ import { ProcessSteps } from '@/components/ProcessSteps'
 import { Deliverables } from '@/components/Deliverables'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
+import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
@@ -71,16 +72,15 @@ export default function FasadinspektionPage() {
         stats={[
           { value: '48h', label: 'Rapport levererad' },
           { value: '100%', label: 'Fasadtäckning' },
-          { value: '0kr', label: 'Ställningskostnad' },
+          { value: 'Inga', label: 'Ställningar krävs' },
         ]}
       />
 
       <TrustBar
         items={[
-          'Certifierade piloter',
-          'Ansvarsförsäkring',
+          'EASA-certifierade fjärrpiloter',
+          'Ansvarsförsäkrade',
           'Alla fasadmaterial',
-          'Hög detaljnivå',
         ]}
       />
 
@@ -169,6 +169,21 @@ export default function FasadinspektionPage() {
       />
 
       <FaqAccordion headline="Vanliga frågor om fasadinspektion" items={faqItems} />
+
+      <RelatedServices
+        services={[
+          {
+            title: 'Takinspektion',
+            href: '/inspektioner-med-dronare/takinspektion',
+            description: 'Identifiera skador och slitage på tak utan att beträda takytan.',
+          },
+          {
+            title: 'Industriell inspektion',
+            href: '/inspektioner-med-dronare/industriell-inspektion',
+            description: 'Inspektera svåråtkomliga industrianläggningar utan driftstopp.',
+          },
+        ]}
+      />
 
       <CtaBand
         headline="Behöver ni inspektera en fasad?"

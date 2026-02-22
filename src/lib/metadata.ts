@@ -16,7 +16,7 @@ export function createMetadata({
 }): Metadata {
   const url = `${BASE_URL}${path}`
   return {
-    title: `${title} | ${SITE_NAME}`,
+    title,
     description,
     alternates: { canonical: url },
     openGraph: {

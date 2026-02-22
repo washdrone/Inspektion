@@ -1,9 +1,18 @@
+import type { Metadata } from 'next'
+import { createMetadata } from '@/lib/metadata'
 import { Hero } from '@/components/Hero'
 import { TrustBar } from '@/components/TrustBar'
 import { UseCaseCards } from '@/components/UseCaseCards'
 import { BenefitsGrid } from '@/components/BenefitsGrid'
 import { ProcessSteps } from '@/components/ProcessSteps'
 import { CtaBand } from '@/components/CtaBand'
+
+export const metadata: Metadata = createMetadata({
+  title: 'Drönarinspektioner för företag',
+  description:
+    'Professionella drönarinspektioner av tak, fasader, solceller och industri. Snabbare, säkrare och mer kostnadseffektivt än traditionella metoder. Rapport inom 48 h.',
+  path: '/',
+})
 
 export default function HomePage() {
   return (
@@ -15,18 +24,16 @@ export default function HomePage() {
         ctaSecondary={{ label: 'Se våra tjänster', href: '/inspektioner-med-dronare' }}
         stats={[
           { value: '48h', label: 'Rapport levererad' },
-          { value: '100%', label: 'EASA-certifierade piloter' },
+          { value: '5', label: 'Inspektionstjänster' },
           { value: '0', label: 'Arbete på höjd krävs' },
-          { value: 'Hela', label: 'Sverige' },
         ]}
       />
 
       <TrustBar
         items={[
-          'Certifierade enligt EASA',
+          'EASA-certifierade fjärrpiloter',
           'Ansvarsförsäkrade',
           'Verksamma i hela Sverige',
-          'Leverans inom 48 h',
         ]}
       />
 

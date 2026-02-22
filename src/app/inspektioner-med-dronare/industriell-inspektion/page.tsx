@@ -8,6 +8,7 @@ import { ProcessSteps } from '@/components/ProcessSteps'
 import { Deliverables } from '@/components/Deliverables'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
+import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
@@ -77,9 +78,8 @@ export default function IndustriellInspektionPage() {
 
       <TrustBar
         items={[
-          'Certifierade piloter',
-          'Ansvarsförsäkring',
-          'Industrierfarenhet',
+          'EASA-certifierade fjärrpiloter',
+          'Ansvarsförsäkrade',
           'Riskbedömning ingår',
         ]}
       />
@@ -94,7 +94,7 @@ export default function IndustriellInspektionPage() {
           },
           {
             title: 'Eliminerar höjdarbete',
-            description: 'Ingen personal behöver klättra, använda rep eller arbeta i confined spaces.',
+            description: 'Ingen personal behöver klättra, använda rep eller arbeta i slutna utrymmen.',
             icon: 'shield',
           },
           {
@@ -169,6 +169,21 @@ export default function IndustriellInspektionPage() {
       />
 
       <FaqAccordion headline="Vanliga frågor om industriell inspektion" items={faqItems} />
+
+      <RelatedServices
+        services={[
+          {
+            title: 'Fasadinspektion',
+            href: '/inspektioner-med-dronare/fasadinspektion',
+            description: 'Dokumentera fasader på industribyggnader och kommersiella fastigheter.',
+          },
+          {
+            title: 'Solcellsinspektion',
+            href: '/inspektioner-med-dronare/solcellsinspektion',
+            description: 'Kontrollera solcellspaneler på industritak för defekter och nedsmutsning.',
+          },
+        ]}
+      />
 
       <CtaBand
         headline="Inspektera er anläggning med drönare"

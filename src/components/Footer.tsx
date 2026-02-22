@@ -1,19 +1,5 @@
 import Link from 'next/link'
-
-const inspectionLinks = [
-  { href: '/inspektioner-med-dronare/takinspektion', label: 'Takinspektion' },
-  { href: '/inspektioner-med-dronare/fasadinspektion', label: 'Fasadinspektion' },
-  { href: '/inspektioner-med-dronare/solcellsinspektion', label: 'Solcellsinspektion' },
-  { href: '/inspektioner-med-dronare/byggplatsdokumentation', label: 'Byggplatsdokumentation' },
-  { href: '/inspektioner-med-dronare/industriell-inspektion', label: 'Industriell inspektion' },
-]
-
-const companyLinks = [
-  { href: '/inspektioner-med-dronare/case', label: 'Kundcase' },
-  { href: '/inspektioner-med-dronare/priser', label: 'Priser' },
-  { href: '/inspektioner-med-dronare/faq', label: 'Vanliga frågor' },
-  { href: '/inspektioner-med-dronare/kontakt', label: 'Kontakt' },
-]
+import { INSPECTION_LINKS, COMPANY_LINKS, CONTACT } from '@/lib/constants'
 
 export function Footer() {
   return (
@@ -36,7 +22,7 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-widest text-dark-400">Inspektioner</h3>
             <ul className="mt-4 space-y-2.5">
-              {inspectionLinks.map((link) => (
+              {INSPECTION_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-dark-300 transition-colors hover:text-brand-400">{link.label}</Link>
                 </li>
@@ -46,7 +32,7 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-widest text-dark-400">Företag</h3>
             <ul className="mt-4 space-y-2.5">
-              {companyLinks.map((link) => (
+              {COMPANY_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-dark-300 transition-colors hover:text-brand-400">{link.label}</Link>
                 </li>
@@ -56,8 +42,8 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-widest text-dark-400">Kontakt</h3>
             <div className="mt-4 space-y-2.5 text-sm text-dark-300">
-              <p><a href="mailto:info@washdrone.se" className="transition-colors hover:text-brand-400">info@washdrone.se</a></p>
-              <p><a href="tel:+46XXXXXXXXX" className="transition-colors hover:text-brand-400">+46 (0)XX-XXX XX XX</a></p>
+              <p><a href={`mailto:${CONTACT.email}`} className="transition-colors hover:text-brand-400">{CONTACT.email}</a></p>
+              <p><a href={`tel:${CONTACT.phone}`} className="transition-colors hover:text-brand-400">{CONTACT.phoneDisplay}</a></p>
               <p className="text-dark-400">Sverige</p>
             </div>
           </div>
@@ -66,7 +52,7 @@ export function Footer() {
           <p className="text-xs text-dark-500">&copy; {new Date().getFullYear()} WashDrone. Alla rättigheter förbehållna.</p>
           <div className="flex items-center gap-1.5 text-xs text-dark-500">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-500" />
-            EASA-certifierade piloter
+            EASA-certifierade fjärrpiloter
           </div>
         </div>
       </div>

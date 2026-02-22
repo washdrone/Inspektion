@@ -2,14 +2,7 @@
 
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-
-const inspectionLinks = [
-  { href: '/inspektioner-med-dronare/takinspektion', label: 'Takinspektion' },
-  { href: '/inspektioner-med-dronare/fasadinspektion', label: 'Fasadinspektion' },
-  { href: '/inspektioner-med-dronare/solcellsinspektion', label: 'Solcellsinspektion' },
-  { href: '/inspektioner-med-dronare/byggplatsdokumentation', label: 'Byggplatsdokumentation' },
-  { href: '/inspektioner-med-dronare/industriell-inspektion', label: 'Industriell inspektion' },
-]
+import { INSPECTION_LINKS } from '@/lib/constants'
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -60,7 +53,7 @@ export function Header() {
             </Link>
             {dropdownOpen && (
               <div className="absolute left-0 top-full z-50 mt-1 w-60 rounded-2xl border border-white/10 bg-dark-800/95 py-2 shadow-xl backdrop-blur-md">
-                {inspectionLinks.map((link) => (
+                {INSPECTION_LINKS.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
@@ -76,7 +69,7 @@ export function Header() {
             Kundcase
           </Link>
           <Link href="/inspektioner-med-dronare/priser" className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
-            Priser
+            Prisguide
           </Link>
           <Link href="/inspektioner-med-dronare/faq" className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
             FAQ
@@ -113,13 +106,13 @@ export function Header() {
             <Link href="/inspektioner-med-dronare" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>
               Alla inspektioner
             </Link>
-            {inspectionLinks.map((link) => (
+            {INSPECTION_LINKS.map((link) => (
               <Link key={link.href} href={link.href} className="block rounded-xl px-4 py-2.5 pl-8 text-sm text-white/60 hover:bg-white/5 hover:text-brand-400" onClick={() => setMobileMenuOpen(false)}>
                 {link.label}
               </Link>
             ))}
             <Link href="/inspektioner-med-dronare/case" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>Kundcase</Link>
-            <Link href="/inspektioner-med-dronare/priser" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>Priser</Link>
+            <Link href="/inspektioner-med-dronare/priser" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>Prisguide</Link>
             <Link href="/inspektioner-med-dronare/faq" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
             <div className="pt-4">
               <Link href="/inspektioner-med-dronare/kontakt" className="btn-primary block w-full text-center" onClick={() => setMobileMenuOpen(false)}>Begär offert</Link>

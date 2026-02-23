@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { useReveal } from '@/hooks/useReveal'
 
 interface UseCase {
   title: string
@@ -14,16 +17,30 @@ interface UseCaseCardsProps {
 }
 
 export function UseCaseCards({ headline, subtitle, useCases }: UseCaseCardsProps) {
+  const { ref, visible } = useReveal()
+
   return (
-    <section className="section-padding">
+    <section ref={ref} className="section-padding">
       <div className="container-content">
-        <div className="text-center">
+        <div
+          className="text-center transition-all duration-700"
+          style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(30px)' }}
+        >
           <h2 className="text-heading-lg sm:text-display">{headline}</h2>
           {subtitle && <p className="mt-4 text-body-lg text-dark-500">{subtitle}</p>}
         </div>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {useCases.map((uc) => (
-            <Link key={uc.href} href={uc.href} className="card group">
+          {useCases.map((uc, i) => (
+            <Link
+              key={uc.href}
+              href={uc.href}
+              className="card group transition-all duration-700"
+              style={{
+                opacity: visible ? 1 : 0,
+                transform: visible ? 'translateY(0)' : 'translateY(30px)',
+                transitionDelay: `${i * 80 + 200}ms`,
+              }}
+            >
               <span className="text-3xl" role="img" aria-hidden="true">{uc.icon}</span>
               <h3 className="mt-4 text-lg font-semibold text-dark-900 group-hover:text-brand-600">{uc.title}</h3>
               <p className="mt-2 text-sm text-dark-500">{uc.description}</p>

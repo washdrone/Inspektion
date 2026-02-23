@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { useReveal } from '@/hooks/useReveal'
 
 interface CtaBandProps {
   headline: string
@@ -13,15 +16,30 @@ export function CtaBand({
   ctaLabel = 'Begär offert',
   ctaHref = '/inspektioner-med-dronare/kontakt',
 }: CtaBandProps) {
+  const { ref, visible } = useReveal()
+
   return (
-    <section className="relative overflow-hidden bg-dark-900">
+    <section ref={ref} className="relative overflow-hidden bg-dark-900">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(6,182,212,0.1)_0%,_transparent_70%)]" aria-hidden="true" />
       <div className="container-content relative z-10 py-20 text-center md:py-28">
-        <h2 className="text-heading-lg font-extrabold text-white sm:text-display">{headline}</h2>
+        <h2
+          className="text-heading-lg font-extrabold text-white sm:text-display transition-all duration-700"
+          style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(30px)' }}
+        >
+          {headline}
+        </h2>
         {description && (
-          <p className="mx-auto mt-4 max-w-xl text-lg text-dark-300">{description}</p>
+          <p
+            className="mx-auto mt-4 max-w-xl text-lg text-dark-300 transition-all duration-700 delay-100"
+            style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(20px)' }}
+          >
+            {description}
+          </p>
         )}
-        <div className="mt-8">
+        <div
+          className="mt-8 transition-all duration-700 delay-200"
+          style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(20px)' }}
+        >
           <Link href={ctaHref} className="btn-primary text-base px-8 py-4">
             {ctaLabel}
             <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

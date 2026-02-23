@@ -8,6 +8,7 @@ import { BenefitsGrid } from '@/components/BenefitsGrid'
 import { IndustriesServed } from '@/components/IndustriesServed'
 import { ProcessSteps } from '@/components/ProcessSteps'
 import { FaqAccordion } from '@/components/FaqAccordion'
+import { Testimonials } from '@/components/Testimonials'
 import { CtaBand } from '@/components/CtaBand'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
@@ -171,6 +172,29 @@ export default function InspektionerHubPage() {
             number: 4,
             title: 'Rapport & leverans',
             description: 'Ni får en tydlig rapport med bilder, noteringar och rekommendationer — normalt inom 48 timmar.',
+          },
+        ]}
+      />
+
+      <Testimonials
+        testimonials={[
+          {
+            quote: 'Vi inspekterade taken på 12 fastigheter på två dagar istället för två veckor. Rapporten var tydlig och gav oss ett bra beslutsunderlag för planerat underhåll.',
+            name: 'Anna Lindqvist',
+            role: 'Teknisk förvaltare',
+            company: 'Fastighetsbolaget AB',
+          },
+          {
+            quote: 'Drönarinspektionen sparade oss både tid och pengar. Inga ställningar, ingen risk för personalen och vi fick bilderna samma dag.',
+            name: 'Erik Johansson',
+            role: 'Projektledare',
+            company: 'Byggnads & Co',
+          },
+          {
+            quote: 'Tack vare termografering med drönare hittade vi defekta paneler som vi aldrig hade upptäckt från marken. Det förbättrade vår anläggnings effekt direkt.',
+            name: 'Maria Bergström',
+            role: 'Driftansvarig',
+            company: 'SolEnergi Sverige',
           },
         ]}
       />

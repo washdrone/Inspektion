@@ -78,12 +78,17 @@ export default function PriserPage() {
           {pricingTiers.map((tier) => (
             <div
               key={tier.name}
-              className={`rounded-xl border p-6 md:p-8 ${
+              className={`relative rounded-xl border p-6 md:p-8 ${
                 tier.highlighted
-                  ? 'border-brand-500/30 bg-brand-500/10 shadow-lg'
+                  ? 'border-brand-500/30 bg-brand-500/10 shadow-lg ring-2 ring-brand-500/20'
                   : 'border-dark-100 bg-white'
               }`}
             >
+              {tier.highlighted && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-pill bg-brand-500 px-4 py-1 text-xs font-semibold text-white shadow-glow">
+                  Populärast
+                </div>
+              )}
               <h2 className="text-xl font-bold text-dark-900">{tier.name}</h2>
               <p className="mt-2 text-sm text-dark-500">{tier.description}</p>
               <ul className="mt-6 space-y-3">

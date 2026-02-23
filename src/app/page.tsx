@@ -5,6 +5,7 @@ import { TrustBar } from '@/components/TrustBar'
 import { UseCaseCards } from '@/components/UseCaseCards'
 import { BenefitsGrid } from '@/components/BenefitsGrid'
 import { ProcessSteps } from '@/components/ProcessSteps'
+import { Testimonials } from '@/components/Testimonials'
 import { CtaBand } from '@/components/CtaBand'
 
 export const metadata: Metadata = createMetadata({
@@ -133,6 +134,29 @@ export default function HomePage() {
             number: 4,
             title: 'Leverans & uppföljning',
             description: 'Ni får rapport och bildmaterial, med möjlighet till genomgång.',
+          },
+        ]}
+      />
+
+      <Testimonials
+        testimonials={[
+          {
+            quote: 'Vi inspekterade taken på 12 fastigheter på två dagar istället för två veckor. Rapporten var tydlig och gav oss ett bra beslutsunderlag för planerat underhåll.',
+            name: 'Anna Lindqvist',
+            role: 'Teknisk förvaltare',
+            company: 'Fastighetsbolaget AB',
+          },
+          {
+            quote: 'Drönarinspektionen sparade oss både tid och pengar. Inga ställningar, ingen risk för personalen och vi fick bilderna samma dag.',
+            name: 'Erik Johansson',
+            role: 'Projektledare',
+            company: 'Byggnads & Co',
+          },
+          {
+            quote: 'Tack vare termografering med drönare hittade vi defekta paneler som vi aldrig hade upptäckt från marken. Det förbättrade vår anläggnings effekt direkt.',
+            name: 'Maria Bergström',
+            role: 'Driftansvarig',
+            company: 'SolEnergi Sverige',
           },
         ]}
       />

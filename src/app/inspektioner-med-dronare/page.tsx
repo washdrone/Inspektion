@@ -13,9 +13,9 @@ import { CtaBand } from '@/components/CtaBand'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Inspektioner med drönare – Tak, fasad, solceller & industri',
+  title: 'Drönare-Inspektion | SurveyDrone — Tak, Fasad, Solceller & Industri',
   description:
-    'Professionella drönarinspektioner för fastighetsägare och företag. Takinspektion, fasadinspektion, solcellsinspektion och byggplatsdokumentation – snabbare, säkrare och mer kostnadseffektivt.',
+    'SurveyDrone erbjuder professionell drönare-inspektion med termisk kamera i hela Sverige. Tak, fasader, solceller, industri och byggdokumentation. PDRA S-01-certifierat. Begär offert.',
   path: '/inspektioner-med-dronare',
 })
 
@@ -44,8 +44,8 @@ export default function InspektionerHubPage() {
       />
 
       <Hero
-        headline="Professionella drönarinspektioner för företag"
-        subheadline="Inspektera tak, fasader, solceller och industrianläggningar med drönarteknik. Ni får snabb, säker och kostnadseffektiv dokumentation — utan ställningar, skylift eller arbete på höjd."
+        headline="Drönare-Inspektion med Termisk Kamera — Tak, Fasad, Solceller & Industri"
+        subheadline="SurveyDrone inspekterar tak, fasader, solceller och industrianläggningar med termisk kamera och drönarteknik. Snabb, säker och kostnadseffektiv dokumentation — utan ställningar, skylift eller arbete på höjd."
         ctaPrimary={{ label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' }}
         ctaSecondary={{ label: 'Se prisguide', href: '/inspektioner-med-dronare/priser' }}
         stats={[
@@ -58,8 +58,9 @@ export default function InspektionerHubPage() {
 
       <TrustBar
         items={[
+          'PDRA S-01-certifierade',
           'EASA-certifierade fjärrpiloter',
-          'Ansvarsförsäkrade',
+          'Termisk kamera & RGB',
           'Verksamma i hela Sverige',
         ]}
       />

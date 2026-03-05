@@ -13,10 +13,10 @@ export function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                 </svg>
               </div>
-              <span className="text-lg font-bold text-white">WashDrone</span>
+              <span className="text-lg font-bold text-white">SurveyDrone</span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-dark-400">
-              Professionella drönarinspektioner för fastighetsägare, förvaltare och industri i hela Sverige.
+              Professionell drönare-inspektion med termisk kamera i hela Sverige. Tak, fasader, solceller och industri. PDRA S-01-certifierat.
             </p>
           </div>
           <div>
@@ -49,10 +49,10 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
-          <p className="text-xs text-dark-500">&copy; {new Date().getFullYear()} WashDrone. Alla rättigheter förbehållna.</p>
+          <p className="text-xs text-dark-500">&copy; {new Date().getFullYear()} SurveyDrone Sverige AB. Alla rättigheter förbehållna.</p>
           <div className="flex items-center gap-1.5 text-xs text-dark-500">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-500" />
-            EASA-certifierade fjärrpiloter
+            PDRA S-01 &amp; EASA-certifierade fjärrpiloter
           </div>
         </div>
       </div>

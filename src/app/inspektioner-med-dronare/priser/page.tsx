@@ -6,9 +6,9 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Prisguide för drönarinspektion – Avtalsmodeller och prisexempel',
+  title: 'Drönare-Inspektion Pris | SurveyDrone — Avtalsmodeller & Prisguide',
   description:
-    'Vad kostar en drönarinspektion? Priset beror på objektets storlek, typ och placering. Se våra avtalsmodeller och begär ett kostnadsfritt prisförslag.',
+    'Vad kostar drönare-inspektion? Priset beror på objektets storlek, typ och placering. Se våra avtalsmodeller och begär ett kostnadsfritt prisförslag.',
   path: '/inspektioner-med-dronare/priser',
 })
 

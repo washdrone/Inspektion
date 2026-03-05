@@ -5,9 +5,9 @@ import { CtaBand } from '@/components/CtaBand'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Kundcase – Drönarinspektioner i praktiken',
+  title: 'Kundcase — Drönare-Inspektion i Praktiken | SurveyDrone',
   description:
-    'Läs om hur fastighetsägare, förvaltare och byggföretag har använt drönarinspektioner för att effektivisera underhåll och dokumentation.',
+    'Se hur fastighetsägare, förvaltare och byggföretag har effektiviserat underhåll med SurveyDrones drönare-inspektion och termisk kamera.',
   path: '/inspektioner-med-dronare/case',
 })
 

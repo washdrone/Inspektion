@@ -12,28 +12,36 @@ import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Fasadinspektion med drönare – Dokumentera fasadens skick',
+  title: 'Fasadinspektion Drönare | SurveyDrone — Utan Skylift',
   description:
-    'Professionell fasadinspektion med drönare. Kartlägg sprickor, fukt, mögel och skador på fasaden utan ställningar. Snabb rapport med högupplösta bilder.',
+    'Professionell fasadinspektion med drönare. Kartlägg sprickor, fukt, mögel och skador utan ställningar eller skylift. PDRA S-01-certifierat. Rapport inom 48 h.',
   path: '/inspektioner-med-dronare/fasadinspektion',
 })
 
 const faqItems = [
   {
-    question: 'Vilka typer av fasader kan inspekteras?',
-    answer: 'Vi inspekterar alla typer av fasader — puts, tegel, trä, metall, glas och kompositmaterial. Drönaren anpassar flygväg och kameravinkel efter fasadens utformning.',
+    question: 'Vilka typer av fasader kan inspekteras med drönare?',
+    answer: 'Vi inspekterar alla typer av fasader — puts, tegel, trä, metall, glas och kompositmaterial. Drönaren anpassar flygväg och kameravinkel efter fasadens utformning för fullständig täckning.',
   },
   {
     question: 'Kan drönaren nå fasader i trånga gaturum?',
-    answer: 'Ja, vi använder kompakta drönare som kan operera i trånga utrymmen. Vi genomför alltid en platsbedömning för att säkerställa säker flygning.',
+    answer: 'Ja, vi använder kompakta drönare som kan operera i trånga utrymmen. Vi genomför alltid en platsbedömning och riskanalys för att säkerställa säker flygning även i stadsmiljö.',
   },
   {
-    question: 'Ser man fuktskador med en drönarinspektion?',
-    answer: 'Visuella tecken på fukt som missfärgning, mögel och avflagning syns tydligt på högupplösta bilder. För att identifiera fukt inne i konstruktionen krävs kompletterande metoder.',
+    question: 'Ser man fuktskador med en drönarinspektion av fasaden?',
+    answer: 'Visuella tecken på fukt som missfärgning, mögel och avflagning syns tydligt på högupplösta bilder. Med termisk kamera kan vi även identifiera fukt inne i konstruktionen genom att mäta temperaturskillnader i fasadytan.',
   },
   {
     question: 'Hur ofta bör man inspektera fasaden?',
-    answer: 'En fasadinspektion vart tredje till femte år är en bra utgångspunkt, eller vid misstanke om skada efter stormar eller andra händelser.',
+    answer: 'En fasadinspektion vart tredje till femte år är en bra utgångspunkt, eller vid misstanke om skada efter stormar eller andra händelser. Regelbundna inspektioner förebygger kostsamma reparationer.',
+  },
+  {
+    question: 'Vad kostar fasadinspektion med drönare?',
+    answer: 'Priset beror på fasadens storlek, höjd och komplexitet. En drönarbaserad fasadinspektion är betydligt billigare än ställningar eller skylift. Kontakta oss för en kostnadsfri offert.',
+  },
+  {
+    question: 'Hur skiljer sig drönarinspektion från fasadinspektion med skylift?',
+    answer: 'Drönare eliminerar behovet av skylift, ställningar och arbete på höjd — vilket sparar tid, pengar och minskar arbetsmiljörisker. Drönare når dessutom svåråtkomliga ytor som skylift inte kan nå, och ger en fullständig dokumentation av hela fasaden.',
   },
 ]
 
@@ -66,8 +74,8 @@ export default function FasadinspektionPage() {
       />
 
       <Hero
-        headline="Fasadinspektion med drönare"
-        subheadline="Dokumentera hela fasadens skick med högupplösta flygbilder. Identifiera sprickor, fuktskador, mögel och slitage — utan byggnadsställningar eller skylift."
+        headline="Fasadinspektion med Drönare — Sprickor, Skador & Fukt"
+        subheadline="Dokumentera hela fasadens skick med högupplösta flygbilder. Identifiera sprickor, fuktskador, mögel och slitage — utan byggnadsställningar eller skylift. PDRA S-01-certifierat."
         ctaPrimary={{ label: 'Begär offert för fasadinspektion', href: '/inspektioner-med-dronare/kontakt' }}
         stats={[
           { value: 'Upp till 50%', label: 'Lägre kostnad vs ställning' },
@@ -79,8 +87,9 @@ export default function FasadinspektionPage() {
 
       <TrustBar
         items={[
+          'PDRA S-01-certifierade',
           'EASA-certifierade fjärrpiloter',
-          'Ansvarsförsäkrade',
+          'Termisk kamera & RGB',
           'Alla fasadmaterial',
         ]}
       />
@@ -174,14 +183,19 @@ export default function FasadinspektionPage() {
       <RelatedServices
         services={[
           {
-            title: 'Takinspektion',
+            title: 'Takinspektion med drönare',
             href: '/inspektioner-med-dronare/takinspektion',
-            description: 'Identifiera skador och slitage på tak utan att beträda takytan.',
+            description: 'Identifiera skador, fukt och köldbryggor med termisk kamera.',
           },
           {
             title: 'Industriell inspektion',
             href: '/inspektioner-med-dronare/industriell-inspektion',
             description: 'Inspektera svåråtkomliga industrianläggningar utan driftstopp.',
+          },
+          {
+            title: 'Solcellsinspektion',
+            href: '/inspektioner-med-dronare/solcellsinspektion',
+            description: 'Hitta hotspots och defekta paneler med termisk analys.',
           },
         ]}
       />

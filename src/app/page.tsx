@@ -13,7 +13,7 @@ import { CtaBand } from '@/components/CtaBand'
 export const metadata: Metadata = createMetadata({
   title: 'SurveyDrone | Drönare-Inspektion Sverige — Termisk & Visuell',
   description:
-    'SurveyDrone erbjuder professionell drönare-inspektion i Sverige. Tak, fasader, solceller & industri med termisk kamera. EASA-certifierade piloter. Begär offert.',
+    'SurveyDrone erbjuder professionell drönare-inspektion i hela Sverige. Tak, fasader, solceller & industri med termisk kamera. EASA-certifierade piloter. Begär offert.',
   path: '/',
 })
 
@@ -32,7 +32,7 @@ const homeFaqItems = [
   },
   {
     question: 'Var i Sverige utför ni inspektioner?',
-    answer: 'Vi utför drönare-inspektioner i stora delar av Sverige. Kontakta oss för att diskutera ert uppdrag och placering.',
+    answer: 'Vi utför drönare-inspektioner i hela Sverige — från Stockholm, Göteborg och Malmö till mindre orter. Kontakta oss för att diskutera ert uppdrag.',
   },
   {
     question: 'Hur lång tid tar en drönarinspektion?',
@@ -78,7 +78,7 @@ export default function HomePage() {
           'EASA-certifierade fjärrpiloter',
           'Ansvarsförsäkrade',
           'Termisk kamera & RGB',
-          'Verksamma i Sverige',
+          'Verksamma i hela Sverige',
         ]}
       />
 
@@ -211,7 +211,7 @@ export default function HomePage() {
 
       <CtaBand
         headline="Redo att effektivisera era inspektioner?"
-        description="Kontakta oss för en kostnadsfri offert. Vi erbjuder drönare-inspektion med termisk kamera i Sverige."
+        description="Kontakta oss för en kostnadsfri offert. Vi erbjuder drönare-inspektion med termisk kamera i hela Sverige."
         ctaLabel="Begär offert"
       />
     </>

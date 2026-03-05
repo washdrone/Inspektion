@@ -15,7 +15,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 export const metadata: Metadata = createMetadata({
   title: 'Drönare-Inspektion | SurveyDrone — Tak, Fasad, Solceller & Industri',
   description:
-    'SurveyDrone erbjuder professionell drönare-inspektion med termisk kamera i Sverige. Tak, fasader, solceller, industri och byggdokumentation. EASA-certifierade piloter. Begär offert.',
+    'SurveyDrone erbjuder professionell drönare-inspektion med termisk kamera i hela Sverige. Tak, fasader, solceller, industri och byggdokumentation. EASA-certifierade piloter. Begär offert.',
   path: '/inspektioner-med-dronare',
 })
 
@@ -61,7 +61,7 @@ export default function InspektionerHubPage() {
           'EASA-certifierade fjärrpiloter',
           'Ansvarsförsäkrade',
           'Termisk kamera & RGB',
-          'Verksamma i Sverige',
+          'Verksamma i hela Sverige',
         ]}
       />
 

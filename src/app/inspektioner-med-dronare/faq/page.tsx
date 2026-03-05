@@ -63,7 +63,7 @@ const allFaqItems = [
   },
   {
     question: 'Var i Sverige är ni verksamma?',
-    answer: 'Vi utför inspektioner i stora delar av Sverige. Resekostnader kan tillkomma beroende på uppdragets placering. Kontakta oss för att diskutera ert uppdrag.',
+    answer: 'Vi utför inspektioner i hela Sverige. Resekostnader kan tillkomma beroende på uppdragets placering.',
   },
   {
     question: 'Kan ni erbjuda regelbundna inspektioner?',

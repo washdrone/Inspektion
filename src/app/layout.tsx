@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    'SurveyDrone erbjuder professionell drönare-inspektion i Sverige. Tak, fasader, solceller & industri med termisk kamera. EASA-certifierade piloter. Begär offert.',
+    'SurveyDrone erbjuder professionell drönare-inspektion i hela Sverige. Tak, fasader, solceller & industri med termisk kamera. EASA-certifierade piloter. Begär offert.',
   openGraph: {
     locale: 'sv_SE',
     type: 'website',

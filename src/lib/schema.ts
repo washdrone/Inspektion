@@ -6,10 +6,10 @@ export function organizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     '@id': `${BASE_URL}/#organization`,
-    name: 'SurveyDrone Sverige AB',
+    name: 'SurveyDrone',
     url: BASE_URL,
     description:
-      'Professionell drönare-inspektion i Sverige. Termisk kamera, takinspektion, fasadinspektion och solcellsinspektion. EASA-certifierade piloter.',
+      'Professionell drönare-inspektion i hela Sverige. Termisk kamera, takinspektion, fasadinspektion och solcellsinspektion. EASA-certifierade piloter.',
     email: CONTACT.email,
     address: {
       '@type': 'PostalAddress',
@@ -69,7 +69,7 @@ export function serviceSchema({
     provider: {
       '@type': 'ProfessionalService',
       '@id': `${BASE_URL}/#organization`,
-      name: 'SurveyDrone Sverige AB',
+      name: 'SurveyDrone',
       url: BASE_URL,
     },
     url: `${BASE_URL}${url}`,

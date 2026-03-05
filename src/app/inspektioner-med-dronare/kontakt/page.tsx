@@ -54,12 +54,6 @@ export default function KontaktPage() {
                     </a>
                   </div>
                   <div>
-                    <p className="font-medium text-dark-900">Telefon</p>
-                    <a href={`tel:${CONTACT.phone}`} className="text-brand-600 hover:text-brand-700">
-                      {CONTACT.phoneDisplay}
-                    </a>
-                  </div>
-                  <div>
                     <p className="font-medium text-dark-900">Svarstid</p>
                     <p>Vi svarar normalt inom en arbetsdag.</p>
                   </div>

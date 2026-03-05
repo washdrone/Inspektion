@@ -36,9 +36,9 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-pill bg-brand-500 px-7 py-3.5 text-sm font-semibold text-white
-      transition-all duration-200 hover:bg-brand-600 hover:shadow-glow
-      focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-pill bg-accent-400 px-7 py-3.5 text-sm font-semibold text-dark-900
+      transition-all duration-200 hover:bg-accent-300 hover:shadow-glow
+      focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2;
   }
 
   .btn-secondary {
@@ -82,12 +82,12 @@
 
 /* Hero animated gradient glows */
 .hero-glow-1 {
-  background: radial-gradient(ellipse at 70% 20%, rgba(6,182,212,0.14) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 70% 20%, rgba(27,58,107,0.18) 0%, transparent 60%);
   animation: glow-drift-1 8s ease-in-out infinite alternate;
 }
 
 .hero-glow-2 {
-  background: radial-gradient(ellipse at 30% 80%, rgba(6,182,212,0.08) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 30% 80%, rgba(46,125,159,0.10) 0%, transparent 60%);
   animation: glow-drift-2 10s ease-in-out infinite alternate;
 }
 

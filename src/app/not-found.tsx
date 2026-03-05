@@ -12,8 +12,8 @@ export default function NotFound() {
           <Link href="/" className="btn-primary">
             Till startsidan
           </Link>
-          <Link href="/inspektioner-med-dronare" className="btn-secondary">
-            Våra inspektioner
+          <Link href="/kontakt" className="btn-secondary">
+            Kontakt
           </Link>
         </div>
       </div>

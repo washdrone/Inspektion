@@ -6,12 +6,11 @@ export function organizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     '@id': `${BASE_URL}/#organization`,
-    name: 'WashDrone',
+    name: 'SurveyDrone Sverige AB',
     url: BASE_URL,
     description:
-      'Professionella drönarinspektioner av tak, fasader, solceller och industri för företag i Sverige.',
+      'Professionell drönare-inspektion i Sverige. Termisk kamera, takinspektion, fasadinspektion och solcellsinspektion. PDRA S-01-certifierat.',
     email: CONTACT.email,
-    /** MÅSTE VERIFIERAS: Fyll i telefonnummer, adress, org.nummer, logo-URL */
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'SE',
@@ -20,16 +19,38 @@ export function organizationSchema() {
       '@type': 'Country',
       name: 'Sverige',
     },
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'certification',
+      name: 'PDRA S-01 — Transportstyrelsen / EASA',
+    },
     knowsAbout: [
       'Drönarinspektion',
       'Takinspektion',
       'Fasadinspektion',
       'Solcellsinspektion',
+      'Termisk kamera inspektion',
+      'IR-inspektion',
       'Byggplatsdokumentation',
       'Industriell inspektion',
+      '3D-kartläggning',
+      'Fotogrammetri',
       'UAS',
       'RPAS',
     ],
+  }
+}
+
+export function websiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'SurveyDrone',
+    url: BASE_URL,
+    publisher: {
+      '@type': 'ProfessionalService',
+      '@id': `${BASE_URL}/#organization`,
+    },
   }
 }
 
@@ -50,13 +71,19 @@ export function serviceSchema({
     provider: {
       '@type': 'ProfessionalService',
       '@id': `${BASE_URL}/#organization`,
-      name: 'WashDrone',
+      name: 'SurveyDrone Sverige AB',
       url: BASE_URL,
     },
     url: `${BASE_URL}${url}`,
     areaServed: {
       '@type': 'Country',
       name: 'Sverige',
+    },
+    serviceType: 'Drönare-inspektion',
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'SEK',
+      availability: 'https://schema.org/InStock',
     },
   }
 }

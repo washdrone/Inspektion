@@ -6,9 +6,9 @@ import { CtaBand } from '@/components/CtaBand'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Vanliga frågor om drönarinspektion – FAQ',
+  title: 'Vanliga frågor om drönare-inspektion | SurveyDrone — FAQ',
   description:
-    'Svar på vanliga frågor om drönarinspektioner. Läs om tillstånd, säkerhet, priser, leverans och vad som ingår i en inspektion.',
+    'Svar på vanliga frågor om drönare-inspektion med termisk kamera. Tillstånd, säkerhet, priser, leverans och certifieringar. SurveyDrone — PDRA S-01-certifierat.',
   path: '/inspektioner-med-dronare/faq',
 })
 

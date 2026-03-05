@@ -1,26 +1,68 @@
 import type { Metadata } from 'next'
 import { createMetadata } from '@/lib/metadata'
+import { faqSchema } from '@/lib/schema'
 import { Hero } from '@/components/Hero'
 import { TrustBar } from '@/components/TrustBar'
 import { UseCaseCards } from '@/components/UseCaseCards'
 import { BenefitsGrid } from '@/components/BenefitsGrid'
 import { ProcessSteps } from '@/components/ProcessSteps'
 import { Testimonials } from '@/components/Testimonials'
+import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Drönarinspektioner för företag',
+  title: 'SurveyDrone | Drönare-Inspektion Hela Sverige — Termisk & Visuell',
   description:
-    'Professionella drönarinspektioner av tak, fasader, solceller och industri. Snabbare, säkrare och mer kostnadseffektivt än traditionella metoder. Rapport inom 48 h.',
+    'SurveyDrone erbjuder professionell drönare-inspektion i hela Sverige. Tak, fasader, solceller & industri med termisk kamera. PDRA S-01-certifierat. Begär offert.',
   path: '/',
 })
+
+const homeFaqItems = [
+  {
+    question: 'Hur fungerar drönare-inspektion med termisk kamera?',
+    answer: 'Vi flyger med drönare utrustade med termisk kamera och högupplöst RGB-kamera. Den termiska kameran identifierar fukt, köldbryggor och skador som är osynliga för blotta ögat. Hela objektet dokumenteras systematiskt och ni får en detaljerad rapport med bilder och åtgärdsförslag inom 48 timmar.',
+  },
+  {
+    question: 'Vad kostar en drönarinspektion?',
+    answer: 'Priset varierar beroende på objektets storlek, typ och komplexitet. En standardinspektion av ett villatak startar från ca 3 500 SEK. Större fastigheter och industrianläggningar prissätts separat. Kontakta oss för en kostnadsfri offert.',
+  },
+  {
+    question: 'Vilka certifieringar har SurveyDrone?',
+    answer: 'Våra piloter är EASA-certifierade och innehar PDRA S-01-certifiering via Transportstyrelsen. Vi är fullt ansvarsförsäkrade och följer alla gällande regler för kommersiell drönardrift i Sverige.',
+  },
+  {
+    question: 'Var i Sverige utför ni inspektioner?',
+    answer: 'SurveyDrone utför drönare-inspektioner i hela Sverige — från Stockholm, Göteborg och Malmö till mindre orter. Vi har kapacitet att hantera uppdrag i alla regioner.',
+  },
+  {
+    question: 'Hur lång tid tar en drönarinspektion?',
+    answer: 'En inspektion på plats tar normalt 1–3 timmar beroende på objektets storlek. Rapporten med bilder, noteringar och åtgärdsförslag levereras inom 48 timmar.',
+  },
+  {
+    question: 'Vad är skillnaden mellan drönare-inspektion och traditionell besiktning?',
+    answer: 'Traditionell inspektion kräver byggnadsställningar, skylift eller att personal beträder taket — med höga kostnader och arbetsmiljörisker. Med drönare inspekteras objektet från luften, upp till 80% snabbare och till betydligt lägre kostnad.',
+  },
+  {
+    question: 'Kan drönare hitta fukt i tak och fasad?',
+    answer: 'Ja, med termisk kamera kan vi identifiera fuktansamlingar, köldbryggor och dolda skador som inte syns med blotta ögat. Termisk inspektion är en av de mest effektiva metoderna för att upptäcka fuktproblem utan destruktiv provtagning.',
+  },
+  {
+    question: 'Vilka branscher anlitar SurveyDrone?',
+    answer: 'Vi arbetar med fastighetsbolag, BRF:er, energibolag, industri, kommuner, försäkringsbolag och byggföretag. Våra tjänster är anpassade för B2B-kunder med behov av regelbunden eller engångsinspektioner.',
+  },
+]
 
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(homeFaqItems)) }}
+      />
+
       <Hero
-        headline="Drönarinspektioner som sparar tid, pengar och risker"
-        subheadline="Vi hjälper fastighetsägare, förvaltare och byggföretag att inspektera tak, fasader, solceller och industrianläggningar — snabbare och säkrare än traditionella metoder."
+        headline="Drönare-Inspektion Sverige — Termisk Kamera & Högupplöst Bildanalys"
+        subheadline="SurveyDrone hjälper fastighetsägare, förvaltare och företag att inspektera tak, fasader, solceller och industrianläggningar med termisk kamera och drönarteknik — snabbare, säkrare och billigare än traditionella metoder."
         ctaPrimary={{ label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' }}
         ctaSecondary={{ label: 'Se våra tjänster', href: '/inspektioner-med-dronare' }}
         stats={[
@@ -33,8 +75,10 @@ export default function HomePage() {
 
       <TrustBar
         items={[
+          'PDRA S-01-certifierade',
           'EASA-certifierade fjärrpiloter',
           'Ansvarsförsäkrade',
+          'Termisk kamera & RGB',
           'Verksamma i hela Sverige',
         ]}
       />
@@ -44,32 +88,32 @@ export default function HomePage() {
         subtitle="Välj den tjänst som passar er fastighet, anläggning eller byggprojekt."
         useCases={[
           {
-            title: 'Takinspektion',
-            description: 'Identifiera skador, slitage och underhållsbehov utan att beträda taket.',
+            title: 'Takinspektion med drönare',
+            description: 'Identifiera skador, fukt och köldbryggor med termisk kamera — utan att beträda taket.',
             href: '/inspektioner-med-dronare/takinspektion',
             icon: '🏠',
           },
           {
-            title: 'Fasadinspektion',
-            description: 'Dokumentera fasadens skick och upptäck sprickor, fukt eller skador.',
+            title: 'Fasadinspektion med drönare',
+            description: 'Dokumentera sprickor, fukt och skador på fasaden utan ställningar eller skylift.',
             href: '/inspektioner-med-dronare/fasadinspektion',
             icon: '🏢',
           },
           {
-            title: 'Solcellsinspektion',
-            description: 'Kontrollera solcellspaneler för defekter, smuts och prestandaproblem.',
+            title: 'Solcellsinspektion med termisk kamera',
+            description: 'Hitta hotspots, defekta paneler och prestandaproblem med termisk analys.',
             href: '/inspektioner-med-dronare/solcellsinspektion',
             icon: '☀️',
           },
           {
             title: 'Byggplatsdokumentation',
-            description: 'Följ byggprojektets framsteg med regelbundna flygbilder och 3D-modeller.',
+            description: 'Följ byggprojektets framsteg med regelbundna flygbilder, ortofoto och 3D-modeller.',
             href: '/inspektioner-med-dronare/byggplatsdokumentation',
             icon: '🏗️',
           },
           {
             title: 'Industriell inspektion',
-            description: 'Inspektera svåråtkomliga industrianläggningar utan driftstopp.',
+            description: 'Inspektera tankar, torn, pipelines och svåråtkomliga anläggningar utan driftstopp.',
             href: '/inspektioner-med-dronare/industriell-inspektion',
             icon: '🏭',
           },
@@ -77,10 +121,15 @@ export default function HomePage() {
       />
 
       <BenefitsGrid
-        headline="Varför välja drönarinspektion?"
+        headline="Varför välja SurveyDrone?"
         benefits={[
           {
-            title: 'Minskad risk',
+            title: 'Termisk & visuell inspektion',
+            description: 'Vi kombinerar termisk kamera med högupplöst RGB för komplett analys av dolda och synliga skador.',
+            icon: 'camera',
+          },
+          {
+            title: 'Minskad arbetsmiljörisk',
             description: 'Ingen personal behöver arbeta på höga höjder eller i farliga miljöer.',
             icon: 'shield',
           },
@@ -95,13 +144,8 @@ export default function HomePage() {
             icon: 'chart',
           },
           {
-            title: 'Högupplöst dokumentation',
-            description: 'Detaljerade flygbilder och video som ger tydlig beslutsgrund.',
-            icon: 'camera',
-          },
-          {
-            title: 'Tydlig rapportering',
-            description: 'Ni får en sammanfattande rapport med bilder, noteringar och rekommendationer.',
+            title: 'Certifierad kvalitet',
+            description: 'PDRA S-01-certifierade piloter och EASA-godkänd verksamhet garanterar professionell leverans.',
             icon: 'file',
           },
           {
@@ -118,22 +162,22 @@ export default function HomePage() {
           {
             number: 1,
             title: 'Kontakt & planering',
-            description: 'Ni beskriver ert behov och vi planerar inspektionens upplägg.',
+            description: 'Ni beskriver ert behov och vi planerar inspektionens upplägg och lämnar offert.',
           },
           {
             number: 2,
             title: 'Flygning & datainsamling',
-            description: 'Certifierad pilot genomför flygningen och samlar in bild- och videodata.',
+            description: 'PDRA S-01-certifierad pilot genomför flygningen med termisk kamera och RGB-kamera.',
           },
           {
             number: 3,
             title: 'Analys & rapport',
-            description: 'Vi analyserar materialet och sammanställer en tydlig rapport.',
+            description: 'Vi analyserar termisk och visuell data och sammanställer en detaljerad rapport.',
           },
           {
             number: 4,
             title: 'Leverans & uppföljning',
-            description: 'Ni får rapport och bildmaterial, med möjlighet till genomgång.',
+            description: 'Ni får rapport med bilder och åtgärdsförslag inom 48 timmar, med möjlighet till genomgång.',
           },
         ]}
       />
@@ -161,9 +205,14 @@ export default function HomePage() {
         ]}
       />
 
+      <FaqAccordion
+        headline="Vanliga frågor om drönare-inspektion"
+        items={homeFaqItems}
+      />
+
       <CtaBand
         headline="Redo att effektivisera era inspektioner?"
-        description="Kontakta oss för en kostnadsfri genomgång av hur drönarteknik kan förbättra ert underhållsarbete."
+        description="Kontakta oss för en kostnadsfri offert. Vi erbjuder drönare-inspektion med termisk kamera i hela Sverige."
         ctaLabel="Begär offert"
       />
     </>

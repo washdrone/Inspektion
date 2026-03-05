@@ -5,9 +5,9 @@ import { ContactForm } from '@/components/ContactForm'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Kontakt & offert – Boka drönarinspektion',
+  title: 'Begär Offert — Drönare-Inspektion | SurveyDrone',
   description:
-    'Begär en kostnadsfri offert för drönarinspektion. Fyll i formuläret eller kontakta oss direkt via e-post eller telefon. Vi återkommer inom en arbetsdag.',
+    'Begär en kostnadsfri offert för drönare-inspektion med termisk kamera. Fyll i formuläret eller kontakta oss direkt. SurveyDrone — PDRA S-01-certifierat.',
   path: '/inspektioner-med-dronare/kontakt',
 })
 

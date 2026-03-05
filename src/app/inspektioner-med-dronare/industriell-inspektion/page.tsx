@@ -12,28 +12,36 @@ import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Industriell inspektion med drönare – Inspektera anläggningar säkert',
+  title: 'Industriinspektion med Drönare | SurveyDrone — Tankar, Torn & Pipelines',
   description:
-    'Drönarinspektion av industrianläggningar, cisterner, skorstenar och svåråtkomliga strukturer. Minimera driftstopp och arbetsmiljörisker med drönarteknik.',
+    'Drönarinspektion av industrianläggningar, cisterner, skorstenar och svåråtkomliga strukturer. Minimera driftstopp och arbetsmiljörisker. PDRA S-01-certifierat.',
   path: '/inspektioner-med-dronare/industriell-inspektion',
 })
 
 const faqItems = [
   {
-    question: 'Vilka typer av industrianläggningar kan inspekteras?',
-    answer: 'Vi inspekterar cisterner, skorstenar, master, silos, broar, kranar, lagerbyggnader och andra svåråtkomliga strukturer. Kontakta oss om ni har ett specifikt objekt.',
+    question: 'Vilka typer av industrianläggningar kan inspekteras med drönare?',
+    answer: 'Vi inspekterar cisterner, skorstenar, master, silos, broar, kranar, pipelines, lagerbyggnader och andra svåråtkomliga strukturer. Drönare med termisk kamera kan även identifiera läckor och temperaturavvikelser.',
   },
   {
     question: 'Kan inspektionen göras utan att stoppa produktionen?',
-    answer: 'I de flesta fall kan drönaren operera utan att påverka pågående drift. Vi samordnar alltid med er driftpersonal för att minimera eventuell störning.',
+    answer: 'I de flesta fall kan drönaren operera utan att påverka pågående drift. Vi samordnar alltid med er driftpersonal för att minimera eventuell störning. Drönare-inspektion minskar behovet av driftstopp jämfört med traditionella metoder.',
   },
   {
     question: 'Hur hanterar ni säkerheten vid industriella miljöer?',
-    answer: 'Vi genomför alltid en riskbedömning och följer gällande säkerhetsföreskrifter. Våra piloter har erfarenhet av att operera i industriella miljöer.',
+    answer: 'Vi genomför alltid en riskbedömning enligt gällande säkerhetsföreskrifter. Våra PDRA S-01-certifierade piloter har erfarenhet av att operera i industriella miljöer med ex-klassade zoner, höga konstruktioner och aktiv drift.',
   },
   {
     question: 'Kan drönaren inspektera invändiga utrymmen?',
-    answer: 'Vår standardtjänst avser utvändiga inspektioner. Invändiga inspektioner kan i vissa fall utföras med specialiserade drönare — kontakta oss för att diskutera möjligheterna.',
+    answer: 'Vår standardtjänst avser utvändiga inspektioner. Invändiga inspektioner av tankar, silos och slutna utrymmen kan i vissa fall utföras med specialiserade drönare — kontakta oss för att diskutera möjligheterna.',
+  },
+  {
+    question: 'Vad kostar industriell inspektion med drönare?',
+    answer: 'Priset beror på anläggningens storlek, höjd och komplexitet. Drönare-inspektion är betydligt billigare än industriklättring, ställningar eller kranbaserade metoder. Kontakta oss för en kostnadsfri offert.',
+  },
+  {
+    question: 'Kan termisk kamera användas vid industriinspektion?',
+    answer: 'Ja, termisk kamera är ett värdefullt verktyg vid industriinspektion. Den kan identifiera värmeutveckling, läckor, isoleringsbrister och elektriska problem i svåråtkomliga strukturer utan att personal behöver närma sig objektet.',
   },
 ]
 
@@ -66,8 +74,8 @@ export default function IndustriellInspektionPage() {
       />
 
       <Hero
-        headline="Industriell inspektion med drönare"
-        subheadline="Inspektera cisterner, skorstenar, master och andra svåråtkomliga strukturer — utan driftstopp, ställningar eller arbete på höjd. Säkrare och mer kostnadseffektivt."
+        headline="Industriinspektion med Drönare — Tankar, Torn, Pipelines & Konstruktioner"
+        subheadline="Inspektera cisterner, skorstenar, master, pipelines och andra svåråtkomliga strukturer — utan driftstopp, ställningar eller arbete på höjd. PDRA S-01-certifierat."
         ctaPrimary={{ label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' }}
         stats={[
           { value: 'Upp till 90%', label: 'Kortare inspektionstid' },
@@ -79,8 +87,9 @@ export default function IndustriellInspektionPage() {
 
       <TrustBar
         items={[
+          'PDRA S-01-certifierade',
           'EASA-certifierade fjärrpiloter',
-          'Ansvarsförsäkrade',
+          'Termisk kamera & RGB',
           'Riskbedömning ingår',
         ]}
       />
@@ -174,14 +183,19 @@ export default function IndustriellInspektionPage() {
       <RelatedServices
         services={[
           {
-            title: 'Fasadinspektion',
+            title: 'Fasadinspektion med drönare',
             href: '/inspektioner-med-dronare/fasadinspektion',
             description: 'Dokumentera fasader på industribyggnader och kommersiella fastigheter.',
           },
           {
-            title: 'Solcellsinspektion',
+            title: 'Solcellsinspektion med termisk kamera',
             href: '/inspektioner-med-dronare/solcellsinspektion',
-            description: 'Kontrollera solcellspaneler på industritak för defekter och nedsmutsning.',
+            description: 'Hitta hotspots och defekta paneler på industritak med termisk analys.',
+          },
+          {
+            title: 'Takinspektion med drönare',
+            href: '/inspektioner-med-dronare/takinspektion',
+            description: 'Identifiera fukt och skador på industritak med termisk kamera.',
           },
         ]}
       />

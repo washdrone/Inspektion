@@ -32,7 +32,7 @@ export function Header() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
             </svg>
           </div>
-          <span className="text-lg font-bold text-white">WashDrone</span>
+          <span className="text-lg font-bold text-white">SurveyDrone</span>
         </Link>
 
         {/* Desktop nav */}

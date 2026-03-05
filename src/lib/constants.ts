@@ -18,10 +18,8 @@ export const COMPANY_LINKS = [
   { href: '/inspektioner-med-dronare/kontakt', label: 'Kontakt' },
 ] as const
 
-/** Contact info — MÅSTE VERIFIERAS: telefonnummer saknas */
 export const CONTACT = {
-  email: 'info@washdrone.se',
-  /** MÅSTE VERIFIERAS: Fyll i riktigt telefonnummer */
+  email: 'info@surveydrone.se',
   phone: '+46XXXXXXXXX',
   phoneDisplay: '+46 (0)XX-XXX XX XX',
 } as const

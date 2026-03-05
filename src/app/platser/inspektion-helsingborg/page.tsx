@@ -90,7 +90,7 @@ export default function HelsingborgPage() {
         headline="Drönarinspektion Helsingborg — Hamn, Handel & Historisk Stad"
         subheadline="Helsingborg är en dynamisk hamnstad i nordvästra Skåne med ett varierat fastighetsbestånd — från historiska byggnader i centrum till moderna logistikfastigheter vid hamnen. SurveyDrone inspekterar tak, fasader och solceller i Söder, Ramlösa, Berga och hela regionen inklusive Landskrona."
         ctaPrimary={{ label: 'Begär offert — Helsingborg', href: '/kontakt' }}
-        ctaSecondary={{ label: 'Våra tjänster', href: '/inspektioner-med-dronare' }}
+        ctaSecondary={{ label: 'Våra tjänster', href: '/tjanster/takinspektion' }}
       />
 
       <TrustBar
@@ -124,19 +124,19 @@ export default function HelsingborgPage() {
               </p>
               <p>
                 Vi erbjuder{' '}
-                <Link href="/inspektioner-med-dronare/takinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/takinspektion" className="text-brand-600 underline hover:text-brand-700">
                   takinspektion
                 </Link>
                 ,{' '}
-                <Link href="/inspektioner-med-dronare/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">
                   fasadinspektion
                 </Link>
                 ,{' '}
-                <Link href="/inspektioner-med-dronare/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
                   solcellsinspektion
                 </Link>
                 {' '}och{' '}
-                <Link href="/inspektioner-med-dronare/industriell-inspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/industriinspektion" className="text-brand-600 underline hover:text-brand-700">
                   industriell inspektion
                 </Link>
                 {' '}i Helsingborg, Landskrona och hela nordvästra Skåne.

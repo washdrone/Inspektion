@@ -90,7 +90,7 @@ export default function UppsalaPage() {
         headline="Drönarinspektion Uppsala — Akademi, Bostäder & Industri"
         subheadline="Uppsala är en av Sveriges snabbast växande städer med en blandning av historiska universitetsfastigheter, expanderande bostadsområden och det aktiva industriområdet Boländerna. SurveyDrone inspekterar tak, fasader och solceller med termisk kamera i hela Uppsalaregionen."
         ctaPrimary={{ label: 'Begär offert — Uppsala', href: '/kontakt' }}
-        ctaSecondary={{ label: 'Våra tjänster', href: '/inspektioner-med-dronare' }}
+        ctaSecondary={{ label: 'Våra tjänster', href: '/tjanster/takinspektion' }}
       />
 
       <TrustBar
@@ -120,22 +120,22 @@ export default function UppsalaPage() {
                 70-talen där tak och fasader ofta behöver renoveras. I Sunnersta finns villabebyggelse
                 där husägare drar nytta av termisk takinspektering för att hitta köldbryggor.
                 Uppsalas tillväxt innebär också nybyggnation där{' '}
-                <Link href="/inspektioner-med-dronare/byggplatsdokumentation" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/3d-kartlaggning" className="text-brand-600 underline hover:text-brand-700">
                   byggplatsdokumentation
                 </Link>
                 {' '}med drönare ger effektiv uppföljning av projekt.
               </p>
               <p>
                 Vi erbjuder{' '}
-                <Link href="/inspektioner-med-dronare/takinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/takinspektion" className="text-brand-600 underline hover:text-brand-700">
                   takinspektion
                 </Link>
                 ,{' '}
-                <Link href="/inspektioner-med-dronare/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">
                   fasadinspektion
                 </Link>
                 {' '}och{' '}
-                <Link href="/inspektioner-med-dronare/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
                   solcellsinspektion
                 </Link>
                 {' '}i hela Uppsalaregionen.

@@ -87,7 +87,7 @@ export default function IndustriPage() {
         headline="Drönarinspektion för processindustrin"
         subheadline="Inspektera cisterner, skorstenar, rörbryggor och svåråtkomliga konstruktioner utan ställningar och utan driftstopp. Vi har erfarenhet av ex-klassade zoner och arbetar efter era säkerhetsrutiner."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
-        ctaSecondary={{ label: 'Industriell inspektion', href: '/inspektioner-med-dronare/industriell-inspektion' }}
+        ctaSecondary={{ label: 'Industriell inspektion', href: '/tjanster/industriinspektion' }}
         stats={[
           { value: '0', label: 'Driftstopp krävs' },
           { value: '0', label: 'Arbete på höjd' },
@@ -122,7 +122,7 @@ export default function IndustriPage() {
                 Visuell och termisk inspektion av utvändiga ytor på cisterner och tankar.
                 Identifiera korrosion, deformation, isoleringsbrister och läckageindikationer.
               </p>
-              <Link href="/inspektioner-med-dronare/industriell-inspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/industriinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om industriell inspektion &rarr;
               </Link>
             </div>
@@ -132,7 +132,7 @@ export default function IndustriPage() {
                 Inspektion av höga konstruktioner utan klättring eller ställningar. Vi dokumenterar
                 ytskador, sprickor och fogbrister med högupplöst kamera.
               </p>
-              <Link href="/inspektioner-med-dronare/fasadinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/fasadinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om fasadinspektion &rarr;
               </Link>
             </div>
@@ -142,7 +142,7 @@ export default function IndustriPage() {
                 Termisk inspektion av tak på industribyggnader för att identifiera fuktinträngning,
                 isoleringsbrister och skador på tätskikt.
               </p>
-              <Link href="/inspektioner-med-dronare/takinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/takinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om takinspektion &rarr;
               </Link>
             </div>

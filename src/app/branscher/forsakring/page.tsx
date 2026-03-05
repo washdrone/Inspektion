@@ -87,7 +87,7 @@ export default function ForsakringPage() {
         headline="Drönarinspektion för försäkringsbolag"
         subheadline="Snabbare skadebedömning, objektiv dokumentation och bättre beslutsunderlag. Med drönare och termisk kamera kartlägger vi skadeomfattningen på tak och fasader — även dolda skador som inte syns vid markbesiktning."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
-        ctaSecondary={{ label: 'Våra tjänster', href: '/inspektioner-med-dronare' }}
+        ctaSecondary={{ label: 'Våra tjänster', href: '/tjanster/takinspektion' }}
         stats={[
           { value: 'Snabb', label: 'Mobilisering' },
           { value: 'Objektiv', label: 'Dokumentation' },
@@ -122,7 +122,7 @@ export default function ForsakringPage() {
                 Snabb kartläggning av tak- och fasadskador efter storm. Drönaren når alla
                 ytor och ger er en komplett bild utan att personal behöver klättra.
               </p>
-              <Link href="/inspektioner-med-dronare/takinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/takinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om takinspektion &rarr;
               </Link>
             </div>
@@ -132,7 +132,7 @@ export default function ForsakringPage() {
                 Termisk kamera avslöjar fuktens utbredning i tak och fasader. Identifiera
                 skadeomfattningen utan destruktiva ingrepp.
               </p>
-              <Link href="/inspektioner-med-dronare/fasadinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/fasadinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om fasadinspektion &rarr;
               </Link>
             </div>
@@ -142,7 +142,7 @@ export default function ForsakringPage() {
                 Säker dokumentation av brandskadade byggnader ovanifrån. Kartlägg skadeomfattningen
                 utan att utsätta personal för rasrisk.
               </p>
-              <Link href="/inspektioner-med-dronare/industriell-inspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/industriinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om industriell inspektion &rarr;
               </Link>
             </div>

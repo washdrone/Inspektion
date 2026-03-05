@@ -87,7 +87,7 @@ export default function FastighetPage() {
         headline="Drönarinspektion för fastighetsförvaltare"
         subheadline="Slipp ställningar och manuella takvandingar. Med termisk kamera och drönarteknik ger vi er ett komplett beslutsunderlag för planerat underhåll av tak, fasader och byggnadsdetaljer — snabbare och säkrare."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
-        ctaSecondary={{ label: 'Våra tjänster', href: '/inspektioner-med-dronare' }}
+        ctaSecondary={{ label: 'Våra tjänster', href: '/tjanster/takinspektion' }}
         stats={[
           { value: '0', label: 'Arbete på höjd' },
           { value: 'Snabb', label: 'Rapportleverans' },
@@ -122,7 +122,7 @@ export default function FastighetPage() {
                 Termisk och visuell inspektion av hela takytan. Vi identifierar fuktinträngning,
                 skadade tätskikt, köldbryggor och mekaniska skador — utan att beträda taket.
               </p>
-              <Link href="/inspektioner-med-dronare/takinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/takinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om takinspektion &rarr;
               </Link>
             </div>
@@ -132,7 +132,7 @@ export default function FastighetPage() {
                 Högupplöst fotografering och termisk analys av fasaden. Identifiera sprickor,
                 putsskador, fuktansamlingar och köldbryggor utan ställningar.
               </p>
-              <Link href="/inspektioner-med-dronare/fasadinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/fasadinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om fasadinspektion &rarr;
               </Link>
             </div>
@@ -142,7 +142,7 @@ export default function FastighetPage() {
                 Har ni solceller på era fastigheter? Vi identifierar defekta paneler, hotspots
                 och anslutningsproblem med fullradiometrisk datainsamling.
               </p>
-              <Link href="/inspektioner-med-dronare/solcellsinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/solcellsinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om solcellsinspektion &rarr;
               </Link>
             </div>

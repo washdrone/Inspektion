@@ -90,7 +90,7 @@ export default function VasterasPage() {
         headline="Drönarinspektion Västerås — Energi, Industri & Mälardalen"
         subheadline="Västerås är en industristad vid Mälarens strand med starkt fokus på energi och teknik. SurveyDrone inspekterar tak, fasader och anläggningar med termisk kamera i Rocklunda, Bäckby, Viksäng och hela Västeråsregionen."
         ctaPrimary={{ label: 'Begär offert — Västerås', href: '/kontakt' }}
-        ctaSecondary={{ label: 'Våra tjänster', href: '/inspektioner-med-dronare' }}
+        ctaSecondary={{ label: 'Våra tjänster', href: '/tjanster/takinspektion' }}
       />
 
       <TrustBar
@@ -124,19 +124,19 @@ export default function VasterasPage() {
               </p>
               <p>
                 Vi erbjuder{' '}
-                <Link href="/inspektioner-med-dronare/takinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/takinspektion" className="text-brand-600 underline hover:text-brand-700">
                   takinspektion
                 </Link>
                 ,{' '}
-                <Link href="/inspektioner-med-dronare/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">
                   fasadinspektion
                 </Link>
                 ,{' '}
-                <Link href="/inspektioner-med-dronare/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
                   solcellsinspektion
                 </Link>
                 {' '}och{' '}
-                <Link href="/inspektioner-med-dronare/industriell-inspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/industriinspektion" className="text-brand-600 underline hover:text-brand-700">
                   industriell inspektion
                 </Link>
                 {' '}i hela Västeråsregionen.

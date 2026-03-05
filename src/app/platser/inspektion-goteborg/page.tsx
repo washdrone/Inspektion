@@ -90,7 +90,7 @@ export default function GoteborgPage() {
         headline="Drönarinspektion Göteborg — Hamn, Industri & Fastigheter"
         subheadline="Göteborg är Sveriges industriella hjärta med Nordens största hamn, omfattande industriområden på Hisingen och ett varierat fastighetsbestånd från Majorna till Mölndal. SurveyDrone inspekterar tak, fasader och anläggningar med termisk kamera i hela Göteborgsregionen."
         ctaPrimary={{ label: 'Begär offert — Göteborg', href: '/kontakt' }}
-        ctaSecondary={{ label: 'Våra tjänster', href: '/inspektioner-med-dronare' }}
+        ctaSecondary={{ label: 'Våra tjänster', href: '/tjanster/takinspektion' }}
       />
 
       <TrustBar
@@ -123,19 +123,19 @@ export default function GoteborgPage() {
               </p>
               <p>
                 Vi erbjuder{' '}
-                <Link href="/inspektioner-med-dronare/takinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/takinspektion" className="text-brand-600 underline hover:text-brand-700">
                   takinspektion
                 </Link>
                 ,{' '}
-                <Link href="/inspektioner-med-dronare/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">
                   fasadinspektion
                 </Link>
                 ,{' '}
-                <Link href="/inspektioner-med-dronare/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
                   solcellsinspektion
                 </Link>
                 {' '}och{' '}
-                <Link href="/inspektioner-med-dronare/industriell-inspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/industriinspektion" className="text-brand-600 underline hover:text-brand-700">
                   industriell inspektion
                 </Link>
                 {' '}i hela Göteborgsregionen.

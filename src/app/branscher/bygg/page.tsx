@@ -87,7 +87,7 @@ export default function ByggPage() {
         headline="Drönarinspektion för byggbranschen"
         subheadline="Dokumentera byggprojektets framdrift, inspektera nybyggda tak och verifiera utförande med termisk kamera. Vi ger er flygbilder, ortofoto och inspektionsrapporter som stärker er projektdokumentation."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
-        ctaSecondary={{ label: 'Byggplatsdokumentation', href: '/inspektioner-med-dronare/byggplatsdokumentation' }}
+        ctaSecondary={{ label: 'Byggplatsdokumentation', href: '/tjanster/3d-kartlaggning' }}
         stats={[
           { value: '0', label: 'Arbete på höjd' },
           { value: 'Snabb', label: 'Leverans' },
@@ -123,7 +123,7 @@ export default function ByggPage() {
                 Materialet kan användas för intern uppföljning, beställarrapporter
                 och som juridisk dokumentation.
               </p>
-              <Link href="/inspektioner-med-dronare/byggplatsdokumentation" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/3d-kartlaggning" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om byggplatsdokumentation &rarr;
               </Link>
             </div>
@@ -133,7 +133,7 @@ export default function ByggPage() {
                 Termisk inspektion av nylagda tak och tätskikt. Identifiera felaktigt utförande,
                 bristfällig isolering och fuktfällor innan garantitiden löper ut.
               </p>
-              <Link href="/inspektioner-med-dronare/takinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/takinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om takinspektion &rarr;
               </Link>
             </div>
@@ -143,7 +143,7 @@ export default function ByggPage() {
                 Dokumentera och verifiera fasadarbeten med högupplösta bilder och termisk
                 analys. Kontrollera att isolering och tätskikt är korrekt utförda.
               </p>
-              <Link href="/inspektioner-med-dronare/fasadinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/fasadinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om fasadinspektion &rarr;
               </Link>
             </div>
@@ -153,7 +153,7 @@ export default function ByggPage() {
                 Termisk inspektion av nyinstallerade solcellsanläggningar för att verifiera
                 att samtliga paneler och strängar fungerar korrekt vid driftsättning.
               </p>
-              <Link href="/inspektioner-med-dronare/solcellsinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/solcellsinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om solcellsinspektion &rarr;
               </Link>
             </div>

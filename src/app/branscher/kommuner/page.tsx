@@ -87,7 +87,7 @@ export default function KommunerPage() {
         headline="Drönarinspektion för kommuner"
         subheadline="Få kontroll över skicket på era kommunala fastigheter och anläggningar. Med termisk kamera och drönarteknik kartlägger vi underhållsbehov på skolor, idrottshallar och offentliga byggnader — effektivt och utan störning i verksamheten."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
-        ctaSecondary={{ label: 'Våra tjänster', href: '/inspektioner-med-dronare' }}
+        ctaSecondary={{ label: 'Våra tjänster', href: '/tjanster/takinspektion' }}
         stats={[
           { value: '0', label: 'Störning i verksamheten' },
           { value: '0', label: 'Arbete på höjd' },
@@ -123,7 +123,7 @@ export default function KommunerPage() {
                 fuktskador och köldbryggor som påverkar inomhusklimatet. Genomförs utan att
                 störa undervisningen.
               </p>
-              <Link href="/inspektioner-med-dronare/takinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/takinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om takinspektion &rarr;
               </Link>
             </div>
@@ -133,7 +133,7 @@ export default function KommunerPage() {
                 Tak på sporthallar, simhallar och arenor är ofta stora och svårinspekterade.
                 Med drönare kartlägger vi skicket snabbt och säkert.
               </p>
-              <Link href="/inspektioner-med-dronare/fasadinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/fasadinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om fasadinspektion &rarr;
               </Link>
             </div>
@@ -143,7 +143,7 @@ export default function KommunerPage() {
                 Termisk inspektion identifierar köldbryggor och energiförluster i kommunala
                 byggnader. Resultatet kan användas som underlag i energibesparingsarbetet.
               </p>
-              <Link href="/inspektioner-med-dronare/solcellsinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/solcellsinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om solcellsinspektion &rarr;
               </Link>
             </div>

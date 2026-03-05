@@ -90,7 +90,7 @@ export default function MalmoPage() {
         headline="Drönarinspektion Malmö — Nybyggt & Kulturhistoriskt"
         subheadline="Malmö växer snabbt med nya stadsdelar som Hyllie och Västra hamnen, samtidigt som stadens äldre bestånd i Limhamn och Kirseberg behöver regelbundet underhåll. SurveyDrone inspekterar tak, fasader och solceller med termisk kamera i hela Malmöregionen — inklusive Lund."
         ctaPrimary={{ label: 'Begär offert — Malmö', href: '/kontakt' }}
-        ctaSecondary={{ label: 'Våra tjänster', href: '/inspektioner-med-dronare' }}
+        ctaSecondary={{ label: 'Våra tjänster', href: '/tjanster/takinspektion' }}
       />
 
       <TrustBar
@@ -123,19 +123,19 @@ export default function MalmoPage() {
               </p>
               <p>
                 Vi erbjuder{' '}
-                <Link href="/inspektioner-med-dronare/takinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/takinspektion" className="text-brand-600 underline hover:text-brand-700">
                   takinspektion
                 </Link>
                 ,{' '}
-                <Link href="/inspektioner-med-dronare/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">
                   fasadinspektion
                 </Link>
                 ,{' '}
-                <Link href="/inspektioner-med-dronare/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
                   solcellsinspektion
                 </Link>
                 {' '}och{' '}
-                <Link href="/inspektioner-med-dronare/byggplatsdokumentation" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/3d-kartlaggning" className="text-brand-600 underline hover:text-brand-700">
                   byggplatsdokumentation
                 </Link>
                 {' '}i Malmö, Lund och hela västra Skåne.

@@ -90,7 +90,7 @@ export default function StockholmPage() {
         headline="Drönarinspektion i Stockholm — Tak, Fasader & Solceller"
         subheadline="Stockholms fastighetsbestånd spänner från sekelskifteshus på Östermalm till moderna kontorskomplex i Solna. SurveyDrone inspekterar tak, fasader och solcellsanläggningar med termisk kamera i hela Stockholmsregionen — från Södermalm och Kungsholmen till Nacka, Huddinge och Täby."
         ctaPrimary={{ label: 'Begär offert — Stockholm', href: '/kontakt' }}
-        ctaSecondary={{ label: 'Våra tjänster', href: '/inspektioner-med-dronare' }}
+        ctaSecondary={{ label: 'Våra tjänster', href: '/tjanster/takinspektion' }}
       />
 
       <TrustBar
@@ -124,19 +124,19 @@ export default function StockholmPage() {
               </p>
               <p>
                 Vi erbjuder{' '}
-                <Link href="/inspektioner-med-dronare/takinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/takinspektion" className="text-brand-600 underline hover:text-brand-700">
                   takinspektion
                 </Link>
                 ,{' '}
-                <Link href="/inspektioner-med-dronare/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">
                   fasadinspektion
                 </Link>
                 ,{' '}
-                <Link href="/inspektioner-med-dronare/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
                   solcellsinspektion
                 </Link>
                 {' '}och{' '}
-                <Link href="/inspektioner-med-dronare/industriell-inspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/industriinspektion" className="text-brand-600 underline hover:text-brand-700">
                   industriell inspektion
                 </Link>
                 {' '}i hela Stockholmsregionen.

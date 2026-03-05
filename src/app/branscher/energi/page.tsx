@@ -87,7 +87,7 @@ export default function EnergiPage() {
         headline="Drönarinspektion för energibranschen"
         subheadline="Maximera drifttiden och minimera energiförluster. Med fullradiometrisk termisk inspektion identifierar vi defekta paneler, hotspots och skador på era energianläggningar — utan avbrott i produktionen."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
-        ctaSecondary={{ label: 'Solcellsinspektion', href: '/inspektioner-med-dronare/solcellsinspektion' }}
+        ctaSecondary={{ label: 'Solcellsinspektion', href: '/tjanster/solcellsinspektion' }}
         stats={[
           { value: '0', label: 'Produktionsstopp' },
           { value: 'Snabb', label: 'Rapportleverans' },
@@ -123,7 +123,7 @@ export default function EnergiPage() {
                 hotspots, defekta celler, PID-effekter och anslutningsproblem med fullradiometrisk
                 datainsamling.
               </p>
-              <Link href="/inspektioner-med-dronare/solcellsinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/solcellsinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om solcellsinspektion &rarr;
               </Link>
             </div>
@@ -133,7 +133,7 @@ export default function EnergiPage() {
                 Visuell och termisk inspektion av kraftledningar, stolpar och transformatorstationer.
                 Identifiera överhettade anslutningar och mekaniska skador på svåråtkomliga platser.
               </p>
-              <Link href="/inspektioner-med-dronare/industriell-inspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/industriinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om industriell inspektion &rarr;
               </Link>
             </div>
@@ -143,7 +143,7 @@ export default function EnergiPage() {
                 Inspektion av tak, fasader och byggnadsskal på energianläggningar. Identifiera
                 fuktskador, isoleringsbrister och underhållsbehov utan att beträda höga höjder.
               </p>
-              <Link href="/inspektioner-med-dronare/takinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
+              <Link href="/tjanster/takinspektion" className="mt-4 inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700">
                 Läs mer om takinspektion &rarr;
               </Link>
             </div>

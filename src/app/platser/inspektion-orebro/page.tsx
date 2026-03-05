@@ -90,7 +90,7 @@ export default function OrebroPage() {
         headline="Drönarinspektion Örebro — Logistik, Bostäder & Handel"
         subheadline="Örebro är Sveriges logistiska knutpunkt med stora lagerfastigheter, aktiva handelsområden i Marieberg och ett bostadsbestånd som sträcker sig från Brickebacken till Baronbackarna. SurveyDrone inspekterar tak, fasader och solceller med termisk kamera i hela Örebroregionen."
         ctaPrimary={{ label: 'Begär offert — Örebro', href: '/kontakt' }}
-        ctaSecondary={{ label: 'Våra tjänster', href: '/inspektioner-med-dronare' }}
+        ctaSecondary={{ label: 'Våra tjänster', href: '/tjanster/takinspektion' }}
       />
 
       <TrustBar
@@ -124,19 +124,19 @@ export default function OrebroPage() {
               </p>
               <p>
                 Vi erbjuder{' '}
-                <Link href="/inspektioner-med-dronare/takinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/takinspektion" className="text-brand-600 underline hover:text-brand-700">
                   takinspektion
                 </Link>
                 ,{' '}
-                <Link href="/inspektioner-med-dronare/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">
                   fasadinspektion
                 </Link>
                 ,{' '}
-                <Link href="/inspektioner-med-dronare/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
                   solcellsinspektion
                 </Link>
                 {' '}och{' '}
-                <Link href="/inspektioner-med-dronare/industriell-inspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/industriinspektion" className="text-brand-600 underline hover:text-brand-700">
                   industriell inspektion
                 </Link>
                 {' '}i hela Örebroregionen.

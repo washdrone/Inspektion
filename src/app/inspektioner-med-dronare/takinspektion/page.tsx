@@ -14,18 +14,18 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 export const metadata: Metadata = createMetadata({
   title: 'Takinspektion med Drönare | SurveyDrone — Hela Sverige',
   description:
-    'Professionell takinspektion med drönare och termisk kamera. Identifiera skador, fukt, köldbryggor och slitage utan att beträda taket. PDRA S-01-certifierat. Rapport inom 48 h.',
+    'Professionell takinspektion med drönare och termisk kamera. Identifiera skador, fukt, köldbryggor och slitage utan att beträda taket. EASA-certifierade piloter. Begär offert.',
   path: '/inspektioner-med-dronare/takinspektion',
 })
 
 const faqItems = [
   {
     question: 'Hur fungerar takinspektion med drönare?',
-    answer: 'Vi flyger med drönare utrustade med termisk kamera och högupplöst RGB-kamera. Den termiska kameran identifierar fukt, köldbryggor och skador som är osynliga för blotta ögat. Hela taket dokumenteras systematiskt och ni får en detaljerad rapport med bilder och åtgärdsförslag inom 48 timmar.',
+    answer: 'Vi flyger med drönare utrustade med termisk kamera och högupplöst RGB-kamera. Den termiska kameran identifierar fukt, köldbryggor och skador som är osynliga för blotta ögat. Hela taket dokumenteras systematiskt och ni får en detaljerad rapport med bilder och åtgärdsförslag normalt inom ett par arbetsdagar.',
   },
   {
     question: 'Vad kostar takinspektion med drönare?',
-    answer: 'Priset varierar beroende på takarea, komplexitet och typ av inspektion. En standardinspektion av ett villatak startar från ca 3 500 SEK. Större fastigheter och industrianläggningar prissätts separat. Kontakta oss för en kostnadsfri offert.',
+    answer: 'Priset varierar beroende på takarea, komplexitet och typ av inspektion. Kontakta oss för en kostnadsfri offert anpassad efter ert behov.',
   },
   {
     question: 'Vilka typer av tak kan inspekteras med drönare?',
@@ -37,11 +37,11 @@ const faqItems = [
   },
   {
     question: 'Hur ofta bör man inspektera taket?',
-    answer: 'Vi rekommenderar en takinspektion minst en gång per år, eller efter kraftig storm, hagel eller andra extrema väderhändelser. Regelbundna inspektioner förebygger kostsamma reparationer.',
+    answer: 'Regelbundna takinspektioner förebygger kostsamma reparationer. Vi rekommenderar att inspektera efter kraftig storm, hagel eller andra extrema väderhändelser. Kontakta oss för att diskutera lämpligt intervall för er fastighet.',
   },
   {
     question: 'Hur skiljer sig drönarinspektion från traditionell takinspektion?',
-    answer: 'Traditionell inspektion kräver byggnadsställningar, skylift eller att en person beträder taket — vilket medför både kostnader och arbetsmiljörisker. Med drönare inspekteras taket från luften, upp till 80% snabbare och till betydligt lägre kostnad. Dessutom ger termisk kamera data som traditionell inspektion inte kan leverera.',
+    answer: 'Traditionell inspektion kräver byggnadsställningar, skylift eller att en person beträder taket — vilket medför både kostnader och arbetsmiljörisker. Med drönare inspekteras taket från luften, avsevärt snabbare och till betydligt lägre kostnad. Dessutom ger termisk kamera data som traditionell inspektion inte kan leverera.',
   },
   {
     question: 'Vad ingår i rapporten från en takinspektion?',
@@ -86,17 +86,17 @@ export default function TakinspektionPage() {
         subheadline="Identifiera skador, fukt, köldbryggor och slitage på ert tak — snabbt, säkert och utan att någon behöver beträda takytan. Perfekt för fastighetsägare, BRF:er och förvaltare."
         ctaPrimary={{ label: 'Begär offert för takinspektion', href: '/inspektioner-med-dronare/kontakt' }}
         stats={[
-          { value: 'Upp till 50%', label: 'Lägre kostnad vs ställning' },
-          { value: '1–3h', label: 'Inspektion på plats' },
-          { value: '48h', label: 'Rapportleverans' },
+          { value: 'Betydligt', label: 'Lägre kostnad vs ställning' },
+          { value: 'Timmar', label: 'Inspektion på plats' },
+          { value: 'Snabb', label: 'Rapportleverans' },
           { value: '0', label: 'Arbete på höjd' },
         ]}
       />
 
       <TrustBar
         items={[
-          'PDRA S-01-certifierade',
           'EASA-certifierade fjärrpiloter',
+          'Ansvarsförsäkrade',
           'Termisk kamera & RGB',
           'Alla taktyper och material',
         ]}
@@ -117,7 +117,7 @@ export default function TakinspektionPage() {
           },
           {
             title: 'Snabbt genomförande',
-            description: 'De flesta tak inspekteras på 1–2 timmar, utan förberedelse av ställningar.',
+            description: 'De flesta tak inspekteras på ett par timmar, utan förberedelse av ställningar.',
             icon: 'clock',
           },
           {
@@ -171,7 +171,7 @@ export default function TakinspektionPage() {
           {
             number: 2,
             title: 'Flygning med termisk & RGB-kamera',
-            description: 'PDRA S-01-certifierad pilot flyger drönaren över taket och samlar in termisk och visuell data.',
+            description: 'EASA-certifierad pilot flyger drönaren över taket och samlar in termisk och visuell data.',
           },
           {
             number: 3,
@@ -181,7 +181,7 @@ export default function TakinspektionPage() {
           {
             number: 4,
             title: 'Leverans',
-            description: 'Ni får rapport med termiska bilder, RGB-bilder och åtgärdsförslag inom 48 timmar.',
+            description: 'Ni får rapport med termiska bilder, RGB-bilder och åtgärdsförslag normalt inom ett par arbetsdagar.',
           },
         ]}
       />
@@ -210,7 +210,7 @@ export default function TakinspektionPage() {
 
       <CtaBand
         headline="Boka takinspektion med drönare"
-        description="Kontakta oss för en kostnadsfri offert. Vi inspekterar alla typer av tak i hela Sverige med termisk kamera."
+        description="Kontakta oss för en kostnadsfri offert. Vi inspekterar alla typer av tak med termisk kamera."
         ctaLabel="Begär offert"
       />
     </>

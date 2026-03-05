@@ -14,7 +14,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 export const metadata: Metadata = createMetadata({
   title: 'Solcellsinspektion Drönare | SurveyDrone — Termisk Analys',
   description:
-    'Solcellsinspektion med drönare och termisk kamera. Hitta hotspots, defekta paneler och prestandaproblem. Optimera er solcellsanläggning. PDRA S-01-certifierat.',
+    'Solcellsinspektion med drönare och termisk kamera. Hitta hotspots, defekta paneler och prestandaproblem. Optimera er solcellsanläggning. EASA-certifierade piloter.',
   path: '/inspektioner-med-dronare/solcellsinspektion',
 })
 
@@ -29,11 +29,11 @@ const faqItems = [
   },
   {
     question: 'Hur ofta bör solceller inspekteras?',
-    answer: 'Vi rekommenderar en inspektion minst en gång per år för att säkerställa optimal prestanda. Vid äldre anläggningar eller efter extremväder kan tätare intervall vara motiverat. Regelbundna termiska inspektioner kan öka anläggningens livslängd betydligt.',
+    answer: 'Regelbundna inspektioner hjälper till att säkerställa optimal prestanda. Vid äldre anläggningar eller efter extremväder kan tätare intervall vara motiverat. Kontakta oss för att diskutera lämpligt intervall för er anläggning.',
   },
   {
     question: 'Kan ni inspektera stora solcellsparker?',
-    answer: 'Ja, drönare med termisk kamera är särskilt effektiva för stora anläggningar. Vi kan inspektera solcellsparker med hundratals eller tusentals paneler på kort tid — upp till 10x snabbare än manuell kontroll.',
+    answer: 'Ja, drönare med termisk kamera är särskilt effektiva för stora anläggningar. Vi kan inspektera solcellsparker med hundratals eller tusentals paneler avsevärt snabbare än manuell kontroll.',
   },
   {
     question: 'Vad kostar solcellsinspektion med drönare?',
@@ -86,8 +86,8 @@ export default function SolcellsinspektionPage() {
         subheadline="Identifiera hotspots, defekta celler och prestandaproblem i er solcellsanläggning med termisk kamera och drönare. Optimera energiproduktionen och förläng anläggningens livslängd."
         ctaPrimary={{ label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' }}
         stats={[
-          { value: 'Upp till 10x', label: 'Snabbare vs manuell kontroll' },
-          { value: '48h', label: 'Rapportleverans' },
+          { value: 'Avsevärt', label: 'Snabbare vs manuell kontroll' },
+          { value: 'Snabb', label: 'Rapportleverans' },
           { value: '0', label: 'Driftstopp krävs' },
           { value: '0', label: 'Arbete på höjd' },
         ]}
@@ -95,8 +95,8 @@ export default function SolcellsinspektionPage() {
 
       <TrustBar
         items={[
-          'PDRA S-01-certifierade',
           'EASA-certifierade fjärrpiloter',
+          'Ansvarsförsäkrade',
           'Termisk kamera (IR)',
           'Alla anläggningsstorlekar',
         ]}

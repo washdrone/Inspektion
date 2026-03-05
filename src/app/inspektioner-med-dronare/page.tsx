@@ -15,7 +15,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 export const metadata: Metadata = createMetadata({
   title: 'Drönare-Inspektion | SurveyDrone — Tak, Fasad, Solceller & Industri',
   description:
-    'SurveyDrone erbjuder professionell drönare-inspektion med termisk kamera i hela Sverige. Tak, fasader, solceller, industri och byggdokumentation. PDRA S-01-certifierat. Begär offert.',
+    'SurveyDrone erbjuder professionell drönare-inspektion med termisk kamera i hela Sverige. Tak, fasader, solceller, industri och byggdokumentation. EASA-certifierade piloter. Begär offert.',
   path: '/inspektioner-med-dronare',
 })
 
@@ -49,17 +49,17 @@ export default function InspektionerHubPage() {
         ctaPrimary={{ label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' }}
         ctaSecondary={{ label: 'Se prisguide', href: '/inspektioner-med-dronare/priser' }}
         stats={[
-          { value: 'Upp till 50%', label: 'Lägre inspektionskostnad' },
-          { value: 'Upp till 80%', label: 'Snabbare genomförande' },
-          { value: '48h', label: 'Rapportleverans' },
+          { value: 'Betydligt', label: 'Lägre inspektionskostnad' },
+          { value: 'Avsevärt', label: 'Snabbare genomförande' },
+          { value: 'Snabb', label: 'Rapportleverans' },
           { value: '0', label: 'Arbete på höjd' },
         ]}
       />
 
       <TrustBar
         items={[
-          'PDRA S-01-certifierade',
           'EASA-certifierade fjärrpiloter',
+          'Ansvarsförsäkrade',
           'Termisk kamera & RGB',
           'Verksamma i hela Sverige',
         ]}
@@ -113,7 +113,7 @@ export default function InspektionerHubPage() {
           },
           {
             title: 'Snabbare resultat',
-            description: 'En inspektion som normalt tar dagar kan genomföras på timmar, med rapport inom 48 timmar.',
+            description: 'En inspektion som normalt tar dagar kan genomföras på timmar, med rapport normalt inom ett par arbetsdagar.',
             icon: 'clock',
           },
           {
@@ -172,7 +172,7 @@ export default function InspektionerHubPage() {
           {
             number: 4,
             title: 'Rapport & leverans',
-            description: 'Ni får en tydlig rapport med bilder, noteringar och rekommendationer — normalt inom 48 timmar.',
+            description: 'Ni får en tydlig rapport med bilder, noteringar och rekommendationer — normalt normalt inom ett par arbetsdagar.',
           },
         ]}
       />
@@ -180,22 +180,22 @@ export default function InspektionerHubPage() {
       <Testimonials
         testimonials={[
           {
-            quote: 'Vi inspekterade taken på 12 fastigheter på två dagar istället för två veckor. Rapporten var tydlig och gav oss ett bra beslutsunderlag för planerat underhåll.',
-            name: 'Anna Lindqvist',
-            role: 'Teknisk förvaltare',
-            company: 'Fastighetsbolaget AB',
+            quote: 'Vi inspekterade taken på flera fastigheter på kort tid istället för veckor. Rapporten var tydlig och gav oss ett bra beslutsunderlag för planerat underhåll.',
+            name: 'Teknisk förvaltare',
+            role: 'Fastighetsförvaltning',
+            company: '',
           },
           {
-            quote: 'Drönarinspektionen sparade oss både tid och pengar. Inga ställningar, ingen risk för personalen och vi fick bilderna samma dag.',
-            name: 'Erik Johansson',
-            role: 'Projektledare',
-            company: 'Byggnads & Co',
+            quote: 'Drönarinspektionen sparade oss både tid och pengar. Inga ställningar, ingen risk för personalen och vi fick bilderna snabbt.',
+            name: 'Projektledare',
+            role: 'Byggbranschen',
+            company: '',
           },
           {
-            quote: 'Tack vare termografering med drönare hittade vi defekta paneler som vi aldrig hade upptäckt från marken. Det förbättrade vår anläggnings effekt direkt.',
-            name: 'Maria Bergström',
-            role: 'Driftansvarig',
-            company: 'SolEnergi Sverige',
+            quote: 'Tack vare inspektion med drönare hittade vi defekta paneler som vi aldrig hade upptäckt från marken. Det förbättrade vår anläggnings effekt.',
+            name: 'Driftansvarig',
+            role: 'Energibranschen',
+            company: '',
           },
         ]}
       />
@@ -205,15 +205,15 @@ export default function InspektionerHubPage() {
         items={[
           {
             question: 'Hur lång tid tar en typisk drönarinspektion?',
-            answer: 'En inspektion på plats tar normalt mellan 1–3 timmar beroende på objektets storlek och komplexitet. Rapporten levereras sedan inom 48 timmar.',
+            answer: 'En inspektion på plats tar normalt mellan 1–3 timmar beroende på objektets storlek och komplexitet. Rapporten levereras sedan normalt inom ett par arbetsdagar.',
           },
           {
             question: 'Behövs det tillstånd för att flyga drönare vid en inspektion?',
-            answer: 'Vi sköter alla nödvändiga tillstånd och anmälningar. Våra piloter är EASA-certifierade och vi följer Transportstyrelsens regler för drönare.',
+            answer: 'Vi sköter alla nödvändiga tillstånd och anmälningar. Våra piloter är EASA-certifierade och vi följer Transportstyrelsens regler för drönare i Sverige.',
           },
           {
             question: 'Kan ni flyga i tätbebyggda områden?',
-            answer: 'Ja, vi har tillstånd och kompetens att operera i tätbebyggt område. Vi genomför alltid en riskbedömning innan varje flygning.',
+            answer: 'Ja, vi har kompetens och rutiner för att operera säkert i tätbebyggda områden. Vi genomför alltid en riskbedömning och anmälan enligt gällande regler.',
           },
           {
             question: 'Vad ingår i rapporten?',

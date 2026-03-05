@@ -21,7 +21,7 @@ const pricingTiers = [
       'Rapport med bilder och noteringar',
       'Rekommenderade åtgärder',
       'Digitalt bildarkiv',
-      'Leverans inom 48 timmar',
+      'Snabb leverans av rapport',
     ],
     cta: 'Begär prisförslag',
   },
@@ -86,7 +86,7 @@ export default function PriserPage() {
             >
               {tier.highlighted && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-pill bg-brand-500 px-4 py-1 text-xs font-semibold text-white shadow-glow">
-                  Populärast
+                  Rekommenderat
                 </div>
               )}
               <h2 className="text-xl font-bold text-dark-900">{tier.name}</h2>

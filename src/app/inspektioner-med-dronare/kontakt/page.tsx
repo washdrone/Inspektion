@@ -7,7 +7,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 export const metadata: Metadata = createMetadata({
   title: 'Begär Offert — Drönare-Inspektion | SurveyDrone',
   description:
-    'Begär en kostnadsfri offert för drönare-inspektion med termisk kamera. Fyll i formuläret eller kontakta oss direkt. SurveyDrone — PDRA S-01-certifierat.',
+    'Begär en kostnadsfri offert för drönare-inspektion med termisk kamera. Fyll i formuläret eller kontakta oss direkt. SurveyDrone — EASA-certifierade piloter.',
   path: '/inspektioner-med-dronare/kontakt',
 })
 
@@ -54,12 +54,6 @@ export default function KontaktPage() {
                     </a>
                   </div>
                   <div>
-                    <p className="font-medium text-dark-900">Telefon</p>
-                    <a href={`tel:${CONTACT.phone}`} className="text-brand-600 hover:text-brand-700">
-                      {CONTACT.phoneDisplay}
-                    </a>
-                  </div>
-                  <div>
                     <p className="font-medium text-dark-900">Svarstid</p>
                     <p>Vi svarar normalt inom en arbetsdag.</p>
                   </div>
@@ -79,7 +73,7 @@ export default function KontaktPage() {
                   </li>
                   <li className="flex gap-3">
                     <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-brand-700">3</span>
-                    <span>Inspektionen genomförs och rapport levereras inom 48 h.</span>
+                    <span>Inspektionen genomförs och rapport levereras.</span>
                   </li>
                 </ol>
               </div>

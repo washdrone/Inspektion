@@ -14,7 +14,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 export const metadata: Metadata = createMetadata({
   title: 'Byggplatsdokumentation Drönare | SurveyDrone — Flygbilder & Ortofoto',
   description:
-    'Dokumentera byggprojektets framsteg med drönare. Flygbilder, ortofoto och 3D-modeller för byggföretag och beställare. PDRA S-01-certifierat. Begär offert.',
+    'Dokumentera byggprojektets framsteg med drönare. Flygbilder och ortofoto för byggföretag och beställare. EASA-certifierade piloter. Begär offert.',
   path: '/inspektioner-med-dronare/byggplatsdokumentation',
 })
 
@@ -70,8 +70,8 @@ export default function ByggplatsdokumentationPage() {
         subheadline="Följ ert byggprojekts framsteg med regelbundna flygbilder. Ge beställare, projektledare och intressenter en tydlig bild av projektets status — rakt uppifrån."
         ctaPrimary={{ label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' }}
         stats={[
-          { value: 'Upp till 55%', label: 'Lägre dokumentationskostnad' },
-          { value: '48h', label: 'Leverans per tillfälle' },
+          { value: 'Betydligt', label: 'Lägre dokumentationskostnad' },
+          { value: 'Snabb', label: 'Leverans per tillfälle' },
           { value: 'V/2V/M', label: 'Flexibla intervall' },
           { value: '0', label: 'Störning av pågående arbete' },
         ]}
@@ -79,10 +79,10 @@ export default function ByggplatsdokumentationPage() {
 
       <TrustBar
         items={[
-          'PDRA S-01-certifierade',
           'EASA-certifierade fjärrpiloter',
           'Ansvarsförsäkrade',
           'Erfarenhet av byggprojekt',
+          'Termisk kamera & RGB',
         ]}
       />
 

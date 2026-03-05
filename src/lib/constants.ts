@@ -18,8 +18,18 @@ export const COMPANY_LINKS = [
   { href: '/inspektioner-med-dronare/kontakt', label: 'Kontakt' },
 ] as const
 
+export const REGION_LINKS = [
+  { href: '/inspektioner-med-dronare/stockholm', label: 'Stockholm' },
+  { href: '/inspektioner-med-dronare/goteborg', label: 'Göteborg' },
+  { href: '/inspektioner-med-dronare/malmo', label: 'Malmö' },
+  { href: '/inspektioner-med-dronare/uppsala', label: 'Uppsala' },
+  { href: '/inspektioner-med-dronare/linkoping', label: 'Linköping' },
+  { href: '/inspektioner-med-dronare/orebro', label: 'Örebro' },
+  { href: '/inspektioner-med-dronare/vasteras', label: 'Västerås' },
+  { href: '/inspektioner-med-dronare/umea', label: 'Umeå' },
+  { href: '/inspektioner-med-dronare/lulea', label: 'Luleå' },
+] as const
+
 export const CONTACT = {
   email: 'info@surveydrone.se',
-  phone: '+46XXXXXXXXX',
-  phoneDisplay: '+46 (0)XX-XXX XX XX',
 } as const

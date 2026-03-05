@@ -14,7 +14,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 export const metadata: Metadata = createMetadata({
   title: 'Fasadinspektion Drönare | SurveyDrone — Utan Skylift',
   description:
-    'Professionell fasadinspektion med drönare. Kartlägg sprickor, fukt, mögel och skador utan ställningar eller skylift. PDRA S-01-certifierat. Rapport inom 48 h.',
+    'Professionell fasadinspektion med drönare. Kartlägg sprickor, fukt, mögel och skador utan ställningar eller skylift. EASA-certifierade piloter. Begär offert.',
   path: '/inspektioner-med-dronare/fasadinspektion',
 })
 
@@ -33,7 +33,7 @@ const faqItems = [
   },
   {
     question: 'Hur ofta bör man inspektera fasaden?',
-    answer: 'En fasadinspektion vart tredje till femte år är en bra utgångspunkt, eller vid misstanke om skada efter stormar eller andra händelser. Regelbundna inspektioner förebygger kostsamma reparationer.',
+    answer: 'Regelbundna fasadinspektioner förebygger kostsamma reparationer. Vid misstanke om skada efter stormar eller andra händelser bör fasaden kontrolleras. Kontakta oss för att diskutera lämpligt intervall för er fastighet.',
   },
   {
     question: 'Vad kostar fasadinspektion med drönare?',
@@ -75,20 +75,20 @@ export default function FasadinspektionPage() {
 
       <Hero
         headline="Fasadinspektion med Drönare — Sprickor, Skador & Fukt"
-        subheadline="Dokumentera hela fasadens skick med högupplösta flygbilder. Identifiera sprickor, fuktskador, mögel och slitage — utan byggnadsställningar eller skylift. PDRA S-01-certifierat."
+        subheadline="Dokumentera hela fasadens skick med högupplösta flygbilder. Identifiera sprickor, fuktskador, mögel och slitage — utan byggnadsställningar eller skylift."
         ctaPrimary={{ label: 'Begär offert för fasadinspektion', href: '/inspektioner-med-dronare/kontakt' }}
         stats={[
-          { value: 'Upp till 50%', label: 'Lägre kostnad vs ställning' },
-          { value: 'Upp till 80%', label: 'Snabbare genomförande' },
-          { value: '48h', label: 'Rapportleverans' },
+          { value: 'Betydligt', label: 'Lägre kostnad vs ställning' },
+          { value: 'Avsevärt', label: 'Snabbare genomförande' },
+          { value: 'Snabb', label: 'Rapportleverans' },
           { value: '0', label: 'Arbete på höjd' },
         ]}
       />
 
       <TrustBar
         items={[
-          'PDRA S-01-certifierade',
           'EASA-certifierade fjärrpiloter',
+          'Ansvarsförsäkrade',
           'Termisk kamera & RGB',
           'Alla fasadmaterial',
         ]}

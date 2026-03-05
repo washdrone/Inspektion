@@ -2,11 +2,12 @@
 
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import { INSPECTION_LINKS } from '@/lib/constants'
+import { SERVICE_LINKS, INDUSTRY_LINKS } from '@/lib/constants'
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [industriesOpen, setIndustriesOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -27,7 +28,7 @@ export function Header() {
     >
       <nav className="container-content flex h-20 items-center justify-between" aria-label="Huvudnavigering">
         <Link href="/" className="flex items-center gap-2.5">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-500">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-700">
             <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
             </svg>
@@ -39,25 +40,25 @@ export function Header() {
         <div className="hidden items-center gap-1 lg:flex">
           <div
             className="relative"
-            onMouseEnter={() => setDropdownOpen(true)}
-            onMouseLeave={() => setDropdownOpen(false)}
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
           >
-            <Link
-              href="/inspektioner-med-dronare"
+            <button
+              type="button"
               className="flex items-center gap-1 rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
             >
-              Inspektioner
+              Tjänster
               <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
-            </Link>
-            {dropdownOpen && (
+            </button>
+            {servicesOpen && (
               <div className="absolute left-0 top-full z-50 mt-1 w-60 rounded-2xl border border-white/10 bg-dark-800/95 py-2 shadow-xl backdrop-blur-md">
-                {INSPECTION_LINKS.map((link) => (
+                {SERVICE_LINKS.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="block px-4 py-2.5 text-sm text-white/70 transition-colors hover:bg-white/5 hover:text-brand-400"
+                    className="block px-4 py-2.5 text-sm text-white/70 transition-colors hover:bg-white/5 hover:text-accent-400"
                   >
                     {link.label}
                   </Link>
@@ -65,16 +66,44 @@ export function Header() {
               </div>
             )}
           </div>
-          <Link href="/inspektioner-med-dronare/case" className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
-            Kundcase
+          <div
+            className="relative"
+            onMouseEnter={() => setIndustriesOpen(true)}
+            onMouseLeave={() => setIndustriesOpen(false)}
+          >
+            <button
+              type="button"
+              className="flex items-center gap-1 rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
+            >
+              Branscher
+              <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {industriesOpen && (
+              <div className="absolute left-0 top-full z-50 mt-1 w-52 rounded-2xl border border-white/10 bg-dark-800/95 py-2 shadow-xl backdrop-blur-md">
+                {INDUSTRY_LINKS.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block px-4 py-2.5 text-sm text-white/70 transition-colors hover:bg-white/5 hover:text-accent-400"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+          <Link href="/hur-det-gar-till" className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
+            Hur det går till
           </Link>
-          <Link href="/inspektioner-med-dronare/priser" className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
-            Prisguide
+          <Link href="/priser" className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
+            Priser
           </Link>
-          <Link href="/inspektioner-med-dronare/faq" className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
-            FAQ
+          <Link href="/om-oss" className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
+            Om oss
           </Link>
-          <Link href="/inspektioner-med-dronare/kontakt" className="btn-primary ml-3">
+          <Link href="/kontakt" className="btn-primary ml-3">
             Begär offert
           </Link>
         </div>
@@ -103,19 +132,25 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="border-t border-white/10 bg-dark-900/98 backdrop-blur-lg lg:hidden">
           <div className="container-content space-y-1 py-6">
-            <Link href="/inspektioner-med-dronare" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>
-              Alla inspektioner
-            </Link>
-            {INSPECTION_LINKS.map((link) => (
-              <Link key={link.href} href={link.href} className="block rounded-xl px-4 py-2.5 pl-8 text-sm text-white/60 hover:bg-white/5 hover:text-brand-400" onClick={() => setMobileMenuOpen(false)}>
+            <p className="px-4 pb-1 text-xs font-semibold uppercase tracking-widest text-dark-400">Tjänster</p>
+            {SERVICE_LINKS.map((link) => (
+              <Link key={link.href} href={link.href} className="block rounded-xl px-4 py-2.5 pl-6 text-sm text-white/60 hover:bg-white/5 hover:text-accent-400" onClick={() => setMobileMenuOpen(false)}>
                 {link.label}
               </Link>
             ))}
-            <Link href="/inspektioner-med-dronare/case" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>Kundcase</Link>
-            <Link href="/inspektioner-med-dronare/priser" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>Prisguide</Link>
-            <Link href="/inspektioner-med-dronare/faq" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
+            <p className="px-4 pb-1 pt-3 text-xs font-semibold uppercase tracking-widest text-dark-400">Branscher</p>
+            {INDUSTRY_LINKS.map((link) => (
+              <Link key={link.href} href={link.href} className="block rounded-xl px-4 py-2.5 pl-6 text-sm text-white/60 hover:bg-white/5 hover:text-accent-400" onClick={() => setMobileMenuOpen(false)}>
+                {link.label}
+              </Link>
+            ))}
+            <div className="border-t border-white/10 pt-3 mt-3">
+              <Link href="/hur-det-gar-till" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>Hur det går till</Link>
+              <Link href="/priser" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>Priser</Link>
+              <Link href="/om-oss" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>Om oss</Link>
+            </div>
             <div className="pt-4">
-              <Link href="/inspektioner-med-dronare/kontakt" className="btn-primary block w-full text-center" onClick={() => setMobileMenuOpen(false)}>Begär offert</Link>
+              <Link href="/kontakt" className="btn-primary block w-full text-center" onClick={() => setMobileMenuOpen(false)}>Begär offert</Link>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ export function organizationSchema() {
     name: 'SurveyDrone',
     url: BASE_URL,
     description:
-      'Professionell drönare-inspektion i hela Sverige. Termisk kamera, takinspektion, fasadinspektion och solcellsinspektion. EASA-certifierade piloter.',
+      'Professionell drönare-inspektion med termisk kamera i hela Sverige. Tak, fasader, solceller och industri. EASA-certifierade piloter och fullradiometrisk datainsamling.',
     email: CONTACT.email,
     address: {
       '@type': 'PostalAddress',
@@ -31,8 +31,11 @@ export function organizationSchema() {
       'Solcellsinspektion',
       'Termisk kamera inspektion',
       'IR-inspektion',
-      'Byggplatsdokumentation',
-      'Industriell inspektion',
+      'Fuktinspektion',
+      'Industriinspektion',
+      'Vindkraftinspektion',
+      '3D-kartläggning',
+      'Fotogrammetri',
       'UAS',
       'RPAS',
     ],
@@ -113,5 +116,43 @@ export function breadcrumbSchema(
       name: item.name,
       item: `${BASE_URL}${item.url}`,
     })),
+  }
+}
+
+export function localBusinessSchema({
+  name,
+  description,
+  url,
+  city,
+  latitude,
+  longitude,
+}: {
+  name: string
+  description: string
+  url: string
+  city: string
+  latitude: number
+  longitude: number
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name,
+    description,
+    url: `${BASE_URL}${url}`,
+    email: CONTACT.email,
+    areaServed: {
+      '@type': 'City',
+      name: city,
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude,
+        longitude,
+      },
+    },
+    parentOrganization: {
+      '@type': 'ProfessionalService',
+      '@id': `${BASE_URL}/#organization`,
+    },
   }
 }

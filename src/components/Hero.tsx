@@ -38,7 +38,7 @@ function AnimatedStat({ value, label, visible, index }: { value: string; label: 
 export function Hero({
   headline,
   subheadline,
-  ctaPrimary = { label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' },
+  ctaPrimary = { label: 'Begär offert', href: '/kontakt' },
   ctaSecondary,
   stats,
 }: HeroProps) {
@@ -63,14 +63,14 @@ export function Hero({
         <div className="max-w-3xl">
           {/* Eyebrow */}
           <div
-            className="mb-6 inline-flex items-center gap-2 rounded-pill border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 transition-all duration-700"
+            className="mb-6 inline-flex items-center gap-2 rounded-pill border border-accent-400/30 bg-accent-400/10 px-4 py-1.5 transition-all duration-700"
             style={{
               opacity: visible ? 1 : 0,
               transform: visible ? 'translateY(0)' : 'translateY(20px)',
             }}
           >
-            <div className="h-1.5 w-1.5 rounded-full bg-brand-400 animate-pulse" />
-            <span className="text-xs font-medium uppercase tracking-wider text-brand-400">
+            <div className="h-1.5 w-1.5 rounded-full bg-accent-400 animate-pulse" />
+            <span className="text-xs font-medium uppercase tracking-wider text-accent-400">
               Drönarinspektioner för företag
             </span>
           </div>

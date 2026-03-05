@@ -3,31 +3,46 @@
  * Single source of truth for links used in Header, Footer, and internal navigation.
  */
 
-export const INSPECTION_LINKS = [
-  { href: '/inspektioner-med-dronare/takinspektion', label: 'Takinspektion' },
-  { href: '/inspektioner-med-dronare/fasadinspektion', label: 'Fasadinspektion' },
-  { href: '/inspektioner-med-dronare/solcellsinspektion', label: 'Solcellsinspektion' },
-  { href: '/inspektioner-med-dronare/byggplatsdokumentation', label: 'Byggplatsdokumentation' },
-  { href: '/inspektioner-med-dronare/industriell-inspektion', label: 'Industriell inspektion' },
+export const SERVICE_LINKS = [
+  { href: '/tjanster/takinspektion', label: 'Takinspektion' },
+  { href: '/tjanster/fasadinspektion', label: 'Fasadinspektion' },
+  { href: '/tjanster/solcellsinspektion', label: 'Solcellsinspektion' },
+  { href: '/tjanster/termisk-inspektion', label: 'Termisk inspektion' },
+  { href: '/tjanster/fuktinspektion', label: 'Fuktinspektion' },
+  { href: '/tjanster/industriinspektion', label: 'Industriinspektion' },
+  { href: '/tjanster/vindkraftinspektion', label: 'Vindkraftinspektion' },
+  { href: '/tjanster/3d-kartlaggning', label: '3D-kartläggning' },
 ] as const
 
-export const COMPANY_LINKS = [
-  { href: '/inspektioner-med-dronare/case', label: 'Kundcase' },
-  { href: '/inspektioner-med-dronare/priser', label: 'Prisguide' },
-  { href: '/inspektioner-med-dronare/faq', label: 'Vanliga frågor' },
-  { href: '/inspektioner-med-dronare/kontakt', label: 'Kontakt' },
+export const INDUSTRY_LINKS = [
+  { href: '/branscher/fastighet', label: 'Fastighet' },
+  { href: '/branscher/energi', label: 'Energi' },
+  { href: '/branscher/industri', label: 'Industri' },
+  { href: '/branscher/kommuner', label: 'Kommuner' },
+  { href: '/branscher/forsakring', label: 'Försäkring' },
+  { href: '/branscher/bygg', label: 'Bygg' },
 ] as const
 
 export const REGION_LINKS = [
-  { href: '/inspektioner-med-dronare/stockholm', label: 'Stockholm' },
-  { href: '/inspektioner-med-dronare/goteborg', label: 'Göteborg' },
-  { href: '/inspektioner-med-dronare/malmo', label: 'Malmö' },
-  { href: '/inspektioner-med-dronare/uppsala', label: 'Uppsala' },
-  { href: '/inspektioner-med-dronare/linkoping', label: 'Linköping' },
-  { href: '/inspektioner-med-dronare/orebro', label: 'Örebro' },
-  { href: '/inspektioner-med-dronare/vasteras', label: 'Västerås' },
-  { href: '/inspektioner-med-dronare/umea', label: 'Umeå' },
-  { href: '/inspektioner-med-dronare/lulea', label: 'Luleå' },
+  { href: '/platser/inspektion-stockholm', label: 'Stockholm' },
+  { href: '/platser/inspektion-goteborg', label: 'Göteborg' },
+  { href: '/platser/inspektion-malmo', label: 'Malmö' },
+  { href: '/platser/inspektion-uppsala', label: 'Uppsala' },
+  { href: '/platser/inspektion-linkoping', label: 'Linköping' },
+  { href: '/platser/inspektion-orebro', label: 'Örebro' },
+  { href: '/platser/inspektion-vasteras', label: 'Västerås' },
+  { href: '/platser/inspektion-helsingborg', label: 'Helsingborg' },
+  { href: '/platser/inspektion-norrkoping', label: 'Norrköping' },
+  { href: '/platser/inspektion-umea', label: 'Umeå' },
+] as const
+
+export const COMPANY_LINKS = [
+  { href: '/om-oss', label: 'Om oss' },
+  { href: '/hur-det-gar-till', label: 'Hur det går till' },
+  { href: '/priser', label: 'Prisguide' },
+  { href: '/forvaltningsavtal', label: 'Förvaltningsavtal' },
+  { href: '/ordlista', label: 'Ordlista' },
+  { href: '/kontakt', label: 'Kontakt' },
 ] as const
 
 export const CONTACT = {

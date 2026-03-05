@@ -101,8 +101,12 @@ export function ContactForm({ headline, subtitle, serviceContext }: ContactFormP
             <option value="takinspektion">Takinspektion</option>
             <option value="fasadinspektion">Fasadinspektion</option>
             <option value="solcellsinspektion">Solcellsinspektion</option>
-            <option value="byggplatsdokumentation">Byggplatsdokumentation</option>
-            <option value="industriell-inspektion">Industriell inspektion</option>
+            <option value="termisk-inspektion">Termisk inspektion</option>
+            <option value="fuktinspektion">Fuktinspektion</option>
+            <option value="industriinspektion">Industriinspektion</option>
+            <option value="vindkraftinspektion">Vindkraftinspektion</option>
+            <option value="3d-kartlaggning">3D-kartläggning</option>
+            <option value="forvaltningsavtal">Förvaltningsavtal</option>
             <option value="annat">Annat / Osäker</option>
           </select>
         </div>

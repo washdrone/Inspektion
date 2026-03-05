@@ -14,13 +14,13 @@ export function CtaBand({
   headline,
   description,
   ctaLabel = 'Begär offert',
-  ctaHref = '/inspektioner-med-dronare/kontakt',
+  ctaHref = '/kontakt',
 }: CtaBandProps) {
   const { ref, visible } = useReveal()
 
   return (
     <section ref={ref} className="relative overflow-hidden bg-dark-900">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(6,182,212,0.1)_0%,_transparent_70%)]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(27,58,107,0.15)_0%,_transparent_70%)]" aria-hidden="true" />
       <div className="container-content relative z-10 py-20 text-center md:py-28">
         <h2
           className="text-heading-lg font-extrabold text-white sm:text-display transition-all duration-700"

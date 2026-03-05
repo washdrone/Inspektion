@@ -9,11 +9,11 @@ import { organizationSchema, websiteSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: `SurveyDrone | Drönare-Inspektion Hela Sverige — Termisk & Visuell`,
+    default: `SurveyDrone | Drönare-Inspektion Sverige — Termisk & Visuell`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    'SurveyDrone erbjuder professionell drönare-inspektion i hela Sverige. Tak, fasader, solceller & industri med termisk kamera. PDRA S-01-certifierat. Begär offert.',
+    'SurveyDrone erbjuder professionell drönare-inspektion i Sverige. Tak, fasader, solceller & industri med termisk kamera. EASA-certifierade piloter. Begär offert.',
   openGraph: {
     locale: 'sv_SE',
     type: 'website',

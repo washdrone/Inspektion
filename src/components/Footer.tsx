@@ -16,7 +16,7 @@ export function Footer() {
               <span className="text-lg font-bold text-white">SurveyDrone</span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-dark-400">
-              Professionell drönare-inspektion med termisk kamera i hela Sverige. Tak, fasader, solceller och industri. PDRA S-01-certifierat.
+              Professionell drönare-inspektion med termisk kamera i Sverige. Tak, fasader, solceller och industri. EASA-certifierade piloter.
             </p>
           </div>
           <div>
@@ -52,7 +52,7 @@ export function Footer() {
           <p className="text-xs text-dark-500">&copy; {new Date().getFullYear()} SurveyDrone Sverige AB. Alla rättigheter förbehållna.</p>
           <div className="flex items-center gap-1.5 text-xs text-dark-500">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-500" />
-            PDRA S-01 &amp; EASA-certifierade fjärrpiloter
+            EASA-certifierade fjärrpiloter &amp; ansvarsförsäkrade
           </div>
         </div>
       </div>

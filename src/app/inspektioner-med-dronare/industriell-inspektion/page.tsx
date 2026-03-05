@@ -14,7 +14,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 export const metadata: Metadata = createMetadata({
   title: 'Industriinspektion med Drönare | SurveyDrone — Tankar, Torn & Pipelines',
   description:
-    'Drönarinspektion av industrianläggningar, cisterner, skorstenar och svåråtkomliga strukturer. Minimera driftstopp och arbetsmiljörisker. PDRA S-01-certifierat.',
+    'Drönarinspektion av industrianläggningar, cisterner, skorstenar och svåråtkomliga strukturer. Minimera driftstopp och arbetsmiljörisker. EASA-certifierade piloter.',
   path: '/inspektioner-med-dronare/industriell-inspektion',
 })
 
@@ -29,7 +29,7 @@ const faqItems = [
   },
   {
     question: 'Hur hanterar ni säkerheten vid industriella miljöer?',
-    answer: 'Vi genomför alltid en riskbedömning enligt gällande säkerhetsföreskrifter. Våra PDRA S-01-certifierade piloter har erfarenhet av att operera i industriella miljöer med ex-klassade zoner, höga konstruktioner och aktiv drift.',
+    answer: 'Vi genomför alltid en riskbedömning enligt gällande säkerhetsföreskrifter. Våra EASA-certifierade piloter har erfarenhet av att operera i industriella miljöer, inklusive ex-klassade zoner, höga konstruktioner och aktiv drift.',
   },
   {
     question: 'Kan drönaren inspektera invändiga utrymmen?',
@@ -75,20 +75,20 @@ export default function IndustriellInspektionPage() {
 
       <Hero
         headline="Industriinspektion med Drönare — Tankar, Torn, Pipelines & Konstruktioner"
-        subheadline="Inspektera cisterner, skorstenar, master, pipelines och andra svåråtkomliga strukturer — utan driftstopp, ställningar eller arbete på höjd. PDRA S-01-certifierat."
+        subheadline="Inspektera cisterner, skorstenar, master, pipelines och andra svåråtkomliga strukturer — utan driftstopp, ställningar eller arbete på höjd."
         ctaPrimary={{ label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' }}
         stats={[
-          { value: 'Upp till 90%', label: 'Kortare inspektionstid' },
+          { value: 'Avsevärt', label: 'Kortare inspektionstid' },
           { value: '0', label: 'Driftstopp krävs' },
-          { value: '48h', label: 'Rapportleverans' },
+          { value: 'Snabb', label: 'Rapportleverans' },
           { value: '0', label: 'Arbete på höjd' },
         ]}
       />
 
       <TrustBar
         items={[
-          'PDRA S-01-certifierade',
           'EASA-certifierade fjärrpiloter',
+          'Ansvarsförsäkrade',
           'Termisk kamera & RGB',
           'Riskbedömning ingår',
         ]}

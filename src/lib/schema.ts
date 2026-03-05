@@ -9,7 +9,7 @@ export function organizationSchema() {
     name: 'SurveyDrone Sverige AB',
     url: BASE_URL,
     description:
-      'Professionell drönare-inspektion i Sverige. Termisk kamera, takinspektion, fasadinspektion och solcellsinspektion. PDRA S-01-certifierat.',
+      'Professionell drönare-inspektion i Sverige. Termisk kamera, takinspektion, fasadinspektion och solcellsinspektion. EASA-certifierade piloter.',
     email: CONTACT.email,
     address: {
       '@type': 'PostalAddress',
@@ -22,7 +22,7 @@ export function organizationSchema() {
     hasCredential: {
       '@type': 'EducationalOccupationalCredential',
       credentialCategory: 'certification',
-      name: 'PDRA S-01 — Transportstyrelsen / EASA',
+      name: 'EASA fjärrpilotcertifikat',
     },
     knowsAbout: [
       'Drönarinspektion',
@@ -33,8 +33,6 @@ export function organizationSchema() {
       'IR-inspektion',
       'Byggplatsdokumentation',
       'Industriell inspektion',
-      '3D-kartläggning',
-      'Fotogrammetri',
       'UAS',
       'RPAS',
     ],
@@ -83,7 +81,7 @@ export function serviceSchema({
     offers: {
       '@type': 'Offer',
       priceCurrency: 'SEK',
-      availability: 'https://schema.org/InStock',
+      availability: 'https://schema.org/OnlineOnly',
     },
   }
 }

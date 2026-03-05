@@ -8,7 +8,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 export const metadata: Metadata = createMetadata({
   title: 'Vanliga frågor om drönare-inspektion | SurveyDrone — FAQ',
   description:
-    'Svar på vanliga frågor om drönare-inspektion med termisk kamera. Tillstånd, säkerhet, priser, leverans och certifieringar. SurveyDrone — PDRA S-01-certifierat.',
+    'Svar på vanliga frågor om drönare-inspektion med termisk kamera. Tillstånd, säkerhet, priser, leverans och certifieringar. SurveyDrone — EASA-certifierade piloter.',
   path: '/inspektioner-med-dronare/faq',
 })
 
@@ -23,7 +23,7 @@ const allFaqItems = [
   },
   {
     question: 'Hur lång tid tar en inspektion?',
-    answer: 'En inspektion på plats tar normalt 1–3 timmar beroende på objektets storlek och komplexitet. Rapporten levereras sedan inom 48 timmar.',
+    answer: 'En inspektion på plats tar normalt 1–3 timmar beroende på objektets storlek och komplexitet. Rapporten levereras sedan normalt inom ett par arbetsdagar.',
   },
   {
     question: 'Behövs det tillstånd för att flyga drönare?',
@@ -31,7 +31,7 @@ const allFaqItems = [
   },
   {
     question: 'Kan ni flyga i tätbebyggda områden?',
-    answer: 'Ja, vi har kompetens och rutiner för att operera säkert i tätbebyggda områden. Vi genomför alltid en riskbedömning och anmälan enligt gällande regler.',
+    answer: 'Ja, vi har kompetens och rutiner för att operera i tätbebyggda områden. Vi genomför alltid en riskbedömning och anmälan enligt gällande regler.',
   },
   {
     question: 'Vad ingår i rapporten?',
@@ -63,7 +63,7 @@ const allFaqItems = [
   },
   {
     question: 'Var i Sverige är ni verksamma?',
-    answer: 'Vi utför inspektioner i hela Sverige. Resekostnader kan tillkomma beroende på uppdragets placering.',
+    answer: 'Vi utför inspektioner i stora delar av Sverige. Resekostnader kan tillkomma beroende på uppdragets placering. Kontakta oss för att diskutera ert uppdrag.',
   },
   {
     question: 'Kan ni erbjuda regelbundna inspektioner?',

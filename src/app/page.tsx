@@ -11,36 +11,36 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
 
 export const metadata: Metadata = createMetadata({
-  title: 'SurveyDrone | Drönare-Inspektion Hela Sverige — Termisk & Visuell',
+  title: 'SurveyDrone | Drönare-Inspektion Sverige — Termisk & Visuell',
   description:
-    'SurveyDrone erbjuder professionell drönare-inspektion i hela Sverige. Tak, fasader, solceller & industri med termisk kamera. PDRA S-01-certifierat. Begär offert.',
+    'SurveyDrone erbjuder professionell drönare-inspektion i Sverige. Tak, fasader, solceller & industri med termisk kamera. EASA-certifierade piloter. Begär offert.',
   path: '/',
 })
 
 const homeFaqItems = [
   {
     question: 'Hur fungerar drönare-inspektion med termisk kamera?',
-    answer: 'Vi flyger med drönare utrustade med termisk kamera och högupplöst RGB-kamera. Den termiska kameran identifierar fukt, köldbryggor och skador som är osynliga för blotta ögat. Hela objektet dokumenteras systematiskt och ni får en detaljerad rapport med bilder och åtgärdsförslag inom 48 timmar.',
+    answer: 'Vi flyger med drönare utrustade med termisk kamera och högupplöst RGB-kamera. Den termiska kameran identifierar fukt, köldbryggor och skador som är osynliga för blotta ögat. Hela objektet dokumenteras systematiskt och ni får en detaljerad rapport med bilder och åtgärdsförslag normalt inom ett par arbetsdagar.',
   },
   {
     question: 'Vad kostar en drönarinspektion?',
-    answer: 'Priset varierar beroende på objektets storlek, typ och komplexitet. En standardinspektion av ett villatak startar från ca 3 500 SEK. Större fastigheter och industrianläggningar prissätts separat. Kontakta oss för en kostnadsfri offert.',
+    answer: 'Priset varierar beroende på objektets storlek, typ och komplexitet. Kontakta oss för en kostnadsfri offert anpassad efter ert behov.',
   },
   {
     question: 'Vilka certifieringar har SurveyDrone?',
-    answer: 'Våra piloter är EASA-certifierade och innehar PDRA S-01-certifiering via Transportstyrelsen. Vi är fullt ansvarsförsäkrade och följer alla gällande regler för kommersiell drönardrift i Sverige.',
+    answer: 'Våra piloter är EASA-certifierade fjärrpiloter. Vi är ansvarsförsäkrade och följer alla gällande regler för kommersiell drönardrift i Sverige.',
   },
   {
     question: 'Var i Sverige utför ni inspektioner?',
-    answer: 'SurveyDrone utför drönare-inspektioner i hela Sverige — från Stockholm, Göteborg och Malmö till mindre orter. Vi har kapacitet att hantera uppdrag i alla regioner.',
+    answer: 'Vi utför drönare-inspektioner i stora delar av Sverige. Kontakta oss för att diskutera ert uppdrag och placering.',
   },
   {
     question: 'Hur lång tid tar en drönarinspektion?',
-    answer: 'En inspektion på plats tar normalt 1–3 timmar beroende på objektets storlek. Rapporten med bilder, noteringar och åtgärdsförslag levereras inom 48 timmar.',
+    answer: 'En inspektion på plats tar normalt 1–3 timmar beroende på objektets storlek. Rapporten med bilder, noteringar och åtgärdsförslag levereras normalt inom ett par arbetsdagar.',
   },
   {
     question: 'Vad är skillnaden mellan drönare-inspektion och traditionell besiktning?',
-    answer: 'Traditionell inspektion kräver byggnadsställningar, skylift eller att personal beträder taket — med höga kostnader och arbetsmiljörisker. Med drönare inspekteras objektet från luften, upp till 80% snabbare och till betydligt lägre kostnad.',
+    answer: 'Traditionell inspektion kräver byggnadsställningar, skylift eller att personal beträder taket — med höga kostnader och arbetsmiljörisker. Med drönare inspekteras objektet från luften, avsevärt snabbare och till betydligt lägre kostnad.',
   },
   {
     question: 'Kan drönare hitta fukt i tak och fasad?',
@@ -66,20 +66,19 @@ export default function HomePage() {
         ctaPrimary={{ label: 'Begär offert', href: '/inspektioner-med-dronare/kontakt' }}
         ctaSecondary={{ label: 'Se våra tjänster', href: '/inspektioner-med-dronare' }}
         stats={[
-          { value: 'Upp till 50%', label: 'Lägre inspektionskostnad' },
-          { value: 'Upp till 80%', label: 'Snabbare genomförande' },
-          { value: '48h', label: 'Rapportleverans' },
+          { value: 'Betydligt', label: 'Lägre inspektionskostnad' },
+          { value: 'Avsevärt', label: 'Snabbare genomförande' },
+          { value: 'Snabb', label: 'Rapportleverans' },
           { value: '0', label: 'Arbete på höjd' },
         ]}
       />
 
       <TrustBar
         items={[
-          'PDRA S-01-certifierade',
           'EASA-certifierade fjärrpiloter',
           'Ansvarsförsäkrade',
           'Termisk kamera & RGB',
-          'Verksamma i hela Sverige',
+          'Verksamma i Sverige',
         ]}
       />
 
@@ -145,7 +144,7 @@ export default function HomePage() {
           },
           {
             title: 'Certifierad kvalitet',
-            description: 'PDRA S-01-certifierade piloter och EASA-godkänd verksamhet garanterar professionell leverans.',
+            description: 'EASA-certifierade piloter och ansvarsförsäkrad verksamhet garanterar professionell leverans.',
             icon: 'file',
           },
           {
@@ -167,7 +166,7 @@ export default function HomePage() {
           {
             number: 2,
             title: 'Flygning & datainsamling',
-            description: 'PDRA S-01-certifierad pilot genomför flygningen med termisk kamera och RGB-kamera.',
+            description: 'EASA-certifierad pilot genomför flygningen med termisk kamera och RGB-kamera.',
           },
           {
             number: 3,
@@ -177,7 +176,7 @@ export default function HomePage() {
           {
             number: 4,
             title: 'Leverans & uppföljning',
-            description: 'Ni får rapport med bilder och åtgärdsförslag inom 48 timmar, med möjlighet till genomgång.',
+            description: 'Ni får rapport med bilder och åtgärdsförslag, med möjlighet till genomgång.',
           },
         ]}
       />
@@ -185,22 +184,22 @@ export default function HomePage() {
       <Testimonials
         testimonials={[
           {
-            quote: 'Vi inspekterade taken på 12 fastigheter på två dagar istället för två veckor. Rapporten var tydlig och gav oss ett bra beslutsunderlag för planerat underhåll.',
-            name: 'Anna Lindqvist',
-            role: 'Teknisk förvaltare',
-            company: 'Fastighetsbolaget AB',
+            quote: 'Vi inspekterade taken på flera fastigheter på kort tid istället för veckor. Rapporten var tydlig och gav oss ett bra beslutsunderlag för planerat underhåll.',
+            name: 'Teknisk förvaltare',
+            role: 'Fastighetsförvaltning',
+            company: '',
           },
           {
-            quote: 'Drönarinspektionen sparade oss både tid och pengar. Inga ställningar, ingen risk för personalen och vi fick bilderna samma dag.',
-            name: 'Erik Johansson',
-            role: 'Projektledare',
-            company: 'Byggnads & Co',
+            quote: 'Drönarinspektionen sparade oss både tid och pengar. Inga ställningar, ingen risk för personalen och vi fick bilderna snabbt.',
+            name: 'Projektledare',
+            role: 'Byggbranschen',
+            company: '',
           },
           {
-            quote: 'Tack vare termografering med drönare hittade vi defekta paneler som vi aldrig hade upptäckt från marken. Det förbättrade vår anläggnings effekt direkt.',
-            name: 'Maria Bergström',
-            role: 'Driftansvarig',
-            company: 'SolEnergi Sverige',
+            quote: 'Tack vare inspektion med drönare hittade vi defekta paneler som vi aldrig hade upptäckt från marken. Det förbättrade vår anläggnings effekt.',
+            name: 'Driftansvarig',
+            role: 'Energibranschen',
+            company: '',
           },
         ]}
       />
@@ -212,7 +211,7 @@ export default function HomePage() {
 
       <CtaBand
         headline="Redo att effektivisera era inspektioner?"
-        description="Kontakta oss för en kostnadsfri offert. Vi erbjuder drönare-inspektion med termisk kamera i hela Sverige."
+        description="Kontakta oss för en kostnadsfri offert. Vi erbjuder drönare-inspektion med termisk kamera i Sverige."
         ctaLabel="Begär offert"
       />
     </>

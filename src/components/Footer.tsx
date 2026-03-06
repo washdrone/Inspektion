@@ -5,8 +5,8 @@ export function Footer() {
   return (
     <footer className="bg-dark-900 text-white" role="contentinfo">
       <div className="container-content py-16 md:py-20">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
-          <div className="lg:col-span-1">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6 lg:gap-8">
+          <div className="sm:col-span-2 lg:col-span-2 lg:pr-4">
             <Link href="/" className="flex items-center gap-2.5">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-700">
                 <svg className="h-4 w-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -16,7 +16,7 @@ export function Footer() {
               <span className="text-lg font-bold text-white">SurveyDrone</span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-dark-400">
-              Professionell drönare-inspektion med termisk kamera i hela Sverige. EASA-certifierade piloter och fullradiometrisk datainsamling.
+              Professionell drönare&shy;inspektion med termisk kamera i hela Sverige. EASA-certifierade piloter och fullradiometrisk datainsamling.
             </p>
             <div className="mt-4 text-sm text-dark-400">
               <a href={`mailto:${CONTACT.email}`} className="transition-colors hover:text-accent-400">{CONTACT.email}</a>
@@ -50,7 +50,7 @@ export function Footer() {
               ))}
             </ul>
           </div>
-          <div className="lg:col-span-2">
+          <div className="sm:col-span-2 lg:col-span-2">
             <h3 className="text-xs font-semibold uppercase tracking-widest text-dark-400">Regioner</h3>
             <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2.5">
               {REGION_LINKS.map((link) => (

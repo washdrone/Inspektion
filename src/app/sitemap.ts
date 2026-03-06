@@ -39,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/platser/inspektion-helsingborg', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/platser/inspektion-norrkoping', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/platser/inspektion-umea', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/platser/inspektion-lulea', priority: 0.6, changeFrequency: 'monthly' as const },
   ]
 
   return routes.map((route) => ({

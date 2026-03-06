@@ -34,6 +34,7 @@ export const REGION_LINKS = [
   { href: '/platser/inspektion-helsingborg', label: 'Helsingborg' },
   { href: '/platser/inspektion-norrkoping', label: 'Norrköping' },
   { href: '/platser/inspektion-umea', label: 'Umeå' },
+  { href: '/platser/inspektion-lulea', label: 'Luleå' },
 ] as const
 
 export const COMPANY_LINKS = [

@@ -1,7 +1,6 @@
 'use client'
 
 type EventName =
-  | 'click_call'
   | 'click_email'
   | 'form_start'
   | 'form_submit'

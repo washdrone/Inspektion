@@ -6,7 +6,7 @@ interface Testimonial {
   quote: string
   name: string
   role: string
-  company: string
+  company?: string
 }
 
 interface TestimonialsProps {
@@ -49,7 +49,7 @@ export function Testimonials({ headline = 'Vad våra kunder säger', testimonial
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-dark-900">{t.name}</div>
-                  <div className="text-xs text-dark-400">{t.role}, {t.company}</div>
+                  <div className="text-xs text-dark-400">{t.company ? `${t.role}, ${t.company}` : t.role}</div>
                 </div>
               </div>
             </div>

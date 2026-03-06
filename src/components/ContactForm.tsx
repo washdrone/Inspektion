@@ -30,7 +30,6 @@ export function ContactForm({ headline, subtitle, serviceContext }: ContactFormP
       name: formData.get('name') as string,
       company: formData.get('company') as string,
       email: formData.get('email') as string,
-      phone: formData.get('phone') as string,
       service: formData.get('service') as string,
       message: formData.get('message') as string,
     }
@@ -84,15 +83,9 @@ export function ContactForm({ headline, subtitle, serviceContext }: ContactFormP
             <input type="text" id="company" name="company" required onFocus={handleFocus} className={inputClasses} placeholder="Företagsnamn" />
           </div>
         </div>
-        <div className="grid gap-5 sm:grid-cols-2">
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-dark-700">E-post <span className="text-red-500" aria-label="obligatoriskt">*</span></label>
-            <input type="email" id="email" name="email" required onFocus={handleFocus} className={inputClasses} placeholder="namn@foretag.se" />
-          </div>
-          <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-dark-700">Telefon</label>
-            <input type="tel" id="phone" name="phone" onFocus={handleFocus} className={inputClasses} placeholder="+46 70 123 45 67" />
-          </div>
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium text-dark-700">E-post <span className="text-red-500" aria-label="obligatoriskt">*</span></label>
+          <input type="email" id="email" name="email" required onFocus={handleFocus} className={inputClasses} placeholder="namn@foretag.se" />
         </div>
         <div>
           <label htmlFor="service" className="block text-sm font-medium text-dark-700">Typ av inspektion</label>

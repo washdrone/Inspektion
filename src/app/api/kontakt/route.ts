@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ ok: true })
     }
 
-    const { name, company, email, phone, service, message } = body
+    const { name, company, email, service, message } = body
 
     // Basic validation
     if (!name || !company || !email) {
@@ -28,13 +28,10 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // TODO: Integrate with email service (e.g. Resend, SendGrid) or CRM
-    // For now, log the submission
     console.log('New contact form submission:', {
       name,
       company,
       email,
-      phone,
       service,
       message,
       timestamp: new Date().toISOString(),

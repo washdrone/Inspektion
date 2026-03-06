@@ -5,8 +5,9 @@ export function Footer() {
   return (
     <footer className="bg-dark-900 text-white" role="contentinfo">
       <div className="container-content py-16 md:py-20">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6 lg:gap-8">
-          <div className="sm:col-span-2 lg:col-span-2 lg:pr-4">
+        <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-x-8">
+          {/* Brand — wide left */}
+          <div className="sm:col-span-2 lg:col-span-3">
             <Link href="/" className="flex items-center gap-2.5">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-700">
                 <svg className="h-4 w-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -22,7 +23,9 @@ export function Footer() {
               <a href={`mailto:${CONTACT.email}`} className="transition-colors hover:text-accent-400">{CONTACT.email}</a>
             </div>
           </div>
-          <div>
+
+          {/* Tjänster */}
+          <div className="lg:col-span-2">
             <h3 className="text-xs font-semibold uppercase tracking-widest text-dark-400">Tjänster</h3>
             <ul className="mt-4 space-y-2.5">
               {SERVICE_LINKS.map((link) => (
@@ -32,7 +35,9 @@ export function Footer() {
               ))}
             </ul>
           </div>
-          <div>
+
+          {/* Branscher */}
+          <div className="lg:col-span-2">
             <h3 className="text-xs font-semibold uppercase tracking-widest text-dark-400">Branscher</h3>
             <ul className="mt-4 space-y-2.5">
               {INDUSTRY_LINKS.map((link) => (
@@ -41,7 +46,11 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-            <h3 className="mt-6 text-xs font-semibold uppercase tracking-widest text-dark-400">Företag</h3>
+          </div>
+
+          {/* Företag */}
+          <div className="lg:col-span-2">
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-dark-400">Företag</h3>
             <ul className="mt-4 space-y-2.5">
               {COMPANY_LINKS.map((link) => (
                 <li key={link.href}>
@@ -50,7 +59,9 @@ export function Footer() {
               ))}
             </ul>
           </div>
-          <div className="sm:col-span-2 lg:col-span-2">
+
+          {/* Regioner — wide right */}
+          <div className="sm:col-span-2 lg:col-span-3">
             <h3 className="text-xs font-semibold uppercase tracking-widest text-dark-400">Regioner</h3>
             <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2.5">
               {REGION_LINKS.map((link) => (

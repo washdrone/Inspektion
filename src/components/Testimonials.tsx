@@ -37,10 +37,10 @@ export function Testimonials({ headline = 'Vad våra kunder säger', testimonial
                 transitionDelay: `${i * 100 + 200}ms`,
               }}
             >
-              <svg className="absolute top-6 right-6 h-8 w-8 text-brand-100" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className="absolute top-6 right-6 z-0 h-8 w-8 text-brand-100" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z" />
               </svg>
-              <p className="relative text-sm leading-relaxed text-dark-600 italic">
+              <p className="relative z-10 text-sm leading-relaxed text-dark-600 italic">
                 &ldquo;{t.quote}&rdquo;
               </p>
               <div className="mt-6 flex items-center gap-3">

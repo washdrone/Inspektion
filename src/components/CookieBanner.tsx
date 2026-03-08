@@ -2,6 +2,18 @@
 
 import { useState, useEffect } from 'react'
 
+function updateConsent(granted: boolean) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    const value = granted ? 'granted' : 'denied'
+    ;(window as any).gtag('consent', 'update', {
+      ad_storage: value,
+      ad_user_data: value,
+      ad_personalization: value,
+      analytics_storage: value,
+    })
+  }
+}
+
 export function CookieBanner() {
   const [visible, setVisible] = useState(false)
 
@@ -9,16 +21,20 @@ export function CookieBanner() {
     const consent = localStorage.getItem('cookie_consent')
     if (!consent) {
       setVisible(true)
+    } else if (consent === 'accepted') {
+      updateConsent(true)
     }
   }, [])
 
   function accept() {
     localStorage.setItem('cookie_consent', 'accepted')
+    updateConsent(true)
     setVisible(false)
   }
 
   function decline() {
     localStorage.setItem('cookie_consent', 'declined')
+    updateConsent(false)
     setVisible(false)
   }
 

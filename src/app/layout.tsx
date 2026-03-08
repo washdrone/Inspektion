@@ -3,6 +3,7 @@ import '@/styles/globals.css'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { CookieBanner } from '@/components/CookieBanner'
+import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 import { SITE_NAME, BASE_URL } from '@/lib/metadata'
 import { organizationSchema, websiteSchema } from '@/lib/schema'
 
@@ -35,6 +36,22 @@ export default function RootLayout({
   return (
     <html lang="sv">
       <head>
+        {/* Google Consent Mode v2 — must run before any gtag/GA script */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied',
+              });
+            `,
+          }}
+        />
+        <GoogleAnalytics />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

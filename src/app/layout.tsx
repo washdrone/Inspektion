@@ -51,7 +51,6 @@ export default function RootLayout({
             `,
           }}
         />
-        <GoogleAnalytics />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -77,6 +76,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1 pt-20">{children}</main>
         <Footer />
+        <GoogleAnalytics />
         <CookieBanner />
       </body>
     </html>

@@ -2,14 +2,11 @@
 
 import Script from 'next/script'
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+const GA_ID = 'G-509KW798YF'
 
 export function GoogleAnalytics() {
-  if (!GA_ID) return null
-
   return (
     <>
-      {/* Global Site Tag (gtag.js) — Google Analytics 4 */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
         strategy="afterInteractive"

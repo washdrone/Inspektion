@@ -45,7 +45,7 @@ export function Hero({
   const { ref, visible } = useReveal({ threshold: 0.1 })
 
   return (
-    <section ref={ref} className="relative min-h-[90vh] flex items-center overflow-hidden bg-dark-950">
+    <section ref={ref} className="relative -mt-20 min-h-[90vh] min-h-[90dvh] flex items-center overflow-hidden bg-dark-950">
       {/* Animated background gradient layers */}
       <div className="absolute inset-0 bg-gradient-to-b from-dark-950 via-dark-900 to-dark-800" aria-hidden="true" />
       <div className="absolute inset-0 hero-glow-1" aria-hidden="true" />

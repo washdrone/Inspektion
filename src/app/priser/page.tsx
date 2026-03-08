@@ -161,10 +161,10 @@ export default function PriserPage() {
                 <div className="mt-8">
                   <Link
                     href="/kontakt"
-                    className={`block w-full rounded-lg px-6 py-3 text-center text-sm font-semibold transition-colors ${
+                    className={`block w-full text-center ${
                       tier.highlighted
-                        ? 'bg-accent-400 text-dark-900 hover:bg-accent-300'
-                        : 'border-2 border-brand-500 text-brand-700 hover:bg-brand-50'
+                        ? 'btn-primary'
+                        : 'btn-secondary'
                     }`}
                   >
                     Begär prisförslag

@@ -25,7 +25,7 @@ export function ProcessSteps({ headline, steps }: ProcessStepsProps) {
         >
           {headline}
         </h2>
-        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-14 grid gap-8 md:grid-cols-3 lg:grid-cols-5">
           {steps.map((step, i) => (
             <div
               key={step.number}

@@ -11,7 +11,7 @@ export function TrustBar({ items, variant = 'dark' }: TrustBarProps) {
       aria-label="Förtroendefaktorer"
     >
       <div className="container-content">
-        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 sm:gap-x-8 lg:gap-x-10">
           {items.map((item, i) => (
             <div key={i} className="flex items-center gap-2.5">
               <svg

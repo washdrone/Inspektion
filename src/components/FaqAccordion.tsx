@@ -55,7 +55,7 @@ export function FaqAccordion({ headline, items }: FaqAccordionProps) {
                 aria-expanded={openIndex === i}
               >
                 <span className="pr-4 font-semibold text-dark-900">{item.question}</span>
-                <div className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full transition-all duration-300 ${openIndex === i ? 'bg-brand-500 text-white rotate-180' : 'bg-dark-50 text-dark-500'}`}>
+                <div className={`flex h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0 items-center justify-center rounded-full transition-all duration-300 ${openIndex === i ? 'bg-brand-500 text-white rotate-180' : 'bg-dark-50 text-dark-500'}`}>
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>

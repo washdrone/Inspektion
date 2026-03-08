@@ -32,7 +32,7 @@
   }
 
   .section-padding {
-    @apply py-20 md:py-28 lg:py-32;
+    @apply py-14 md:py-24 lg:py-32;
   }
 
   .btn-primary {
@@ -60,7 +60,13 @@
   }
 
   .card {
-    @apply rounded-2xl border border-dark-100 bg-white p-6 shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-0.5;
+    @apply rounded-2xl border border-dark-100 bg-white p-6 shadow-card transition-all duration-300;
+  }
+
+  @media (hover: hover) {
+    .card:hover {
+      @apply shadow-card-hover -translate-y-0.5;
+    }
   }
 
   .card-dark {
@@ -84,21 +90,23 @@
 .hero-glow-1 {
   background: radial-gradient(ellipse at 70% 20%, rgba(27,58,107,0.18) 0%, transparent 60%);
   animation: glow-drift-1 8s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 .hero-glow-2 {
   background: radial-gradient(ellipse at 30% 80%, rgba(46,125,159,0.10) 0%, transparent 60%);
   animation: glow-drift-2 10s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 @keyframes glow-drift-1 {
   0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(30px, -20px) scale(1.1); }
+  100% { transform: translate(15px, -10px) scale(1.05); }
 }
 
 @keyframes glow-drift-2 {
   0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(-20px, 15px) scale(1.05); }
+  100% { transform: translate(-10px, 8px) scale(1.03); }
 }
 
 /* Smooth FAQ accordion */

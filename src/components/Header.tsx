@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { SERVICE_LINKS, INDUSTRY_LINKS } from '@/lib/constants'
 
 export function Header() {
@@ -10,12 +10,53 @@ export function Header() {
   const [industriesOpen, setIndustriesOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
+  const servicesTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const industriesTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
+
   useEffect(() => {
     function onScroll() {
       setScrolled(window.scrollY > 20)
     }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  // C1: Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [mobileMenuOpen])
+
+  // M5: Debounced dropdown close to prevent premature closing on hover gap
+  const openServices = useCallback(() => {
+    if (servicesTimeout.current) clearTimeout(servicesTimeout.current)
+    setServicesOpen(true)
+  }, [])
+
+  const closeServices = useCallback(() => {
+    servicesTimeout.current = setTimeout(() => setServicesOpen(false), 150)
+  }, [])
+
+  const openIndustries = useCallback(() => {
+    if (industriesTimeout.current) clearTimeout(industriesTimeout.current)
+    setIndustriesOpen(true)
+  }, [])
+
+  const closeIndustries = useCallback(() => {
+    industriesTimeout.current = setTimeout(() => setIndustriesOpen(false), 150)
+  }, [])
+
+  useEffect(() => {
+    return () => {
+      if (servicesTimeout.current) clearTimeout(servicesTimeout.current)
+      if (industriesTimeout.current) clearTimeout(industriesTimeout.current)
+    }
   }, [])
 
   return (
@@ -40,8 +81,8 @@ export function Header() {
         <div className="hidden items-center gap-1 lg:flex">
           <div
             className="relative"
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
+            onMouseEnter={openServices}
+            onMouseLeave={closeServices}
           >
             <button
               type="button"
@@ -53,7 +94,7 @@ export function Header() {
               </svg>
             </button>
             {servicesOpen && (
-              <div className="absolute left-0 top-full z-50 mt-1 w-60 rounded-2xl border border-white/10 bg-dark-800/95 py-2 shadow-xl backdrop-blur-md">
+              <div className="absolute left-0 top-full z-50 w-60 rounded-2xl border border-white/10 bg-dark-800/95 py-2 shadow-xl backdrop-blur-md">
                 {SERVICE_LINKS.map((link) => (
                   <Link
                     key={link.href}
@@ -68,8 +109,8 @@ export function Header() {
           </div>
           <div
             className="relative"
-            onMouseEnter={() => setIndustriesOpen(true)}
-            onMouseLeave={() => setIndustriesOpen(false)}
+            onMouseEnter={openIndustries}
+            onMouseLeave={closeIndustries}
           >
             <button
               type="button"
@@ -81,7 +122,7 @@ export function Header() {
               </svg>
             </button>
             {industriesOpen && (
-              <div className="absolute left-0 top-full z-50 mt-1 w-52 rounded-2xl border border-white/10 bg-dark-800/95 py-2 shadow-xl backdrop-blur-md">
+              <div className="absolute left-0 top-full z-50 w-52 rounded-2xl border border-white/10 bg-dark-800/95 py-2 shadow-xl backdrop-blur-md">
                 {INDUSTRY_LINKS.map((link) => (
                   <Link
                     key={link.href}
@@ -111,10 +152,10 @@ export function Header() {
         {/* Mobile hamburger */}
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-lg p-2 text-white/80 hover:text-white lg:hidden"
+          className="relative z-50 inline-flex items-center justify-center rounded-lg p-2 text-white/80 hover:text-white lg:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-expanded={mobileMenuOpen}
-          aria-label="Öppna meny"
+          aria-label={mobileMenuOpen ? 'Stäng meny' : 'Öppna meny'}
         >
           {mobileMenuOpen ? (
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -128,33 +169,54 @@ export function Header() {
         </button>
       </nav>
 
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <div className="border-t border-white/10 bg-dark-900/98 backdrop-blur-lg lg:hidden">
-          <div className="container-content space-y-1 py-6">
-            <p className="px-4 pb-1 text-xs font-semibold uppercase tracking-widest text-dark-400">Tjänster</p>
-            {SERVICE_LINKS.map((link) => (
-              <Link key={link.href} href={link.href} className="block rounded-xl px-4 py-2.5 pl-6 text-sm text-white/60 hover:bg-white/5 hover:text-accent-400" onClick={() => setMobileMenuOpen(false)}>
-                {link.label}
-              </Link>
-            ))}
-            <p className="px-4 pb-1 pt-3 text-xs font-semibold uppercase tracking-widest text-dark-400">Branscher</p>
-            {INDUSTRY_LINKS.map((link) => (
-              <Link key={link.href} href={link.href} className="block rounded-xl px-4 py-2.5 pl-6 text-sm text-white/60 hover:bg-white/5 hover:text-accent-400" onClick={() => setMobileMenuOpen(false)}>
-                {link.label}
-              </Link>
-            ))}
-            <div className="border-t border-white/10 pt-3 mt-3">
-              <Link href="/hur-det-gar-till" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>Hur det går till</Link>
-              <Link href="/priser" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>Priser</Link>
-              <Link href="/om-oss" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5" onClick={() => setMobileMenuOpen(false)}>Om oss</Link>
-            </div>
-            <div className="pt-4">
-              <Link href="/kontakt" className="btn-primary block w-full text-center" onClick={() => setMobileMenuOpen(false)}>Begär offert</Link>
-            </div>
+      {/* M4: Mobile menu with backdrop overlay and transition */}
+      <div
+        className={`fixed inset-0 top-20 z-40 bg-black/50 transition-opacity duration-300 lg:hidden ${
+          mobileMenuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
+        }`}
+        aria-hidden="true"
+        onClick={() => setMobileMenuOpen(false)}
+      />
+      <div
+        className={`fixed inset-x-0 top-20 z-40 max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-white/10 bg-dark-900/98 backdrop-blur-lg transition-all duration-300 lg:hidden ${
+          mobileMenuOpen
+            ? 'translate-y-0 opacity-100'
+            : 'pointer-events-none -translate-y-2 opacity-0'
+        }`}
+      >
+        <div className="container-content space-y-1 py-6">
+          <p className="px-4 pb-1 text-xs font-semibold uppercase tracking-widest text-dark-400">Tjänster</p>
+          {SERVICE_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="block rounded-xl px-4 py-2.5 pl-6 text-sm text-white/60 hover:bg-white/5 hover:text-accent-400 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <p className="px-4 pb-1 pt-3 text-xs font-semibold uppercase tracking-widest text-dark-400">Branscher</p>
+          {INDUSTRY_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="block rounded-xl px-4 py-2.5 pl-6 text-sm text-white/60 hover:bg-white/5 hover:text-accent-400 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <div className="border-t border-white/10 pt-3 mt-3">
+            <Link href="/hur-det-gar-till" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none" onClick={() => setMobileMenuOpen(false)}>Hur det går till</Link>
+            <Link href="/priser" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none" onClick={() => setMobileMenuOpen(false)}>Priser</Link>
+            <Link href="/om-oss" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none" onClick={() => setMobileMenuOpen(false)}>Om oss</Link>
+          </div>
+          <div className="pt-4">
+            <Link href="/kontakt" className="btn-primary block w-full text-center" onClick={() => setMobileMenuOpen(false)}>Begär offert</Link>
           </div>
         </div>
-      )}
+      </div>
     </header>
   )
 }

@@ -35,11 +35,11 @@ export function CookieBanner() {
         Inga personuppgifter delas med tredje part.
       </p>
       <div className="mt-4 flex gap-3">
-        <button onClick={decline} className="btn-ghost text-sm">
-          Avvisa
-        </button>
         <button onClick={accept} className="btn-primary text-sm">
           Acceptera
+        </button>
+        <button onClick={decline} className="btn-ghost text-sm">
+          Avvisa
         </button>
       </div>
     </div>

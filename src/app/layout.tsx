@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   },
   description:
     'SurveyDrone erbjuder professionell drönare-inspektion i hela Sverige. Tak, fasader, solceller & industri med termisk kamera. EASA-certifierade piloter. Begär offert.',
+  icons: {
+    icon: '/icon.svg',
+    apple: '/apple-icon.svg',
+  },
   openGraph: {
     locale: 'sv_SE',
     type: 'website',

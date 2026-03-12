@@ -3,6 +3,8 @@ import { MetadataRoute } from 'next'
 const BASE_URL = 'https://surveydrone.se'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = '2026-03-12'
+
   const routes = [
     // Top-level
     { path: '/', priority: 1.0, changeFrequency: 'weekly' as const },
@@ -44,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes.map((route) => ({
     url: `${BASE_URL}${route.path}`,
-    lastModified: new Date(),
+    lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }))

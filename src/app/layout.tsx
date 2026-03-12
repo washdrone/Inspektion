@@ -21,10 +21,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
   },
   alternates: {
-    languages: {
-      'sv': BASE_URL,
-      'sv-SE': BASE_URL,
-    },
+    canonical: BASE_URL,
   },
 }
 
@@ -57,8 +54,6 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
-        <link rel="alternate" hrefLang="sv" href={BASE_URL} />
-        <link rel="alternate" hrefLang="sv-SE" href={BASE_URL} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

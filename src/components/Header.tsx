@@ -144,6 +144,11 @@ export function Header() {
           <Link href="/om-oss" className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
             Om oss
           </Link>
+          {/* Language selector */}
+          <div className="ml-2 flex items-center gap-0.5 rounded-full border border-white/15 px-1 py-0.5 text-xs font-medium">
+            <span className="rounded-full bg-white/15 px-2 py-1 text-white">SV</span>
+            <Link href="/en" className="rounded-full px-2 py-1 text-white/50 transition-colors hover:text-white">EN</Link>
+          </div>
           <Link href="/kontakt" className="btn-primary ml-3">
             Begär offert
           </Link>
@@ -212,7 +217,13 @@ export function Header() {
             <Link href="/priser" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none" onClick={() => setMobileMenuOpen(false)}>Priser</Link>
             <Link href="/om-oss" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none" onClick={() => setMobileMenuOpen(false)}>Om oss</Link>
           </div>
-          <div className="pt-4">
+          <div className="flex items-center justify-center gap-3 pt-4">
+            <div className="flex items-center gap-0.5 rounded-full border border-white/15 px-1 py-0.5 text-sm font-medium">
+              <span className="rounded-full bg-white/15 px-3 py-1 text-white">SV</span>
+              <Link href="/en" className="rounded-full px-3 py-1 text-white/50 transition-colors hover:text-white" onClick={() => setMobileMenuOpen(false)}>EN</Link>
+            </div>
+          </div>
+          <div className="pt-3">
             <Link href="/kontakt" className="btn-primary block w-full text-center" onClick={() => setMobileMenuOpen(false)}>Begär offert</Link>
           </div>
         </div>

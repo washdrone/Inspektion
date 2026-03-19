@@ -3,8 +3,13 @@
 import Link from 'next/link'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { SERVICE_LINKS, INDUSTRY_LINKS } from '@/lib/constants'
+import { SERVICE_LINKS_EN, INDUSTRY_LINKS_EN } from '@/lib/constants-en'
 
-export function Header() {
+export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
+  const serviceLinks = locale === 'en' ? SERVICE_LINKS_EN : SERVICE_LINKS
+  const industryLinks = locale === 'en' ? INDUSTRY_LINKS_EN : INDUSTRY_LINKS
+  const isEn = locale === 'en'
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [industriesOpen, setIndustriesOpen] = useState(false)
@@ -67,8 +72,8 @@ export function Header() {
           : 'bg-transparent'
       }`}
     >
-      <nav className="container-content flex h-20 items-center justify-between" aria-label="Huvudnavigering">
-        <Link href="/" className="flex items-center gap-2.5">
+      <nav className="container-content flex h-20 items-center justify-between" aria-label={isEn ? 'Main navigation' : 'Huvudnavigering'}>
+        <Link href={isEn ? '/en' : '/'} className="flex items-center gap-2.5">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-700">
             <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
@@ -88,14 +93,14 @@ export function Header() {
               type="button"
               className="flex items-center gap-1 rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
             >
-              Tjänster
+              {isEn ? 'Services' : 'Tjänster'}
               <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
             {servicesOpen && (
               <div className="absolute left-0 top-full z-50 w-60 rounded-2xl border border-white/10 bg-dark-800/95 py-2 shadow-xl backdrop-blur-md">
-                {SERVICE_LINKS.map((link) => (
+                {serviceLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
@@ -116,14 +121,14 @@ export function Header() {
               type="button"
               className="flex items-center gap-1 rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
             >
-              Branscher
+              {isEn ? 'Industries' : 'Branscher'}
               <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
             {industriesOpen && (
               <div className="absolute left-0 top-full z-50 w-52 rounded-2xl border border-white/10 bg-dark-800/95 py-2 shadow-xl backdrop-blur-md">
-                {INDUSTRY_LINKS.map((link) => (
+                {industryLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
@@ -135,22 +140,22 @@ export function Header() {
               </div>
             )}
           </div>
-          <Link href="/hur-det-gar-till" className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
-            Hur det går till
+          <Link href={isEn ? '/en/how-it-works' : '/hur-det-gar-till'} className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
+            {isEn ? 'How It Works' : 'Hur det går till'}
           </Link>
-          <Link href="/priser" className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
-            Priser
+          <Link href={isEn ? '/en/pricing' : '/priser'} className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
+            {isEn ? 'Pricing' : 'Priser'}
           </Link>
-          <Link href="/om-oss" className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
-            Om oss
+          <Link href={isEn ? '/en/about' : '/om-oss'} className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
+            {isEn ? 'About Us' : 'Om oss'}
           </Link>
           {/* Language selector */}
           <div className="ml-2 flex items-center gap-0.5 rounded-full border border-white/15 px-1 py-0.5 text-xs font-medium">
-            <span className="rounded-full bg-white/15 px-2 py-1 text-white">SV</span>
-            <Link href="/en" className="rounded-full px-2 py-1 text-white/50 transition-colors hover:text-white">EN</Link>
+            <Link href="/" className={`rounded-full px-2 py-1 transition-colors ${!isEn ? 'bg-white/15 text-white' : 'text-white/50 hover:text-white'}`}>SV</Link>
+            <Link href="/en" className={`rounded-full px-2 py-1 transition-colors ${isEn ? 'bg-white/15 text-white' : 'text-white/50 hover:text-white'}`}>EN</Link>
           </div>
-          <Link href="/kontakt" className="btn-primary ml-3">
-            Begär offert
+          <Link href={isEn ? '/en/contact' : '/kontakt'} className="btn-primary ml-3">
+            {isEn ? 'Get a Quote' : 'Begär offert'}
           </Link>
         </div>
 
@@ -160,7 +165,7 @@ export function Header() {
           className="relative z-50 inline-flex items-center justify-center rounded-lg p-2 text-white/80 hover:text-white lg:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-expanded={mobileMenuOpen}
-          aria-label={mobileMenuOpen ? 'Stäng meny' : 'Öppna meny'}
+          aria-label={mobileMenuOpen ? (isEn ? 'Close menu' : 'Stäng meny') : (isEn ? 'Open menu' : 'Öppna meny')}
         >
           {mobileMenuOpen ? (
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -190,8 +195,8 @@ export function Header() {
         }`}
       >
         <div className="container-content space-y-1 py-6">
-          <p className="px-4 pb-1 text-xs font-semibold uppercase tracking-widest text-dark-400">Tjänster</p>
-          {SERVICE_LINKS.map((link) => (
+          <p className="px-4 pb-1 text-xs font-semibold uppercase tracking-widest text-dark-400">{isEn ? 'Services' : 'Tjänster'}</p>
+          {serviceLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -201,8 +206,8 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <p className="px-4 pb-1 pt-3 text-xs font-semibold uppercase tracking-widest text-dark-400">Branscher</p>
-          {INDUSTRY_LINKS.map((link) => (
+          <p className="px-4 pb-1 pt-3 text-xs font-semibold uppercase tracking-widest text-dark-400">{isEn ? 'Industries' : 'Branscher'}</p>
+          {industryLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -213,18 +218,18 @@ export function Header() {
             </Link>
           ))}
           <div className="border-t border-white/10 pt-3 mt-3">
-            <Link href="/hur-det-gar-till" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none" onClick={() => setMobileMenuOpen(false)}>Hur det går till</Link>
-            <Link href="/priser" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none" onClick={() => setMobileMenuOpen(false)}>Priser</Link>
-            <Link href="/om-oss" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none" onClick={() => setMobileMenuOpen(false)}>Om oss</Link>
+            <Link href={isEn ? '/en/how-it-works' : '/hur-det-gar-till'} className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none" onClick={() => setMobileMenuOpen(false)}>{isEn ? 'How It Works' : 'Hur det går till'}</Link>
+            <Link href={isEn ? '/en/pricing' : '/priser'} className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none" onClick={() => setMobileMenuOpen(false)}>{isEn ? 'Pricing' : 'Priser'}</Link>
+            <Link href={isEn ? '/en/about' : '/om-oss'} className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none" onClick={() => setMobileMenuOpen(false)}>{isEn ? 'About Us' : 'Om oss'}</Link>
           </div>
           <div className="flex items-center justify-center gap-3 pt-4">
             <div className="flex items-center gap-0.5 rounded-full border border-white/15 px-1 py-0.5 text-sm font-medium">
-              <span className="rounded-full bg-white/15 px-3 py-1 text-white">SV</span>
-              <Link href="/en" className="rounded-full px-3 py-1 text-white/50 transition-colors hover:text-white" onClick={() => setMobileMenuOpen(false)}>EN</Link>
+              <Link href="/" className={`rounded-full px-3 py-1 transition-colors ${!isEn ? 'bg-white/15 text-white' : 'text-white/50 hover:text-white'}`} onClick={() => setMobileMenuOpen(false)}>SV</Link>
+              <Link href="/en" className={`rounded-full px-3 py-1 transition-colors ${isEn ? 'bg-white/15 text-white' : 'text-white/50 hover:text-white'}`} onClick={() => setMobileMenuOpen(false)}>EN</Link>
             </div>
           </div>
           <div className="pt-3">
-            <Link href="/kontakt" className="btn-primary block w-full text-center" onClick={() => setMobileMenuOpen(false)}>Begär offert</Link>
+            <Link href={isEn ? '/en/contact' : '/kontakt'} className="btn-primary block w-full text-center" onClick={() => setMobileMenuOpen(false)}>{isEn ? 'Get a Quote' : 'Begär offert'}</Link>
           </div>
         </div>
       </div>

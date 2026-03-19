@@ -1,11 +1,7 @@
 import type { Metadata } from 'next'
 import '@/styles/globals.css'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
-import { CookieBanner } from '@/components/CookieBanner'
 import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 import { SITE_NAME, BASE_URL } from '@/lib/metadata'
-import { organizationSchema, websiteSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -58,25 +54,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema()),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(websiteSchema()),
-          }}
-        />
       </head>
       <body className="flex min-h-screen flex-col font-sans">
-        <Header />
-        <main className="flex-1 pt-20">{children}</main>
-        <Footer />
+        {children}
         <GoogleAnalytics />
-        <CookieBanner />
       </body>
     </html>
   )

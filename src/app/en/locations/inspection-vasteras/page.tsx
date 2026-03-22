@@ -24,7 +24,7 @@ const localBusinessSchema = {
   name: 'SurveyDrone - Västerås',
   description:
     'Professional drone inspection in the Västerås region. Roofs, facades, solar panels and industrial facilities with thermal camera. EASA-certified remote pilots.',
-  url: 'https://surveydrone.se/en/locations/inspection-vasteras',
+  url: 'https://www.surveydrone.se/en/locations/inspection-vasteras',
   email: 'info@surveydrone.se',
   areaServed: {
     '@type': 'City',
@@ -37,7 +37,7 @@ const localBusinessSchema = {
   },
   parentOrganization: {
     '@type': 'ProfessionalService',
-    '@id': 'https://surveydrone.se/#organization',
+    '@id': 'https://www.surveydrone.se/#organization',
   },
 }
 

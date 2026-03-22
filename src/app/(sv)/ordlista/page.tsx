@@ -89,7 +89,7 @@ export default function OrdlistaPage() {
               inDefinedTermSet: {
                 '@type': 'DefinedTermSet',
                 name: 'Ordlista — Termer inom drönarinspektion',
-                url: 'https://surveydrone.se/ordlista',
+                url: 'https://www.surveydrone.se/ordlista',
               },
             }))
           ),

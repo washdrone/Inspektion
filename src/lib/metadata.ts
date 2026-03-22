@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 const SITE_NAME = 'SurveyDrone'
-const BASE_URL = 'https://surveydrone.se'
+const BASE_URL = 'https://www.surveydrone.se'
 
 export function createMetadata({
   title,

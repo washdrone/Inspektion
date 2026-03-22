@@ -22,7 +22,7 @@ const localBusinessSchema = {
   name: 'SurveyDrone - Luleå',
   description:
     'Professionell drönarinspektion i Luleå och Norrbotten. Tak, fasader, solceller och industri med termisk kamera. EASA-certifierade fjärrpiloter.',
-  url: 'https://surveydrone.se/platser/inspektion-lulea',
+  url: 'https://www.surveydrone.se/platser/inspektion-lulea',
   email: 'info@surveydrone.se',
   areaServed: {
     '@type': 'City',
@@ -35,7 +35,7 @@ const localBusinessSchema = {
   },
   parentOrganization: {
     '@type': 'ProfessionalService',
-    '@id': 'https://surveydrone.se/#organization',
+    '@id': 'https://www.surveydrone.se/#organization',
   },
 }
 

@@ -22,7 +22,7 @@ const localBusinessSchema = {
   name: 'SurveyDrone - Helsingborg',
   description:
     'Professionell drönarinspektion i Helsingborg och nordvästra Skåne. Tak, fasader, solceller och industri med termisk kamera. EASA-certifierade fjärrpiloter.',
-  url: 'https://surveydrone.se/platser/inspektion-helsingborg',
+  url: 'https://www.surveydrone.se/platser/inspektion-helsingborg',
   email: 'info@surveydrone.se',
   areaServed: {
     '@type': 'City',
@@ -35,7 +35,7 @@ const localBusinessSchema = {
   },
   parentOrganization: {
     '@type': 'ProfessionalService',
-    '@id': 'https://surveydrone.se/#organization',
+    '@id': 'https://www.surveydrone.se/#organization',
   },
 }
 

@@ -91,7 +91,7 @@ export default function GlossaryPage() {
               inDefinedTermSet: {
                 '@type': 'DefinedTermSet',
                 name: 'Glossary — Drone Inspection Terms',
-                url: 'https://surveydrone.se/en/glossary',
+                url: 'https://www.surveydrone.se/en/glossary',
               },
             }))
           ),

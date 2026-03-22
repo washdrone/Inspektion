@@ -24,7 +24,7 @@ const localBusinessSchema = {
   name: 'SurveyDrone - Norrköping',
   description:
     'Professional drone inspection in Norrköping and Östergötland. Roofs, facades, solar panels and industrial facilities with thermal camera. EASA-certified remote pilots.',
-  url: 'https://surveydrone.se/en/locations/inspection-norrkoping',
+  url: 'https://www.surveydrone.se/en/locations/inspection-norrkoping',
   email: 'info@surveydrone.se',
   areaServed: {
     '@type': 'City',
@@ -37,7 +37,7 @@ const localBusinessSchema = {
   },
   parentOrganization: {
     '@type': 'ProfessionalService',
-    '@id': 'https://surveydrone.se/#organization',
+    '@id': 'https://www.surveydrone.se/#organization',
   },
 }
 

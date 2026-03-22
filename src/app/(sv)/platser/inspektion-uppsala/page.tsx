@@ -22,7 +22,7 @@ const localBusinessSchema = {
   name: 'SurveyDrone - Uppsala',
   description:
     'Professionell drönarinspektion i Uppsalaregionen. Tak, fasader, solceller och industri med termisk kamera. EASA-certifierade fjärrpiloter.',
-  url: 'https://surveydrone.se/platser/inspektion-uppsala',
+  url: 'https://www.surveydrone.se/platser/inspektion-uppsala',
   email: 'info@surveydrone.se',
   areaServed: {
     '@type': 'City',
@@ -35,7 +35,7 @@ const localBusinessSchema = {
   },
   parentOrganization: {
     '@type': 'ProfessionalService',
-    '@id': 'https://surveydrone.se/#organization',
+    '@id': 'https://www.surveydrone.se/#organization',
   },
 }
 

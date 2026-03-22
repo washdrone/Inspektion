@@ -22,7 +22,7 @@ const localBusinessSchema = {
   name: 'SurveyDrone - Umeå',
   description:
     'Professionell drönarinspektion i Umeå och Västerbotten. Tak, fasader, solceller och industri med termisk kamera. EASA-certifierade fjärrpiloter.',
-  url: 'https://surveydrone.se/platser/inspektion-umea',
+  url: 'https://www.surveydrone.se/platser/inspektion-umea',
   email: 'info@surveydrone.se',
   areaServed: {
     '@type': 'City',
@@ -35,7 +35,7 @@ const localBusinessSchema = {
   },
   parentOrganization: {
     '@type': 'ProfessionalService',
-    '@id': 'https://surveydrone.se/#organization',
+    '@id': 'https://www.surveydrone.se/#organization',
   },
 }
 

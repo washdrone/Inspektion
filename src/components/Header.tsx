@@ -17,6 +17,7 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
 
   const servicesTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
   const industriesTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const scrollYRef = useRef(0)
 
   useEffect(() => {
     function onScroll() {
@@ -26,19 +27,35 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // C1: Lock body scroll when mobile menu is open
+  // Lock body scroll when mobile menu is open (iOS-safe)
   useEffect(() => {
     if (mobileMenuOpen) {
+      scrollYRef.current = window.scrollY
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollYRef.current}px`
+      document.body.style.left = '0'
+      document.body.style.right = '0'
       document.body.style.overflow = 'hidden'
     } else {
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
       document.body.style.overflow = ''
+      if (scrollYRef.current) {
+        window.scrollTo(0, scrollYRef.current)
+      }
     }
     return () => {
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
       document.body.style.overflow = ''
     }
   }, [mobileMenuOpen])
 
-  // M5: Debounced dropdown close to prevent premature closing on hover gap
+  // Debounced dropdown close to prevent premature closing on hover gap
   const openServices = useCallback(() => {
     if (servicesTimeout.current) clearTimeout(servicesTimeout.current)
     setServicesOpen(true)
@@ -63,6 +80,19 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
       if (industriesTimeout.current) clearTimeout(industriesTimeout.current)
     }
   }, [])
+
+  // Close dropdowns on Escape key
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        setServicesOpen(false)
+        setIndustriesOpen(false)
+        if (mobileMenuOpen) setMobileMenuOpen(false)
+      }
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [mobileMenuOpen])
 
   return (
     <header
@@ -92,9 +122,18 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
             <button
               type="button"
               className="flex items-center gap-1 rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
+              aria-expanded={servicesOpen}
+              aria-haspopup="true"
+              onClick={() => setServicesOpen(!servicesOpen)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  setServicesOpen(!servicesOpen)
+                }
+              }}
             >
               {isEn ? 'Services' : 'Tjänster'}
-              <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className={`h-3.5 w-3.5 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -105,6 +144,7 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
                     key={link.href}
                     href={link.href}
                     className="block px-4 py-2.5 text-sm text-white/70 transition-colors hover:bg-white/5 hover:text-accent-400"
+                    onClick={() => setServicesOpen(false)}
                   >
                     {link.label}
                   </Link>
@@ -120,9 +160,18 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
             <button
               type="button"
               className="flex items-center gap-1 rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
+              aria-expanded={industriesOpen}
+              aria-haspopup="true"
+              onClick={() => setIndustriesOpen(!industriesOpen)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  setIndustriesOpen(!industriesOpen)
+                }
+              }}
             >
               {isEn ? 'Industries' : 'Branscher'}
-              <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className={`h-3.5 w-3.5 transition-transform duration-200 ${industriesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -133,6 +182,7 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
                     key={link.href}
                     href={link.href}
                     className="block px-4 py-2.5 text-sm text-white/70 transition-colors hover:bg-white/5 hover:text-accent-400"
+                    onClick={() => setIndustriesOpen(false)}
                   >
                     {link.label}
                   </Link>
@@ -179,7 +229,7 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
         </button>
       </nav>
 
-      {/* M4: Mobile menu with backdrop overlay and transition */}
+      {/* Mobile menu with backdrop overlay and transition */}
       <div
         className={`fixed inset-0 top-20 z-40 bg-black/50 transition-opacity duration-300 lg:hidden ${
           mobileMenuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
@@ -188,11 +238,13 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
         onClick={() => setMobileMenuOpen(false)}
       />
       <div
-        className={`fixed inset-x-0 top-20 z-40 max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-white/10 bg-dark-900/98 backdrop-blur-lg transition-all duration-300 lg:hidden ${
+        className={`fixed inset-x-0 top-20 z-40 max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain border-t border-white/10 bg-dark-900/98 backdrop-blur-lg transition-all duration-300 lg:hidden ${
           mobileMenuOpen
             ? 'translate-y-0 opacity-100'
             : 'pointer-events-none -translate-y-2 opacity-0'
         }`}
+        role="dialog"
+        aria-label={isEn ? 'Mobile menu' : 'Mobilmeny'}
       >
         <div className="container-content space-y-1 py-6">
           <p className="px-4 pb-1 text-xs font-semibold uppercase tracking-widest text-dark-400">{isEn ? 'Services' : 'Tjänster'}</p>

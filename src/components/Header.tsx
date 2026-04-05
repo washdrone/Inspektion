@@ -99,7 +99,7 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-dark-900/95 backdrop-blur-md shadow-lg'
-          : 'bg-dark-900/80 backdrop-blur-sm'
+          : 'bg-gradient-to-b from-dark-950 to-dark-950/0'
       }`}
     >
       <nav className="container-content flex h-20 items-center justify-between" aria-label={isEn ? 'Main navigation' : 'Huvudnavigering'}>

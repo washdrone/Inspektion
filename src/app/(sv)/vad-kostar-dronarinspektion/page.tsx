@@ -107,7 +107,7 @@ export default function VadKostarDronarinspektionPage() {
               Vill ni förstå vår prismodell i mer detalj?{' '}
               <Link
                 href="/priser"
-                className="text-brand-700 underline hover:text-brand-500"
+                className="link-inline"
               >
                 Läs mer om vår prismodell och avtalsformer
               </Link>
@@ -155,7 +155,7 @@ export default function VadKostarDronarinspektionPage() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="rounded-xl border border-dark-100 bg-white p-5 shadow-card"
+                className="card"
               >
                 <h3 className="font-semibold text-dark-900">{item.title}</h3>
                 <p className="mt-2 text-sm text-dark-500">{item.desc}</p>
@@ -197,7 +197,7 @@ export default function VadKostarDronarinspektionPage() {
                 desc: 'Högupplösta bilder, termiska data och georefererade avvikelser ger ett underlag som minskar risken för felaktiga åtgärdsbeslut.',
               },
             ].map((item) => (
-              <div key={item.title} className="rounded-xl border border-dark-100 bg-white p-5">
+              <div key={item.title} className="card">
                 <h3 className="font-semibold text-dark-900">{item.title}</h3>
                 <p className="mt-2 text-sm text-dark-500">{item.desc}</p>
               </div>

@@ -93,7 +93,7 @@ export default function HowItWorksPage() {
       <section className="section-padding">
         <div className="container-content">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-3xl font-bold text-dark-900 sm:text-4xl lg:text-display">
+            <h1 className="page-heading">
               How a drone inspection works
             </h1>
             <p className="mt-4 text-lg text-dark-500">
@@ -131,7 +131,7 @@ export default function HowItWorksPage() {
 
       <section className="section-padding">
         <div className="container-narrow text-center">
-          <h2 className="text-2xl font-bold text-dark-900 sm:text-3xl">Ready to get started?</h2>
+          <h2 className="text-center section-heading">Ready to get started?</h2>
           <p className="mt-3 text-lg text-dark-500">
             It starts with a simple quote request. We get back to you within 24 hours.
           </p>

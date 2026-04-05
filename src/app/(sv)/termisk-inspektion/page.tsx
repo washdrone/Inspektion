@@ -129,12 +129,12 @@ export default function TermiskInspektionLandingPage() {
             <p className="mt-4 text-body-lg text-dark-500">
               Metoden används brett inom fastighetsförvaltning, industri, energi och bygg.
               SurveyDrone erbjuder{' '}
-              <Link href="/tjanster/termisk-inspektion" className="text-brand-600 underline hover:text-brand-700">
+              <Link href="/tjanster/termisk-inspektion" className="link-inline">
                 termisk inspektion som tjänst
               </Link>{' '}
               med EASA-certifierade piloter. Tekniken kompletterar visuell inspektion och är
               särskilt värdefull vid{' '}
-              <Link href="/tjanster/takinspektion" className="text-brand-600 underline hover:text-brand-700">
+              <Link href="/tjanster/takinspektion" className="link-inline">
                 takinspektion
               </Link>{' '}
               där dolda problem annars lätt missas.

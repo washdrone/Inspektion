@@ -123,19 +123,19 @@ export default function GoteborgPage() {
               </p>
               <p>
                 Vi erbjuder{' '}
-                <Link href="/tjanster/takinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/takinspektion" className="link-inline">
                   takinspektion
                 </Link>
                 ,{' '}
-                <Link href="/tjanster/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/fasadinspektion" className="link-inline">
                   fasadinspektion
                 </Link>
                 ,{' '}
-                <Link href="/tjanster/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/solcellsinspektion" className="link-inline">
                   solcellsinspektion
                 </Link>
                 {' '}och{' '}
-                <Link href="/tjanster/industriinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/industriinspektion" className="link-inline">
                   industriell inspektion
                 </Link>
                 {' '}i hela Göteborgsregionen.

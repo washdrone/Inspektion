@@ -51,7 +51,7 @@ export function FaqAccordion({ headline, items }: FaqAccordionProps) {
               <button
                 type="button"
                 onClick={() => toggle(i)}
-                className="flex w-full items-center justify-between px-6 py-5 text-left"
+                className="flex w-full items-center justify-between px-6 py-5 text-left rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2"
                 aria-expanded={openIndex === i}
               >
                 <span className="pr-4 font-semibold text-dark-900">{item.question}</span>

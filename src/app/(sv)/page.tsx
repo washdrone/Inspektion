@@ -115,19 +115,19 @@ export default function HomePage() {
               manuellt arbete på höjd.
             </p>
             <p className="mt-4 text-body-lg text-dark-600 leading-relaxed">
-              En <Link href="/termisk-inspektion" className="text-brand-600 underline hover:text-brand-700">termisk inspektion</Link> med
+              En <Link href="/termisk-inspektion" className="link-inline">termisk inspektion</Link> med
               drönare bygger på fullradiometrisk datainsamling, vilket innebär att varje pixel i
               bilden innehåller exakt temperaturdata. Det gör det möjligt att
-              identifiera <Link href="/tjanster/fuktinspektion" className="text-brand-600 underline hover:text-brand-700">fuktinträngning</Link>,
+              identifiera <Link href="/tjanster/fuktinspektion" className="link-inline">fuktinträngning</Link>,
               köldbryggor, bristfällig isolering och dolda skador som inte syns med blotta ögat.
             </p>
             <p className="mt-4 text-body-lg text-dark-600 leading-relaxed">
               En drönarinspektion passar särskilt bra när objekt är svåråtkomliga, när stora ytor
               ska täckas effektivt, eller när man vill undvika risker och kostnader förknippade
               med arbete på höjd. Vanliga användningsområden
-              är <Link href="/takinspektion-med-dronare" className="text-brand-600 underline hover:text-brand-700">takinspektion</Link>,{' '}
-              <Link href="/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">fasadinspektion</Link> och{' '}
-              <Link href="/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">solcellsinspektion</Link>.
+              är <Link href="/takinspektion-med-dronare" className="link-inline">takinspektion</Link>,{' '}
+              <Link href="/fasadinspektion" className="link-inline">fasadinspektion</Link> och{' '}
+              <Link href="/solcellsinspektion" className="link-inline">solcellsinspektion</Link>.
               Metoden används av fastighetsförvaltare, energibolag, byggföretag,
               kommuner och försäkringsbolag i hela Sverige.
             </p>
@@ -249,8 +249,8 @@ export default function HomePage() {
             Traditionell inspektion kräver ofta ställningar, skylift och personal som arbetar på
             höjd. Drönarinspektion erbjuder ett säkrare och effektivare alternativ.
           </p>
-          <div className="mx-auto mt-10 max-w-3xl overflow-hidden rounded-2xl border border-dark-100">
-            <table className="w-full text-left text-sm">
+          <div className="mx-auto mt-10 max-w-3xl overflow-x-auto rounded-2xl border border-dark-100">
+            <table className="w-full min-w-[540px] text-left text-sm">
               <thead>
                 <tr className="bg-dark-50">
                   <th className="px-6 py-4 font-semibold text-dark-900"></th>
@@ -294,7 +294,7 @@ export default function HomePage() {
           </div>
           <p className="mx-auto mt-8 max-w-2xl text-center text-dark-500">
             Vill du veta mer om prissättningen?{' '}
-            <Link href="/vad-kostar-dronarinspektion" className="text-brand-600 underline hover:text-brand-700">
+            <Link href="/vad-kostar-dronarinspektion" className="link-inline">
               Läs vår guide om vad drönarinspektion kostar
             </Link>.
           </p>

@@ -131,11 +131,11 @@ export default function SolcellsinspektionPage() {
             </p>
             <p className="mt-4 text-body-lg text-dark-500">
               Läs mer om{' '}
-              <Link href="/tjanster/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
+              <Link href="/tjanster/solcellsinspektion" className="link-inline">
                 vår solcellsinspektionstjänst
               </Link>{' '}
               eller om{' '}
-              <Link href="/tjanster/termisk-inspektion" className="text-brand-600 underline hover:text-brand-700">
+              <Link href="/tjanster/termisk-inspektion" className="link-inline">
                 termisk inspektion
               </Link>{' '}
               generellt.

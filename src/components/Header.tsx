@@ -121,7 +121,7 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
           >
             <button
               type="button"
-              className="flex items-center gap-1 rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
+              className="flex items-center gap-1 rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900"
               aria-expanded={servicesOpen}
               aria-haspopup="true"
               onClick={() => setServicesOpen(!servicesOpen)}
@@ -143,7 +143,7 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="block px-4 py-2.5 text-sm text-white/70 transition-colors hover:bg-white/5 hover:text-accent-400"
+                    className="block px-4 py-2.5 text-sm text-white/70 transition-colors hover:bg-white/5 hover:text-accent-400 focus-visible:outline-none focus-visible:bg-white/5 focus-visible:text-accent-400"
                     onClick={() => setServicesOpen(false)}
                   >
                     {link.label}
@@ -159,7 +159,7 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
           >
             <button
               type="button"
-              className="flex items-center gap-1 rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
+              className="flex items-center gap-1 rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900"
               aria-expanded={industriesOpen}
               aria-haspopup="true"
               onClick={() => setIndustriesOpen(!industriesOpen)}
@@ -181,7 +181,7 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="block px-4 py-2.5 text-sm text-white/70 transition-colors hover:bg-white/5 hover:text-accent-400"
+                    className="block px-4 py-2.5 text-sm text-white/70 transition-colors hover:bg-white/5 hover:text-accent-400 focus-visible:outline-none focus-visible:bg-white/5 focus-visible:text-accent-400"
                     onClick={() => setIndustriesOpen(false)}
                   >
                     {link.label}
@@ -190,13 +190,13 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
               </div>
             )}
           </div>
-          <Link href={isEn ? '/en/how-it-works' : '/hur-det-gar-till'} className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
+          <Link href={isEn ? '/en/how-it-works' : '/hur-det-gar-till'} className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900">
             {isEn ? 'How It Works' : 'Hur det går till'}
           </Link>
-          <Link href={isEn ? '/en/pricing' : '/priser'} className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
+          <Link href={isEn ? '/en/pricing' : '/priser'} className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900">
             {isEn ? 'Pricing' : 'Priser'}
           </Link>
-          <Link href={isEn ? '/en/about' : '/om-oss'} className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
+          <Link href={isEn ? '/en/about' : '/om-oss'} className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900">
             {isEn ? 'About Us' : 'Om oss'}
           </Link>
           {/* Language selector */}

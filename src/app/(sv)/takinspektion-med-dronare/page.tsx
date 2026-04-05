@@ -123,20 +123,20 @@ export default function TakinspektionMedDronarePage() {
             </p>
             <p className="mt-4 text-body-lg text-dark-500">
               Metoden kombinerar högupplösta visuella bilder med{' '}
-              <Link href="/tjanster/termisk-inspektion" className="text-brand-600 underline hover:text-brand-700">
+              <Link href="/tjanster/termisk-inspektion" className="link-inline">
                 termisk inspektion
               </Link>{' '}
               för att upptäcka både synliga skador och dolda problem som fuktinträngning och
               isoleringsbrister. Termisk datainsamling avslöjar temperaturavvikelser i takytan
               som indikerar fuktproblem — något som kompletterar en dedikerad{' '}
-              <Link href="/tjanster/fuktinspektion" className="text-brand-600 underline hover:text-brand-700">
+              <Link href="/tjanster/fuktinspektion" className="link-inline">
                 fuktinspektion
               </Link>
               .
             </p>
             <p className="mt-4 text-body-lg text-dark-500">
               SurveyDrone genomför professionella{' '}
-              <Link href="/tjanster/takinspektion" className="text-brand-600 underline hover:text-brand-700">
+              <Link href="/tjanster/takinspektion" className="link-inline">
                 takinspektioner
               </Link>{' '}
               i hela Sverige. Alla flygningar utförs av EASA-certifierade fjärrpiloter med

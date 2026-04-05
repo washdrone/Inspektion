@@ -25,7 +25,7 @@ export default function OmOssPage() {
       <section className="section-padding">
         <div className="container-content">
           <div className="mx-auto max-w-3xl">
-            <h1 className="text-3xl font-bold text-dark-900 sm:text-4xl lg:text-display">
+            <h1 className="page-heading">
               Om SurveyDrone
             </h1>
             <div className="mt-8 space-y-6 text-dark-600 text-body-lg leading-relaxed">
@@ -63,7 +63,7 @@ export default function OmOssPage() {
       <section className="section-padding section-muted">
         <div className="container-content">
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-center text-2xl font-bold text-dark-900 sm:text-3xl">
+            <h2 className="text-center section-heading">
               Vad vi erbjuder
             </h2>
             <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -115,7 +115,7 @@ export default function OmOssPage() {
 
       <section className="section-padding">
         <div className="container-narrow">
-          <h2 className="text-center text-2xl font-bold text-dark-900 sm:text-3xl">
+          <h2 className="text-center section-heading">
             Vår approach
           </h2>
           <div className="mt-8 space-y-6 text-dark-600">

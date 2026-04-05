@@ -30,7 +30,7 @@ export function Testimonials({ headline = 'Vad våra kunder säger', testimonial
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="relative rounded-2xl border border-dark-100 bg-white p-6 shadow-card transition-all duration-700"
+              className="card relative transition-all duration-700"
               style={{
                 opacity: visible ? 1 : 0,
                 transform: visible ? 'translateY(0)' : 'translateY(30px)',

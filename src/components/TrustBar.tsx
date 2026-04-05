@@ -7,7 +7,7 @@ export function TrustBar({ items, variant = 'dark' }: TrustBarProps) {
   const isDark = variant === 'dark'
   return (
     <section
-      className={`${isDark ? 'bg-dark-800 border-y border-white/5' : 'bg-dark-50 border-y border-dark-100'} py-5`}
+      className={`${isDark ? 'bg-dark-800 border-y border-white/5' : 'bg-dark-50 border-y border-dark-100'} py-6`}
       aria-label="Förtroendefaktorer"
     >
       <div className="container-content">

@@ -120,22 +120,22 @@ export default function UppsalaPage() {
                 70-talen där tak och fasader ofta behöver renoveras. I Sunnersta finns villabebyggelse
                 där husägare drar nytta av termisk takinspektering för att hitta köldbryggor.
                 Uppsalas tillväxt innebär också nybyggnation där{' '}
-                <Link href="/tjanster/3d-kartlaggning" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/3d-kartlaggning" className="link-inline">
                   byggplatsdokumentation
                 </Link>
                 {' '}med drönare ger effektiv uppföljning av projekt.
               </p>
               <p>
                 Vi erbjuder{' '}
-                <Link href="/tjanster/takinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/takinspektion" className="link-inline">
                   takinspektion
                 </Link>
                 ,{' '}
-                <Link href="/tjanster/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/fasadinspektion" className="link-inline">
                   fasadinspektion
                 </Link>
                 {' '}och{' '}
-                <Link href="/tjanster/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/tjanster/solcellsinspektion" className="link-inline">
                   solcellsinspektion
                 </Link>
                 {' '}i hela Uppsalaregionen.

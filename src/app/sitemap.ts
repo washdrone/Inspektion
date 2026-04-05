@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 const BASE_URL = 'https://www.surveydrone.se'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = '2026-03-19'
+  const lastModified = '2026-04-05'
 
   const svRoutes = [
     // Top-level
@@ -14,6 +14,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/ordlista', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/om-oss', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/kontakt', priority: 0.9, changeFrequency: 'monthly' as const },
+    // SEO landing pages
+    { path: '/takinspektion-med-dronare', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/termisk-inspektion', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/fasadinspektion', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/solcellsinspektion', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/vad-kostar-dronarinspektion', priority: 0.8, changeFrequency: 'monthly' as const },
     // Services
     { path: '/tjanster/takinspektion', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/tjanster/fasadinspektion', priority: 0.8, changeFrequency: 'monthly' as const },

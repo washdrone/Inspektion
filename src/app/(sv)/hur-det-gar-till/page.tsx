@@ -91,7 +91,7 @@ export default function HurDetGarTillPage() {
       <section className="section-padding">
         <div className="container-content">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-3xl font-bold text-dark-900 sm:text-4xl lg:text-display">
+            <h1 className="page-heading">
               Hur en drönarinspektion går till
             </h1>
             <p className="mt-4 text-lg text-dark-500">
@@ -129,7 +129,7 @@ export default function HurDetGarTillPage() {
 
       <section className="section-padding">
         <div className="container-narrow text-center">
-          <h2 className="text-2xl font-bold text-dark-900 sm:text-3xl">Redo att komma igång?</h2>
+          <h2 className="section-heading">Redo att komma igång?</h2>
           <p className="mt-3 text-lg text-dark-500">
             Det börjar med en enkel offertförfrågan. Vi återkommer inom 24 timmar.
           </p>

@@ -122,7 +122,7 @@ export default function FasadinspektionSeoPage() {
               varje sektion med högupplösta bilder. Vid behov kompletteras inspektionen med{' '}
               <Link
                 href="/tjanster/termisk-inspektion"
-                className="text-brand-600 underline hover:text-brand-700"
+                className="link-inline"
               >
                 termisk kamera
               </Link>{' '}
@@ -134,7 +134,7 @@ export default function FasadinspektionSeoPage() {
               Läs mer om vår{' '}
               <Link
                 href="/tjanster/fasadinspektion"
-                className="text-brand-600 underline hover:text-brand-700"
+                className="link-inline"
               >
                 fasadinspektionstjänst
               </Link>{' '}

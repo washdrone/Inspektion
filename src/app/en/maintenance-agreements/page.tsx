@@ -57,7 +57,7 @@ export default function MaintenanceAgreementsPage() {
       <section className="section-padding">
         <div className="container-content">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-3xl font-bold text-dark-900 sm:text-4xl lg:text-display">
+            <h1 className="page-heading">
               Maintenance agreements for recurring inspection
             </h1>
             <p className="mt-4 text-lg text-dark-500">
@@ -72,7 +72,7 @@ export default function MaintenanceAgreementsPage() {
       <section className="section-padding section-muted">
         <div className="container-content">
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-center text-2xl font-bold text-dark-900 sm:text-3xl">What is included?</h2>
+            <h2 className="text-center section-heading">What is included?</h2>
             <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 { title: 'Pre-booked inspection', desc: '1-2 times per year, scheduled in advance so you do not have to plan.' },
@@ -82,7 +82,7 @@ export default function MaintenanceAgreementsPage() {
                 { title: 'Fixed pricing', desc: 'No surprises. You know exactly what it costs per year.' },
                 { title: 'Digital documentation', desc: 'All material is stored digitally and available for future comparison.' },
               ].map((item) => (
-                <div key={item.title} className="rounded-xl border border-dark-100 bg-white p-5 shadow-card">
+                <div key={item.title} className="card">
                   <h3 className="font-semibold text-dark-900">{item.title}</h3>
                   <p className="mt-2 text-sm text-dark-500">{item.desc}</p>
                 </div>
@@ -131,7 +131,7 @@ export default function MaintenanceAgreementsPage() {
 
       <section className="section-padding section-muted">
         <div className="container-narrow text-center">
-          <h2 className="text-2xl font-bold text-dark-900 sm:text-3xl">Suited for</h2>
+          <h2 className="text-center section-heading">Suited for</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {[
               { title: 'Housing associations', desc: 'Regular roof inspections as a basis for maintenance plans.' },
@@ -139,7 +139,7 @@ export default function MaintenanceAgreementsPage() {
               { title: 'Municipalities', desc: 'Systematic inspection of public buildings and facilities.' },
               { title: 'Energy companies', desc: 'Ongoing monitoring of solar parks and technical installations.' },
             ].map((item) => (
-              <div key={item.title} className="rounded-xl border border-dark-100 bg-white p-5 text-left">
+              <div key={item.title} className="card text-left">
                 <h3 className="font-semibold text-dark-900">{item.title}</h3>
                 <p className="mt-1 text-sm text-dark-500">{item.desc}</p>
               </div>

@@ -127,19 +127,19 @@ export default function VasterasPage() {
               </p>
               <p>
                 We offer{' '}
-                <Link href="/en/services/roof-inspection" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/en/services/roof-inspection" className="link-inline">
                   roof inspection
                 </Link>
                 ,{' '}
-                <Link href="/en/services/facade-inspection" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/en/services/facade-inspection" className="link-inline">
                   facade inspection
                 </Link>
                 ,{' '}
-                <Link href="/en/services/solar-panel-inspection" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/en/services/solar-panel-inspection" className="link-inline">
                   solar panel inspection
                 </Link>
                 {' '}and{' '}
-                <Link href="/en/services/industrial-inspection" className="text-brand-600 underline hover:text-brand-700">
+                <Link href="/en/services/industrial-inspection" className="link-inline">
                   industrial inspection
                 </Link>
                 {' '}across the entire Västerås region.

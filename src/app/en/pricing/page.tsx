@@ -55,7 +55,7 @@ export default function PricingPage() {
 
       <section className="section-padding">
         <div className="container-content text-center">
-          <h1 className="text-3xl font-bold text-dark-900 sm:text-4xl">
+          <h1 className="page-heading">
             How drone inspection is priced
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-dark-500">
@@ -67,7 +67,7 @@ export default function PricingPage() {
 
       <section className="section-padding section-muted">
         <div className="container-content max-w-4xl">
-          <h2 className="text-center text-2xl font-bold text-dark-900 sm:text-3xl">
+          <h2 className="text-center section-heading">
             What affects the price?
           </h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -90,13 +90,13 @@ export default function PricingPage() {
 
       <section className="section-padding">
         <div className="container-content max-w-4xl">
-          <h2 className="text-center text-2xl font-bold text-dark-900 sm:text-3xl">
+          <h2 className="text-center section-heading">
             Three contract models
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-dark-500">
             Choose the arrangement that suits your needs.
           </p>
-          <div className="mt-10 grid gap-8 lg:grid-cols-3">
+          <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 name: 'Single inspection',
@@ -137,7 +137,7 @@ export default function PricingPage() {
             ].map((tier) => (
               <div
                 key={tier.name}
-                className={`relative rounded-xl border p-6 md:p-8 ${
+                className={`relative rounded-2xl border p-6 md:p-8 ${
                   tier.highlighted
                     ? 'border-accent-400/30 bg-accent-50 shadow-lg ring-2 ring-accent-400/20'
                     : 'border-dark-100 bg-white'
@@ -177,7 +177,7 @@ export default function PricingPage() {
           </div>
           <p className="mt-6 text-center text-sm text-dark-400">
             Want to know more about ongoing contracts?{' '}
-            <Link href="/en/maintenance-agreements" className="text-brand-700 underline hover:text-brand-500">
+            <Link href="/en/maintenance-agreements" className="link-inline">
               Read about maintenance agreements
             </Link>
           </p>

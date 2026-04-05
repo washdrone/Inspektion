@@ -25,7 +25,7 @@ export default function KontaktPage() {
         <div className="container-content">
           <div className="grid gap-12 lg:grid-cols-5">
             <div className="lg:col-span-3">
-              <h1 className="text-3xl font-bold text-dark-900 sm:text-4xl">
+              <h1 className="page-heading">
                 Begär offert
               </h1>
               <p className="mt-3 text-lg text-dark-500">
@@ -41,7 +41,7 @@ export default function KontaktPage() {
             </div>
 
             <aside className="lg:col-span-2">
-              <div className="rounded-xl border border-dark-100 bg-dark-50 p-6">
+              <div className="rounded-2xl border border-dark-100 bg-dark-50 p-6">
                 <h2 className="text-lg font-semibold text-dark-900">Kontakta oss direkt</h2>
                 <div className="mt-4 space-y-4 text-sm text-dark-700">
                   <div>
@@ -61,7 +61,7 @@ export default function KontaktPage() {
                 </div>
               </div>
 
-              <div className="mt-6 rounded-xl border border-dark-100 bg-white p-6">
+              <div className="mt-6 rounded-2xl border border-dark-100 bg-white p-6">
                 <h2 className="text-lg font-semibold text-dark-900">Vad händer sedan?</h2>
                 <ol className="mt-4 space-y-3 text-sm text-dark-700">
                   <li className="flex gap-3">

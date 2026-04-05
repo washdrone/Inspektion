@@ -106,7 +106,7 @@ export default function OrdlistaPage() {
       <section className="section-padding">
         <div className="container-content">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-3xl font-bold text-dark-900 sm:text-4xl">
+            <h1 className="page-heading">
               Ordlista — Termer inom drönarinspektion
             </h1>
             <p className="mt-4 text-lg text-dark-500">
@@ -133,7 +133,7 @@ export default function OrdlistaPage() {
           {/* Terms */}
           <div className="mx-auto mt-12 max-w-3xl space-y-8">
             {terms.map((t) => (
-              <div key={t.id} id={t.id} className="scroll-mt-28 rounded-xl border border-dark-100 bg-white p-6 shadow-card">
+              <div key={t.id} id={t.id} className="card scroll-mt-28">
                 <h2 className="text-lg font-bold text-dark-900">{t.term}</h2>
                 <p className="mt-2 text-dark-600 leading-relaxed">{t.definition}</p>
               </div>

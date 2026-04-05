@@ -53,7 +53,7 @@ export default function PriserPage() {
 
       <section className="section-padding">
         <div className="container-content text-center">
-          <h1 className="text-3xl font-bold text-dark-900 sm:text-4xl">
+          <h1 className="page-heading">
             Så prissätts en drönarinspektion
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-dark-500">
@@ -65,7 +65,7 @@ export default function PriserPage() {
 
       <section className="section-padding section-muted">
         <div className="container-content max-w-4xl">
-          <h2 className="text-center text-2xl font-bold text-dark-900 sm:text-3xl">
+          <h2 className="text-center section-heading">
             Vad påverkar priset?
           </h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -77,7 +77,7 @@ export default function PriserPage() {
               { title: 'Restid', desc: 'Objekt utanför storstadsregioner kan innebära restidstillägg.' },
               { title: 'Antal objekt', desc: 'Fler objekt i samma område ger volymfördelar. Löpande avtal ger bäst villkor.' },
             ].map((item) => (
-              <div key={item.title} className="rounded-xl border border-dark-100 bg-white p-5 shadow-card">
+              <div key={item.title} className="card">
                 <h3 className="font-semibold text-dark-900">{item.title}</h3>
                 <p className="mt-2 text-sm text-dark-500">{item.desc}</p>
               </div>
@@ -88,13 +88,13 @@ export default function PriserPage() {
 
       <section className="section-padding">
         <div className="container-content max-w-4xl">
-          <h2 className="text-center text-2xl font-bold text-dark-900 sm:text-3xl">
+          <h2 className="text-center section-heading">
             Tre avtalsmodeller
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-dark-500">
             Välj det upplägg som passar ert behov.
           </p>
-          <div className="mt-10 grid gap-8 lg:grid-cols-3">
+          <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 name: 'Enstaka inspektion',
@@ -135,7 +135,7 @@ export default function PriserPage() {
             ].map((tier) => (
               <div
                 key={tier.name}
-                className={`relative rounded-xl border p-6 md:p-8 ${
+                className={`relative rounded-2xl border p-6 md:p-8 shadow-card ${
                   tier.highlighted
                     ? 'border-accent-400/30 bg-accent-50 shadow-lg ring-2 ring-accent-400/20'
                     : 'border-dark-100 bg-white'
@@ -175,7 +175,7 @@ export default function PriserPage() {
           </div>
           <p className="mt-6 text-center text-sm text-dark-400">
             Vill ni veta mer om löpande avtal?{' '}
-            <Link href="/forvaltningsavtal" className="text-brand-700 underline hover:text-brand-500">
+            <Link href="/forvaltningsavtal" className="link-inline">
               Läs om förvaltningsavtal
             </Link>
           </p>

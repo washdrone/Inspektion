@@ -13,9 +13,9 @@ import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Fasadinspektion med drönare — sprickor, fukt och skador utan ställning',
+  title: 'Fasadinspektion med drönare — Guide till metod, skador och fördelar',
   description:
-    'Professionell fasadinspektion med drönare. Upptäck sprickor, fuktskador, fogbrister och putssläpp utan ställning. EASA-certifierade piloter. Hela Sverige.',
+    'Hur fungerar fasadinspektion med drönare? Vilka skador kan upptäckas, hur ersätter drönaren ställning och när passar metoden bäst? En komplett guide för fastighetsägare.',
   path: '/fasadinspektion',
 })
 
@@ -93,8 +93,8 @@ export default function FasadinspektionSeoPage() {
       />
 
       <Hero
-        headline="Fasadinspektion med drönare — utan ställning, med precision"
-        subheadline="Identifiera sprickor, fuktskador, fogbrister och putssläpp på byggnaders fasader. Våra EASA-certifierade fjärrpiloter dokumenterar fasaden med högupplösta bilder och termisk analys — snabbt, säkert och utan kostsam ställning."
+        headline="Fasadinspektion med drönare — så fungerar det"
+        subheadline="Vad innebär fasadinspektion med drönare, vilka skador kan upptäckas och hur skiljer sig metoden från traditionell ställningsbaserad inspektion? En guide för dig som förvaltar byggnader eller planerar fasadunderhåll."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
         ctaSecondary={{ label: 'Så fungerar det', href: '#process' }}
       />
@@ -122,7 +122,7 @@ export default function FasadinspektionSeoPage() {
               varje sektion med högupplösta bilder. Vid behov kompletteras inspektionen med{' '}
               <Link
                 href="/tjanster/termisk-inspektion"
-                className="text-primary-600 underline hover:text-primary-700"
+                className="text-brand-600 underline hover:text-brand-700"
               >
                 termisk kamera
               </Link>{' '}
@@ -134,7 +134,7 @@ export default function FasadinspektionSeoPage() {
               Läs mer om vår{' '}
               <Link
                 href="/tjanster/fasadinspektion"
-                className="text-primary-600 underline hover:text-primary-700"
+                className="text-brand-600 underline hover:text-brand-700"
               >
                 fasadinspektionstjänst
               </Link>{' '}
@@ -157,49 +157,49 @@ export default function FasadinspektionSeoPage() {
             </p>
             <ul className="mt-6 space-y-3 text-body text-dark-500">
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary-600" />
+                <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-brand-600" />
                 <span>
                   <strong>Sprickor i puts och betong</strong> — kan tyda på sättningar,
                   temperaturpåverkan eller materialutmattning.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary-600" />
+                <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-brand-600" />
                 <span>
                   <strong>Fuktgenomslag och fuktskador</strong> — synliga fläckar,
                   missfärgningar eller, med termisk kamera, dolda fuktproblem bakom fasadytan.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary-600" />
+                <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-brand-600" />
                 <span>
                   <strong>Fogskador och fogbrister</strong> — uttorkade, spruckna eller
                   saknade fogar som släpper in vatten och luft.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary-600" />
+                <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-brand-600" />
                 <span>
                   <strong>Putssläpp och lös puts</strong> — partier där putsen har släppt
                   från underlaget och riskerar att falla ned.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary-600" />
+                <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-brand-600" />
                 <span>
                   <strong>Köldbryggor och isoleringsbrister</strong> — identifieras med
                   termisk kamera och visar var fasaden läcker energi.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary-600" />
+                <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-brand-600" />
                 <span>
                   <strong>Mögel och biologisk påväxt</strong> — alger, mossa eller mögel
                   som indikerar fuktproblem.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary-600" />
+                <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-brand-600" />
                 <span>
                   <strong>Korrosion och skadade infästningar</strong> — rostiga beslag,
                   plåtdetaljer eller fästdon som behöver åtgärdas.
@@ -324,22 +324,22 @@ export default function FasadinspektionSeoPage() {
       <RelatedServices
         services={[
           {
-            title: 'Takinspektion',
-            href: '/tjanster/takinspektion',
+            title: 'Takinspektion med drönare',
+            href: '/takinspektion-med-dronare',
             description:
-              'Kombinera fasadinspektionen med en noggrann takinspektion för komplett kontroll av byggnadens klimatskal.',
+              'Kombinera fasadinspektionen med takinspektion för komplett kontroll av byggnadens klimatskal.',
           },
           {
             title: 'Termisk inspektion',
             href: '/termisk-inspektion',
             description:
-              'Fördjupad termisk analys med infraröd kamera för att identifiera energiförluster, fukt och köldbryggor.',
+              'Guide till termisk analys — hur infraröd teknik avslöjar fukt, köldbryggor och energiförluster.',
           },
           {
-            title: 'Solcellsinspektion',
-            href: '/tjanster/solcellsinspektion',
+            title: 'Vad kostar drönarinspektion?',
+            href: '/vad-kostar-dronarinspektion',
             description:
-              'Inspektion av solcellsanläggningar med termisk kamera för att upptäcka defekta celler och anslutningsfel.',
+              'Prisguide — vad som påverkar kostnaden och varför drönare är billigare än ställning.',
           },
         ]}
       />

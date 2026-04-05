@@ -13,9 +13,9 @@ import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Takinspektion med drönare — Säker och effektiv drönarinspektion av tak',
+  title: 'Takinspektion med drönare — Guide, fördelar och användningsområden',
   description:
-    'Takinspektion med drönare utförs av EASA-certifierade piloter med termisk kamera. Upptäck läckor, fuktskador och isoleringsbrister utan ställning. Hela Sverige.',
+    'Allt om takinspektion med drönare: hur det fungerar, vad som kan upptäckas, fördelar jämfört med traditionella metoder och när metoden passar bäst. EASA-certifierade piloter i hela Sverige.',
   path: '/takinspektion-med-dronare',
 })
 
@@ -93,8 +93,8 @@ export default function TakinspektionMedDronarePage() {
       />
 
       <Hero
-        headline="Takinspektion med drönare"
-        subheadline="Professionell drönarinspektion av tak med visuell och termisk datainsamling. Våra EASA-certifierade piloter identifierar skador, fukt och isoleringsbrister — utan ställning, utan fallrisk och utan driftstopp."
+        headline="Takinspektion med drönare — hur fungerar det?"
+        subheadline="Lär dig hur drönarbaserad takinspektion fungerar, vilka skador som kan upptäckas och varför metoden ersätter traditionell inspektion med ställning. En komplett guide för fastighetsägare, förvaltare och tekniska beslutsfattare."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
         ctaSecondary={{ label: 'Se hur det fungerar', href: '#process' }}
       />
@@ -300,22 +300,22 @@ export default function TakinspektionMedDronarePage() {
       <RelatedServices
         services={[
           {
-            title: 'Fasadinspektion',
-            href: '/tjanster/fasadinspektion',
-            description:
-              'Inspektion av fasader och byggnadsskal med högupplöst kamera och termisk analys.',
-          },
-          {
-            title: 'Solcellsinspektion',
-            href: '/tjanster/solcellsinspektion',
-            description:
-              'Termisk inspektion av solcellsanläggningar för att identifiera defekta paneler och hotspots.',
-          },
-          {
             title: 'Termisk inspektion',
-            href: '/tjanster/termisk-inspektion',
+            href: '/termisk-inspektion',
             description:
-              'Avancerad termisk analys för att upptäcka dolda problem i byggnader och anläggningar.',
+              'Fördjupad guide om termisk inspektion — hur fullradiometrisk data avslöjar dolda problem.',
+          },
+          {
+            title: 'Fasadinspektion med drönare',
+            href: '/fasadinspektion',
+            description:
+              'Allt om fasadinspektion — vilka skador som upptäcks och hur drönare ersätter ställning.',
+          },
+          {
+            title: 'Vad kostar drönarinspektion?',
+            href: '/vad-kostar-dronarinspektion',
+            description:
+              'Prisguide — vad som påverkar kostnaden och varför drönarinspektion är kostnadseffektivt.',
           },
         ]}
       />

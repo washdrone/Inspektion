@@ -13,7 +13,7 @@ import { CtaBand } from '@/components/CtaBand'
 import { IndustriesServed } from '@/components/IndustriesServed'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Drönarinspektion Sverige | Termisk inspektion av tak, fasad & solceller',
+  title: 'Drönarinspektion Sverige — Termisk inspektion av tak, fasad & solceller',
   description:
     'Professionell drönarinspektion med termisk kamera i hela Sverige. Tak, fasader, solceller och industri. EASA-certifierade piloter, fullradiometrisk datainsamling. Begär offert idag.',
   path: '/',
@@ -115,15 +115,20 @@ export default function HomePage() {
               manuellt arbete på höjd.
             </p>
             <p className="mt-4 text-body-lg text-dark-600 leading-relaxed">
-              En termisk inspektion med drönare bygger på fullradiometrisk datainsamling, vilket
-              innebär att varje pixel i bilden innehåller exakt temperaturdata. Det gör det möjligt
-              att identifiera <Link href="/tjanster/fuktinspektion" className="text-brand-600 hover:underline">fuktinträngning</Link>,
+              En <Link href="/termisk-inspektion" className="text-brand-600 underline hover:text-brand-700">termisk inspektion</Link> med
+              drönare bygger på fullradiometrisk datainsamling, vilket innebär att varje pixel i
+              bilden innehåller exakt temperaturdata. Det gör det möjligt att
+              identifiera <Link href="/tjanster/fuktinspektion" className="text-brand-600 underline hover:text-brand-700">fuktinträngning</Link>,
               köldbryggor, bristfällig isolering och dolda skador som inte syns med blotta ögat.
             </p>
             <p className="mt-4 text-body-lg text-dark-600 leading-relaxed">
               En drönarinspektion passar särskilt bra när objekt är svåråtkomliga, när stora ytor
               ska täckas effektivt, eller när man vill undvika risker och kostnader förknippade
-              med arbete på höjd. Metoden används av fastighetsförvaltare, energibolag, byggföretag,
+              med arbete på höjd. Vanliga användningsområden
+              är <Link href="/takinspektion-med-dronare" className="text-brand-600 underline hover:text-brand-700">takinspektion</Link>,{' '}
+              <Link href="/fasadinspektion" className="text-brand-600 underline hover:text-brand-700">fasadinspektion</Link> och{' '}
+              <Link href="/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">solcellsinspektion</Link>.
+              Metoden används av fastighetsförvaltare, energibolag, byggföretag,
               kommuner och försäkringsbolag i hela Sverige.
             </p>
           </div>
@@ -200,8 +205,8 @@ export default function HomePage() {
       </section>
 
       <BenefitsGrid
-        headline="Varför välja drönarinspektion?"
-        subtitle="Jämfört med traditionell inspektion med ställning, skylift eller manuellt arbete på höjd."
+        headline="Varför välja SurveyDrone?"
+        subtitle="EASA-certifierade piloter, fullradiometrisk teknik och erfarenhet av krävande miljöer."
         benefits={[
           {
             title: 'Termisk & visuell inspektion',
@@ -287,6 +292,12 @@ export default function HomePage() {
               </tbody>
             </table>
           </div>
+          <p className="mx-auto mt-8 max-w-2xl text-center text-dark-500">
+            Vill du veta mer om prissättningen?{' '}
+            <Link href="/vad-kostar-dronarinspektion" className="text-brand-600 underline hover:text-brand-700">
+              Läs vår guide om vad drönarinspektion kostar
+            </Link>.
+          </p>
         </div>
       </section>
 
@@ -376,26 +387,32 @@ export default function HomePage() {
           {
             name: 'Fastighetsförvaltning',
             description: 'Regelbundna inspektioner av tak och fasader för att planera underhåll och minska oförutsedda kostnader.',
-          },
-          {
-            name: 'Bostadsrättsföreningar',
-            description: 'Kostnadseffektiv tillståndsbedömning av gemensamma byggnadsdelar utan dyra ställningar.',
+            href: '/branscher/fastighet',
           },
           {
             name: 'Energibolag',
             description: 'Termisk inspektion av solcellsanläggningar och kraftvärmeverk för att optimera drift och säkerhet.',
+            href: '/branscher/energi',
           },
           {
             name: 'Byggföretag',
             description: 'Dokumentation under och efter byggnation samt kontroll av tätskikt och isolering.',
+            href: '/branscher/bygg',
           },
           {
             name: 'Industri',
             description: 'Inspektion av svåråtkomliga industriobjekt som tankar, torn, pipelines och processutrustning.',
+            href: '/branscher/industri',
           },
           {
             name: 'Kommuner & offentlig sektor',
             description: 'Effektiv tillståndsbedömning av offentliga byggnader, skolor, sportanläggningar och infrastruktur.',
+            href: '/branscher/kommuner',
+          },
+          {
+            name: 'Försäkringsbolag',
+            description: 'Dokumentation av skador och tillståndsbedömning vid försäkringsärenden och skadereglering.',
+            href: '/branscher/forsakring',
           },
         ]}
       />

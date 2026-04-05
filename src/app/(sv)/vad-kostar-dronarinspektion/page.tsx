@@ -10,7 +10,7 @@ import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Vad kostar drönarinspektion? | Prisguide och faktorer',
+  title: 'Vad kostar drönarinspektion? — Prisguide och kostnadsfaktorer',
   description:
     'Vad kostar en drönarinspektion? Priset beror på objektets storlek, inspektionstyp, geografiskt läge och komplexitet. Begär kostnadsfri offert från SurveyDrone.',
   path: '/vad-kostar-dronarinspektion',
@@ -89,7 +89,7 @@ export default function VadKostarDronarinspektionPage() {
       {/* AEO section: Vad kostar en drönarinspektion? */}
       <section className="section-padding">
         <div className="container-content max-w-3xl">
-          <h2 className="text-2xl font-bold text-dark-900 sm:text-3xl">
+          <h2 className="text-heading-lg sm:text-display">
             Vad kostar en drönarinspektion?
           </h2>
           <div className="mt-6 space-y-4 text-dark-600">
@@ -120,7 +120,7 @@ export default function VadKostarDronarinspektionPage() {
       {/* Vad påverkar priset? */}
       <section className="section-padding section-muted">
         <div className="container-content max-w-4xl">
-          <h2 className="text-center text-2xl font-bold text-dark-900 sm:text-3xl">
+          <h2 className="text-center text-heading-lg sm:text-display">
             Vad påverkar priset?
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-dark-500">
@@ -168,7 +168,7 @@ export default function VadKostarDronarinspektionPage() {
       {/* Varför är drönarinspektion kostnadseffektivt? */}
       <section className="section-padding">
         <div className="container-content max-w-3xl">
-          <h2 className="text-2xl font-bold text-dark-900 sm:text-3xl">
+          <h2 className="text-heading-lg sm:text-display">
             Varför är drönarinspektion kostnadseffektivt?
           </h2>
           <div className="mt-6 space-y-4 text-dark-600">
@@ -209,7 +209,7 @@ export default function VadKostarDronarinspektionPage() {
       {/* Vad ingår i priset? */}
       <section className="section-padding section-muted">
         <div className="container-content max-w-3xl">
-          <h2 className="text-center text-2xl font-bold text-dark-900 sm:text-3xl">
+          <h2 className="text-center text-heading-lg sm:text-display">
             Vad ingår i priset?
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-dark-500">
@@ -256,25 +256,25 @@ export default function VadKostarDronarinspektionPage() {
       <FaqAccordion headline="Vanliga frågor om kostnader" items={faqItems} />
 
       <RelatedServices
-        headline="Utforska våra inspektionstjänster"
+        headline="Läs mer om våra inspektionstyper"
         services={[
           {
-            title: 'Takinspektion',
-            href: '/tjanster/takinspektion',
+            title: 'Takinspektion med drönare',
+            href: '/takinspektion-med-dronare',
             description:
-              'Inspektion av tak med drönare — identifiera skador, fukt och brister utan ställning.',
+              'Guide till takinspektion — hur det fungerar, vad som kan upptäckas och fördelar jämfört med ställning.',
           },
           {
             title: 'Termisk inspektion',
-            href: '/tjanster/termisk-inspektion',
+            href: '/termisk-inspektion',
             description:
-              'Hitta köldbryggor, fuktskador och isoleringsbrister med termisk kamera från drönare.',
+              'Allt om termisk inspektion — hur fullradiometrisk data avslöjar fukt, köldbryggor och isoleringsbrister.',
           },
           {
-            title: 'Fasadinspektion',
-            href: '/tjanster/fasadinspektion',
+            title: 'Fasadinspektion med drönare',
+            href: '/fasadinspektion',
             description:
-              'Dokumentera och analysera fasadens skick med högupplösta drönarbilder.',
+              'Guide till fasadinspektion — vilka skador som upptäcks och hur drönare ersätter ställning.',
           },
         ]}
       />

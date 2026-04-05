@@ -84,7 +84,6 @@ export function serviceSchema({
     offers: {
       '@type': 'Offer',
       priceCurrency: 'SEK',
-      availability: 'https://schema.org/OnlineOnly',
     },
   }
 }

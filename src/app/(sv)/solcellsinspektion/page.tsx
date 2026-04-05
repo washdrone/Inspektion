@@ -13,9 +13,9 @@ import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Solcellsinspektion med drönare — termisk kamera för solceller',
+  title: 'Solcellsinspektion med drönare — Guide till feltyper och termisk analys',
   description:
-    'Professionell solcellsinspektion med drönare och termisk kamera. Upptäck hotspots, defekta celler och elektriska fel. EASA-certifierade piloter. Hela Sverige.',
+    'Hur inspekteras solceller med drönare? Vilka fel kan termisk kamera hitta? Guide till hotspots, PID, diodfel och andra vanliga avvikelser i solcellsanläggningar.',
   path: '/solcellsinspektion',
 })
 
@@ -93,8 +93,8 @@ export default function SolcellsinspektionPage() {
       />
 
       <Hero
-        headline="Solcellsinspektion med drönare och termisk kamera"
-        subheadline="Upptäck hotspots, defekta celler och dolda fel i era solpaneler med fullradiometrisk termisk datainsamling. Våra EASA-certifierade fjärrpiloter inspekterar hela anläggningen effektivt och säkert från luften — oavsett storlek och typ."
+        headline="Solcellsinspektion med drönare — hitta fel innan de kostar"
+        subheadline="Vad kan termisk kamera avslöja om era solcellspaneler? Lär dig om hotspots, PID-degradering, diodfel och andra vanliga avvikelser — och hur drönarinspektion gör det möjligt att inspektera stora anläggningar effektivt."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
         ctaSecondary={{ label: 'Så fungerar det', href: '#process' }}
       />
@@ -131,11 +131,11 @@ export default function SolcellsinspektionPage() {
             </p>
             <p className="mt-4 text-body-lg text-dark-500">
               Läs mer om{' '}
-              <Link href="/tjanster/solcellsinspektion" className="text-accent underline">
+              <Link href="/tjanster/solcellsinspektion" className="text-brand-600 underline hover:text-brand-700">
                 vår solcellsinspektionstjänst
               </Link>{' '}
               eller om{' '}
-              <Link href="/tjanster/termisk-inspektion" className="text-accent underline">
+              <Link href="/tjanster/termisk-inspektion" className="text-brand-600 underline hover:text-brand-700">
                 termisk inspektion
               </Link>{' '}
               generellt.
@@ -308,9 +308,9 @@ export default function SolcellsinspektionPage() {
         services={[
           {
             title: 'Termisk inspektion',
-            href: '/tjanster/termisk-inspektion',
+            href: '/termisk-inspektion',
             description:
-              'Generell infraröd inspektion för byggnader, anläggningar och teknisk infrastruktur.',
+              'Guide till termisk inspektion — hur infraröd teknik fungerar för byggnader och anläggningar.',
           },
           {
             title: 'Takinspektion med drönare',
@@ -319,10 +319,10 @@ export default function SolcellsinspektionPage() {
               'Kombinera solcellsinspektion med takinspektion för en komplett kontroll av takytan.',
           },
           {
-            title: 'Industriinspektion',
-            href: '/tjanster/industriinspektion',
+            title: 'Vad kostar drönarinspektion?',
+            href: '/vad-kostar-dronarinspektion',
             description:
-              'Inspektion av industrianläggningar, rörledningar och teknisk utrustning med drönare.',
+              'Prisguide — vilka faktorer som påverkar kostnaden för solcellsinspektion och andra inspektioner.',
           },
         ]}
       />

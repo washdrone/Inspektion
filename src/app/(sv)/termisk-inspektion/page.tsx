@@ -13,52 +13,52 @@ import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Termisk inspektion med drönare — Termografi för fastigheter och industri',
+  title: 'Termisk inspektion — Guide till termografi och värmekamera för byggnader',
   description:
-    'Termisk inspektion med drönare och värmekamera. Fullradiometrisk datainsamling avslöjar fukt, köldbryggor, isoleringsbrister och hotspots. EASA-certifierade piloter i hela Sverige.',
+    'Hur fungerar termisk inspektion? Lär dig om fullradiometrisk datainsamling, vad som kan upptäckas och när termografi ger störst nytta. Guide för fastigheter, industri och energi.',
   path: '/termisk-inspektion',
 })
 
 const faqItems = [
   {
-    question: 'Vad är termisk inspektion med drönare?',
+    question: 'Hur fungerar termisk inspektion av byggnader?',
     answer:
-      'Termisk inspektion med drönare innebär att en infraröd kamera monterad på en UAV samlar in fullradiometrisk temperaturdata från byggnader, anläggningar eller infrastruktur. Varje pixel i bilden innehåller ett exakt temperaturvärde, vilket gör det möjligt att identifiera avvikelser som fukt, köldbryggor, isoleringsbrister och elektriska fel.',
+      'En infraröd kamera registrerar temperaturstrålning från byggnadens ytor. Avvikelser i temperaturmönstret — exempelvis kalla fläckar orsakade av fukt eller varma zoner vid köldbryggor — kartläggs och analyseras. Med drönare kan hela tak och fasader inspekteras systematiskt från luften.',
   },
   {
-    question: 'Vad kan termisk inspektion upptäcka?',
+    question: 'Vilka typer av problem avslöjar termografi?',
     answer:
-      'Termisk inspektion kan avslöja fuktinträngning i tak och fasader, köldbryggor i byggnadsomslutningen, bristfällig eller skadad isolering, hotspots i solcellsanläggningar, överhettade komponenter i elektriska installationer samt läckor i fjärrvärme- och kylsystem.',
+      'Termografi kan identifiera fuktinträngning, köldbryggor, bristfällig isolering, läckor i tätskikt, hotspots i solcellspaneler, överhettade elektriska komponenter och dolda rörlägkage. Metoden är särskilt effektiv för att hitta problem som inte syns visuellt.',
   },
   {
-    question: 'Vad betyder fullradiometrisk datainsamling?',
+    question: 'Vad skiljer fullradiometrisk data från vanlig termisk bild?',
     answer:
-      'Fullradiometrisk data innebär att varje pixel i den termiska bilden innehåller ett absolut temperaturvärde. Det möjliggör detaljerad efteranalys, temperaturjämförelser mellan olika inspektionstillfällen och kvantifierbara resultat — till skillnad från enklare termiska kameror som bara visar relativa skillnader.',
+      'Fullradiometrisk data innebär att varje pixel bär ett absolut temperaturvärde, inte bara en relativ färgskala. Det gör att analysen kan kvantifiera temperaturskillnader exakt, jämföra resultat mellan inspektioner och ligga till grund för tekniska beslut om åtgärder.',
   },
   {
-    question: 'När på året bör termisk inspektion genomföras?',
+    question: 'När på året ger termisk inspektion bäst resultat?',
     answer:
-      'För byggnader och fasader ger kallare årstider ofta tydligare resultat, eftersom temperaturskillnaden mellan inne och ute förstärker synligheten av köldbryggor och isoleringsbrister. För solcellsanläggningar och industriella tillämpningar kan inspektion genomföras året runt, förutsatt att rätt förhållanden råder.',
+      'För byggnader fungerar termisk inspektion bäst under uppvärmningssäsongen, då temperaturskillnaden mellan inne och ute förstärker köldbryggor och isoleringsbrister. Solcellsinspektioner genomförs under god solinstrålning, och industriella tillämpningar kan utföras året runt.',
   },
   {
-    question: 'Hur skiljer sig drönarbaserad termisk inspektion från handhållen termografi?',
+    question: 'Drönare eller handhållen kamera — vad är skillnaden?',
     answer:
-      'Drönarbaserad termisk inspektion ger tillgång till svåråtkomliga ytor som tak, höga fasader och stora industrianläggningar — utan byggnadsställningar eller skylift. Stora arealer kan inspekteras snabbt och systematiskt, och datainsamlingen sker under enhetliga förhållanden.',
+      'Drönare når tak, höga fasader och stora anläggningar utan ställning. Datainsamlingen sker under enhetliga förhållanden och täcker stora arealer snabbt. Handhållen termografi lämpar sig bättre för små ytor inomhus eller kompletterande mätningar på nära håll.',
   },
   {
-    question: 'Vilka förberedelser krävs inför en termisk inspektion?',
+    question: 'Hur förbereder man sig inför en termisk inspektion?',
     answer:
-      'För byggnadsinspektion bör fastigheten vara uppvärmd och inga extrema väderomslag bör ha skett de senaste timmarna. Vi ger er detaljerade instruktioner vid bokning, anpassade efter er specifika tillämpning.',
+      'Fastigheten bör vara normalt uppvärmd och inga extrema väderomslag bör ha inträffat de senaste timmarna. Vid solcellsinspektioner ska anläggningen vara i drift. Vi ger detaljerade instruktioner anpassade efter ert objekt vid bokning.',
   },
   {
-    question: 'Hur lång tid tar en termisk inspektion?',
+    question: 'Kan termisk inspektion ersätta destruktiv provtagning?',
     answer:
-      'Tidsåtgången beror på objektets storlek och komplexitet. Kontakta oss med uppgifter om ert objekt så ger vi en uppskattning vid offertförfrågan.',
+      'Termisk inspektion är en oförstörande metod som identifierar problemområden utan att material behöver öppnas. Det minskar antalet provtagningspunkter och riktar eventuella destruktiva prover till de mest kritiska ställena, vilket sparar tid och pengar.',
   },
   {
-    question: 'Vad ingår i leveransen efter en termisk inspektion?',
+    question: 'Hur tolkar man en termisk inspektionsrapport?',
     answer:
-      'Leveransen inkluderar fullradiometriska termogrammer, RGB-referensbilder, en avvikelseanalys med klassificerade fynd, temperaturprofiler för kritiska områden samt en komplett PDF-rapport med åtgärdsrekommendationer.',
+      'Rapporten innehåller termogrammer med färgskala, temperaturvärden, RGB-referensbilder och en avvikelseanalys där varje fynd klassificeras och förklaras. Vi inkluderar alltid konkreta åtgärdsrekommendationer så att rapporten kan användas direkt som beslutsunderlag.',
   },
 ]
 
@@ -93,8 +93,8 @@ export default function TermiskInspektionLandingPage() {
       />
 
       <Hero
-        headline="Termisk inspektion med drönare — avslöja det osynliga"
-        subheadline="Fullradiometrisk datainsamling med infraröd kamera identifierar fukt, köldbryggor, isoleringsbrister och elektriska fel — snabbt, säkert och utan byggnadsställningar. EASA-certifierade piloter, ansvarsförsäkrade, i hela Sverige."
+        headline="Termisk inspektion — hur fungerar termografi med drönare?"
+        subheadline="Lär dig hur termisk inspektion fungerar, vad fullradiometrisk data innebär och i vilka situationer termografi ger störst nytta. En teknisk guide för fastighetsägare, förvaltare och driftansvariga."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
         ctaSecondary={{ label: 'Så går det till', href: '#process' }}
       />
@@ -129,12 +129,12 @@ export default function TermiskInspektionLandingPage() {
             <p className="mt-4 text-body-lg text-dark-500">
               Metoden används brett inom fastighetsförvaltning, industri, energi och bygg.
               SurveyDrone erbjuder{' '}
-              <Link href="/tjanster/termisk-inspektion" className="text-brand underline">
+              <Link href="/tjanster/termisk-inspektion" className="text-brand-600 underline hover:text-brand-700">
                 termisk inspektion som tjänst
               </Link>{' '}
               med EASA-certifierade piloter. Tekniken kompletterar visuell inspektion och är
               särskilt värdefull vid{' '}
-              <Link href="/tjanster/takinspektion" className="text-brand underline">
+              <Link href="/tjanster/takinspektion" className="text-brand-600 underline hover:text-brand-700">
                 takinspektion
               </Link>{' '}
               där dolda problem annars lätt missas.
@@ -144,7 +144,7 @@ export default function TermiskInspektionLandingPage() {
       </section>
 
       {/* AEO: När bör man använda termisk inspektion? */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding section-muted">
         <div className="container-content">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-heading-lg sm:text-display">
@@ -215,7 +215,7 @@ export default function TermiskInspektionLandingPage() {
       />
 
       {/* Vad kan termisk inspektion upptäcka? */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding section-muted">
         <div className="container-content">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-heading-lg sm:text-display text-center">
@@ -227,7 +227,7 @@ export default function TermiskInspektionLandingPage() {
             </p>
           </div>
           <div className="mx-auto mt-12 grid max-w-4xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-lg border border-gray-200 bg-white p-6">
+            <div className="card">
               <h3 className="text-heading-sm font-semibold">Fuktinträngning</h3>
               <p className="mt-2 text-body text-dark-500">
                 Fukt i tak och fasader syns som kalla zoner i termogrammet eftersom vatten
@@ -235,35 +235,35 @@ export default function TermiskInspektionLandingPage() {
                 konstruktionsskador.
               </p>
             </div>
-            <div className="rounded-lg border border-gray-200 bg-white p-6">
+            <div className="card">
               <h3 className="text-heading-sm font-semibold">Köldbryggor</h3>
               <p className="mt-2 text-body text-dark-500">
                 Köldbryggor uppstår där isoleringen är otillräcklig eller saknas. De syns som
                 varmare områden på utsidan av byggnaden under uppvärmningssäsongen.
               </p>
             </div>
-            <div className="rounded-lg border border-gray-200 bg-white p-6">
+            <div className="card">
               <h3 className="text-heading-sm font-semibold">Isoleringsbrister</h3>
               <p className="mt-2 text-body text-dark-500">
                 Felaktig, komprimerad eller saknad isolering skapar tydliga temperaturskillnader
                 som enkelt identifieras med termisk kamera.
               </p>
             </div>
-            <div className="rounded-lg border border-gray-200 bg-white p-6">
+            <div className="card">
               <h3 className="text-heading-sm font-semibold">Hotspots i solceller</h3>
               <p className="mt-2 text-body text-dark-500">
                 Defekta celler eller anslutningar i solcellspaneler genererar onormal värme.
                 Termisk inspektion identifierar dessa hotspots så att panelerna kan åtgärdas.
               </p>
             </div>
-            <div className="rounded-lg border border-gray-200 bg-white p-6">
+            <div className="card">
               <h3 className="text-heading-sm font-semibold">Elektriska fel</h3>
               <p className="mt-2 text-body text-dark-500">
                 Överhettade kopplingar, transformatorer och kabelgenomföringar syns tydligt i
                 termogrammet och kan åtgärdas innan de leder till haveri eller brand.
               </p>
             </div>
-            <div className="rounded-lg border border-gray-200 bg-white p-6">
+            <div className="card">
               <h3 className="text-heading-sm font-semibold">Läckor i rör och ledningar</h3>
               <p className="mt-2 text-body text-dark-500">
                 Fjärrvärmeledningar, kylsystem och dolda vattenledningar som läcker skapar
@@ -346,21 +346,21 @@ export default function TermiskInspektionLandingPage() {
         services={[
           {
             title: 'Takinspektion med drönare',
-            href: '/tjanster/takinspektion',
+            href: '/takinspektion-med-dronare',
             description:
-              'Kombinerad visuell och termisk inspektion av tak — identifiera skador, fukt och slitage.',
+              'Guide till takinspektion — hur drönare och termisk kamera identifierar skador, fukt och slitage.',
           },
           {
-            title: 'Solcellsinspektion',
-            href: '/tjanster/solcellsinspektion',
+            title: 'Solcellsinspektion med drönare',
+            href: '/solcellsinspektion',
             description:
-              'Termisk inspektion av solcellsanläggningar för att upptäcka hotspots och defekta paneler.',
+              'Allt om termisk inspektion av solceller — upptäck hotspots, defekta celler och PID-degradering.',
           },
           {
-            title: 'Termisk inspektion (tjänstesida)',
-            href: '/tjanster/termisk-inspektion',
+            title: 'Vad kostar drönarinspektion?',
+            href: '/vad-kostar-dronarinspektion',
             description:
-              'Läs mer om vår termiska inspektionstjänst med fullradiometrisk datainsamling.',
+              'Prisguide — vilka faktorer som påverkar kostnaden för termisk inspektion och drönarinspektion.',
           },
         ]}
       />

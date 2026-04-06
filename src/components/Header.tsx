@@ -231,14 +231,14 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
 
       {/* Mobile menu with backdrop overlay and transition */}
       <div
-        className={`fixed inset-0 top-20 z-40 bg-black/50 transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 top-20 z-40 bg-black/60 transition-opacity duration-300 lg:hidden ${
           mobileMenuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
         }`}
         aria-hidden="true"
         onClick={() => setMobileMenuOpen(false)}
       />
       <div
-        className={`fixed inset-x-0 top-20 z-40 max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain border-t border-white/10 bg-dark-900/98 backdrop-blur-lg transition-all duration-300 lg:hidden ${
+        className={`fixed inset-x-0 top-20 z-50 max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain border-t border-white/10 bg-dark-900 transition-all duration-300 lg:hidden ${
           mobileMenuOpen
             ? 'translate-y-0 opacity-100'
             : 'pointer-events-none -translate-y-2 opacity-0'

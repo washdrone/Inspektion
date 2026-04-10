@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
-import { faqSchema } from '@/lib/schema'
+import { faqSchema, localBusinessSchemaSv } from '@/lib/schema'
 import { Hero } from '@/components/Hero'
 import { TrustBar } from '@/components/TrustBar'
 import { BenefitsGrid } from '@/components/BenefitsGrid'
@@ -16,28 +16,15 @@ export const metadata: Metadata = createMetadata({
   path: '/platser/inspektion-malmo',
 })
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+const localBusinessSchema = localBusinessSchemaSv({
   name: 'SurveyDrone - Malmö',
   description:
     'Professionell drönarinspektion i Malmöregionen. Tak, fasader, solceller och industri med termisk kamera. EASA-certifierade fjärrpiloter.',
-  url: 'https://www.surveydrone.se/platser/inspektion-malmo',
-  email: 'info@surveydrone.se',
-  areaServed: {
-    '@type': 'City',
-    name: 'Malmö',
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 55.605,
-      longitude: 13.0038,
-    },
-  },
-  parentOrganization: {
-    '@type': 'ProfessionalService',
-    '@id': 'https://www.surveydrone.se/#organization',
-  },
-}
+  url: '/platser/inspektion-malmo',
+  city: 'Malmö',
+  latitude: 55.605,
+  longitude: 13.0038,
+})
 
 const faqItems = [
   {

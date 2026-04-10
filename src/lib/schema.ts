@@ -118,7 +118,7 @@ export function breadcrumbSchema(
   }
 }
 
-export function localBusinessSchema({
+export function localBusinessSchemaSv({
   name,
   description,
   url,

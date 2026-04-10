@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { createMetadata } from '@/lib/metadata'
+import { BASE_URL, createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaBand } from '@/components/CtaBand'
 
@@ -91,7 +91,7 @@ export default function GlossaryPage() {
               inDefinedTermSet: {
                 '@type': 'DefinedTermSet',
                 name: 'Glossary — Drone Inspection Terms',
-                url: 'https://www.surveydrone.se/en/glossary',
+                url: `${BASE_URL}/en/glossary`,
               },
             }))
           ),

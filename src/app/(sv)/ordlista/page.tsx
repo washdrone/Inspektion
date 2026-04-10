@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { createMetadata } from '@/lib/metadata'
+import { BASE_URL, createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CtaBand } from '@/components/CtaBand'
 
@@ -89,7 +89,7 @@ export default function OrdlistaPage() {
               inDefinedTermSet: {
                 '@type': 'DefinedTermSet',
                 name: 'Ordlista — Termer inom drönarinspektion',
-                url: 'https://www.surveydrone.se/ordlista',
+                url: `${BASE_URL}/ordlista`,
               },
             }))
           ),

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
-import { faqSchema } from '@/lib/schema'
+import { faqSchema, localBusinessSchemaSv } from '@/lib/schema'
 import { Hero } from '@/components/Hero'
 import { TrustBar } from '@/components/TrustBar'
 import { BenefitsGrid } from '@/components/BenefitsGrid'
@@ -16,28 +16,15 @@ export const metadata: Metadata = createMetadata({
   path: '/platser/inspektion-norrkoping',
 })
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+const localBusinessSchema = localBusinessSchemaSv({
   name: 'SurveyDrone - Norrköping',
   description:
     'Professionell drönarinspektion i Norrköping och Östergötland. Tak, fasader, solceller och industri med termisk kamera. EASA-certifierade fjärrpiloter.',
-  url: 'https://www.surveydrone.se/platser/inspektion-norrkoping',
-  email: 'info@surveydrone.se',
-  areaServed: {
-    '@type': 'City',
-    name: 'Norrköping',
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 58.5877,
-      longitude: 16.1924,
-    },
-  },
-  parentOrganization: {
-    '@type': 'ProfessionalService',
-    '@id': 'https://www.surveydrone.se/#organization',
-  },
-}
+  url: '/platser/inspektion-norrkoping',
+  city: 'Norrköping',
+  latitude: 58.5877,
+  longitude: 16.1924,
+})
 
 const faqItems = [
   {

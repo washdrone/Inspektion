@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { BASE_URL } from '@/lib/metadata'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -9,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: '/api/',
       },
     ],
-    sitemap: 'https://www.surveydrone.se/sitemap.xml',
+    sitemap: `${BASE_URL}/sitemap.xml`,
   }
 }

@@ -1,6 +1,5 @@
 import { MetadataRoute } from 'next'
-
-const BASE_URL = 'https://www.surveydrone.se'
+import { BASE_URL } from '@/lib/metadata'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = '2026-04-05'

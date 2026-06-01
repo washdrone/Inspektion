@@ -45,6 +45,11 @@ export function createMetadata({
       locale: ogLocale,
       type: 'website',
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} | ${SITE_NAME}`,
+      description,
+    },
     robots: noIndex ? { index: false, follow: false } : undefined,
   }
 }

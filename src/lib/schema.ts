@@ -8,6 +8,7 @@ export function organizationSchema() {
     '@id': `${BASE_URL}/#organization`,
     name: 'SurveyDrone',
     url: BASE_URL,
+    logo: `${BASE_URL}/icon.svg`,
     description:
       'Professionell drönare-inspektion med termisk kamera i hela Sverige. Tak, fasader, solceller och industri. EASA-certifierade piloter och fullradiometrisk datainsamling.',
     email: CONTACT.email,
@@ -26,6 +27,9 @@ export function organizationSchema() {
     },
     knowsAbout: [
       'Drönarinspektion',
+      'Drönarinmätning',
+      'Volymberäkning',
+      'Drönarkartläggning',
       'Takinspektion',
       'Fasadinspektion',
       'Solcellsinspektion',
@@ -59,10 +63,12 @@ export function serviceSchema({
   name,
   description,
   url,
+  serviceType = 'Drönare-inspektion',
 }: {
   name: string
   description: string
   url: string
+  serviceType?: string
 }) {
   return {
     '@context': 'https://schema.org',
@@ -80,7 +86,7 @@ export function serviceSchema({
       '@type': 'Country',
       name: 'Sverige',
     },
-    serviceType: 'Drönare-inspektion',
+    serviceType,
     offers: {
       '@type': 'Offer',
       priceCurrency: 'SEK',

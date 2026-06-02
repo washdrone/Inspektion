@@ -4,6 +4,10 @@
  */
 
 export const SERVICE_LINKS = [
+  { href: '/tjanster/dronarinmatning', label: 'Drönarinmätning' },
+  { href: '/tjanster/volymberakning', label: 'Volymberäkning' },
+  { href: '/tjanster/fotogrammetri-3d-modell', label: 'Fotogrammetri & 3D-modell' },
+  { href: '/tjanster/3d-kartlaggning', label: '3D-kartläggning' },
   { href: '/tjanster/takinspektion', label: 'Takinspektion' },
   { href: '/tjanster/fasadinspektion', label: 'Fasadinspektion' },
   { href: '/tjanster/solcellsinspektion', label: 'Solcellsinspektion' },
@@ -11,7 +15,6 @@ export const SERVICE_LINKS = [
   { href: '/tjanster/fuktinspektion', label: 'Fuktinspektion' },
   { href: '/tjanster/industriinspektion', label: 'Industriinspektion' },
   { href: '/tjanster/vindkraftinspektion', label: 'Vindkraftinspektion' },
-  { href: '/tjanster/3d-kartlaggning', label: '3D-kartläggning' },
 ] as const
 
 export const INDUSTRY_LINKS = [

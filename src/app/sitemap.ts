@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { BASE_URL } from '@/lib/metadata'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = '2026-04-05'
+  const lastModified = '2026-06-01'
 
   const svRoutes = [
     // Top-level
@@ -19,6 +19,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/fasadinspektion', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: '/solcellsinspektion', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: '/vad-kostar-dronarinspektion', priority: 0.8, changeFrequency: 'monthly' as const },
+    // Mätning & 3D (kärntjänster)
+    { path: '/tjanster/dronarinmatning', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/tjanster/volymberakning', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/tjanster/fotogrammetri-3d-modell', priority: 0.9, changeFrequency: 'monthly' as const },
     // Services
     { path: '/tjanster/takinspektion', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/tjanster/fasadinspektion', priority: 0.8, changeFrequency: 'monthly' as const },

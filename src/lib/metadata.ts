@@ -23,10 +23,12 @@ export function createMetadata({
 
   const languages: Record<string, string> = {}
   if (locale === 'sv' && alternateLocalePath) {
+    languages['sv'] = url
     languages['en'] = `${BASE_URL}${alternateLocalePath}`
     languages['x-default'] = url
   } else if (locale === 'en' && alternateLocalePath) {
     languages['sv'] = `${BASE_URL}${alternateLocalePath}`
+    languages['en'] = url
     languages['x-default'] = `${BASE_URL}${alternateLocalePath}`
   }
 

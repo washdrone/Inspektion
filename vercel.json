@@ -1,11 +1,29 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "regions": ["arn1"],
+  "regions": [
+    "arn1"
+  ],
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "surveydrone.se" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "inspektion-two.vercel.app"
+        }
+      ],
+      "destination": "https://www.surveydrone.se/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "surveydrone.se"
+        }
+      ],
       "destination": "https://www.surveydrone.se/:path*",
       "permanent": true
     }
@@ -14,15 +32,27 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     },
     {
       "source": "/(.*)\\.(js|css|woff2|avif|webp|jpg|png|svg|ico)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     }
   ]

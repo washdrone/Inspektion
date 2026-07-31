@@ -10,9 +10,12 @@
  *  - robots.txt finns, tillåter crawl och pekar på sitemap
  *  - sitemap.xml finns, använder produktionsdomänen, inga dubbletter
  *  - varje sitemap-URL: 200 utan redirect, absolut self-canonical,
- *    ingen noindex, unik titel, exakt en H1, meta description
+ *    ingen noindex, unik titel, exakt en H1, meta description, rätt html-lang
+ *  - JSON-LD går att parsa och saknar ofullständig LocalBusiness,
+ *    felaktig OnlineOnly och avvikande breadcrumb-URL
  *  - okänd URL ger äkta 404
  *  - trailing slash-varianter redirectar (ingen dubblett)
+ *  - tidigare publicerade URL:er har permanenta redirects
  * Avslutar med exit-kod 1 vid fel.
  */
 
@@ -81,6 +84,11 @@ for (const loc of locs) {
   if (r.status !== 200) { fail(`${path}: status ${r.status} (förväntade 200 utan redirect)`); continue }
   const html = await r.text()
 
+  const htmlLang = extract(html, /<html[^>]*\blang="([^"]+)"/i)
+  const expectedLang = path === '/en' || path.startsWith('/en/') ? 'en' : 'sv'
+  if (htmlLang !== expectedLang)
+    fail(`${path}: html lang="${htmlLang}" (förväntade "${expectedLang}")`)
+
   const canonical = extract(html, /<link[^>]*rel="canonical"[^>]*href="([^"]*)"/) ||
     extract(html, /<link[^>]*href="([^"]*)"[^>]*rel="canonical"/)
   if (!canonical) fail(`${path}: canonical saknas`)
@@ -101,6 +109,31 @@ for (const loc of locs) {
   else if (h1count > 1) warn(`${path}: ${h1count} st H1`)
 
   if (!/<meta[^>]*name="description"/.test(html)) fail(`${path}: meta description saknas`)
+
+  const jsonLdBlocks = [...html.matchAll(
+    /<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g
+  )]
+  for (const [index, match] of jsonLdBlocks.entries()) {
+    let data
+    try {
+      data = JSON.parse(match[1])
+    } catch {
+      fail(`${path}: JSON-LD block ${index + 1} kan inte parsas`)
+      continue
+    }
+
+    if (data['@type'] === 'LocalBusiness' && !data.address)
+      fail(`${path}: LocalBusiness saknar fysisk adress`)
+
+    if (JSON.stringify(data).includes('https://schema.org/OnlineOnly'))
+      fail(`${path}: fysisk tjänst är felaktigt märkt OnlineOnly`)
+
+    if (data['@type'] === 'BreadcrumbList') {
+      const lastItem = data.itemListElement?.at(-1)?.item
+      if (lastItem && lastItem !== loc)
+        fail(`${path}: sista breadcrumb-URL "${lastItem}" ≠ sidans URL "${loc}"`)
+    }
+  }
   checked++
 }
 ok(`${checked}/${locs.length} sitemap-URL:er verifierade (200, canonical, index, titel, H1)`)
@@ -138,6 +171,37 @@ ok(`${checked}/${locs.length} sitemap-URL:er verifierade (200, canonical, index,
   }
   if (!withAlt) fail('sitemap saknar hreflang-annoteringar (förväntade sv/en-par)')
   else if (!broken) ok(`hreflang: ${withAlt} URL:er med ömsesidiga sv/en-annoteringar`)
+}
+
+// 7. Permanenta redirects från tidigare publicerad URL-struktur
+{
+  const legacyRedirects = new Map([
+    ['/inspektioner-med-dronare', '/'],
+    ['/inspektioner-med-dronare/takinspektion', '/tjanster/takinspektion'],
+    ['/inspektioner-med-dronare/fasadinspektion', '/tjanster/fasadinspektion'],
+    ['/inspektioner-med-dronare/solcellsinspektion', '/tjanster/solcellsinspektion'],
+    ['/inspektioner-med-dronare/byggplatsdokumentation', '/branscher/bygg'],
+    ['/inspektioner-med-dronare/industriell-inspektion', '/tjanster/industriinspektion'],
+    ['/inspektioner-med-dronare/priser', '/priser'],
+    ['/inspektioner-med-dronare/faq', '/'],
+    ['/inspektioner-med-dronare/case/takinspektion-flerbostadshus', '/tjanster/takinspektion'],
+    ['/inspektioner-med-dronare/case/byggplatsdokumentation-nyproduktion', '/branscher/bygg'],
+    ['/inspektioner-med-dronare/case/solcellsinspektion-kommersiell', '/tjanster/solcellsinspektion'],
+    ['/inspektioner-med-dronare/kontakt', '/kontakt'],
+  ])
+
+  let validRedirects = 0
+  for (const [source, destination] of legacyRedirects) {
+    const r = await get(source)
+    const location = r.headers.get('location')
+    if (![301, 308].includes(r.status))
+      fail(`${source}: status ${r.status}, förväntade permanent redirect`)
+    else if (location !== destination && location !== `${PROD_ORIGIN}${destination}`)
+      fail(`${source}: redirectar till "${location}", förväntade "${destination}"`)
+    else validRedirects++
+  }
+  if (validRedirects === legacyRedirects.size)
+    ok(`${validRedirects} äldre URL:er har korrekta permanenta redirects`)
 }
 
 console.log(`\nResultat: ${errors.length} fel, ${warnings.length} varningar`)

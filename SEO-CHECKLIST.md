@@ -28,22 +28,24 @@ Status för teknisk SEO och indexerbarhet. Kanonisk form: **https://www.surveydr
 - [x] Unik `title` och `meta description` per rutt (`createMetadata`).
 - [x] Open Graph (title, description, url, siteName, locale, type).
 - [x] **Twitter Card** (`summary_large_image`) tillagd i `createMetadata`.
-- [x] `lang="sv"` på `<html>` (root-layout) och `lang`-hantering för `/en`.
-- [x] hreflang/alternates mellan sv och en där `alternateLocalePath` anges.
+- [x] Separata root-layouts renderar `lang="sv"` respektive `lang="en"` direkt i HTML.
+- [x] Gemensam språkparning ger ömsesidig hreflang i både sidmetadata och sitemap.
 
 ### Steg 4 — JSON-LD (i renderad HTML)
 - [x] **Organization** (`ProfessionalService`): namn, **logo**, `areaServed: SE`,
       e-post, EASA-credential. **Inget `sameAs`**, ingen gatuadress/geo.
 - [x] **WebSite**.
 - [x] **Service** per tjänst med konfigurerbar `serviceType` och `areaServed: SE`.
+- [x] Ortssidor använder regionalt **Service**-schema, inte `LocalBusiness` utan fysisk adress.
 - [x] **BreadcrumbList** (via `Breadcrumbs`-komponenten).
 - [x] **FAQPage** på sidor med vanliga frågor.
 
 ### Steg 5 — Crawl/indexering
-- [x] Dynamisk `sitemap.xml` (`src/app/sitemap.ts`) med alla publika URL:er + `lastmod`.
-      Nya mät-/3D-sidor tillagda. `lastModified` uppdaterad.
+- [x] Dynamisk `sitemap.xml` (`src/app/sitemap.ts`) med alla publika URL:er och
+      ömsesidiga språkpar. Ingen artificiell `lastmod` används.
 - [x] `robots.txt` (`src/app/robots.ts`) tillåter crawl, blockerar `/api/`, pekar på sitemap.
 - [x] Ingen `noindex` kvar på publika sidor (`robots`-fältet sätts bara när `noIndex: true`).
+- [x] Permanenta redirects finns från tidigare publicerade URL:er till tydliga motsvarigheter.
 
 ### Steg 6 — Innehåll & tjänstetexter (mätning & 3D)
 Tre nya dedikerade landningssidor, var och en med unikt innehåll, primärt sökord i
@@ -77,9 +79,9 @@ H1 + slug + första 100 orden, logisk H2/H3-hierarki, FAQ (AEO) och FAQPage-sche
       bort. Avgör om sajten ska renodlas mot mätning & 3D eller behålla båda reviren.
 - [ ] **OG-/Twitter-bild:** Ingen delningsbild (`og:image`) är satt. Lägg till en
       brandad 1200×630-bild när sådan finns, annars visas länkkort utan bild.
-- [ ] **Plats-/stadssidor använder `LocalBusiness` med geo** (`localBusinessSchemaSv`).
-      Steg 4 i uppdraget förordar *ingen* LocalBusiness/adress/geo. Dessa sidor lämnades
-      orörda för att inte skada befintlig SEO — gör ett medvetet val om de ska behållas.
+- [ ] **Innehållsbeslut för plats-/stadssidor:** tekniskt använder de nu korrekt
+      regionalt `Service`-schema. Avgör separat vilka ortssidor som har tillräckligt
+      verifierat, unikt innehåll för att fortsatt prioriteras för indexering.
 - [ ] **Reveal-animation (`useReveal`)** renderar sektioner med `opacity:0` tills JS kör.
       Texten finns i HTML (bra för crawlers) men är dold utan JS och kan påverka upplevd
       LCP. Site-brett mönster — överväg att rendera synligt som default.

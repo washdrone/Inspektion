@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { languagePairFor } from './i18n'
 
 const SITE_NAME = 'SurveyDrone'
 const BASE_URL = 'https://www.surveydrone.se'
@@ -20,16 +21,19 @@ export function createMetadata({
 }): Metadata {
   const url = `${BASE_URL}${path}`
   const ogLocale = locale === 'en' ? 'en_US' : 'sv_SE'
+  const pair = languagePairFor(path)
+  const inferredAlternatePath = locale === 'en' ? pair?.sv : pair?.en
+  const resolvedAlternatePath = alternateLocalePath ?? inferredAlternatePath
 
   const languages: Record<string, string> = {}
-  if (locale === 'sv' && alternateLocalePath) {
+  if (locale === 'sv' && resolvedAlternatePath) {
     languages['sv'] = url
-    languages['en'] = `${BASE_URL}${alternateLocalePath}`
+    languages['en'] = `${BASE_URL}${resolvedAlternatePath}`
     languages['x-default'] = url
-  } else if (locale === 'en' && alternateLocalePath) {
-    languages['sv'] = `${BASE_URL}${alternateLocalePath}`
+  } else if (locale === 'en' && resolvedAlternatePath) {
+    languages['sv'] = `${BASE_URL}${resolvedAlternatePath}`
     languages['en'] = url
-    languages['x-default'] = `${BASE_URL}${alternateLocalePath}`
+    languages['x-default'] = `${BASE_URL}${resolvedAlternatePath}`
   }
 
   return {

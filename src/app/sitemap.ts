@@ -1,50 +1,13 @@
 import { MetadataRoute } from 'next'
 import { BASE_URL } from '@/lib/metadata'
-
-
-// Sv/en-par för hreflang i sitemap (xhtml:link). Ensidiga sidor (utan
-// motsvarighet på andra språket) får ingen hreflang, vilket är korrekt.
-const LANGUAGE_PAIRS: Array<{ sv: string; en: string }> = [
-  { sv: '/', en: '/en' },
-  { sv: '/hur-det-gar-till', en: '/en/how-it-works' },
-  { sv: '/priser', en: '/en/pricing' },
-  { sv: '/forvaltningsavtal', en: '/en/maintenance-agreements' },
-  { sv: '/ordlista', en: '/en/glossary' },
-  { sv: '/om-oss', en: '/en/about' },
-  { sv: '/kontakt', en: '/en/contact' },
-  { sv: '/tjanster/takinspektion', en: '/en/services/roof-inspection' },
-  { sv: '/tjanster/fasadinspektion', en: '/en/services/facade-inspection' },
-  { sv: '/tjanster/solcellsinspektion', en: '/en/services/solar-panel-inspection' },
-  { sv: '/tjanster/termisk-inspektion', en: '/en/services/thermal-inspection' },
-  { sv: '/tjanster/fuktinspektion', en: '/en/services/moisture-inspection' },
-  { sv: '/tjanster/industriinspektion', en: '/en/services/industrial-inspection' },
-  { sv: '/tjanster/vindkraftinspektion', en: '/en/services/wind-turbine-inspection' },
-  { sv: '/tjanster/3d-kartlaggning', en: '/en/services/3d-mapping' },
-  { sv: '/branscher/fastighet', en: '/en/industries/property' },
-  { sv: '/branscher/energi', en: '/en/industries/energy' },
-  { sv: '/branscher/industri', en: '/en/industries/industrial' },
-  { sv: '/branscher/kommuner', en: '/en/industries/municipalities' },
-  { sv: '/branscher/forsakring', en: '/en/industries/insurance' },
-  { sv: '/branscher/bygg', en: '/en/industries/construction' },
-  { sv: '/platser/inspektion-stockholm', en: '/en/locations/inspection-stockholm' },
-  { sv: '/platser/inspektion-goteborg', en: '/en/locations/inspection-gothenburg' },
-  { sv: '/platser/inspektion-malmo', en: '/en/locations/inspection-malmo' },
-  { sv: '/platser/inspektion-uppsala', en: '/en/locations/inspection-uppsala' },
-  { sv: '/platser/inspektion-linkoping', en: '/en/locations/inspection-linkoping' },
-  { sv: '/platser/inspektion-orebro', en: '/en/locations/inspection-orebro' },
-  { sv: '/platser/inspektion-vasteras', en: '/en/locations/inspection-vasteras' },
-  { sv: '/platser/inspektion-helsingborg', en: '/en/locations/inspection-helsingborg' },
-  { sv: '/platser/inspektion-norrkoping', en: '/en/locations/inspection-norrkoping' },
-  { sv: '/platser/inspektion-umea', en: '/en/locations/inspection-umea' },
-  { sv: '/platser/inspektion-lulea', en: '/en/locations/inspection-lulea' },
-]
+import { languagePairFor } from '@/lib/i18n'
 
 function urlFor(path: string): string {
   return path === '/' ? BASE_URL : `${BASE_URL}${path}`
 }
 
 function languagesFor(path: string): Record<string, string> | undefined {
-  const pair = LANGUAGE_PAIRS.find((p) => p.sv === path || p.en === path)
+  const pair = languagePairFor(path)
   if (!pair) return undefined
   return {
     sv: urlFor(pair.sv),

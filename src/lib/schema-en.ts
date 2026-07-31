@@ -71,45 +71,50 @@ export function serviceSchemaEn({
     offers: {
       '@type': 'Offer',
       priceCurrency: 'SEK',
-      availability: 'https://schema.org/OnlineOnly',
     },
   }
 }
 
-export function localBusinessSchemaEn({
+export function regionalServiceSchemaEn({
   name,
   description,
   url,
   city,
-  latitude,
-  longitude,
 }: {
   name: string
   description: string
   url: string
   city: string
-  latitude: number
-  longitude: number
 }) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'Service',
     name,
     description,
     url: `${BASE_URL}${url}`,
-    email: CONTACT.email,
+    serviceType: 'Drone Inspection',
+    provider: {
+      '@type': 'ProfessionalService',
+      '@id': `${BASE_URL}/#organization`,
+      name: 'SurveyDrone',
+      url: BASE_URL,
+    },
     areaServed: {
       '@type': 'City',
       name: city,
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude,
-        longitude,
-      },
-    },
-    parentOrganization: {
-      '@type': 'ProfessionalService',
-      '@id': `${BASE_URL}/#organization`,
     },
   }
+}
+
+// Backwards-compatible wrapper for existing location pages. These pages describe
+// service areas, not physical business locations, and must not emit LocalBusiness.
+export function localBusinessSchemaEn({
+  latitude: _latitude,
+  longitude: _longitude,
+  ...service
+}: Parameters<typeof regionalServiceSchemaEn>[0] & {
+  latitude: number
+  longitude: number
+}) {
+  return regionalServiceSchemaEn(service)
 }

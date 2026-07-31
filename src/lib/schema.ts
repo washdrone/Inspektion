@@ -119,45 +119,51 @@ export function breadcrumbSchema(
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `${BASE_URL}${item.url}`,
+      ...(item.url ? { item: `${BASE_URL}${item.url}` } : {}),
     })),
   }
 }
 
-export function localBusinessSchemaSv({
+export function regionalServiceSchemaSv({
   name,
   description,
   url,
   city,
-  latitude,
-  longitude,
 }: {
   name: string
   description: string
   url: string
   city: string
-  latitude: number
-  longitude: number
 }) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'Service',
     name,
     description,
     url: `${BASE_URL}${url}`,
-    email: CONTACT.email,
+    serviceType: 'Drönare-inspektion',
+    provider: {
+      '@type': 'ProfessionalService',
+      '@id': `${BASE_URL}/#organization`,
+      name: 'SurveyDrone',
+      url: BASE_URL,
+    },
     areaServed: {
       '@type': 'City',
       name: city,
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude,
-        longitude,
-      },
-    },
-    parentOrganization: {
-      '@type': 'ProfessionalService',
-      '@id': `${BASE_URL}/#organization`,
     },
   }
+}
+
+// Backwards-compatible wrapper for existing location pages. These pages describe
+// service areas, not physical business locations, and must not emit LocalBusiness.
+export function localBusinessSchemaSv({
+  latitude: _latitude,
+  longitude: _longitude,
+  ...service
+}: Parameters<typeof regionalServiceSchemaSv>[0] & {
+  latitude: number
+  longitude: number
+}) {
+  return regionalServiceSchemaSv(service)
 }

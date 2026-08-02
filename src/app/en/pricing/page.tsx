@@ -30,7 +30,7 @@ const faqItems = [
   },
   {
     question: 'How quickly can you provide a quote?',
-    answer: 'We typically respond within 24 hours with a quote based on your description.',
+    answer: 'We get back to you promptly with a quote based on your description.',
   },
   {
     question: 'What does it cost to add thermal inspection?',
@@ -106,7 +106,7 @@ export default function PricingPage() {
                   'Report with images and notes',
                   'Recommended actions',
                   'Digital image archive',
-                  'Report within 48 hours',
+                  'Analysed report with recommended actions',
                 ],
                 highlighted: false,
               },
@@ -188,7 +188,7 @@ export default function PricingPage() {
 
       <CtaBand
         headline="Request a free quote"
-        description="Describe your needs and we will get back to you within 24 hours with a quote."
+        description="Describe your needs and we will get back to you promptly with a quote."
         ctaLabel="Request a quote"
         ctaHref="/en/contact"
       />

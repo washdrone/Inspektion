@@ -9,7 +9,7 @@ import { faqSchema } from '@/lib/schema'
 export const metadata: Metadata = createMetadata({
   title: 'How It Works — Drone Inspection Process',
   description:
-    'From quote request to finished report within 48 hours. See how a drone inspection with SurveyDrone works in five simple steps. You do not need to be on site.',
+    'From quote request to finished report. See how a drone inspection with SurveyDrone works in five simple steps. You do not need to be on site.',
   path: '/en/how-it-works',
   locale: 'en',
   alternateLocalePath: '/hur-det-gar-till',
@@ -19,7 +19,7 @@ const steps = [
   {
     number: 1,
     title: 'Quote request',
-    description: 'Describe the object and your needs via the form or email. We respond within 24 hours with a tailored quote.',
+    description: 'Describe the object and your needs via the form or email. We get back to you promptly with a tailored quote.',
     detail: 'You do not need to be an expert — just describe what you want inspected and why. We help you choose the right service and setup.',
   },
   {
@@ -32,7 +32,7 @@ const steps = [
     number: 3,
     title: 'Flight',
     description: 'An EASA-certified pilot carries out the inspection using industry-leading thermal camera and high-resolution RGB camera.',
-    detail: 'A typical inspection takes 1-4 hours depending on the size and complexity of the object. We can inspect multiple objects on the same day.',
+    detail: 'Time on site depends on the size and complexity of the object — a few hours is often enough, and multiple objects can be inspected on the same day.',
   },
   {
     number: 4,
@@ -43,7 +43,7 @@ const steps = [
   {
     number: 5,
     title: 'Report',
-    description: 'A professional PDF report is delivered typically within 48 hours with images, analyses and recommended actions.',
+    description: 'A professional PDF report with images, analyses and recommended actions. Delivery time depends on the amount of data and is stated in the quote.',
     detail: 'The report is designed as a decision-making document — clear, structured and ready to share with board members, property managers or contractors.',
   },
 ]
@@ -55,7 +55,7 @@ const faqItems = [
   },
   {
     question: 'How quickly will the report be delivered?',
-    answer: 'The report is typically delivered within 48 hours after the flight. For urgent matters, we can prioritise faster delivery.',
+    answer: 'Delivery time depends on the scope and the amount of data to analyse — you get a clear delivery time in the quote, and urgent matters can be prioritised.',
   },
   {
     question: 'What is included in the inspection report?',
@@ -133,7 +133,7 @@ export default function HowItWorksPage() {
         <div className="container-narrow text-center">
           <h2 className="text-center section-heading">Ready to get started?</h2>
           <p className="mt-3 text-lg text-dark-500">
-            It starts with a simple quote request. We get back to you within 24 hours.
+            It starts with a simple quote request — we get back to you promptly.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link href="/en/contact" className="btn-primary px-8 py-4 text-base">
@@ -150,7 +150,7 @@ export default function HowItWorksPage() {
 
       <CtaBand
         headline="Easier than you think"
-        description="Describe your needs — we handle the rest. Quote within 24 hours, report within 48 hours."
+        description="Describe your needs — we handle the rest. Free quote with a clear delivery time."
         ctaHref="/en/contact"
       />
     </>

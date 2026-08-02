@@ -50,7 +50,7 @@ const faqItems = [
   {
     question: 'How long does a facade inspection take?',
     answer:
-      'Typically 1–4 hours depending on building size and complexity. The report is delivered within 48 hours.',
+      'Time on site depends on building size and complexity — a few hours is often enough. Report delivery time is stated in the quote.',
   },
   {
     question: 'Can facade inspection be combined with roof inspection?',
@@ -60,7 +60,7 @@ const faqItems = [
   {
     question: 'How do I book a facade inspection?',
     answer:
-      'Contact us via the form or email. We respond within 24 hours with a tailored quote.',
+      'Contact us via the form or email. We get back to you promptly with a tailored quote.',
   },
 ]
 
@@ -189,7 +189,7 @@ export default function FacadeInspectionPage() {
             number: 4,
             title: 'Reporting',
             description:
-              'You receive a professional report with images, thermal analysis and recommended actions within 48 hours.',
+              'You receive a professional report with images, thermal analysis and recommended actions — delivery time as stated in the quote.',
           },
         ]}
       />
@@ -237,7 +237,7 @@ export default function FacadeInspectionPage() {
 
       <CtaBand
         headline="Need a facade inspection?"
-        description="Contact us for a free quote. Response within 24 hours, report within 48 hours."
+        description="Contact us for a free quote with a clear delivery time."
         ctaLabel="Get a Quote"
         ctaHref="/en/contact"
       />

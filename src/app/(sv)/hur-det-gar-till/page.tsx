@@ -9,7 +9,7 @@ import { faqSchema } from '@/lib/schema'
 export const metadata: Metadata = createMetadata({
   title: 'Hur det går till — Drönarinspektion steg för steg',
   description:
-    'Från offertförfrågan till färdig rapport inom 48 timmar. Se hur en drönarinspektion med SurveyDrone går till i fem enkla steg. Ni behöver inte vara på plats.',
+    'Från offertförfrågan till färdig rapport. Se hur en drönarinspektion med SurveyDrone går till i fem enkla steg. Ni behöver inte vara på plats.',
   path: '/hur-det-gar-till',
 })
 
@@ -17,7 +17,7 @@ const steps = [
   {
     number: 1,
     title: 'Offertförfrågan',
-    description: 'Beskriv objektet och era behov via formuläret eller e-post. Vi svarar inom 24 timmar med en skräddarsydd offert.',
+    description: 'Beskriv objektet och era behov via formuläret eller e-post. Vi återkommer snarast med en skräddarsydd offert.',
     detail: 'Ni behöver inte vara experter — beskriv bara vad ni vill inspektera och varför. Vi hjälper er välja rätt tjänst och upplägg.',
   },
   {
@@ -30,7 +30,7 @@ const steps = [
     number: 3,
     title: 'Flygning',
     description: 'EASA-certifierad pilot genomför inspektionen med branschledande termisk kamera och högupplöst RGB-kamera.',
-    detail: 'En typisk inspektion tar 1–4 timmar beroende på objektets storlek och komplexitet. Vi kan inspektera flera objekt samma dag.',
+    detail: 'Tidsåtgången beror på objektets storlek och komplexitet — ofta räcker det med några timmar, och flera objekt kan inspekteras samma dag.',
   },
   {
     number: 4,
@@ -41,7 +41,7 @@ const steps = [
   {
     number: 5,
     title: 'Rapport',
-    description: 'Professionell PDF-rapport levereras normalt inom 48 timmar med bilder, analyser och åtgärdsförslag.',
+    description: 'Professionell PDF-rapport med bilder, analyser och åtgärdsförslag. Leveranstiden beror på datamängden och anges i offerten.',
     detail: 'Rapporten är utformad som beslutsunderlag — tydlig, strukturerad och redo att delas med styrelse, förvaltare eller entreprenör.',
   },
 ]
@@ -53,7 +53,7 @@ const faqItems = [
   },
   {
     question: 'Hur snabbt kommer rapporten?',
-    answer: 'Rapporten levereras normalt inom 48 timmar efter genomförd flygning. Vid brådskande ärenden kan vi prioritera snabbare leverans.',
+    answer: 'Leveranstiden beror på uppdragets omfattning och hur mycket data som ska analyseras — enklare uppdrag går snabbt, större datamängder kräver mer analystid. Ni får en tydlig leveranstid i offerten, och brådskande ärenden kan prioriteras.',
   },
   {
     question: 'Vad ingår i inspektionsrapporten?',
@@ -131,7 +131,7 @@ export default function HurDetGarTillPage() {
         <div className="container-narrow text-center">
           <h2 className="section-heading">Redo att komma igång?</h2>
           <p className="mt-3 text-lg text-dark-500">
-            Det börjar med en enkel offertförfrågan. Vi återkommer inom 24 timmar.
+            Det börjar med en enkel offertförfrågan — vi återkommer snarast.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link href="/kontakt" className="btn-primary px-8 py-4 text-base">
@@ -148,7 +148,7 @@ export default function HurDetGarTillPage() {
 
       <CtaBand
         headline="Enklare än ni tror"
-        description="Beskriv ert behov — vi sköter resten. Offert inom 24 timmar, rapport inom 48 timmar."
+        description="Beskriv ert behov — vi sköter resten. Kostnadsfri offert med tydlig leveranstid."
       />
     </>
   )

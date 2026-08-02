@@ -9,7 +9,7 @@ export function organizationSchemaEn() {
     name: 'SurveyDrone',
     url: BASE_URL,
     description:
-      'Professional drone inspection with thermal camera across Sweden. Roofs, facades, solar panels and industrial facilities. EASA-certified pilots and full radiometric data collection.',
+      'Professional visual and thermal drone inspection across Sweden. Roofs, facades, solar panels and industrial facilities. EASA-certified pilots and full radiometric data collection.',
     email: CONTACT.email,
     address: {
       '@type': 'PostalAddress',

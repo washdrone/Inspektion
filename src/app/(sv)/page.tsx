@@ -13,9 +13,9 @@ import { CtaBand } from '@/components/CtaBand'
 import { IndustriesServed } from '@/components/IndustriesServed'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Drönarinspektion Sverige — Termisk inspektion av tak, fasad & solceller',
+  title: 'Drönarinspektion Sverige — Visuell & termisk inspektion av tak, fasad & solceller',
   description:
-    'Professionell drönarinspektion med termisk kamera i hela Sverige. Tak, fasader, solceller och industri. EASA-certifierade piloter, fullradiometrisk datainsamling. Begär offert idag.',
+    'Professionell drönarinspektion i hela Sverige med högupplöst RGB- och termisk kamera. Tak, fasader, solceller och industri — analyserad rapport med åtgärdsförslag. EASA-certifierade piloter. Begär offert.',
   path: '/',
 })
 
@@ -53,17 +53,17 @@ const homeFaqItems = [
   {
     question: 'Vad ingår i inspektionsrapporten?',
     answer:
-      'Rapporten innehåller högupplösta flygbilder, termiska bilder med fullradiometrisk data, identifierade avvikelser med georeferering, prioritetsklassning av skador och konkreta åtgärdsrekommendationer. Allt levereras som en professionell PDF-rapport, normalt inom 48 timmar.',
+      'Rapporten innehåller högupplösta flygbilder, termiska bilder med fullradiometrisk data, identifierade avvikelser med georeferering, prioritetsklassning av skador och konkreta åtgärdsrekommendationer. Allt levereras som en professionell PDF-rapport. Leveranstiden beror på uppdragets omfattning och anges i offerten.',
   },
   {
     question: 'Hur fungerar drönare-inspektion med termisk kamera?',
     answer:
-      'Vi flyger med kommersiell inspektionsklass-UAV utrustad med fullradiometrisk termisk kamera och högupplöst RGB-kamera. Den termiska kameran registrerar temperaturskillnader på ytor, vilket avslöjar fukt, köldbryggor och skador osynliga för blotta ögat. Hela objektet dokumenteras systematiskt och ni får en detaljerad rapport normalt inom 48 timmar.',
+      'Vi flyger med kommersiell inspektionsklass-UAV utrustad med fullradiometrisk termisk kamera och högupplöst RGB-kamera. Den termiska kameran registrerar temperaturskillnader på ytor, vilket avslöjar fukt, köldbryggor och skador osynliga för blotta ögat. Hela objektet dokumenteras systematiskt och ni får en detaljerad, analyserad rapport — leveranstiden anges i offerten.',
   },
   {
     question: 'Hur lång tid tar en inspektion?',
     answer:
-      'En inspektion på plats tar normalt 1–4 timmar beroende på objektets storlek och komplexitet. Rapporten levereras normalt inom 48 timmar efter genomförd flygning.',
+      'Tidsåtgången på plats beror på objektets storlek och komplexitet — ofta räcker det med några timmar. Därefter analyseras materialet, och rapportens leveranstid anges i offerten.',
   },
   {
     question: 'Går det att inspektera på vintern?',
@@ -81,14 +81,14 @@ export default function HomePage() {
       />
 
       <Hero
-        headline="Drönarinspektion med termisk kamera — hela Sverige"
-        subheadline="SurveyDrone hjälper fastighetsägare, förvaltare och företag att inspektera tak, fasader, solceller och industrianläggningar med fullradiometrisk termisk kamera — snabbare, säkrare och kostnadseffektivare än traditionella metoder."
+        headline="Visuell och termisk drönarinspektion — hela Sverige"
+        subheadline="SurveyDrone dokumenterar tak, fasader, solceller och industrianläggningar med högupplöst RGB-kamera och fullradiometrisk värmekamera — och levererar analyserade rapporter med prioriterade åtgärdsförslag."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
         ctaSecondary={{ label: 'Hur det går till', href: '/hur-det-gar-till' }}
         stats={[
           { value: 'Hela', label: 'Sverige' },
-          { value: '1–4h', label: 'Inspektion på plats' },
-          { value: '48h', label: 'Rapport levereras' },
+          { value: 'RGB + IR', label: 'Visuell & termisk data' },
+          { value: 'EASA', label: 'Certifierade piloter' },
           { value: '0', label: 'Arbete på höjd' },
         ]}
       />
@@ -220,7 +220,7 @@ export default function HomePage() {
           },
           {
             title: 'Snabbare genomförande',
-            description: 'En inspektion som tidigare tog dagar kan genomföras på 1–4 timmar med drönare.',
+            description: 'En inspektion som tidigare krävde dagar av etablering kan ofta genomföras på några timmar med drönare.',
             icon: 'clock',
           },
           {
@@ -261,7 +261,7 @@ export default function HomePage() {
               <tbody className="divide-y divide-dark-100">
                 <tr>
                   <td className="px-6 py-4 font-medium text-dark-900">Tidsåtgång</td>
-                  <td className="px-6 py-4 text-dark-600">1–4 timmar</td>
+                  <td className="px-6 py-4 text-dark-600">Timmar snarare än dagar</td>
                   <td className="px-6 py-4 text-dark-600">Dagar till veckor</td>
                 </tr>
                 <tr>
@@ -286,7 +286,7 @@ export default function HomePage() {
                 </tr>
                 <tr>
                   <td className="px-6 py-4 font-medium text-dark-900">Rapport</td>
-                  <td className="px-6 py-4 text-dark-600">Inom 48 timmar</td>
+                  <td className="px-6 py-4 text-dark-600">Analyserad rapport, tid enligt offert</td>
                   <td className="px-6 py-4 text-dark-600">Varierar</td>
                 </tr>
               </tbody>
@@ -307,7 +307,7 @@ export default function HomePage() {
           {
             number: 1,
             title: 'Offertförfrågan',
-            description: 'Beskriv ert behov — vi svarar inom 24 timmar med en skräddarsydd offert.',
+            description: 'Beskriv ert behov — vi återkommer snarast med en skräddarsydd offert.',
           },
           {
             number: 2,
@@ -317,7 +317,7 @@ export default function HomePage() {
           {
             number: 3,
             title: 'Flygning & datainsamling',
-            description: 'EASA-certifierad pilot genomför inspektionen med termisk och RGB-kamera. Normalt 1–4 timmar.',
+            description: 'EASA-certifierad pilot genomför inspektionen med RGB- och termisk kamera.',
           },
           {
             number: 4,
@@ -327,7 +327,7 @@ export default function HomePage() {
           {
             number: 5,
             title: 'Rapport & beslutsunderlag',
-            description: 'Professionell PDF-rapport med bilder, termogrammer, analyser och åtgärdsförslag — normalt inom 48 timmar.',
+            description: 'Professionell PDF-rapport med bilder, termogrammer, analyser och åtgärdsförslag — leveranstid enligt offert.',
           },
         ]}
       />
@@ -488,7 +488,7 @@ export default function HomePage() {
 
       <CtaBand
         headline="Redo att effektivisera era inspektioner?"
-        description="Kontakta oss för en kostnadsfri offert. Svar inom 24 timmar, rapport inom 48 timmar."
+        description="Kontakta oss för en kostnadsfri offert med tydlig leveranstid."
         ctaLabel="Begär offert"
       />
     </>

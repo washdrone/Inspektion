@@ -18,7 +18,7 @@ export function FooterEn() {
               <span className="text-lg font-bold text-white">SurveyDrone</span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-dark-400">
-              Professional drone inspection with thermal camera across Sweden. EASA-certified pilots and full radiometric data collection.
+              Professional visual and thermal drone inspection across Sweden. EASA-certified pilots and full radiometric data collection.
             </p>
             <div className="mt-4 text-sm text-dark-400">
               <a href={`mailto:${CONTACT.email}`} className="transition-colors hover:text-accent-400">{CONTACT.email}</a>

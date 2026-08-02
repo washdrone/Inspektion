@@ -28,7 +28,7 @@ const faqItems = [
   },
   {
     question: 'Hur snabbt kan ni lämna prisförslag?',
-    answer: 'Vi svarar normalt inom 24 timmar med ett prisförslag baserat på er beskrivning.',
+    answer: 'Vi återkommer snarast med ett prisförslag baserat på er beskrivning.',
   },
   {
     question: 'Vad kostar det att lägga till termisk inspektion?',
@@ -104,7 +104,7 @@ export default function PriserPage() {
                   'Rapport med bilder och noteringar',
                   'Rekommenderade åtgärder',
                   'Digitalt bildarkiv',
-                  'Rapport inom 48 timmar',
+                  'Analyserad rapport med åtgärdsförslag',
                 ],
                 highlighted: false,
               },
@@ -186,7 +186,7 @@ export default function PriserPage() {
 
       <CtaBand
         headline="Begär ett kostnadsfritt prisförslag"
-        description="Beskriv ert behov så återkommer vi inom 24 timmar med ett prisförslag."
+        description="Beskriv ert behov så återkommer vi snarast med ett prisförslag."
         ctaLabel="Begär prisförslag"
       />
     </>

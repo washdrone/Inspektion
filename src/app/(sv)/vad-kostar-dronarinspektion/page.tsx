@@ -30,7 +30,7 @@ const faqItems = [
   {
     question: 'Kan man få offert utan kostnad?',
     answer:
-      'Ja, alla våra offerter är helt kostnadsfria och utan förpliktelser. Beskriv ert objekt och era behov så återkommer vi med ett prisförslag inom 24 timmar.',
+      'Ja, alla våra offerter är helt kostnadsfria och utan förpliktelser. Beskriv ert objekt och era behov så återkommer vi snarast med ett prisförslag.',
   },
   {
     question: 'Vad ingår i priset för en drönarinspektion?',
@@ -45,7 +45,7 @@ const faqItems = [
   {
     question: 'Hur snabbt får man offert?',
     answer:
-      'Vi svarar normalt inom 24 timmar med ett prisförslag baserat på er beskrivning av objektet och era behov.',
+      'Vi återkommer snarast med ett prisförslag baserat på er beskrivning av objektet och era behov.',
   },
   {
     question: 'Tillkommer det extra kostnader utöver offerten?',
@@ -236,7 +236,7 @@ export default function VadKostarDronarinspektionPage() {
               {
                 step: '4',
                 title: 'Professionell rapport',
-                desc: 'Ni får en tydlig rapport med bilder, identifierade avvikelser och rekommenderade åtgärder — normalt inom 48 timmar.',
+                desc: 'Ni får en tydlig rapport med bilder, identifierade avvikelser och rekommenderade åtgärder. Leveranstiden framgår av offerten.',
               },
             ].map((item) => (
               <div key={item.step} className="flex gap-4 md:gap-6">
@@ -281,7 +281,7 @@ export default function VadKostarDronarinspektionPage() {
 
       <CtaBand
         headline="Begär en kostnadsfri offert"
-        description="Beskriv ert objekt och era behov — vi återkommer inom 24 timmar med ett prisförslag anpassat efter just er inspektion."
+        description="Beskriv ert objekt och era behov — vi återkommer snarast med ett prisförslag anpassat efter just er inspektion."
         ctaLabel="Begär offert"
       />
     </>

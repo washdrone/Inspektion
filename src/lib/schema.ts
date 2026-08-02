@@ -10,7 +10,7 @@ export function organizationSchema() {
     url: BASE_URL,
     logo: `${BASE_URL}/icon.svg`,
     description:
-      'Professionell drönare-inspektion med termisk kamera i hela Sverige. Tak, fasader, solceller och industri. EASA-certifierade piloter och fullradiometrisk datainsamling.',
+      'Professionell visuell och termisk drönarinspektion i hela Sverige. Tak, fasader, solceller och industri. EASA-certifierade piloter, högupplöst RGB och fullradiometrisk termisk datainsamling.',
     email: CONTACT.email,
     address: {
       '@type': 'PostalAddress',

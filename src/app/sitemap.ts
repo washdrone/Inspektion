@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { BASE_URL } from '@/lib/metadata'
 import { languagePairFor } from '@/lib/i18n'
+import { ARTICLES } from '@/lib/articles'
 
 function urlFor(path: string): string {
   return path === '/' ? BASE_URL : `${BASE_URL}${path}`
@@ -26,6 +27,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/ordlista', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/om-oss', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/kontakt', priority: 0.9, changeFrequency: 'monthly' as const },
+    // Kunskapsbank
+    { path: '/kunskapsbank', priority: 0.8, changeFrequency: 'weekly' as const },
+    ...ARTICLES.map((article) => ({
+      path: `/kunskapsbank/${article.slug}`,
+      priority: 0.7,
+      changeFrequency: 'monthly' as const,
+    })),
     // SEO landing pages
     { path: '/takinspektion-med-dronare', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: '/termisk-inspektion', priority: 0.9, changeFrequency: 'monthly' as const },

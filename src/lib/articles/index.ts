@@ -17,6 +17,13 @@ import { stormskadorPaTak } from './stormskador-pa-tak-dokumentation'
 import { byggdokumentationMedDronare } from './byggdokumentation-med-dronare'
 import { dronarinspektionExMiljoer } from './dronarinspektion-i-ex-klassade-miljoer'
 import { vindkraftinspektionSaGarDetTill } from './vindkraftinspektion-sa-gar-det-till'
+import { dronardokumentationForsakring } from './dronardokumentation-vid-forsakringsarenden'
+import { underhallsplanMedDronarinspektion } from './underhallsplan-med-dronarinspektion'
+import { vanligaFasadskador } from './vanliga-fasadskador-och-hur-de-upptacks'
+import { koldbryggorOchVarmelackage } from './koldbryggor-och-varmelackage'
+import { taksakerhetVidInspektion } from './taksakerhet-vid-inspektion-och-underhall'
+import { dronareIKommunalForvaltning } from './dronare-i-kommunal-fastighetsforvaltning'
+import { tredimensionellaModeller } from './3d-modeller-av-byggnader-anvandningsomraden'
 
 export type { Article, ArticleCategory } from './types'
 
@@ -35,11 +42,18 @@ export const ARTICLES: Article[] = [
   saFungerarVolymberakning,
   dronarinspektionPaVintern,
   dronarinspektionExMiljoer,
+  taksakerhetVidInspektion,
   stormskadorPaTak,
+  underhallsplanMedDronarinspektion,
+  vanligaFasadskador,
+  dronardokumentationForsakring,
+  koldbryggorOchVarmelackage,
+  dronareIKommunalForvaltning,
   vindkraftinspektionSaGarDetTill,
   vadArEttOrtofoto,
   hurNoggrannArDronarmatning,
   byggdokumentationMedDronare,
+  tredimensionellaModeller,
 ]
 
 export const CATEGORY_ORDER: ArticleCategory[] = [

@@ -181,20 +181,6 @@ export default function VindkraftinspektionPage() {
         ]}
       />
 
-      {/* Live-visning */}
-      <section className="section-padding">
-        <div className="container-content">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-heading-lg sm:text-display">Följ inspektionen i realtid</h2>
-            <p className="mt-6 text-body-lg text-dark-500">
-              Driftcentralen och teknisk personal kan följa vindkraftinspektionen live via en säker
-              länk. Se bladens skick i realtid och diskutera fynd med piloten direkt under
-              flygningen. Särskilt värdefullt vid inspektion av vindkraftparker där beslut om
-              stilleståndstid behöver fattas snabbt.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <Deliverables
         headline="Det här ingår i leveransen"

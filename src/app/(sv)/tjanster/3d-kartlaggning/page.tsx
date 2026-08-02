@@ -181,20 +181,6 @@ export default function KartlaggningPage() {
         ]}
       />
 
-      {/* Live-visning */}
-      <section className="section-padding">
-        <div className="container-content">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-heading-lg sm:text-display">Följ kartläggningen i realtid</h2>
-            <p className="mt-6 text-body-lg text-dark-500">
-              Via en säker live-länk kan projektledare och beställare följa kartläggningsflygningen
-              i realtid. Se hur datainsamlingen fortskrider och få en förhandsvisning av det
-              område som dokumenteras. Perfekt för byggprojekt där flera parter behöver insyn
-              utan att vara fysiskt på plats.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <Deliverables
         headline="Det här ingår i leveransen"

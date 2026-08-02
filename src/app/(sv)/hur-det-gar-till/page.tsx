@@ -49,7 +49,7 @@ const steps = [
 const faqItems = [
   {
     question: 'Behöver jag vara på plats under inspektionen?',
-    answer: 'Nej, ni behöver inte vara på plats. Vi hanterar hela processen självständigt. Om ni vill följa inspektionen i realtid kan vi erbjuda en säker live-länk.',
+    answer: 'Nej, ni behöver inte vara på plats. Vi hanterar hela processen självständigt och stämmer av med er före och efter flygningen.',
   },
   {
     question: 'Hur snabbt kommer rapporten?',

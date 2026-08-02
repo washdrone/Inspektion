@@ -34,7 +34,7 @@ const homeFaqItems = [
   },
   {
     question: 'Do I need to be on site during the inspection?',
-    answer: 'No, you do not need to be on site. We handle airspace control, planning and execution independently. You can follow the inspection in real time via a secure link if you wish.',
+    answer: 'No, you do not need to be on site. We handle airspace control, planning and execution independently, and align with you before and after the flight.',
   },
   {
     question: 'What is included in the inspection report?',

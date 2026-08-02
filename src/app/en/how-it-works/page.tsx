@@ -51,7 +51,7 @@ const steps = [
 const faqItems = [
   {
     question: 'Do I need to be on site during the inspection?',
-    answer: 'No, you do not need to be on site. We handle the entire process independently. If you would like to follow the inspection in real time, we can provide a secure live link.',
+    answer: 'No, you do not need to be on site. We handle the entire process independently and align with you before and after the flight.',
   },
   {
     question: 'How quickly will the report be delivered?',

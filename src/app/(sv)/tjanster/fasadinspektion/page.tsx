@@ -181,20 +181,6 @@ export default function FasadinspektionPage() {
         ]}
       />
 
-      {/* Live-visning */}
-      <section className="section-padding">
-        <div className="container-content">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-heading-lg sm:text-display">Följ inspektionen live</h2>
-            <p className="mt-6 text-body-lg text-dark-500">
-              Med vår live-visningstjänst kan ni följa fasadinspektionen i realtid via en säker
-              länk. Särskilt värdefullt för fastighetsförvaltare som ansvarar för byggnader på
-              annan ort och vill följa arbetet utan att behöva resa. Ni ser exakt vad kameran
-              fångar och kan kommunicera med piloten under hela flygningen.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <Deliverables
         headline="Det här ingår i leveransen"

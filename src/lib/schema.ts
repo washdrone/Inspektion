@@ -100,12 +100,14 @@ export function articleSchema({
   url,
   datePublished,
   dateModified,
+  inLanguage = 'sv',
 }: {
   title: string
   description: string
   url: string
   datePublished: string
   dateModified: string
+  inLanguage?: string
 }) {
   return {
     '@context': 'https://schema.org',
@@ -119,7 +121,7 @@ export function articleSchema({
     },
     datePublished,
     dateModified,
-    inLanguage: 'sv',
+    inLanguage,
     author: {
       '@type': 'Organization',
       '@id': `${BASE_URL}/#organization`,

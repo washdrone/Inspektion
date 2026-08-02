@@ -6,6 +6,14 @@ export type ArticleCategory =
   | 'Solceller & energi'
   | 'Mätning & 3D'
 
+export type ArticleCategoryEn =
+  | 'Basics & methods'
+  | 'Rules & safety'
+  | 'Thermography & moisture'
+  | 'Roofs & property'
+  | 'Solar & energy'
+  | 'Surveying & 3D'
+
 export type ArticleBlock =
   | { type: 'p'; text: string }
   | { type: 'list'; ordered?: boolean; items: string[] }
@@ -24,7 +32,7 @@ export interface Article {
   /** Title-tagg (kan vara kortare än H1) */
   metaTitle: string
   description: string
-  category: ArticleCategory
+  category: ArticleCategory | ArticleCategoryEn
   datePublished: string
   dateModified: string
   /** Ingress — det direkta svaret på sidans primära fråga */

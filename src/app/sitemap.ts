@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 import { BASE_URL } from '@/lib/metadata'
 import { languagePairFor } from '@/lib/i18n'
 import { ARTICLES } from '@/lib/articles'
+import { ARTICLES_EN } from '@/lib/articles-en'
 
 function urlFor(path: string): string {
   return path === '/' ? BASE_URL : `${BASE_URL}${path}`
@@ -83,6 +84,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/en/glossary', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/en/about', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/en/contact', priority: 0.9, changeFrequency: 'monthly' as const },
+    // Knowledge base
+    { path: '/en/knowledge-base', priority: 0.8, changeFrequency: 'weekly' as const },
+    ...ARTICLES_EN.map((article) => ({
+      path: `/en/knowledge-base/${article.slug}`,
+      priority: 0.7,
+      changeFrequency: 'monthly' as const,
+    })),
     // Services
     { path: '/en/services/roof-inspection', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/en/services/facade-inspection', priority: 0.8, changeFrequency: 'monthly' as const },

@@ -7,7 +7,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 export const metadata: Metadata = createMetadata({
   title: 'Contact SurveyDrone — Get a Quote',
   description:
-    'Request a free quote for drone inspection with thermal camera. Response within 24 hours. SurveyDrone — EASA-certified pilots across all of Sweden.',
+    'Request a free quote for visual and thermal drone inspection. SurveyDrone — EASA-certified pilots across all of Sweden.',
   path: '/en/contact',
   locale: 'en',
   alternateLocalePath: '/kontakt',
@@ -31,7 +31,7 @@ export default function ContactPage() {
                 Request a quote
               </h1>
               <p className="mt-3 text-lg text-dark-500">
-                Describe your needs and we will get back to you with a quote within 24 hours.
+                Describe your needs and we will get back to you promptly with a quote.
                 The quote is free of charge and without obligation.
               </p>
               <div className="mt-8">
@@ -54,7 +54,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium text-dark-900">Response time</p>
-                    <p>We typically respond within 24 hours.</p>
+                    <p>We get back to you promptly.</p>
                   </div>
                   <div>
                     <p className="font-medium text-dark-900">Coverage</p>
@@ -68,7 +68,7 @@ export default function ContactPage() {
                 <ol className="mt-4 space-y-3 text-sm text-dark-700">
                   <li className="flex gap-3">
                     <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-brand-700">1</span>
-                    <span>We review your enquiry and respond with questions or a quote within 24 hours.</span>
+                    <span>We review your enquiry and respond with questions or a quote.</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-brand-700">2</span>
@@ -80,7 +80,7 @@ export default function ContactPage() {
                   </li>
                   <li className="flex gap-3">
                     <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-brand-700">4</span>
-                    <span>Report with analyses and recommended actions delivered within 48 hours.</span>
+                    <span>Report with analyses and recommended actions delivered as scheduled in the quote.</span>
                   </li>
                 </ol>
               </div>

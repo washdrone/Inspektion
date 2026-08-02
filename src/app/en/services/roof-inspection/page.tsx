@@ -50,7 +50,7 @@ const faqItems = [
   {
     question: 'How quickly do we get the report?',
     answer:
-      'The report is delivered normally within 48 hours after the flight. For urgent matters, faster delivery can be arranged.',
+      'Delivery time depends on the amount of data to analyse and is stated in the quote. For urgent matters, faster delivery can be arranged.',
   },
   {
     question: 'Can roof inspection be combined with facade inspection?',
@@ -60,7 +60,7 @@ const faqItems = [
   {
     question: 'How do I book a roof inspection?',
     answer:
-      'Contact us via the form or email with information about the property. We respond within 24 hours with a tailored quote.',
+      'Contact us via the form or email with information about the property. We get back to you promptly with a tailored quote.',
   },
 ]
 
@@ -171,7 +171,7 @@ export default function RoofInspectionPage() {
             number: 1,
             title: 'Quote Request',
             description:
-              'Tell us about the property — we respond within 24 hours.',
+              'Tell us about the property — we get back to you promptly.',
           },
           {
             number: 2,
@@ -189,7 +189,7 @@ export default function RoofInspectionPage() {
             number: 4,
             title: 'Report',
             description:
-              'PDF report with images, thermal analysis and recommended actions within 48 hours.',
+              'PDF report with images, thermal analysis and recommended actions — delivery time as stated in the quote.',
           },
         ]}
       />
@@ -237,7 +237,7 @@ export default function RoofInspectionPage() {
 
       <CtaBand
         headline="Need a roof inspection?"
-        description="Contact us for a free quote. Response within 24 hours, report within 48 hours."
+        description="Contact us for a free quote with a clear delivery time."
         ctaLabel="Get a Quote"
         ctaHref="/en/contact"
       />

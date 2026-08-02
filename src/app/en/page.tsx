@@ -11,9 +11,9 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
 
 export const metadata: Metadata = createMetadata({
-  title: 'SurveyDrone | Drone Inspection Sweden — Thermal Camera',
+  title: 'SurveyDrone | Drone Inspection Sweden — Visual & Thermal',
   description:
-    'Professional drone inspection with thermal camera across Sweden. Roofs, facades, solar panels and industrial facilities. EASA-certified pilots, full radiometric data collection. Get a quote.',
+    'Professional drone inspection across Sweden with high-resolution RGB and thermal cameras. Roofs, facades, solar panels and industry — analysed reports with recommended actions. EASA-certified pilots. Get a quote.',
   path: '/en',
   locale: 'en',
   alternateLocalePath: '/',
@@ -22,7 +22,7 @@ export const metadata: Metadata = createMetadata({
 const homeFaqItems = [
   {
     question: 'How does drone inspection with thermal camera work?',
-    answer: 'We fly a commercial inspection-class UAV equipped with an industry-leading thermal camera and a high-resolution RGB camera. The thermal camera identifies moisture, cold bridges and damage invisible to the naked eye through full radiometric data collection. The entire object is systematically documented and you receive a detailed report normally within 48 hours.',
+    answer: 'We fly a commercial inspection-class UAV equipped with an industry-leading thermal camera and a high-resolution RGB camera. The thermal camera identifies moisture, cold bridges and damage invisible to the naked eye through full radiometric data collection. The entire object is systematically documented and you receive a detailed, analysed report — delivery time is stated in the quote.',
   },
   {
     question: 'How much does drone inspection cost?',
@@ -30,7 +30,7 @@ const homeFaqItems = [
   },
   {
     question: 'How long does a roof inspection take?',
-    answer: 'An on-site inspection normally takes 1–4 hours depending on the size and complexity of the object. The report is delivered normally within 48 hours.',
+    answer: 'Time on site depends on the size and complexity of the object — a few hours is often enough. The material is then analysed, and the report delivery time is stated in the quote.',
   },
   {
     question: 'Do I need to be on site during the inspection?',
@@ -46,7 +46,7 @@ const homeFaqItems = [
   },
   {
     question: 'How quickly will the report be delivered?',
-    answer: 'The report is normally delivered within 48 hours after the flight. For urgent matters, we can prioritise faster delivery.',
+    answer: 'Delivery time depends on the scope of the assignment and the amount of data to analyse — you always get a clear delivery time in the quote, and urgent matters can be prioritised.',
   },
   {
     question: 'Is it possible to inspect during winter?',
@@ -71,14 +71,14 @@ export default function HomePage() {
       />
 
       <Hero
-        headline="Drone Inspection with Thermal Camera — All of Sweden"
-        subheadline="SurveyDrone helps property owners, managers and companies inspect roofs, facades, solar panels and industrial facilities with industry-leading thermal camera and full radiometric data collection — faster, safer and more cost-effective than traditional methods."
+        headline="Visual and Thermal Drone Inspection — All of Sweden"
+        subheadline="SurveyDrone documents roofs, facades, solar panels and industrial facilities with high-resolution RGB and full radiometric thermal cameras — and delivers analysed reports with prioritised recommendations."
         ctaPrimary={{ label: 'Get a Quote', href: '/en/contact' }}
         ctaSecondary={{ label: 'How It Works', href: '/en/how-it-works' }}
         stats={[
           { value: 'All of', label: 'Sweden' },
-          { value: '1–4h', label: 'On-site inspection' },
-          { value: '48h', label: 'Report delivered' },
+          { value: 'RGB + IR', label: 'Visual & thermal data' },
+          { value: 'EASA', label: 'Certified pilots' },
           { value: '0', label: 'Work at height' },
         ]}
       />
@@ -150,7 +150,7 @@ export default function HomePage() {
           },
           {
             title: 'Faster execution',
-            description: 'An inspection that previously took days can be completed in 1–4 hours.',
+            description: 'An inspection that previously required days of scaffolding can often be completed in hours.',
             icon: 'clock',
           },
           {
@@ -177,7 +177,7 @@ export default function HomePage() {
           {
             number: 1,
             title: 'Quote Request',
-            description: 'Describe your needs — we respond within 24 hours with a tailored quote.',
+            description: 'Describe your needs — we get back to you promptly with a tailored quote.',
           },
           {
             number: 2,
@@ -187,7 +187,7 @@ export default function HomePage() {
           {
             number: 3,
             title: 'Flight',
-            description: 'EASA-certified pilot conducts the inspection with thermal and RGB camera. 1–4 hours.',
+            description: 'EASA-certified pilot conducts the inspection with RGB and thermal cameras.',
           },
           {
             number: 4,
@@ -197,7 +197,7 @@ export default function HomePage() {
           {
             number: 5,
             title: 'Report',
-            description: 'Professional PDF report with images, analyses and recommended actions within 48 hours.',
+            description: 'Professional PDF report with images, analyses and recommended actions — delivery time as stated in the quote.',
           },
         ]}
       />
@@ -232,7 +232,7 @@ export default function HomePage() {
 
       <CtaBand
         headline="Ready to streamline your inspections?"
-        description="Contact us for a free quote. Response within 24 hours, report within 48 hours."
+        description="Contact us for a free quote with a clear delivery time."
         ctaLabel="Get a Quote"
         ctaHref="/en/contact"
       />

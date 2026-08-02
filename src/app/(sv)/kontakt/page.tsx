@@ -7,7 +7,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 export const metadata: Metadata = createMetadata({
   title: 'Begär offert — Drönarinspektion | SurveyDrone',
   description:
-    'Begär en kostnadsfri offert för drönarinspektion med termisk kamera. Svar inom 24 timmar. SurveyDrone — EASA-certifierade piloter i hela Sverige.',
+    'Begär en kostnadsfri offert för visuell och termisk drönarinspektion. SurveyDrone — EASA-certifierade piloter i hela Sverige.',
   path: '/kontakt',
 })
 
@@ -29,7 +29,7 @@ export default function KontaktPage() {
                 Begär offert
               </h1>
               <p className="mt-3 text-lg text-dark-500">
-                Beskriv ert behov så återkommer vi med en offert inom 24 timmar.
+                Beskriv ert behov så återkommer vi snarast med en offert.
                 Offerten är kostnadsfri och utan förpliktelser.
               </p>
               <div className="mt-8">
@@ -52,7 +52,7 @@ export default function KontaktPage() {
                   </div>
                   <div>
                     <p className="font-medium text-dark-900">Svarstid</p>
-                    <p>Vi svarar normalt inom 24 timmar.</p>
+                    <p>Vi återkommer snarast.</p>
                   </div>
                   <div>
                     <p className="font-medium text-dark-900">Täckning</p>
@@ -66,7 +66,7 @@ export default function KontaktPage() {
                 <ol className="mt-4 space-y-3 text-sm text-dark-700">
                   <li className="flex gap-3">
                     <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-brand-700">1</span>
-                    <span>Vi granskar er förfrågan och återkommer med frågor eller offert inom 24 timmar.</span>
+                    <span>Vi granskar er förfrågan och återkommer med frågor eller en offert.</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-brand-700">2</span>
@@ -78,7 +78,7 @@ export default function KontaktPage() {
                   </li>
                   <li className="flex gap-3">
                     <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-brand-700">4</span>
-                    <span>Rapport med analyser och åtgärdsförslag levereras inom 48 timmar.</span>
+                    <span>Rapport med analyser och åtgärdsförslag levereras enligt tidplanen i offerten.</span>
                   </li>
                 </ol>
               </div>

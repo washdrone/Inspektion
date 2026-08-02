@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    'SurveyDrone offers professional drone inspection across Sweden. Roofs, facades, solar panels & industrial facilities with thermal camera. EASA-certified pilots. Get a quote.',
+    'SurveyDrone offers professional drone inspection across Sweden. Roofs, facades, solar panels & industrial facilities with RGB and thermal cameras. EASA-certified pilots. Get a quote.',
   icons: {
     icon: '/icon.svg',
     apple: '/apple-icon.svg',

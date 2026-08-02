@@ -10,6 +10,7 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
 import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
+import { KnowledgeLinks } from '@/components/KnowledgeLinks'
 
 export const metadata: Metadata = createMetadata({
   title: 'Solcellsinspektion med drönare och termisk kamera',
@@ -253,6 +254,14 @@ export default function SolcellsinspektionPage() {
             description:
               'Inspektion av industrianläggningar, rörledningar och teknisk utrustning.',
           },
+        ]}
+      />
+
+      <KnowledgeLinks
+        slugs={[
+          'hotspots-i-solceller',
+          'besiktning-av-solcellsanlaggning-checklista',
+          'sa-fungerar-termografi-med-dronare',
         ]}
       />
 

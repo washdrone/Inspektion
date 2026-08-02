@@ -196,6 +196,11 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
           <Link href={isEn ? '/en/pricing' : '/priser'} className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900">
             {isEn ? 'Pricing' : 'Priser'}
           </Link>
+          {!isEn && (
+            <Link href="/kunskapsbank" className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900">
+              Kunskapsbank
+            </Link>
+          )}
           <Link href={isEn ? '/en/about' : '/om-oss'} className="rounded-pill px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900">
             {isEn ? 'About Us' : 'Om oss'}
           </Link>
@@ -272,6 +277,9 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
           <div className="border-t border-white/10 pt-3 mt-3">
             <Link href={isEn ? '/en/how-it-works' : '/hur-det-gar-till'} className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none" onClick={() => setMobileMenuOpen(false)}>{isEn ? 'How It Works' : 'Hur det går till'}</Link>
             <Link href={isEn ? '/en/pricing' : '/priser'} className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none" onClick={() => setMobileMenuOpen(false)}>{isEn ? 'Pricing' : 'Priser'}</Link>
+            {!isEn && (
+              <Link href="/kunskapsbank" className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none" onClick={() => setMobileMenuOpen(false)}>Kunskapsbank</Link>
+            )}
             <Link href={isEn ? '/en/about' : '/om-oss'} className="block rounded-xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 focus-visible:outline-none" onClick={() => setMobileMenuOpen(false)}>{isEn ? 'About Us' : 'Om oss'}</Link>
           </div>
           <div className="flex items-center justify-center gap-3 pt-4">

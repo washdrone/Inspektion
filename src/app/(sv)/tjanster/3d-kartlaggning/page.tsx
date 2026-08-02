@@ -10,6 +10,7 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
 import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
+import { KnowledgeLinks } from '@/components/KnowledgeLinks'
 
 export const metadata: Metadata = createMetadata({
   title: '3D-kartläggning med drönare — fotogrammetri och ortofoto',
@@ -253,6 +254,14 @@ export default function KartlaggningPage() {
             description:
               'Detaljerad inspektion av fasader med högupplöst kamera och termisk analys.',
           },
+        ]}
+      />
+
+      <KnowledgeLinks
+        slugs={[
+          'vad-ar-ett-ortofoto',
+          'vad-ar-fotogrammetri',
+          '3d-modeller-av-byggnader-anvandningsomraden',
         ]}
       />
 

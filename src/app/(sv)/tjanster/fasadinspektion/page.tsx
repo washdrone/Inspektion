@@ -10,6 +10,7 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
 import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
+import { KnowledgeLinks } from '@/components/KnowledgeLinks'
 
 export const metadata: Metadata = createMetadata({
   title: 'Fasadinspektion med drönare — skador och sprickor',
@@ -253,6 +254,14 @@ export default function FasadinspektionPage() {
             description:
               'Specialiserad fuktdetektering för att hitta dolda fuktproblem i byggnader.',
           },
+        ]}
+      />
+
+      <KnowledgeLinks
+        slugs={[
+          'vanliga-fasadskador-och-hur-de-upptacks',
+          'hitta-fuktskador-med-termisk-inspektion',
+          'dronarinspektion-for-bostadsrattsforeningar',
         ]}
       />
 

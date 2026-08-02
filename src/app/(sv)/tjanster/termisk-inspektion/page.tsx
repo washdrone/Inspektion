@@ -10,6 +10,7 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
 import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
+import { KnowledgeLinks } from '@/components/KnowledgeLinks'
 
 export const metadata: Metadata = createMetadata({
   title: 'Termisk inspektion med drönare — IR och infraröd',
@@ -253,6 +254,14 @@ export default function TermiskInspektionPage() {
             description:
               'Termisk inspektion av solcellsanläggningar för att identifiera hotspots och defekta paneler.',
           },
+        ]}
+      />
+
+      <KnowledgeLinks
+        slugs={[
+          'sa-fungerar-termografi-med-dronare',
+          'koldbryggor-och-varmelackage',
+          'dronarinspektion-pa-vintern',
         ]}
       />
 

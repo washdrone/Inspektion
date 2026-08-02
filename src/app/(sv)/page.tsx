@@ -440,6 +440,47 @@ export default function HomePage() {
         ]}
       />
 
+      {/* Kunskapsbank — teaser med pelarartiklar */}
+      <section className="section-padding section-muted">
+        <div className="container-content">
+          <h2 className="text-heading-lg sm:text-display text-center">Lär dig mer i kunskapsbanken</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-dark-500">
+            Faktabaserade guider om metoder, regler och teknik — skrivna för dig som beställer
+            inspektioner, inte för ingenjörer.
+          </p>
+          <div className="mt-12 grid gap-5 sm:grid-cols-3">
+            {[
+              {
+                title: 'Vad är drönarinspektion?',
+                desc: 'Komplett guide till hur metoden fungerar, vad som kan inspekteras och när den passar.',
+                href: '/kunskapsbank/vad-ar-dronarinspektion',
+              },
+              {
+                title: 'Regler för drönarflygning i Sverige',
+                desc: 'EU:s drönarregelverk förklarat — kategorier, drönarkort och vad som gäller för dig som beställare.',
+                href: '/kunskapsbank/regler-for-dronarflygning-i-sverige',
+              },
+              {
+                title: 'Så fungerar termografi med drönare',
+                desc: 'Vad värmekameran faktiskt mäter, vad den kan avslöja och när förhållandena är rätt.',
+                href: '/kunskapsbank/sa-fungerar-termografi-med-dronare',
+              },
+            ].map((item) => (
+              <Link key={item.href} href={item.href} className="card group flex flex-col">
+                <h3 className="text-base font-semibold text-dark-900 transition-colors group-hover:text-brand-700">{item.title}</h3>
+                <p className="mt-2 flex-1 text-body-sm text-dark-500">{item.desc}</p>
+                <span className="mt-4 text-sm font-medium text-brand-700" aria-hidden="true">Läs guiden →</span>
+              </Link>
+            ))}
+          </div>
+          <p className="mt-8 text-center">
+            <Link href="/kunskapsbank" className="link-inline font-medium">
+              Se alla artiklar i kunskapsbanken
+            </Link>
+          </p>
+        </div>
+      </section>
+
       <FaqAccordion
         headline="Vanliga frågor om drönarinspektion"
         items={homeFaqItems}

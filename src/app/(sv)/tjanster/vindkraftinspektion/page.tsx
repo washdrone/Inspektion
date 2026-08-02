@@ -10,6 +10,7 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
 import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
+import { KnowledgeLinks } from '@/components/KnowledgeLinks'
 
 export const metadata: Metadata = createMetadata({
   title: 'Vindkraftinspektion med drönare — blad och torn',
@@ -253,6 +254,14 @@ export default function VindkraftinspektionPage() {
             description:
               'Skapa 3D-modeller av vindkraftparker för planering, dokumentation och BIM.',
           },
+        ]}
+      />
+
+      <KnowledgeLinks
+        slugs={[
+          'vindkraftinspektion-sa-gar-det-till',
+          'dronarinspektion-vs-traditionell-inspektion',
+          'hotspots-i-solceller',
         ]}
       />
 

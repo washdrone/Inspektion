@@ -10,6 +10,7 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
 import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
+import { KnowledgeLinks } from '@/components/KnowledgeLinks'
 
 export const metadata: Metadata = createMetadata({
   title: 'Drönarinmätning — noggrann inmätning i hela Sverige',
@@ -245,6 +246,14 @@ export default function DronarinmatningPage() {
             description:
               'Kartläggning av större mark- och anläggningsområden med drönare och fotogrammetri.',
           },
+        ]}
+      />
+
+      <KnowledgeLinks
+        slugs={[
+          'hur-noggrann-ar-dronarmatning',
+          'vad-ar-ett-ortofoto',
+          'byggdokumentation-med-dronare',
         ]}
       />
 

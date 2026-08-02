@@ -10,6 +10,7 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
 import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
+import { KnowledgeLinks } from '@/components/KnowledgeLinks'
 
 export const metadata: Metadata = createMetadata({
   title: 'Volymberäkning med drönare — upplag, täkter, schakt',
@@ -240,6 +241,14 @@ export default function VolymberakningPage() {
             description:
               'Kartläggning av täkter och anläggningsområden med drönare och fotogrammetri.',
           },
+        ]}
+      />
+
+      <KnowledgeLinks
+        slugs={[
+          'sa-fungerar-volymberakning-med-dronare',
+          'hur-noggrann-ar-dronarmatning',
+          'vad-ar-fotogrammetri',
         ]}
       />
 

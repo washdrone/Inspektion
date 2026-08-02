@@ -94,6 +94,49 @@ export function serviceSchema({
   }
 }
 
+export function articleSchema({
+  title,
+  description,
+  url,
+  datePublished,
+  dateModified,
+}: {
+  title: string
+  description: string
+  url: string
+  datePublished: string
+  dateModified: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    url: `${BASE_URL}${url}`,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${BASE_URL}${url}`,
+    },
+    datePublished,
+    dateModified,
+    inLanguage: 'sv',
+    author: {
+      '@type': 'Organization',
+      '@id': `${BASE_URL}/#organization`,
+      name: 'SurveyDrone',
+    },
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${BASE_URL}/#organization`,
+      name: 'SurveyDrone',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${BASE_URL}/icon.svg`,
+      },
+    },
+  }
+}
+
 export function faqSchema(items: { question: string; answer: string }[]) {
   return {
     '@context': 'https://schema.org',

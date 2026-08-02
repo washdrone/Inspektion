@@ -45,6 +45,7 @@ export const COMPANY_LINKS = [
   { href: '/hur-det-gar-till', label: 'Hur det går till' },
   { href: '/priser', label: 'Prisguide' },
   { href: '/forvaltningsavtal', label: 'Förvaltningsavtal' },
+  { href: '/kunskapsbank', label: 'Kunskapsbank' },
   { href: '/ordlista', label: 'Ordlista' },
   { href: '/kontakt', label: 'Kontakt' },
 ] as const

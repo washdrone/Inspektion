@@ -8,7 +8,7 @@ import { CtaBand } from '@/components/CtaBand'
 export const metadata: Metadata = createMetadata({
   title: 'Om SurveyDrone — Drönarinspektion i hela Sverige',
   description:
-    'SurveyDrone erbjuder professionell drönarinspektion med termisk kamera i hela Sverige. EASA-certifierade fjärrpiloter, ansvarsförsäkrade och erfarenhet av ex-klassade zoner.',
+    'SurveyDrone erbjuder professionell visuell och termisk drönarinspektion i hela Sverige. EASA-certifierade fjärrpiloter, ansvarsförsäkrade och erfarenhet av ex-klassade zoner.',
   path: '/om-oss',
 })
 
@@ -59,6 +59,36 @@ export default function OmOssPage() {
         ]}
         variant="light"
       />
+
+      <section className="section-padding">
+        <div className="container-content">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="section-heading text-center">Vår utrustning</h2>
+            <p className="mt-6 text-body-lg text-dark-600 leading-relaxed text-center">
+              Vi flyger med drönare ur DJI:s enterprise-serie, utvalda för professionellt
+              inspektions- och kartläggningsarbete.
+            </p>
+            <div className="mt-10 grid gap-6 sm:grid-cols-2">
+              <div className="card">
+                <h3 className="text-lg font-bold text-dark-900">DJI Matrice 4T</h3>
+                <p className="mt-2 text-dark-600 leading-relaxed">
+                  Inspektionsdrönare med radiometrisk värmekamera i kombination med högupplösta
+                  vidvinkel- och zoomkameror. Används för termisk och visuell inspektion av tak,
+                  fasader, solceller och industrianläggningar.
+                </p>
+              </div>
+              <div className="card">
+                <h3 className="text-lg font-bold text-dark-900">DJI Matrice 4E</h3>
+                <p className="mt-2 text-dark-600 leading-relaxed">
+                  Kartläggningsdrönare med högupplöst kamerasystem anpassat för fotogrammetri.
+                  Används för drönarinmätning, ortofoto, 3D-modeller och volymberäkning med
+                  hög noggrannhet.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="section-padding section-muted">
         <div className="container-content">

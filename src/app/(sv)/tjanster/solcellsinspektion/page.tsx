@@ -181,20 +181,6 @@ export default function SolcellsinspektionPage() {
         ]}
       />
 
-      {/* Live-visning */}
-      <section className="section-padding">
-        <div className="container-content">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-heading-lg sm:text-display">Följ inspektionen i realtid</h2>
-            <p className="mt-6 text-body-lg text-dark-500">
-              Via vår säkra live-länk kan ni följa solcellsinspektionen i realtid, oavsett var ni
-              befinner er. Idealiskt för energibolag och fastighetsägare som förvaltar anläggningar
-              på flera platser. Driftansvariga kan se termiska avvikelser direkt och diskutera
-              fynd med piloten under flygningen.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <Deliverables
         headline="Det här ingår i leveransen"

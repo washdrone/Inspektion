@@ -181,20 +181,6 @@ export default function IndustriinspektionPage() {
         ]}
       />
 
-      {/* Live-visning */}
-      <section className="section-padding">
-        <div className="container-content">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-heading-lg sm:text-display">Följ inspektionen i realtid</h2>
-            <p className="mt-6 text-body-lg text-dark-500">
-              Driftansvariga och underhållstekniker kan följa industriinspektionen live via en
-              säker länk. Det möjliggör omedelbar dialog om fynd och prioriteringar under
-              flygningen. Särskilt värdefullt när specialister på annan ort behöver delta i
-              bedömningen utan att resa till anläggningen.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <Deliverables
         headline="Det här ingår i leveransen"

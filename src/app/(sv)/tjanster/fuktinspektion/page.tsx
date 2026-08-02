@@ -181,20 +181,6 @@ export default function FuktinspektionPage() {
         ]}
       />
 
-      {/* Live-visning */}
-      <section className="section-padding">
-        <div className="container-content">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-heading-lg sm:text-display">Följ fuktinspektionen live</h2>
-            <p className="mt-6 text-body-lg text-dark-500">
-              Ni kan följa fuktinspektionen i realtid via en säker länk. Fastighetsförvaltare och
-              driftansvariga ser direkt var termiska avvikelser uppstår, utan att behöva vara på
-              plats. Det underlättar snabba beslut om akuta åtgärder vid allvarliga läckor och
-              gör det enkelt att involvera flera intressenter.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <Deliverables
         headline="Det här ingår i leveransen"

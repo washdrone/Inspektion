@@ -181,20 +181,6 @@ export default function TermiskInspektionPage() {
         ]}
       />
 
-      {/* Live-visning */}
-      <section className="section-padding">
-        <div className="container-content">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-heading-lg sm:text-display">Följ inspektionen i realtid</h2>
-            <p className="mt-6 text-body-lg text-dark-500">
-              Under den termiska inspektionen kan ni följa kameraflödet live via en säker länk.
-              Det innebär att fastighetsansvariga, drifttekniker eller andra beslutsfattare kan se
-              termiska avvikelser direkt — oavsett var de befinner sig. Perfekt för organisationer
-              som förvaltar anläggningar på flera orter.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <Deliverables
         headline="Det här ingår i leveransen"

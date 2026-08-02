@@ -55,11 +55,6 @@ const faqItems = [
     answer:
       'Vi rekommenderar regelbundna inspektioner för att fånga upp skador tidigt. Kontakta oss för att diskutera ett inspektionsintervall som passar er fastighetsportfölj.',
   },
-  {
-    question: 'Kan vi följa inspektionen i realtid?',
-    answer:
-      'Ja, vi erbjuder live-visning via en säker länk så att ni kan följa inspektionen i realtid, oavsett var ni befinner er.',
-  },
 ]
 
 export default function TakinspektionPage() {
@@ -181,20 +176,6 @@ export default function TakinspektionPage() {
         ]}
       />
 
-      {/* Live-visning */}
-      <section className="section-padding">
-        <div className="container-content">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-heading-lg sm:text-display">Följ inspektionen i realtid</h2>
-            <p className="mt-6 text-body-lg text-dark-500">
-              Med vår live-visningstjänst kan ni följa hela takinspektionen i realtid via en säker
-              länk. Perfekt för fastighetsförvaltare som hanterar fastigheter på distans eller vill
-              involvera flera beslutsfattare utan att alla behöver vara på plats. Ni ser exakt vad
-              drönaren ser och kan ställa frågor till piloten under flygningen.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <Deliverables
         headline="Det här ingår i leveransen"

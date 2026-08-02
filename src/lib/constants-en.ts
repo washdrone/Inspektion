@@ -42,6 +42,7 @@ export const COMPANY_LINKS_EN = [
   { href: '/en/how-it-works', label: 'How It Works' },
   { href: '/en/pricing', label: 'Pricing Guide' },
   { href: '/en/maintenance-agreements', label: 'Maintenance Agreements' },
+  { href: '/en/knowledge-base', label: 'Knowledge Base' },
   { href: '/en/glossary', label: 'Glossary' },
   { href: '/en/contact', label: 'Contact' },
 ] as const

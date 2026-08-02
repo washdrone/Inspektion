@@ -10,6 +10,13 @@ import { vadArFotogrammetri } from './vad-ar-fotogrammetri'
 import { saFungerarVolymberakning } from './sa-fungerar-volymberakning-med-dronare'
 import { dronarinspektionForBrf } from './dronarinspektion-for-bostadsrattsforeningar'
 import { besiktningSolcellsanlaggning } from './besiktning-av-solcellsanlaggning-checklista'
+import { vadArEttOrtofoto } from './vad-ar-ett-ortofoto'
+import { hurNoggrannArDronarmatning } from './hur-noggrann-ar-dronarmatning'
+import { dronarinspektionPaVintern } from './dronarinspektion-pa-vintern'
+import { stormskadorPaTak } from './stormskador-pa-tak-dokumentation'
+import { byggdokumentationMedDronare } from './byggdokumentation-med-dronare'
+import { dronarinspektionExMiljoer } from './dronarinspektion-i-ex-klassade-miljoer'
+import { vindkraftinspektionSaGarDetTill } from './vindkraftinspektion-sa-gar-det-till'
 
 export type { Article, ArticleCategory } from './types'
 
@@ -26,6 +33,13 @@ export const ARTICLES: Article[] = [
   besiktningSolcellsanlaggning,
   vadArFotogrammetri,
   saFungerarVolymberakning,
+  dronarinspektionPaVintern,
+  dronarinspektionExMiljoer,
+  stormskadorPaTak,
+  vindkraftinspektionSaGarDetTill,
+  vadArEttOrtofoto,
+  hurNoggrannArDronarmatning,
+  byggdokumentationMedDronare,
 ]
 
 export const CATEGORY_ORDER: ArticleCategory[] = [

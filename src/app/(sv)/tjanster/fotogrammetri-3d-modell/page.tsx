@@ -10,6 +10,7 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
 import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
+import { KnowledgeLinks } from '@/components/KnowledgeLinks'
 
 export const metadata: Metadata = createMetadata({
   title: 'Fotogrammetri med drönare — 3D-modell och punktmoln',
@@ -240,6 +241,14 @@ export default function FotogrammetriPage() {
             description:
               'Kartläggning av större mark- och anläggningsområden med drönare och fotogrammetri.',
           },
+        ]}
+      />
+
+      <KnowledgeLinks
+        slugs={[
+          'vad-ar-fotogrammetri',
+          '3d-modeller-av-byggnader-anvandningsomraden',
+          'hur-noggrann-ar-dronarmatning',
         ]}
       />
 

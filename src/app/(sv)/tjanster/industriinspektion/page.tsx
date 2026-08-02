@@ -10,6 +10,7 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
 import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
+import { KnowledgeLinks } from '@/components/KnowledgeLinks'
 
 export const metadata: Metadata = createMetadata({
   title: 'Industriinspektion med drönare — anläggningar säkert',
@@ -253,6 +254,14 @@ export default function IndustriinspektionPage() {
             description:
               'Skapa 3D-modeller och ortofoto av industriområden för planering och dokumentation.',
           },
+        ]}
+      />
+
+      <KnowledgeLinks
+        slugs={[
+          'dronarinspektion-i-ex-klassade-miljoer',
+          'vad-ar-dronarinspektion',
+          'dronarinspektion-vs-traditionell-inspektion',
         ]}
       />
 

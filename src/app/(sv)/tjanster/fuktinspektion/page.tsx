@@ -10,6 +10,7 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
 import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
+import { KnowledgeLinks } from '@/components/KnowledgeLinks'
 
 export const metadata: Metadata = createMetadata({
   title: 'Fuktinspektion med drönare — hitta dolda läckor',
@@ -253,6 +254,14 @@ export default function FuktinspektionPage() {
             description:
               'Inspektion av fasader för att identifiera sprickor, putssläpp och fuktgenomslag.',
           },
+        ]}
+      />
+
+      <KnowledgeLinks
+        slugs={[
+          'hitta-fuktskador-med-termisk-inspektion',
+          'koldbryggor-och-varmelackage',
+          'sa-fungerar-termografi-med-dronare',
         ]}
       />
 

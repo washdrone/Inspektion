@@ -10,6 +10,7 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
 import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
+import { KnowledgeLinks } from '@/components/KnowledgeLinks'
 
 export const metadata: Metadata = createMetadata({
   title: 'Takinspektion med drönare och termisk kamera',
@@ -253,6 +254,14 @@ export default function TakinspektionPage() {
             description:
               'Termisk inspektion av solcellsanläggningar för att identifiera defekta paneler.',
           },
+        ]}
+      />
+
+      <KnowledgeLinks
+        slugs={[
+          'sa-gar-en-takinspektion-till',
+          'stormskador-pa-tak-dokumentation',
+          'taksakerhet-vid-inspektion-och-underhall',
         ]}
       />
 

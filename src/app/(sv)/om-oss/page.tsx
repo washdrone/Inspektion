@@ -65,12 +65,21 @@ export default function OmOssPage() {
           <div className="mx-auto max-w-3xl">
             <h2 className="section-heading text-center">Vår utrustning</h2>
             <p className="mt-6 text-body-lg text-dark-600 leading-relaxed text-center">
-              Vi flyger med drönare ur DJI:s enterprise-serie, utvalda för professionellt
-              inspektions- och kartläggningsarbete.
+              Vi flyger med drönare ur DJI:s enterprise-serie tillsammans med utbytbara
+              Zenmuse-nyttolaster, utvalda för professionellt inspektions- och kartläggningsarbete.
+              Sensorvalet anpassas efter uppdraget.
             </p>
-            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <h3 className="mt-10 text-xs font-semibold uppercase tracking-widest text-dark-400">Drönare</h3>
+            <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <div className="card">
-                <h3 className="text-lg font-bold text-dark-900">DJI Matrice 4T</h3>
+                <h4 className="text-lg font-bold text-dark-900">DJI Matrice 400</h4>
+                <p className="mt-2 text-dark-600 leading-relaxed">
+                  Bärarplattform för utbytbara Zenmuse-nyttolaster med RTK-positionering. Används
+                  för uppdrag som kräver termisk zoominspektion eller laserskanning.
+                </p>
+              </div>
+              <div className="card">
+                <h4 className="text-lg font-bold text-dark-900">DJI Matrice 4T</h4>
                 <p className="mt-2 text-dark-600 leading-relaxed">
                   Inspektionsdrönare med radiometrisk värmekamera i kombination med högupplösta
                   vidvinkel- och zoomkameror. Används för termisk och visuell inspektion av tak,
@@ -78,15 +87,26 @@ export default function OmOssPage() {
                 </p>
               </div>
               <div className="card">
-                <h3 className="text-lg font-bold text-dark-900">DJI Matrice 4E</h3>
+                <h4 className="text-lg font-bold text-dark-900">DJI Matrice 4E</h4>
                 <p className="mt-2 text-dark-600 leading-relaxed">
                   Kartläggningsdrönare med högupplöst kamerasystem anpassat för fotogrammetri.
                   Används för drönarinmätning, ortofoto, 3D-modeller och volymberäkning med
                   hög noggrannhet.
                 </p>
               </div>
+            </div>
+            <h3 className="mt-10 text-xs font-semibold uppercase tracking-widest text-dark-400">Nyttolaster</h3>
+            <div className="mt-4 grid gap-6 sm:grid-cols-2">
               <div className="card">
-                <h3 className="text-lg font-bold text-dark-900">DJI Zenmuse L2</h3>
+                <h4 className="text-lg font-bold text-dark-900">DJI Zenmuse H30T</h4>
+                <p className="mt-2 text-dark-600 leading-relaxed">
+                  Kombinerad sensor med radiometrisk värmekamera samt högupplösta vidvinkel- och
+                  zoomkameror. Används för termisk och visuell inspektion på avstånd, exempelvis av
+                  höga fasader, skorstenar och industrianläggningar.
+                </p>
+              </div>
+              <div className="card">
+                <h4 className="text-lg font-bold text-dark-900">DJI Zenmuse L2</h4>
                 <p className="mt-2 text-dark-600 leading-relaxed">
                   LiDAR-nyttolast för laserskanning från drönare. Ger klassificerbara punktmoln
                   och kan delvis mäta marken genom vegetation, vilket ger terrängmodeller även

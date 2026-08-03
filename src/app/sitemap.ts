@@ -54,6 +54,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/tjanster/industriinspektion', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/tjanster/vindkraftinspektion', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/tjanster/3d-kartlaggning', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/tjanster/lidar-skanning', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/tjanster/bim-underlag', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/tjanster/digital-tvilling', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/tjanster/markmodellering', priority: 0.8, changeFrequency: 'monthly' as const },
     // Industries
     { path: '/branscher/fastighet', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/branscher/energi', priority: 0.7, changeFrequency: 'monthly' as const },

@@ -101,6 +101,8 @@ export const tredimensionellaModeller: Article = {
     { href: '/tjanster/dronarinmatning', label: 'Drönarinmätning' },
   ],
   relatedArticles: [
+    'vad-ar-en-digital-tvilling',
+    'fran-punktmoln-till-bim-underlag',
     'vad-ar-fotogrammetri',
     'vad-ar-ett-ortofoto',
     'hur-noggrann-ar-dronarmatning',

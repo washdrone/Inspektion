@@ -89,6 +89,7 @@ export default function VolymberakningPage() {
       />
 
       <Hero
+        eyebrow="Drönarmätning för företag"
         headline="Volymberäkning med drönare — upplag, täkter och schakt"
         subheadline="Volymberäkning med drönare ger objektiva massor för upplag, täkter, schakt och fyllningar. Vi beräknar volymerna ur punktmoln och digital terrängmodell med en spårbar metod och redovisar resultatet i kubikmeter — rikstäckande i hela Sverige."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}

@@ -94,6 +94,7 @@ export default function DigitalTvillingPage() {
       />
 
       <Hero
+        eyebrow="Kartläggning & 3D för företag"
         headline="Digital tvilling av byggnader och anläggningar"
         subheadline="En digital tvilling är en måttriktig kopia av ert objekt som byggs om vid återkommande flygningar och därmed speglar nuläget. Genom att jämföra mättillfällena ser ni exakt vad som förändrats — underlag för förvaltning, produktionsuppföljning och gemensam bild mellan parter. Rikstäckande i hela Sverige."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}

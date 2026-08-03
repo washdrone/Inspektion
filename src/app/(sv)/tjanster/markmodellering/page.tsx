@@ -94,6 +94,7 @@ export default function MarkmodelleringPage() {
       />
 
       <Hero
+        eyebrow="Drönarmätning för företag"
         headline="Markmodellering — digital terrängmodell och ytmodell"
         subheadline="Vi tar fram digital terrängmodell (DTM) över den rena marken och digital ytmodell (DSM) med vegetation och byggnader, ur fotogrammetri eller LiDAR beroende på markförhållandena. Underlag för projektering, massberäkning och markplanering — rikstäckande i hela Sverige."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}

@@ -7,6 +7,8 @@ import { useCountUp } from '@/hooks/useCountUp'
 interface HeroProps {
   headline: string
   subheadline: string
+  /** Kategoritext ovanför rubriken. Default passar inspektionstjänster. */
+  eyebrow?: string
   ctaPrimary?: { label: string; href: string }
   ctaSecondary?: { label: string; href: string }
   stats?: { value: string; label: string }[]
@@ -38,6 +40,7 @@ function AnimatedStat({ value, label, visible, index }: { value: string; label: 
 export function Hero({
   headline,
   subheadline,
+  eyebrow = 'Drönarinspektioner för företag',
   ctaPrimary = { label: 'Begär offert', href: '/kontakt' },
   ctaSecondary,
   stats,
@@ -71,7 +74,7 @@ export function Hero({
           >
             <div className="h-1.5 w-1.5 rounded-full bg-accent-400 animate-pulse" />
             <span className="text-xs font-medium uppercase tracking-wider text-accent-400">
-              Drönarinspektioner för företag
+              {eyebrow}
             </span>
           </div>
 

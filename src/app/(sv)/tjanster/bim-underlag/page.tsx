@@ -94,6 +94,7 @@ export default function BimUnderlagPage() {
       />
 
       <Hero
+        eyebrow="Mätunderlag för projektering"
         headline="BIM-underlag från drönardata"
         subheadline="Vi mäter in verkligheten från luften och levererar georefererade punktmoln, mesh-modeller, ortofoto och terrängmodeller som era projektörer kan läsa in direkt i CAD- och BIM-miljö. Ett aktuellt relationsunderlag innan om- eller tillbyggnad — rikstäckande i hela Sverige."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}

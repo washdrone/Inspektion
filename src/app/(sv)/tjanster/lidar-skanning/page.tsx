@@ -94,6 +94,7 @@ export default function LidarSkanningPage() {
       />
 
       <Hero
+        eyebrow="Drönarmätning för företag"
         headline="LiDAR-skanning med drönare"
         subheadline="Vi laserskannar mark och anläggningar från luften med DJI Zenmuse L2. Till skillnad från fotogrammetri mäts avstånden direkt med laserpulser, vilket ger klassificerbara punktmoln även där vegetation eller ljusförhållanden sätter stopp för bildbaserad mätning — i hela Sverige."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}

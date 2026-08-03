@@ -89,6 +89,7 @@ export default function FotogrammetriPage() {
       />
 
       <Hero
+        eyebrow="Kartläggning & 3D för företag"
         headline="Fotogrammetri med drönare — mätbara 3D-modeller och punktmoln"
         subheadline="Fotogrammetri med drönare omvandlar överlappande flygbilder till mätbara 3D-modeller och punktmoln av byggnader och områden. Du får ett beslutsunderlag i SWEREF 99 där avstånd, ytor och volymer kan mätas direkt — rikstäckande i hela Sverige."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}

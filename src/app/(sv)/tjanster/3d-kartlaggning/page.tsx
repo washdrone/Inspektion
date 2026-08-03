@@ -93,6 +93,7 @@ export default function KartlaggningPage() {
       />
 
       <Hero
+        eyebrow="Kartläggning & 3D för företag"
         headline="3D-kartläggning med drönare — fotogrammetri och ortofoto"
         subheadline="Skapa exakta 3D-modeller, ortofoto och punktmoln med RTK/GNSS-positionering med centimeternoggrannhet. Våra EASA-certifierade piloter levererar mätbara digitala underlag för projektering, byggdokumentation och förvaltning."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}

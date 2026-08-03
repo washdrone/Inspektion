@@ -24,6 +24,10 @@ import { koldbryggorOchVarmelackage } from './koldbryggor-och-varmelackage'
 import { taksakerhetVidInspektion } from './taksakerhet-vid-inspektion-och-underhall'
 import { dronareIKommunalForvaltning } from './dronare-i-kommunal-fastighetsforvaltning'
 import { tredimensionellaModeller } from './3d-modeller-av-byggnader-anvandningsomraden'
+import { lidarEllerFotogrammetri } from './lidar-eller-fotogrammetri'
+import { franPunktmolnTillBimUnderlag } from './fran-punktmoln-till-bim-underlag'
+import { vadArEnDigitalTvilling } from './vad-ar-en-digital-tvilling'
+import { dtmOchDsmSkillnaden } from './dtm-och-dsm-skillnaden'
 
 export type { Article, ArticleCategory } from './types'
 
@@ -54,6 +58,10 @@ export const ARTICLES: Article[] = [
   hurNoggrannArDronarmatning,
   byggdokumentationMedDronare,
   tredimensionellaModeller,
+  lidarEllerFotogrammetri,
+  dtmOchDsmSkillnaden,
+  franPunktmolnTillBimUnderlag,
+  vadArEnDigitalTvilling,
 ]
 
 export const CATEGORY_ORDER: ArticleCategory[] = [

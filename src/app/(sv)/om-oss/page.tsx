@@ -68,7 +68,7 @@ export default function OmOssPage() {
               Vi flyger med drönare ur DJI:s enterprise-serie, utvalda för professionellt
               inspektions- och kartläggningsarbete.
             </p>
-            <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <div className="card">
                 <h3 className="text-lg font-bold text-dark-900">DJI Matrice 4T</h3>
                 <p className="mt-2 text-dark-600 leading-relaxed">
@@ -83,6 +83,14 @@ export default function OmOssPage() {
                   Kartläggningsdrönare med högupplöst kamerasystem anpassat för fotogrammetri.
                   Används för drönarinmätning, ortofoto, 3D-modeller och volymberäkning med
                   hög noggrannhet.
+                </p>
+              </div>
+              <div className="card">
+                <h3 className="text-lg font-bold text-dark-900">DJI Zenmuse L2</h3>
+                <p className="mt-2 text-dark-600 leading-relaxed">
+                  LiDAR-nyttolast för laserskanning från drönare. Ger klassificerbara punktmoln
+                  och kan delvis mäta marken genom vegetation, vilket ger terrängmodeller även
+                  där bildbaserad mätning inte räcker.
                 </p>
               </div>
             </div>

@@ -104,6 +104,8 @@ export const hurNoggrannArDronarmatning: Article = {
     { href: '/tjanster/3d-kartlaggning', label: '3D-kartläggning' },
   ],
   relatedArticles: [
+    'lidar-eller-fotogrammetri',
+    'dtm-och-dsm-skillnaden',
     'vad-ar-fotogrammetri',
     'vad-ar-ett-ortofoto',
     'sa-fungerar-volymberakning-med-dronare',

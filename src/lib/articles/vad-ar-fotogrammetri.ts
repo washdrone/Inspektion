@@ -116,6 +116,7 @@ export const vadArFotogrammetri: Article = {
     { href: '/tjanster/dronarinmatning', label: 'Drönarinmätning' },
   ],
   relatedArticles: [
+    'lidar-eller-fotogrammetri',
     'sa-fungerar-volymberakning-med-dronare',
     'vad-ar-dronarinspektion',
     'regler-for-dronarflygning-i-sverige',

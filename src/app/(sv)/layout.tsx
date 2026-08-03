@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import '@/styles/globals.css'
+import { inter } from '@/lib/fonts'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { CookieBanner } from '@/components/CookieBanner'
@@ -32,7 +33,7 @@ export default function SwedishLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="sv">
+    <html lang="sv" className={inter.variable}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -47,12 +48,6 @@ export default function SwedishLayout({
               });
             `,
           }}
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet"
         />
       </head>
       <body className="flex min-h-screen flex-col font-sans">

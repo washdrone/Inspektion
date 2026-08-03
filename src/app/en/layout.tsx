@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import { inter } from '@/lib/fonts'
 import { Header } from '@/components/Header'
 import { FooterEn } from '@/components/FooterEn'
 import { CookieBannerEn } from '@/components/CookieBannerEn'
@@ -40,7 +41,7 @@ export default function EnglishLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -55,12 +56,6 @@ export default function EnglishLayout({
               });
             `,
           }}
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet"
         />
       </head>
       <body className="flex min-h-screen flex-col font-sans">

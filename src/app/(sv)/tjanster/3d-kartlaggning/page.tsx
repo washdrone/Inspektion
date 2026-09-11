@@ -185,6 +185,7 @@ export default function KartlaggningPage() {
 
 
       <Deliverables
+        image="3d-kartlaggning"
         headline="Det här ingår i leveransen"
         items={[
           {

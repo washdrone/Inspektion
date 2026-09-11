@@ -106,6 +106,7 @@ export default function VolymberakningPage() {
       />
 
       <Deliverables
+        image="volymberakning"
         headline="Leveransens delar – omfattning enligt offert"
         items={[
           {

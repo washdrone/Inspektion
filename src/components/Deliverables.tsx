@@ -1,6 +1,8 @@
 'use client'
 
 import { useReveal } from '@/hooks/useReveal'
+import { ServiceImage } from '@/components/ServiceImage'
+import type { ServiceImageKey } from '@/lib/service-images'
 
 interface Deliverable {
   title: string
@@ -10,9 +12,10 @@ interface Deliverable {
 interface DeliverablesProps {
   headline: string
   items: Deliverable[]
+  image?: ServiceImageKey
 }
 
-export function Deliverables({ headline, items }: DeliverablesProps) {
+export function Deliverables({ headline, items, image }: DeliverablesProps) {
   const { ref, visible } = useReveal()
 
   return (
@@ -24,6 +27,7 @@ export function Deliverables({ headline, items }: DeliverablesProps) {
         >
           {headline}
         </h2>
+        {image && <ServiceImage service={image} />}
         <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {items.map((item, i) => (
             <div

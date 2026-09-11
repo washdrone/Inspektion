@@ -97,6 +97,7 @@ export default function SolcellsinspektionPage() {
       />
 
       <Deliverables
+        image="solcellsinspektion"
         headline="Leveransens delar – omfattning enligt offert"
         items={[
           {

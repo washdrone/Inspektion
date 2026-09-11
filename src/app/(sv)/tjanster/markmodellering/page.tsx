@@ -191,6 +191,7 @@ export default function MarkmodelleringPage() {
       />
 
       <Deliverables
+        image="markmodellering"
         headline="Det här ingår i leveransen"
         items={[
           {

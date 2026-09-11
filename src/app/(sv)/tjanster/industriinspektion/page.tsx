@@ -184,6 +184,7 @@ export default function IndustriinspektionPage() {
 
 
       <Deliverables
+        image="industriinspektion"
         headline="Det här ingår i leveransen"
         items={[
           {

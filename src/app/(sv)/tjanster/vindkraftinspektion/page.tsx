@@ -184,6 +184,7 @@ export default function VindkraftinspektionPage() {
 
 
       <Deliverables
+        image="vindkraftinspektion"
         headline="Det här ingår i leveransen"
         items={[
           {

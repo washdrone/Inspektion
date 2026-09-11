@@ -191,6 +191,7 @@ export default function DronarinmatningPage() {
       />
 
       <Deliverables
+        image="dronarinmatning"
         headline="Det här ingår i leveransen"
         items={[
           {

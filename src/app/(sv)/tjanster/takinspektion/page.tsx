@@ -97,6 +97,7 @@ export default function TakinspektionPage() {
       />
 
       <Deliverables
+        image="takinspektion"
         headline="Leveransens delar – omfattning enligt offert"
         items={[
           {

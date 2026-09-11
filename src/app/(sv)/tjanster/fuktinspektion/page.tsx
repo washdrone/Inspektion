@@ -184,6 +184,7 @@ export default function FuktinspektionPage() {
 
 
       <Deliverables
+        image="fuktinspektion"
         headline="Det här ingår i leveransen"
         items={[
           {

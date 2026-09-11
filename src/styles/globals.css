@@ -139,3 +139,9 @@
 .faq-answer-inner {
   overflow: hidden;
 }
+
+/* Anchor destinations remain below the fixed navigation. */
+[id] { scroll-margin-top: 6rem; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

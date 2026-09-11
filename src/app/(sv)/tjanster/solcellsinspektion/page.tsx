@@ -13,53 +13,41 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { KnowledgeLinks } from '@/components/KnowledgeLinks'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Solcellsinspektion med drönare och termisk kamera',
+  title: "Solcellsinspektion med drönare och termografi",
   description:
-    'Termisk inspektion av solceller med drönare. Hitta hotspots, defekta celler och produktionsbortfall. EASA-certifierade piloter. Hela Sverige.',
+    "Termiska och visuella bilder av solcellsanläggningar. Få markerade avvikelser och underlag för fortsatt felsökning. Begär offert från SurveyDrone.",
   path: '/tjanster/solcellsinspektion',
 })
 
 const faqItems = [
   {
-    question: 'Hur fungerar termisk inspektion av solceller?',
-    answer:
-      'En branschledande termisk kamera monterad på drönaren fångar temperaturskillnader i varje panel. Defekta celler, hotspots och anslutningsproblem syns som avvikelser i det termiska mönstret.',
+    "question": "Vad visar en solcellsinspektion?",
+    "answer": "Vi dokumenterar termiska avvikelser och synliga brister med värmekamera och RGB-bilder. Fynden kan användas för att lokalisera områden som behöver kontrolleras. Den exakta felorsaken kan kräva kompletterande elteknisk felsökning."
   },
   {
-    question: 'Vilka typer av fel kan ni hitta?',
-    answer:
-      'Vi identifierar hotspots, defekta cellsträngar, PID-degradering (Potential Induced Degradation), mikro­sprickor som ger värmeavvikelser, smutsiga eller skuggade paneler, samt anslutningsproblem i kablar och kontakter.',
+    "question": "Måste anläggningen vara i drift?",
+    "answer": "För termisk inspektion behöver anläggningens drift och solinstrålning ge användbara mätförhållanden. Vi stämmer av förutsättningarna och flygtidpunkten inför uppdraget."
   },
   {
-    question: 'Måste solcellerna vara i drift under inspektionen?',
-    answer:
-      'Ja, för bästa resultat bör anläggningen vara i drift och solen bör lysa. Termiska avvikelser är tydligast när panelerna producerar energi under god solinstrålning.',
+    "question": "Vilket underlag behöver ni inför offert?",
+    "answer": "Ange plats, ungefärlig storlek, typ av anläggning och vad ni vill undersöka. Om layout, panelinformation eller tidigare fynd finns kan det hjälpa planeringen. Börja med en beskrivning i kontaktformuläret."
   },
   {
-    question: 'Hur stora anläggningar kan ni inspektera?',
-    answer:
-      'Vi inspekterar allt från villatak med solpaneler till stora solparker och kommersiella takanläggningar. Kontakta oss för en plan anpassad efter er anläggnings storlek.',
+    "question": "Hur hittar vi rätt panel efter inspektionen?",
+    "answer": "Rapportens markerade fynd kopplas till anläggningens layout. Vi stämmer av identifiering, kartunderlag och önskat format så att driftorganisationen kan följa upp fynden."
   },
   {
-    question: 'Hur ofta bör solcellsanläggningen inspekteras?',
-    answer:
-      'Regelbundna inspektioner hjälper till att fånga upp fel tidigt och maximera energiproduktionen. Kontakta oss för att diskutera ett inspektionsintervall som passar er anläggning.',
+    "question": "Ingår en fullständig elteknisk besiktning?",
+    "answer": "Tjänsten omfattar den visuella och termiska inspektion som anges i offerten. Kompletterande eltekniska mätningar, reparationer och ansvar för vidare felsökning behöver avtalas separat."
   },
   {
-    question: 'Kan inspektionen visa hur mycket produktion vi förlorar?',
-    answer:
-      'Rapporten identifierar defekta paneler och klassificerar avvikelserna, vilket ger er en grund för att uppskatta produktionsbortfall tillsammans med er driftansvarige.',
+    "question": "Kan rapporten ensam beräkna produktionsförlust?",
+    "answer": "Nej. Bildfynden kan ge underlag för fortsatt analys, men produktionsbortfall behöver bedömas tillsammans med driftdata och vid behov ytterligare mätningar."
   },
   {
-    question: 'Fungerar det på alla typer av solcellspaneler?',
-    answer:
-      'Ja, metoden fungerar på alla vanliga paneltyper — mono­kristallina, polykristallina och tunnfilmsmoduler. Den termiska analysen anpassas efter panelernas egenskaper.',
-  },
-  {
-    question: 'Vad kostar en solcellsinspektion?',
-    answer:
-      'Priset beror på anläggningens storlek och plats. Kontakta oss för en offert anpassad efter er situation.',
-  },
+    "question": "Vad styr pris och leveranstid?",
+    "answer": "Anläggningens storlek, plats, tillgänglighet, mätförhållanden och rapportkrav påverkar uppdraget. Vi anger pris, innehåll och tidplan i offerten."
+  }
 ]
 
 export default function SolcellsinspektionPage() {
@@ -72,7 +60,7 @@ export default function SolcellsinspektionPage() {
             serviceSchema({
               name: 'Solcellsinspektion med drönare',
               description:
-                'Termisk inspektion av solcellsanläggningar med drönare. Hitta hotspots, defekta celler och produktionsbortfall.',
+                "Vi kombinerar termiska och visuella bilder för att dokumentera temperaturavvikelser och synliga brister i solcellsanläggningar. Ni får en rapport med markerade fynd och rekommenderad uppföljning som hjälper driftorganisationen att prioritera fortsatt felsökning.",
               url: '/tjanster/solcellsinspektion',
             })
           ),
@@ -93,9 +81,9 @@ export default function SolcellsinspektionPage() {
       />
 
       <Hero
-        headline="Solcellsinspektion med drönare och termisk kamera"
-        subheadline="Maximera er energiproduktion genom att identifiera hotspots, defekta celler och dolda fel med fullradiometrisk termisk datainsamling. Våra EASA-certifierade piloter inspekterar hela anläggningen effektivt från luften."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        headline="Solcellsinspektion med drönare – lokalisera avvikelser i anläggningen"
+        subheadline="Vi kombinerar termiska och visuella bilder för att dokumentera temperaturavvikelser och synliga brister i solcellsanläggningar. Ni får en rapport med markerade fynd och rekommenderad uppföljning som hjälper driftorganisationen att prioritera fortsatt felsökning."
+        ctaPrimary={{ label: "Begär offert på solcellsinspektion", href: '/kontakt?service=solcellsinspektion' }}
         ctaSecondary={{ label: 'Se hur det fungerar', href: '#process' }}
       />
 
@@ -108,21 +96,57 @@ export default function SolcellsinspektionPage() {
         ]}
       />
 
+      <Deliverables
+        headline="Leveransens delar – omfattning enligt offert"
+        items={[
+          {
+            title: 'Termiska kartor',
+            description:
+              'Termogram av de överenskomna ytorna med markerade temperaturavvikelser.',
+          },
+          {
+            title: 'RGB-bilder',
+            description:
+              'Högupplösta visuella bilder för att komplettera den termiska analysen.',
+          },
+          {
+            title: 'Panelklassificering',
+            description:
+              'Varje panel med avvikelse klassificeras efter typ och allvarlighetsgrad.',
+          },
+          {
+            title: 'Layout-karta',
+            description:
+              'Översiktskarta med anläggningens layout och markerade problemområden.',
+          },
+          {
+            title: 'Åtgärdsrekommendationer',
+            description:
+              'Rekommenderad uppföljning av fynd. Behov av reparation och utbyte bedöms efter erforderlig felsökning.',
+          },
+          {
+            title: 'Digital rapport',
+            description:
+              'Komplett PDF-rapport med sammanfattning, analyser och bilagor.',
+          },
+        ]}
+      />
+
       <BenefitsGrid
         headline="Varför inspektera solceller med drönare?"
-        subtitle="Snabb och exakt inspektion som hjälper er att behålla optimal produktion."
+        subtitle="Lokaliserade fynd och tydligt underlag för driftorganisationens fortsatta arbete."
         benefits={[
           {
             icon: 'camera',
             title: 'Termisk hotspot-detektion',
             description:
-              'Branschledande termisk kamera identifierar överhettade celler och anslutningar som påverkar produktion och säkerhet.',
+              'Värmekameran visar temperaturavvikelser som analyseras tillsammans med visuella bilder och driftförhållanden.',
           },
           {
             icon: 'chart',
-            title: 'Maximera produktionen',
+            title: 'Prioritera felsökning',
             description:
-              'Genom att hitta och åtgärda fel tidigt säkerställer ni att anläggningen levererar optimal energiproduktion.',
+              'Markerade fynd hjälper driftorganisationen att välja var kompletterande kontroll och åtgärder behövs.',
           },
           {
             icon: 'clock',
@@ -134,7 +158,7 @@ export default function SolcellsinspektionPage() {
             icon: 'shield',
             title: 'Förebyggande underhåll',
             description:
-              'Regelbunden inspektion förhindrar att små fel utvecklas till allvarliga problem och kostsamma reparationer.',
+              'Återkommande dokumentation kan hjälpa er att upptäcka och följa förändringar mellan inspektioner.',
           },
           {
             icon: 'file',
@@ -152,6 +176,7 @@ export default function SolcellsinspektionPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="Så genomförs en solcellsinspektion"
         steps={[
           {
@@ -182,41 +207,7 @@ export default function SolcellsinspektionPage() {
       />
 
 
-      <Deliverables
-        headline="Det här ingår i leveransen"
-        items={[
-          {
-            title: 'Termiska kartor',
-            description:
-              'Fullradiometriska termogrammer av hela anläggningen med tydligt markerade hotspots.',
-          },
-          {
-            title: 'RGB-bilder',
-            description:
-              'Högupplösta visuella bilder för att komplettera den termiska analysen.',
-          },
-          {
-            title: 'Panelklassificering',
-            description:
-              'Varje panel med avvikelse klassificeras efter typ och allvarlighetsgrad.',
-          },
-          {
-            title: 'Layout-karta',
-            description:
-              'Översiktskarta med anläggningens layout och markerade problemområden.',
-          },
-          {
-            title: 'Åtgärdsrekommendationer',
-            description:
-              'Prioriterade förslag för reparation och utbyte baserat på inspektionens resultat.',
-          },
-          {
-            title: 'Digital rapport',
-            description:
-              'Komplett PDF-rapport med sammanfattning, analyser och bilagor.',
-          },
-        ]}
-      />
+
 
       <FaqAccordion headline="Vanliga frågor om solcellsinspektion" items={faqItems} />
 
@@ -252,10 +243,10 @@ export default function SolcellsinspektionPage() {
       />
 
       <CtaBand
-        headline="Maximera er solcellsproduktion"
+        headline="Lokalisera avvikelser och planera nästa steg"
         description="Boka en termisk inspektion av era solceller — kontakta oss för offert."
-        ctaLabel="Begär offert"
-        ctaHref="/kontakt"
+        ctaLabel="Begär offert på solcellsinspektion"
+        ctaHref="/kontakt?service=solcellsinspektion"
       />
     </>
   )

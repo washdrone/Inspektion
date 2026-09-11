@@ -13,48 +13,41 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { KnowledgeLinks } from '@/components/KnowledgeLinks'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Takinspektion med drönare och termisk kamera',
+  title: "Takinspektion med drönare – rapport och offert",
   description:
-    'Professionell takinspektion med drönare och termisk kamera. Upptäck läckor, skador och isoleringsbrister utan ställning. EASA-certifierade piloter. Hela Sverige.',
+    "Dokumentera takets skick med drönare. Få bilder, markerade avvikelser och underlag för fortsatt underhåll. Beskriv fastigheten och begär offert.",
   path: '/tjanster/takinspektion',
 })
 
 const faqItems = [
   {
-    question: 'Hur går en takinspektion med drönare till?',
-    answer:
-      'Vi flyger en kommersiell inspektionsklass-UAV över taket och samlar in högupplösta bilder samt termiska data. Hela inspektionen genomförs utan ställning eller skylift, vilket minimerar störningar och risker.',
+    "question": "Hur går en takinspektion till?",
+    "answer": "Vi stämmer av vilka takytor och frågor som ingår, planerar flygningen och samlar in bilder. Termisk inspektion planeras efter uppdragets behov och lämpliga förhållanden. Materialet analyseras och sammanställs i en rapport."
   },
   {
-    question: 'Vilka typer av tak kan inspekteras?',
-    answer:
-      'Vi inspekterar alla typer av tak — platta tak, sadeltak, pulpettak, gröna tak och industritak. Metoden fungerar på allt från bostadsrättsföreningar till stora industrianläggningar.',
+    "question": "Vad visar en termisk takinspektion?",
+    "answer": "Temperaturavvikelser kan indikera exempelvis fukt eller isoleringsbrister. De behöver tolkas utifrån material och förhållanden. Rapporten kan peka ut områden för vidare undersökning; en värmebild ensam fastställer inte alltid orsaken."
   },
   {
-    question: 'Kan ni upptäcka fuktskador med termisk kamera?',
-    answer:
-      'Ja, termisk kamera kan identifiera områden med avvikande temperatur som indikerar fuktinträngning, bristande isolering eller dolda läckor under takytan.',
+    "question": "Vad ingår i rapporten?",
+    "answer": "Rapportens innehåll bestäms i offerten. Bilddokumentation, markerade avvikelser och rekommenderad uppföljning beskrivs tillsammans med eventuell termisk analys, kartöverlägg och övriga leveranskrav."
   },
   {
-    question: 'Hur snabbt får vi rapporten efter inspektionen?',
-    answer:
-      'Normalt levererar vi en komplett rapport med analyser och rekommendationer inom några arbetsdagar efter genomförd inspektion. Kontakta oss för exakta leveranstider.',
+    "question": "Kan rapporten användas i underhållsplanen?",
+    "answer": "Rapporten ger dokumentation av synligt skick och fynd som kan användas i underhållsplaneringen. Den ersätter inte eventuella kompletterande undersökningar, dimensionering eller projektering av en åtgärd."
   },
   {
-    question: 'Behövs det tillstånd för att flyga drönare över fastigheten?',
-    answer:
-      'Våra piloter är EASA-certifierade och hanterar alla nödvändiga tillstånd och flygplaner. Vi säkerställer att alla flygningar sker i enlighet med gällande regelverk.',
+    "question": "Behöver vi vara på plats?",
+    "answer": "Tillträde, kontaktperson och eventuell medverkan stäms av under planeringen. Behovet beror på fastigheten och uppdragets omfattning."
   },
   {
-    question: 'Är takinspektion med drönare säkrare än traditionell inspektion?',
-    answer:
-      'Ja, drönare eliminerar behovet av att personal vistas på taket, vilket avsevärt minskar risken för fallolyckor. Dessutom krävs ingen ställning eller skylift.',
+    "question": "Vad händer vid olämpligt väder?",
+    "answer": "Flygning och eventuell termografi behöver lämpliga förhållanden. Tidpunkt och behov av omplanering stäms av för uppdraget."
   },
   {
-    question: 'Hur ofta bör man genomföra takinspektion?',
-    answer:
-      'Vi rekommenderar regelbundna inspektioner för att fånga upp skador tidigt. Kontakta oss för att diskutera ett inspektionsintervall som passar er fastighetsportfölj.',
-  },
+    "question": "Vad styr pris och leveranstid?",
+    "answer": "Takets storlek, tillgänglighet, plats, metod och rapportens omfattning påverkar upplägget. Ange adress, ungefärlig takyta, ert problem och önskad tidpunkt. Pris och tidplan anges i offerten."
+  }
 ]
 
 export default function TakinspektionPage() {
@@ -67,7 +60,7 @@ export default function TakinspektionPage() {
             serviceSchema({
               name: 'Takinspektion med drönare',
               description:
-                'Professionell takinspektion med drönare och termisk kamera. Upptäck läckor, skador och isoleringsbrister utan ställning.',
+                "Få en dokumenterad överblick över takets synliga skick och områden som behöver undersökas närmare. Vi samlar in högupplösta bilder och, när uppdrag och förhållanden medger det, termiska data. Ni får en rapport med markerade avvikelser och rekommendationer för fortsatt uppföljning.",
               url: '/tjanster/takinspektion',
             })
           ),
@@ -88,9 +81,9 @@ export default function TakinspektionPage() {
       />
 
       <Hero
-        headline="Takinspektion med drönare och termisk kamera"
-        subheadline="Identifiera läckor, fuktskador och isoleringsbrister utan ställning eller skylift. Våra EASA-certifierade piloter genomför noggranna takinspektioner med fullradiometrisk datainsamling — snabbt, säkert och kostnadseffektivt."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        headline="Takinspektion med drönare – underlag för nästa underhållsbeslut"
+        subheadline="Få en dokumenterad överblick över takets synliga skick och områden som behöver undersökas närmare. Vi samlar in högupplösta bilder och, när uppdrag och förhållanden medger det, termiska data. Ni får en rapport med markerade avvikelser och rekommendationer för fortsatt uppföljning."
+        ctaPrimary={{ label: "Begär offert på takinspektion", href: '/kontakt?service=takinspektion' }}
         ctaSecondary={{ label: 'Se hur det fungerar', href: '#process' }}
       />
 
@@ -103,39 +96,75 @@ export default function TakinspektionPage() {
         ]}
       />
 
+      <Deliverables
+        headline="Leveransens delar – omfattning enligt offert"
+        items={[
+          {
+            title: 'Högupplösta flygbilder',
+            description:
+              'RGB-bilder av överenskomna, synliga takytor med närbilder av identifierade avvikelser.',
+          },
+          {
+            title: 'Termiska kartor',
+            description:
+              'När termografi ingår: termogram som visar temperaturfördelning och markerade avvikelser.',
+          },
+          {
+            title: 'Skadeklassificering',
+            description:
+              'Varje identifierat problem klassificeras efter allvarlighetsgrad och prioritet.',
+          },
+          {
+            title: 'Åtgärdsrekommendationer',
+            description:
+              'Konkreta förslag på åtgärder baserade på analysens resultat.',
+          },
+          {
+            title: 'Digital rapport',
+            description:
+              'Komplett inspektionsrapport i PDF-format med sammanfattning och detaljbilagor.',
+          },
+          {
+            title: 'Kartöverlägg',
+            description:
+              'Georeferering och format för ert fastighetssystem stäms av i offerten.',
+          },
+        ]}
+      />
+
       <BenefitsGrid
         headline="Fördelarna med drönarbaserad takinspektion"
-        subtitle="Snabbare, säkrare och mer detaljerad inspektion jämfört med traditionella metoder."
+        subtitle="Bilddokumentation som hjälper förvaltare och fastighetsägare att prioritera nästa steg."
         benefits={[
           {
             icon: 'shield',
             title: 'Ökad säkerhet',
             description:
-              'Ingen personal behöver vistas på taket. Eliminerar risken för fallolyckor och behovet av ställning.',
+              'Datainsamling från luften minskar behovet av takåtkomst. Kompletterande undersökningar kan ändå kräva tillträde.',
           },
           {
             icon: 'clock',
             title: 'Snabbare genomförande',
             description:
-              'En komplett takinspektion genomförs på en bråkdel av tiden jämfört med manuella metoder.',
+              'Svåråtkomliga takytor kan dokumenteras från luften. Tidsåtgången bedöms efter objekt och omfattning.',
           },
           {
             icon: 'camera',
             title: 'Termisk analys',
             description:
-              'Branschledande termisk kamera avslöjar dolda fuktskador, läckor och isoleringsbrister som inte syns med blotta ögat.',
+              'Termiska data kan visa temperaturavvikelser som behöver tolkas och vid behov undersökas vidare.',
           },
           {
             icon: 'chart',
             title: 'Detaljerad dokumentation',
             description:
-              'Högupplösta bilder och termiska kartor ger ett komplett beslutsunderlag för underhållsplanering.',
+              'Bilder och markerade avvikelser ger dokumenterat underlag för underhållsplanering och fortsatt undersökning.',
           },
           {
             icon: 'building',
-            title: 'Alla taktyper',
+            title: 'Anpassat till fastigheten',
             description:
-              'Platta tak, sadeltak, industritak eller gröna tak — vår metod fungerar på alla typer av byggnader.',
+              'Takets utformning, material och siktförhållanden styr vad som går att dokumentera.',
           },
           {
             icon: 'file',
@@ -147,6 +176,7 @@ export default function TakinspektionPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="Så genomförs en takinspektion"
         steps={[
           {
@@ -177,41 +207,7 @@ export default function TakinspektionPage() {
       />
 
 
-      <Deliverables
-        headline="Det här ingår i leveransen"
-        items={[
-          {
-            title: 'Högupplösta flygbilder',
-            description:
-              'Detaljerade RGB-bilder av hela takytan, inklusive närbilder av identifierade skador.',
-          },
-          {
-            title: 'Termiska kartor',
-            description:
-              'Fullradiometriska termogrammer som visar temperaturfördelning och avvikelser.',
-          },
-          {
-            title: 'Skadeklassificering',
-            description:
-              'Varje identifierat problem klassificeras efter allvarlighetsgrad och prioritet.',
-          },
-          {
-            title: 'Åtgärdsrekommendationer',
-            description:
-              'Konkreta förslag på åtgärder baserade på analysens resultat.',
-          },
-          {
-            title: 'Digital rapport',
-            description:
-              'Komplett inspektionsrapport i PDF-format med sammanfattning och detaljbilagor.',
-          },
-          {
-            title: 'Kartöverlägg',
-            description:
-              'Georefererade bilder som kan användas i ert fastighetssystem.',
-          },
-        ]}
-      />
+
 
       <FaqAccordion headline="Vanliga frågor om takinspektion" items={faqItems} />
 
@@ -227,7 +223,7 @@ export default function TakinspektionPage() {
             title: 'Fuktinspektion',
             href: '/tjanster/fuktinspektion',
             description:
-              'Avancerad fuktdetektering med termisk kamera för att hitta dolda fuktproblem.',
+              'Termisk undersökning av avvikelser som kan indikera fukt och behöva följas upp.',
           },
           {
             title: 'Solcellsinspektion',
@@ -247,10 +243,10 @@ export default function TakinspektionPage() {
       />
 
       <CtaBand
-        headline="Boka en takinspektion idag"
+        headline="Få underlag för takets nästa underhållsbeslut"
         description="Kontakta oss för en kostnadsfri konsultation och offert anpassad efter era behov."
-        ctaLabel="Begär offert"
-        ctaHref="/kontakt"
+        ctaLabel="Begär offert på takinspektion"
+        ctaHref="/kontakt?service=takinspektion"
       />
     </>
   )

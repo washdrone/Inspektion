@@ -109,7 +109,7 @@ export default function FacadeInspectionPage() {
       <Hero
         headline="Facade Inspection with Drone — without scaffolding"
         subheadline="Document cracks, moisture damage, cold bridges and structural issues with high-resolution aerial images and thermal camera — without scaffolding or cherry pickers. Safer, faster and more cost-effective."
-        ctaPrimary={{ label: 'Get a Quote', href: '/en/contact' }}
+        ctaPrimary={{ label: 'Get a Quote', href: '/en/contact?service=facade-inspection' }}
         ctaSecondary={{ label: 'How It Works', href: '/en/how-it-works' }}
       />
 
@@ -135,7 +135,7 @@ export default function FacadeInspectionPage() {
             icon: 'shield',
             title: 'No scaffolding needed',
             description:
-              'The entire inspection is carried out from the air, eliminating the cost and logistics of scaffolding.',
+              'Drone image collection can reduce the need for scaffolding. Additional investigations or remedial work may still require physical access.',
           },
           {
             icon: 'camera',
@@ -239,7 +239,7 @@ export default function FacadeInspectionPage() {
         headline="Need a facade inspection?"
         description="Contact us for a free quote with a clear delivery time."
         ctaLabel="Get a Quote"
-        ctaHref="/en/contact"
+        ctaHref="/en/contact?service=facade-inspection"
       />
 
       <RelatedServices

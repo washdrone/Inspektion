@@ -13,7 +13,7 @@ import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Termisk inspektion — Guide till termografi och värmekamera för byggnader',
+  title: 'Guide till termisk inspektion med drönare',
   description:
     'Hur fungerar termisk inspektion? Lär dig om fullradiometrisk datainsamling, vad som kan upptäckas och när termografi ger störst nytta. Guide för fastigheter, industri och energi.',
   path: '/termisk-inspektion',
@@ -93,9 +93,9 @@ export default function TermiskInspektionLandingPage() {
       />
 
       <Hero
-        headline="Termisk inspektion — hur fungerar termografi med drönare?"
+        headline="Termisk inspektion – vad värmekameran visar"
         subheadline="Lär dig hur termisk inspektion fungerar, vad fullradiometrisk data innebär och i vilka situationer termografi ger störst nytta. En teknisk guide för fastighetsägare, förvaltare och driftansvariga."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        ctaPrimary={{ label: 'Se tjänst och leverans', href: '/tjanster/termisk-inspektion' }}
         ctaSecondary={{ label: 'Så går det till', href: '#process' }}
       />
 
@@ -122,7 +122,7 @@ export default function TermiskInspektionLandingPage() {
             <p className="mt-4 text-body-lg text-dark-500">
               Vid drönarbaserad termisk inspektion monteras en värmekamera på en professionell
               inspektions-UAV. Kameran samlar in fullradiometrisk data, vilket innebär att varje
-              pixel i bilden innehåller ett exakt temperaturvärde. Detta ger kvantifierbara
+              pixel i bilden innehåller ett temperaturvärde med mätosäkerhet. Detta ger kvantifierbara
               resultat som kan jämföras mellan inspektionstillfällen och ligga till grund för
               tekniska beslut.
             </p>
@@ -179,7 +179,7 @@ export default function TermiskInspektionLandingPage() {
             icon: 'camera',
             title: 'Fullradiometrisk data',
             description:
-              'Varje pixel innehåller ett exakt temperaturvärde, vilket ger kvantifierbara och jämförbara resultat.',
+              'Varje pixel innehåller ett temperaturvärde med mätosäkerhet, vilket ger kvantifierbara och jämförbara resultat.',
           },
           {
             icon: 'building',
@@ -275,6 +275,7 @@ export default function TermiskInspektionLandingPage() {
       </section>
 
       <ProcessSteps
+        id="process"
         headline="Så genomförs en termisk inspektion"
         steps={[
           {

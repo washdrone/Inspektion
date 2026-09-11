@@ -10,7 +10,7 @@ export function organizationSchema() {
     url: BASE_URL,
     logo: `${BASE_URL}/icon.svg`,
     description:
-      'Professionell visuell och termisk drönarinspektion i hela Sverige. Tak, fasader, solceller och industri. EASA-certifierade piloter, högupplöst RGB och fullradiometrisk termisk datainsamling.',
+      'Drönarinspektion, inmätning och 3D-kartläggning i hela Sverige. Bilddokumentation, rapporter och mätunderlag för underhåll, projektering och uppföljning.',
     email: CONTACT.email,
     address: {
       '@type': 'PostalAddress',
@@ -19,11 +19,6 @@ export function organizationSchema() {
     areaServed: {
       '@type': 'Country',
       name: 'Sverige',
-    },
-    hasCredential: {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'certification',
-      name: 'EASA fjärrpilotcertifikat',
     },
     knowsAbout: [
       'Drönarinspektion',

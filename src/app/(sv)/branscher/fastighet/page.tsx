@@ -30,7 +30,7 @@ const faqItems = [
   {
     question: 'Vilken typ av rapport får vi efter inspektionen?',
     answer:
-      'Ni får en detaljerad rapport med högupplösta bilder, termiska bilder med analys, identifierade skador med koordinater samt prioriterade åtgärdsförslag. Rapporten levereras normalt inom ett par arbetsdagar.',
+      'Ni får en detaljerad rapport med högupplösta bilder, termiska bilder med analys, identifierade skador med koordinater samt prioriterade åtgärdsförslag. Leveranstiden anges i offerten.',
   },
   {
     question: 'Behövs det tillgång till taket eller fasaden under inspektionen?',

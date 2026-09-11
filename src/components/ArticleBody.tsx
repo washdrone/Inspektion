@@ -6,7 +6,7 @@ import type { ArticleBlock, ArticleSection } from '@/lib/articles/types'
  * Renders inline text with minimal markup support:
  * [text](/intern-lank) for internal links and **text** for bold.
  */
-function renderInline(text: string): ReactNode[] {
+export function renderInline(text: string): ReactNode[] {
   const nodes: ReactNode[] = []
   const pattern = /\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*/g
   let lastIndex = 0

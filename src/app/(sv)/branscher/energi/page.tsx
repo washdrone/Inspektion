@@ -89,7 +89,7 @@ export default function EnergiPage() {
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
         ctaSecondary={{ label: 'Solcellsinspektion', href: '/tjanster/solcellsinspektion' }}
         stats={[
-          { value: '0', label: 'Produktionsstopp' },
+          { value: 'Anpassad', label: 'Driftplanering' },
           { value: 'Snabb', label: 'Rapportleverans' },
           { value: 'Hela', label: 'Sverige' },
           { value: 'EASA', label: 'Certifierade piloter' },
@@ -174,7 +174,7 @@ export default function EnergiPage() {
           {
             title: 'Fullradiometrisk data',
             description:
-              'Branschledande termisk kamera med fullradiometrisk datainsamling ger exakta temperaturvärden för varje pixel.',
+              'Branschledande termisk kamera med fullradiometrisk datainsamling ger temperaturvärden per pixel, med mätosäkerhet och metodförutsättningar.',
             icon: 'camera',
           },
           {

@@ -109,7 +109,7 @@ export default function WindTurbineInspectionPage() {
       <Hero
         headline="Wind Turbine Inspection with Drone — Blades and Tower"
         subheadline="Inspect rotor blades, tower and nacelle without rope access or climbing. Detailed images and thermal analysis by EASA-certified pilots — faster, safer and with shorter standstill time."
-        ctaPrimary={{ label: 'Get a Quote', href: '/en/contact' }}
+        ctaPrimary={{ label: 'Get a Quote', href: '/en/contact?service=wind-turbine-inspection' }}
         ctaSecondary={{ label: 'See How It Works', href: '#process' }}
       />
 
@@ -165,6 +165,7 @@ export default function WindTurbineInspectionPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="How wind turbine inspection works"
         steps={[
           {
@@ -236,7 +237,7 @@ export default function WindTurbineInspectionPage() {
         headline="Need a wind turbine inspection?"
         description="Contact us for a free quote. We inspect individual turbines and entire wind farms across Sweden."
         ctaLabel="Get a Quote"
-        ctaHref="/en/contact"
+        ctaHref="/en/contact?service=wind-turbine-inspection"
       />
 
       <RelatedServices

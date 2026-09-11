@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { trackEvent } from '@/lib/analytics'
 import { useReveal } from '@/hooks/useReveal'
 import { useCountUp } from '@/hooks/useCountUp'
 
@@ -48,7 +49,7 @@ export function Hero({
   const { ref, visible } = useReveal({ threshold: 0.1 })
 
   return (
-    <section ref={ref} className="relative -mt-20 min-h-[90vh] min-h-[90dvh] flex items-center overflow-hidden bg-dark-950">
+    <section ref={ref} className="relative -mt-20 min-h-[60vh] min-h-[60dvh] flex items-center overflow-hidden bg-dark-950">
       {/* Animated background gradient layers */}
       <div className="absolute inset-0 bg-gradient-to-b from-dark-950 via-dark-900 to-dark-800" aria-hidden="true" />
       <div className="absolute inset-0 hero-glow-1" aria-hidden="true" />
@@ -62,7 +63,7 @@ export function Hero({
         }} />
       </div>
 
-      <div className="container-content relative z-10 pt-28 pb-20 md:pt-36 md:pb-28">
+      <div className="container-content relative z-10 pt-28 pb-14 md:pt-32 md:pb-20">
         <div className="max-w-3xl">
           {/* Eyebrow */}
           <div
@@ -79,7 +80,7 @@ export function Hero({
           </div>
 
           <h1
-            className="text-display font-extrabold text-white sm:text-display-lg lg:text-display-xl transition-all duration-700 delay-100"
+            className="text-display font-extrabold text-white sm:text-display-lg lg:text-[3.5rem] lg:leading-[1.12] transition-all duration-700 delay-100"
             style={{
               opacity: visible ? 1 : 0,
               transform: visible ? 'translateY(0)' : 'translateY(30px)',
@@ -89,7 +90,7 @@ export function Hero({
           </h1>
 
           <p
-            className="mt-6 text-body-lg leading-relaxed text-dark-300 md:text-xl md:leading-relaxed max-w-2xl transition-all duration-700 delay-200"
+            className="mt-6 text-body-lg leading-relaxed text-white/85 md:text-xl md:leading-relaxed max-w-2xl transition-all duration-700 delay-200"
             style={{
               opacity: visible ? 1 : 0,
               transform: visible ? 'translateY(0)' : 'translateY(20px)',
@@ -105,7 +106,7 @@ export function Hero({
               transform: visible ? 'translateY(0)' : 'translateY(20px)',
             }}
           >
-            <Link href={ctaPrimary.href} className="btn-primary text-base px-8 py-4">
+            <Link href={ctaPrimary.href} onClick={() => trackEvent('cta_click', { placement: 'hero', destination: ctaPrimary.href })} className="btn-primary text-base px-8 py-4">
               {ctaPrimary.label}
               <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

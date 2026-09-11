@@ -78,7 +78,7 @@ export function BenefitsGrid({ headline, subtitle, benefits, variant = 'light' }
                 {icons[benefit.icon]}
               </div>
               <h3 className={`mt-4 text-heading-sm ${isDark ? 'text-white' : ''}`}>{benefit.title}</h3>
-              <p className={`mt-2 text-body-sm ${isDark ? 'text-dark-400' : 'text-dark-500'}`}>{benefit.description}</p>
+              <p className={`mt-2 text-base ${isDark ? 'text-dark-400' : 'text-dark-500'}`}>{benefit.description}</p>
             </div>
           ))}
         </div>

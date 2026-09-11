@@ -13,7 +13,7 @@ export const metadata: Metadata = createMetadata({
   alternateLocalePath: '/kontakt',
 })
 
-export default function ContactPage() {
+export default function ContactPage({ searchParams }: { searchParams: { service?: string | string[] } }) {
   return (
     <>
       <Breadcrumbs
@@ -36,6 +36,7 @@ export default function ContactPage() {
               </p>
               <div className="mt-8">
                 <ContactFormEn
+                  serviceContext={typeof searchParams.service === 'string' ? searchParams.service : undefined}
                   headline="Contact form"
                   subtitle="Fields marked with * are required."
                 />
@@ -76,11 +77,11 @@ export default function ContactPage() {
                   </li>
                   <li className="flex gap-3">
                     <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-brand-700">3</span>
-                    <span>The flight is carried out. You do not need to be on site.</span>
+                    <span>The work follows the agreed plan. Site access and any participation are agreed in advance.</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-brand-700">4</span>
-                    <span>Report with analyses and recommended actions delivered as scheduled in the quote.</span>
+                    <span>The agreed report or survey data is delivered according to the scope and schedule in the quote.</span>
                   </li>
                 </ol>
               </div>

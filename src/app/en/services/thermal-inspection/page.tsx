@@ -30,7 +30,7 @@ const faqItems = [
   {
     question: 'What does full radiometric data collection mean?',
     answer:
-      'Every pixel in the thermal image contains an exact temperature value, enabling detailed analysis and comparison rather than just colour representation.',
+      'Every pixel in the thermal image contains a temperature value with measurement uncertainty, enabling detailed analysis and comparison rather than just colour representation.',
   },
   {
     question: 'What applications are there for thermal inspection?',
@@ -109,7 +109,7 @@ export default function ThermalInspectionPage() {
       <Hero
         headline="Thermal Inspection with Drone — IR and Infrared"
         subheadline="Reveal hidden problems with full radiometric infrared data collection. Identify moisture, cold bridges, insulation defects and energy losses — quickly, safely and without disruption."
-        ctaPrimary={{ label: 'Get a Quote', href: '/en/contact' }}
+        ctaPrimary={{ label: 'Get a Quote', href: '/en/contact?service=thermal-inspection' }}
         ctaSecondary={{ label: 'How It Works', href: '/en/how-it-works' }}
       />
 
@@ -129,7 +129,7 @@ export default function ThermalInspectionPage() {
             icon: 'camera',
             title: 'Full radiometric data',
             description:
-              'Every pixel contains an exact temperature value for detailed analysis and comparison.',
+              'Every pixel contains a temperature value with measurement uncertainty for detailed analysis and comparison.',
           },
           {
             icon: 'building',
@@ -147,7 +147,7 @@ export default function ThermalInspectionPage() {
             icon: 'chart',
             title: 'Measurable data',
             description:
-              'Exact temperature values enable objective assessment and tracking over time.',
+              'Temperature data supports assessment when measurement conditions and uncertainty are taken into account.',
           },
           {
             icon: 'clock',
@@ -200,7 +200,7 @@ export default function ThermalInspectionPage() {
           {
             title: 'Full radiometric thermograms',
             description:
-              'Thermal images where every pixel contains an exact temperature value.',
+              'Thermal images where every pixel contains a temperature value with measurement uncertainty.',
           },
           {
             title: 'RGB reference images',
@@ -239,7 +239,7 @@ export default function ThermalInspectionPage() {
         headline="Need a thermal inspection?"
         description="Contact us for a free quote. We carry out thermal inspections across all of Sweden."
         ctaLabel="Get a Quote"
-        ctaHref="/en/contact"
+        ctaHref="/en/contact?service=thermal-inspection"
       />
 
       <RelatedServices

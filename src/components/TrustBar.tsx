@@ -20,7 +20,7 @@ export function TrustBar({ items, variant = 'dark' }: TrustBarProps) {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              <span className={`text-sm font-medium ${isDark ? 'text-dark-300' : 'text-dark-600'}`}>
+              <span className={`text-sm font-medium ${isDark ? 'text-white/85' : 'text-dark-600'}`}>
                 {item}
               </span>
             </div>

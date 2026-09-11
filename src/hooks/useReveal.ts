@@ -1,33 +1,13 @@
+
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 
-interface UseRevealOptions {
-  threshold?: number
-  rootMargin?: string
-}
+interface UseRevealOptions { threshold?: number; rootMargin?: string }
 
-export function useReveal({ threshold = 0.15, rootMargin = '0px' }: UseRevealOptions = {}) {
+// Content must remain visible in server HTML and when JavaScript is unavailable.
+// Preserve the hook API used by the existing sections without hiding their content.
+export function useReveal(_options: UseRevealOptions = {}) {
   const ref = useRef<HTMLDivElement>(null)
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true)
-          observer.unobserve(el)
-        }
-      },
-      { threshold, rootMargin }
-    )
-
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [threshold, rootMargin])
-
-  return { ref, visible }
+  return { ref, visible: true }
 }

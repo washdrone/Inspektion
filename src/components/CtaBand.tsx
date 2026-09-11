@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { trackEvent } from '@/lib/analytics'
 import { useReveal } from '@/hooks/useReveal'
 
 interface CtaBandProps {
@@ -40,7 +41,7 @@ export function CtaBand({
           className="mt-8 transition-all duration-700 delay-200"
           style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(20px)' }}
         >
-          <Link href={ctaHref} className="btn-primary text-base px-8 py-4">
+          <Link href={ctaHref} onClick={() => trackEvent('cta_click', { placement: 'closing', destination: ctaHref })} className="btn-primary text-base px-8 py-4">
             {ctaLabel}
             <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

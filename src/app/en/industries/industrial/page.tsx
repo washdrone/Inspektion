@@ -67,7 +67,7 @@ export default function IndustrialPage() {
             serviceSchemaEn({
               name: 'Industrial Drone Inspection',
               description:
-                'Professional drone inspection of industrial facilities, tanks, towers and pipelines. Thermal and visual inspection without downtime.',
+                'Professional drone inspection of industrial facilities, tanks, towers and pipelines. Thermal and visual inspection with operating conditions agreed in advance.',
               url: '/en/industries/industrial',
             })
           ),
@@ -88,11 +88,11 @@ export default function IndustrialPage() {
 
       <Hero
         headline="Drone Inspection for Process Industry"
-        subheadline="Inspect tanks, chimneys, pipe racks and hard-to-reach structures without scaffolding and without downtime. We have experience with ex-classified zones and work according to your safety procedures."
+        subheadline="Inspect tanks, chimneys, pipe racks and hard-to-reach structures with access and operating conditions agreed in advance. We have experience with ex-classified zones and work according to your safety procedures."
         ctaPrimary={{ label: 'Request a quote', href: '/en/contact' }}
         ctaSecondary={{ label: 'Industrial inspection', href: '/en/services/industrial-inspection' }}
         stats={[
-          { value: '0', label: 'Downtime required' },
+          { value: 'Planned', label: 'Site operations' },
           { value: '0', label: 'Work at height' },
           { value: 'All of', label: 'Sweden' },
           { value: 'EASA', label: 'Certified pilots' },
@@ -174,7 +174,7 @@ export default function IndustrialPage() {
             icon: 'clock',
           },
           {
-            title: 'Eliminated height risk',
+            title: 'Reduced need for work at height',
             description:
               'No personnel need to climb on tanks, chimneys or other tall structures. The entire inspection is carried out from a safe position.',
             icon: 'shield',

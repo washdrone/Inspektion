@@ -13,7 +13,7 @@ import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Takinspektion med drönare — Guide, fördelar och användningsområden',
+  title: 'Guide: så fungerar takinspektion med drönare',
   description:
     'Allt om takinspektion med drönare: hur det fungerar, vad som kan upptäckas, fördelar jämfört med traditionella metoder och när metoden passar bäst. EASA-certifierade piloter i hela Sverige.',
   path: '/takinspektion-med-dronare',
@@ -93,9 +93,9 @@ export default function TakinspektionMedDronarePage() {
       />
 
       <Hero
-        headline="Takinspektion med drönare — hur fungerar det?"
+        headline="Takinspektion med drönare – metod, användning och frågor"
         subheadline="Lär dig hur drönarbaserad takinspektion fungerar, vilka skador som kan upptäckas och varför metoden ersätter traditionell inspektion med ställning. En komplett guide för fastighetsägare, förvaltare och tekniska beslutsfattare."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        ctaPrimary={{ label: 'Se tjänst och leverans', href: '/tjanster/takinspektion' }}
         ctaSecondary={{ label: 'Se hur det fungerar', href: '#process' }}
       />
 
@@ -230,6 +230,7 @@ export default function TakinspektionMedDronarePage() {
       </section>
 
       <ProcessSteps
+        id="process"
         headline="Så går en takinspektion med drönare till"
         steps={[
           {

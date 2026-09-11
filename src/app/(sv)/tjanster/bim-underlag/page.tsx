@@ -97,7 +97,7 @@ export default function BimUnderlagPage() {
         eyebrow="Mätunderlag för projektering"
         headline="BIM-underlag från drönardata"
         subheadline="Vi mäter in verkligheten från luften och levererar georefererade punktmoln, mesh-modeller, ortofoto och terrängmodeller som era projektörer kan läsa in direkt i CAD- och BIM-miljö. Ett aktuellt relationsunderlag innan om- eller tillbyggnad — rikstäckande i hela Sverige."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        ctaPrimary={{ label: 'Begär offert', href: '/kontakt?service=bim-underlag' }}
         ctaSecondary={{ label: 'Så tas underlaget fram', href: '#process' }}
       />
 
@@ -154,6 +154,7 @@ export default function BimUnderlagPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="Så tas BIM-underlaget fram"
         steps={[
           {
@@ -262,7 +263,7 @@ export default function BimUnderlagPage() {
         headline="Behöver era projektörer ett aktuellt underlag?"
         description="Berätta om objektet och vilka format ni arbetar i så föreslår vi ett upplägg för inmätning och leverans."
         ctaLabel="Begär offert"
-        ctaHref="/kontakt"
+        ctaHref="/kontakt?service=bim-underlag"
       />
     </>
   )

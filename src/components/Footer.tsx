@@ -17,7 +17,7 @@ export function Footer() {
               <span className="text-lg font-bold text-white">SurveyDrone</span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-dark-400">
-              Professionell visuell och termisk drönar&shy;inspektion i hela Sverige. EASA-certifierade piloter och fullradiometrisk datainsamling.
+              Drönarinspektion, inmätning och 3D-underlag i hela Sverige. EASA-certifierade piloter och metoder anpassade efter uppdraget.
             </p>
             <div className="mt-4 text-sm text-dark-400">
               <a href={`mailto:${CONTACT.email}`} className="transition-colors hover:text-accent-400">{CONTACT.email}</a>

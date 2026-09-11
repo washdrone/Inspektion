@@ -13,7 +13,7 @@ import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Solcellsinspektion med drönare — Guide till feltyper och termisk analys',
+  title: 'Guide till solcellsinspektion med drönare',
   description:
     'Hur inspekteras solceller med drönare? Vilka fel kan termisk kamera hitta? Guide till hotspots, PID, diodfel och andra vanliga avvikelser i solcellsanläggningar.',
   path: '/solcellsinspektion',
@@ -93,9 +93,9 @@ export default function SolcellsinspektionPage() {
       />
 
       <Hero
-        headline="Solcellsinspektion med drönare — hitta fel innan de kostar"
+        headline="Så fungerar termisk inspektion av solceller"
         subheadline="Vad kan termisk kamera avslöja om era solcellspaneler? Lär dig om hotspots, PID-degradering, diodfel och andra vanliga avvikelser — och hur drönarinspektion gör det möjligt att inspektera stora anläggningar effektivt."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        ctaPrimary={{ label: 'Se tjänst och leverans', href: '/tjanster/solcellsinspektion' }}
         ctaSecondary={{ label: 'Så fungerar det', href: '#process' }}
       />
 
@@ -237,6 +237,7 @@ export default function SolcellsinspektionPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="Så genomförs en solcellsinspektion med drönare"
         steps={[
           {

@@ -30,7 +30,7 @@ const faqItems = [
   {
     question: 'Do you need access to the roof?',
     answer:
-      'No, the entire inspection is carried out from the air. No personnel need to be on the roof, which eliminates fall risk and the need for safety equipment.',
+      'Drone image collection reduces the need for roof access. Site safety measures and any additional hands-on inspection are assessed for the assignment.',
   },
   {
     question: 'How large roofs can you inspect?',
@@ -109,7 +109,7 @@ export default function RoofInspectionPage() {
       <Hero
         headline="Roof Inspection with Drone — without accessing the roof"
         subheadline="Identify moisture, cold bridges, insulation defects and membrane damage with thermal camera and high-resolution aerial images — without personnel on the roof. Faster, safer and more cost-effective than traditional methods."
-        ctaPrimary={{ label: 'Get a Quote', href: '/en/contact' }}
+        ctaPrimary={{ label: 'Get a Quote', href: '/en/contact?service=roof-inspection' }}
         ctaSecondary={{ label: 'How It Works', href: '/en/how-it-works' }}
       />
 
@@ -239,7 +239,7 @@ export default function RoofInspectionPage() {
         headline="Need a roof inspection?"
         description="Contact us for a free quote with a clear delivery time."
         ctaLabel="Get a Quote"
-        ctaHref="/en/contact"
+        ctaHref="/en/contact?service=roof-inspection"
       />
 
       <RelatedServices

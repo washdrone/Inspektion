@@ -61,7 +61,7 @@ const terms = [
   {
     id: 'radiometric-camera',
     term: 'Radiometric camera',
-    definition: 'A thermal camera that measures and records exact temperature values for each pixel in the image. Unlike simpler thermal cameras, fully radiometric data collection enables quantitative analysis and precise temperature measurements in post-processing.',
+    definition: 'A thermal camera that measures and records temperature values subject to measurement conditions for each pixel in the image. Unlike simpler thermal cameras, fully radiometric data collection enables quantitative analysis and precise temperature measurements in post-processing.',
   },
   {
     id: 'rtk-positioning',

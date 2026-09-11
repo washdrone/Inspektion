@@ -122,7 +122,7 @@ export default function HomePage() {
           },
           {
             title: 'Industrial Inspection',
-            description: 'Inspect tanks, towers, pipelines and hard-to-reach facilities without downtime.',
+            description: 'Inspect tanks, towers, pipelines and hard-to-reach facilities with operating conditions agreed in advance.',
             href: '/en/services/industrial-inspection',
             icon: '🏭',
           },

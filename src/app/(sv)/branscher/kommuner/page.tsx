@@ -198,7 +198,7 @@ export default function KommunerPage() {
           {
             title: 'Snabb leverans',
             description:
-              'Rapport med bilder och åtgärdsförslag levereras normalt inom ett par arbetsdagar efter inspektion.',
+              'Rapport med bilder och åtgärdsförslag levereras enligt tidplanen i offerten.',
             icon: 'clock',
           },
         ]}

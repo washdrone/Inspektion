@@ -7,7 +7,7 @@ import { CtaBand } from '@/components/CtaBand'
 import { faqSchema } from '@/lib/schema'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Drönarinspektion pris — Prismodell och prisguide',
+  title: 'Pris för drönarinspektion och inmätning – offertguide',
   description:
     'Vad kostar drönarinspektion? Priset beror på objektets yta, antal våningsplan, inspektionstyp och leverabler. Se vår prismodell och begär kostnadsfri offert.',
   path: '/priser',
@@ -54,7 +54,7 @@ export default function PriserPage() {
       <section className="section-padding">
         <div className="container-content text-center">
           <h1 className="page-heading">
-            Så prissätts en drönarinspektion
+            Pris för inspektion och inmätning
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-dark-500">
             Vi publicerar inga fasta priser — varje uppdrag är unikt. Istället förklarar vi vad som
@@ -72,8 +72,8 @@ export default function PriserPage() {
             {[
               { title: 'Objektets yta', desc: 'Större tak eller fasader kräver längre flygtid och mer bildbearbetning.' },
               { title: 'Antal våningsplan', desc: 'Flervåningsfasader kräver flera flygpass och mer detaljerad dokumentation.' },
-              { title: 'Typ av inspektion', desc: 'Visuell, termisk eller kombinerad inspektion har olika krav på flygmönster och analys.' },
-              { title: 'Leverabler', desc: 'Enkel rapport, termisk analys, ortofoto eller 3D-modell påverkar bearbetningstiden.' },
+              { title: 'Metod och kvalitetskrav', desc: 'Visuell eller termisk inspektion, fotogrammetri och LiDAR kräver olika insamling och bearbetning. För mätuppdrag påverkar även kvalitetskrav och markkontroll.' },
+              { title: 'Leverans och format', desc: 'Enkel rapport, termisk analys, ortofoto eller 3D-modell påverkar bearbetningstiden.' },
               { title: 'Restid', desc: 'Objekt utanför storstadsregioner kan innebära restidstillägg.' },
               { title: 'Antal objekt', desc: 'Fler objekt i samma område ger volymfördelar. Löpande avtal ger bäst villkor.' },
             ].map((item) => (
@@ -143,7 +143,7 @@ export default function PriserPage() {
               >
                 {tier.highlighted && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-pill bg-accent-400 px-4 py-1 text-xs font-semibold text-dark-900">
-                    Populärast
+                    Samordnad planering
                   </div>
                 )}
                 <h3 className="text-xl font-bold text-dark-900">{tier.name}</h3>
@@ -181,6 +181,19 @@ export default function PriserPage() {
           </p>
         </div>
       </section>
+
+      <section className="section-padding section-muted"><div className="container-content max-w-4xl">
+        <h2 className="section-heading">Det här behöver framgå av offerten</h2>
+        <ul className="mt-6 list-disc space-y-3 pl-6 text-base text-dark-600">
+          <li>Objekt, plats och vad resultatet ska användas till.</li>
+          <li>Datainsamling, analys och avgränsningar – inklusive eventuell termografi.</li>
+          <li>Rapport, punktmoln, modeller och filformat: vad som ingår och vad som är tillval.</li>
+          <li>För mätuppdrag: referenssystem, basyta och överenskomna kvalitetskrav.</li>
+          <li>Tidplan, resor och hur väder eller ändrad omfattning hanteras.</li>
+          <li>Vid återkommande uppdrag: intervall, jämförelseunderlag och tillgång till tidigare data.</li>
+        </ul>
+        <p className="mt-6 text-base">Beskriv det ni känner till i <Link href="/kontakt" className="link-inline">förfrågan</Link>. Vi stämmer av återstående frågor innan uppdragets omfattning fastställs.</p>
+      </div></section>
 
       <FaqAccordion headline="Vanliga frågor om prissättning" items={faqItems} />
 

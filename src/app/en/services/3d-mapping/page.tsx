@@ -109,7 +109,7 @@ export default function ThreeDMappingPage() {
       <Hero
         headline="3D Mapping with Drone — Photogrammetry and Orthophoto"
         subheadline="Create precise 3D models, orthophotos and point clouds with RTK/GNSS positioning. For measurement, documentation and BIM integration — collected safely and efficiently from the air by EASA-certified pilots."
-        ctaPrimary={{ label: 'Get a Quote', href: '/en/contact' }}
+        ctaPrimary={{ label: 'Get a Quote', href: '/en/contact?service=3d-mapping' }}
         ctaSecondary={{ label: 'See How It Works', href: '#process' }}
       />
 
@@ -165,6 +165,7 @@ export default function ThreeDMappingPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="How 3D mapping works"
         steps={[
           {
@@ -236,7 +237,7 @@ export default function ThreeDMappingPage() {
         headline="Need precise 3D mapping?"
         description="Contact us for a free quote. We map areas across all of Sweden with centimetre accuracy."
         ctaLabel="Get a Quote"
-        ctaHref="/en/contact"
+        ctaHref="/en/contact?service=3d-mapping"
       />
 
       <RelatedServices

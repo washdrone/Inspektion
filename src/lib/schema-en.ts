@@ -19,11 +19,6 @@ export function organizationSchemaEn() {
       '@type': 'Country',
       name: 'Sweden',
     },
-    hasCredential: {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'certification',
-      name: 'EASA Remote Pilot Certificate',
-    },
     knowsAbout: [
       'Drone Inspection',
       'Roof Inspection',

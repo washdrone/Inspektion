@@ -28,7 +28,7 @@ const faqItems = [
   {
     question: 'Vad betyder fullradiometrisk datainsamling?',
     answer:
-      'Fullradiometrisk data innebär att varje pixel i den termiska bilden innehåller ett exakt temperaturvärde. Det möjliggör detaljerad efteranalys och jämförelse över tid, till skillnad från enklare termiska kameror som bara visar relativa skillnader.',
+      'Fullradiometrisk data innebär att varje pixel i den termiska bilden innehåller ett temperaturvärde med mätosäkerhet. Det möjliggör detaljerad efteranalys och jämförelse över tid, Mätningen påverkas bland annat av yta, emissivitet, reflektioner och väder.',
   },
   {
     question: 'Vilka tillämpningar finns för termisk inspektion?',
@@ -95,7 +95,7 @@ export default function TermiskInspektionPage() {
       <Hero
         headline="Termisk inspektion med drönare och infraröd kamera"
         subheadline="Avslöja dolda problem med fullradiometrisk infraröd datainsamling. Våra EASA-certifierade piloter utför termisk inspektion av byggnader, anläggningar och infrastruktur — från energiläckage till elektriska fel."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        ctaPrimary={{ label: 'Begär offert', href: '/kontakt?service=termisk-inspektion' }}
         ctaSecondary={{ label: 'Se hur det fungerar', href: '#process' }}
       />
 
@@ -116,7 +116,7 @@ export default function TermiskInspektionPage() {
             icon: 'camera',
             title: 'Fullradiometrisk data',
             description:
-              'Varje pixel innehåller exakt temperaturdata, vilket möjliggör detaljerad analys och jämförelse över tid.',
+              'Varje pixel innehåller temperaturdata som behöver tolkas utifrån mätförhållandena, vilket möjliggör detaljerad analys och jämförelse över tid.',
           },
           {
             icon: 'building',
@@ -152,6 +152,7 @@ export default function TermiskInspektionPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="Så genomförs en termisk inspektion"
         steps={[
           {
@@ -188,7 +189,7 @@ export default function TermiskInspektionPage() {
           {
             title: 'Fullradiometriska termogrammer',
             description:
-              'Termiska bilder med exakta temperaturvärden för varje pixel, redo för djupanalys.',
+              'Termiska bilder med temperaturvärden per pixel, med mätosäkerhet och metodförutsättningar, redo för djupanalys.',
           },
           {
             title: 'RGB-referensbilder',
@@ -255,7 +256,7 @@ export default function TermiskInspektionPage() {
         headline="Boka termisk inspektion"
         description="Avslöja dolda problem med infraröd teknik — kontakta oss för en kostnadsfri konsultation."
         ctaLabel="Begär offert"
-        ctaHref="/kontakt"
+        ctaHref="/kontakt?service=termisk-inspektion"
       />
     </>
   )

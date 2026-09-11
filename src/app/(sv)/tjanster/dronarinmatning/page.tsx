@@ -97,7 +97,7 @@ export default function DronarinmatningPage() {
         eyebrow="Drönarmätning för företag"
         headline="Drönarinmätning — noggrann inmätning med drönare"
         subheadline="Drönarinmätning ger ett heltäckande mätunderlag på centimeternivå med RTK/GNSS och markstödpunkter. Vi levererar mätdata i SWEREF 99 som punktmoln, DWG och 3D — rikstäckande i hela Sverige och redo att användas direkt i era system."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        ctaPrimary={{ label: 'Begär offert', href: '/kontakt?service=dronarinmatning' }}
         ctaSecondary={{ label: 'Så går inmätningen till', href: '#process' }}
       />
 
@@ -154,6 +154,7 @@ export default function DronarinmatningPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="Så går en drönarinmätning till"
         steps={[
           {
@@ -262,7 +263,7 @@ export default function DronarinmatningPage() {
         headline="Behöver ni en drönarinmätning?"
         description="Berätta om ert område och era noggrannhetskrav så återkommer vi med ett förslag på upplägg och leverans."
         ctaLabel="Begär offert"
-        ctaHref="/kontakt"
+        ctaHref="/kontakt?service=dronarinmatning"
       />
     </>
   )

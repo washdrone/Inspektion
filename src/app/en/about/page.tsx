@@ -44,9 +44,9 @@ export default function AboutPage() {
                 all of Sweden.
               </p>
               <p>
-                All data collection is carried out using fully radiometric thermal cameras and
-                RTK/GNSS positioning with centimetre-level accuracy. This delivers precise,
-                georeferenced results that can be compared between inspection occasions.
+                We select visual imaging, thermal imaging or surveying methods to suit the task.
+                The scope, positioning requirements and deliverable formats are agreed before
+                the assignment so that the results support your intended use.
               </p>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function AboutPage() {
                 },
                 {
                   title: 'Industrial inspection',
-                  desc: 'Inspect hard-to-reach facilities without downtime or scaffolding.',
+                  desc: 'Inspect hard-to-reach facilities with access and operating conditions agreed in advance.',
                   href: '/en/services/industrial-inspection',
                 },
                 {
@@ -139,7 +139,7 @@ export default function AboutPage() {
 
       <CtaBand
         headline="Want to learn more?"
-        description="Contact us to discuss your inspection needs. We respond within one business day."
+        description="Contact us to discuss your inspection needs. We respond as soon as we can."
         ctaLabel="Contact us"
         ctaHref="/en/contact"
       />

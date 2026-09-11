@@ -1,7 +1,4 @@
-'use client'
-
 import Link from 'next/link'
-import { useReveal } from '@/hooks/useReveal'
 
 interface UseCase {
   title: string
@@ -17,29 +14,22 @@ interface UseCaseCardsProps {
 }
 
 export function UseCaseCards({ headline, subtitle, useCases }: UseCaseCardsProps) {
-  const { ref, visible } = useReveal()
 
   return (
-    <section ref={ref} className="section-padding">
+    <section className="section-padding">
       <div className="container-content">
         <div
-          className="text-center transition-all duration-700"
-          style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(30px)' }}
+          className="text-center"
         >
           <h2 className="text-heading-lg sm:text-display">{headline}</h2>
           {subtitle && <p className="mt-4 text-body-lg text-dark-500">{subtitle}</p>}
         </div>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {useCases.map((uc, i) => (
+          {useCases.map((uc) => (
             <Link
               key={uc.href}
               href={uc.href}
-              className="card group transition-all duration-700"
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? 'translateY(0)' : 'translateY(30px)',
-                transitionDelay: `${i * 80 + 200}ms`,
-              }}
+              className="card group"
             >
               <span className="text-3xl" role="img" aria-hidden="true">{uc.icon}</span>
               <h3 className="mt-4 text-lg font-semibold text-dark-900 group-hover:text-brand-600">{uc.title}</h3>

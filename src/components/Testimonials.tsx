@@ -1,7 +1,3 @@
-'use client'
-
-import { useReveal } from '@/hooks/useReveal'
-
 interface Testimonial {
   quote: string
   name: string
@@ -15,14 +11,12 @@ interface TestimonialsProps {
 }
 
 export function Testimonials({ headline = 'Vad våra kunder säger', testimonials }: TestimonialsProps) {
-  const { ref, visible } = useReveal()
 
   return (
-    <section ref={ref} className="section-padding section-muted">
+    <section className="section-padding section-muted">
       <div className="container-content">
         <h2
-          className="text-center text-heading-lg sm:text-display transition-all duration-700"
-          style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(30px)' }}
+          className="text-center text-heading-lg sm:text-display"
         >
           {headline}
         </h2>
@@ -30,12 +24,7 @@ export function Testimonials({ headline = 'Vad våra kunder säger', testimonial
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="card relative transition-all duration-700"
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? 'translateY(0)' : 'translateY(30px)',
-                transitionDelay: `${i * 100 + 200}ms`,
-              }}
+              className="card relative"
             >
               <svg className="absolute top-6 right-6 z-0 h-8 w-8 text-brand-100" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z" />

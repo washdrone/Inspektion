@@ -191,6 +191,7 @@ export default function BimUnderlagPage() {
       />
 
       <Deliverables
+        image="bim-underlag"
         headline="Det här ingår i leveransen"
         items={[
           {

@@ -184,6 +184,7 @@ export default function FasadinspektionPage() {
 
 
       <Deliverables
+        image="fasadinspektion"
         headline="Det här ingår i leveransen"
         items={[
           {

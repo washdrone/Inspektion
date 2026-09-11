@@ -186,6 +186,7 @@ export default function FotogrammetriPage() {
       />
 
       <Deliverables
+        image="fotogrammetri-3d-modell"
         headline="Det här ingår i leveransen"
         items={[
           {

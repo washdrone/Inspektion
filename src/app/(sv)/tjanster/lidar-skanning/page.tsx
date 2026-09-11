@@ -191,6 +191,7 @@ export default function LidarSkanningPage() {
       />
 
       <Deliverables
+        image="lidar-skanning"
         headline="Det här ingår i leveransen"
         items={[
           {

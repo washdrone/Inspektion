@@ -191,6 +191,7 @@ export default function DigitalTvillingPage() {
       />
 
       <Deliverables
+        image="digital-tvilling"
         headline="Det här ingår i leveransen"
         items={[
           {

@@ -184,6 +184,7 @@ export default function TermiskInspektionPage() {
 
 
       <Deliverables
+        image="termisk-inspektion"
         headline="Det här ingår i leveransen"
         items={[
           {

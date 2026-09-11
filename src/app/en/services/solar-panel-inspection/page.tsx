@@ -109,7 +109,7 @@ export default function SolarPanelInspectionPage() {
       <Hero
         headline="Solar Panel Inspection with Drone and Thermal Camera"
         subheadline="Maximise energy production by identifying hotspots, defective cells and performance issues. Thermal drone inspection covers large installations quickly and without disruption."
-        ctaPrimary={{ label: 'Get a Quote', href: '/en/contact' }}
+        ctaPrimary={{ label: 'Get a Quote', href: '/en/contact?service=solar-panel-inspection' }}
         ctaSecondary={{ label: 'How It Works', href: '/en/how-it-works' }}
       />
 
@@ -239,7 +239,7 @@ export default function SolarPanelInspectionPage() {
         headline="Need a solar panel inspection?"
         description="Contact us for a free quote. We inspect installations of all sizes across Sweden."
         ctaLabel="Get a Quote"
-        ctaHref="/en/contact"
+        ctaHref="/en/contact?service=solar-panel-inspection"
       />
 
       <RelatedServices

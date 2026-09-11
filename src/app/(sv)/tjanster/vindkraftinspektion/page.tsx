@@ -95,7 +95,7 @@ export default function VindkraftinspektionPage() {
       <Hero
         headline="Vindkraftinspektion med drönare — blad, torn och nacelle"
         subheadline="Inspektera rotorblad, torn och nacelle utan reparbete eller klättring. Våra EASA-certifierade piloter dokumenterar varje detalj med högupplöst kamera och termisk analys — snabbare och säkrare."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        ctaPrimary={{ label: 'Begär offert', href: '/kontakt?service=vindkraftinspektion' }}
         ctaSecondary={{ label: 'Se hur det fungerar', href: '#process' }}
       />
 
@@ -152,6 +152,7 @@ export default function VindkraftinspektionPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="Så genomförs en vindkraftinspektion"
         steps={[
           {
@@ -255,7 +256,7 @@ export default function VindkraftinspektionPage() {
         headline="Boka vindkraftinspektion"
         description="Håll era turbiner i optimalt skick — kontakta oss för offert och planering."
         ctaLabel="Begär offert"
-        ctaHref="/kontakt"
+        ctaHref="/kontakt?service=vindkraftinspektion"
       />
     </>
   )

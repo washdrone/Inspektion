@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import { createMetadata } from '@/lib/metadata'
 import { articleSchema, faqSchema } from '@/lib/schema'
 import { ARTICLES, getArticle } from '@/lib/articles'
-import { ArticleBody } from '@/components/ArticleBody'
+import { ArticleBody, renderInline } from '@/components/ArticleBody'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { CtaBand } from '@/components/CtaBand'
@@ -95,7 +95,7 @@ export default function ArticlePage({ params }: PageProps) {
               </span>
               <span>Av SurveyDrone</span>
             </div>
-            <p className="mt-6 text-lg leading-relaxed text-dark-600">{article.intro}</p>
+            <p className="mt-6 text-lg leading-relaxed text-dark-600">{renderInline(article.intro)}</p>
           </header>
 
           <ArticleBody sections={article.sections} />

@@ -13,9 +13,9 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { KnowledgeLinks } from '@/components/KnowledgeLinks'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Volymberäkning med drönare — upplag, täkter, schakt',
+  title: "Volymberäkning med drönare – upplag och schakt",
   description:
-    'Volymberäkning med drönare ger objektiva massor för upplag, täkter och schakt ur punktmoln och terrängmodell. Spårbar metod, rikstäckande i hela Sverige. Begär offert.',
+    "Mät volymen i upplag, täkter och schakt med drönare. Få en volymrapport med referensyta, metod och resultat i m³. Beskriv objektet och begär offert.",
   path: '/tjanster/volymberakning',
 })
 
@@ -23,7 +23,7 @@ const faqItems = [
   {
     question: 'Hur beräknas volym från drönardata?',
     answer:
-      'Ur den fotogrammetriska bearbetningen skapas en digital terrängmodell över ytan. Volymen beräknas som skillnaden mellan denna yta och en referensnivå — antingen en definierad basplan, marknivån runt upplaget eller en tidigare inmätning. Resultatet blir en objektiv massa i kubikmeter med tillhörande redovisning.',
+      'Ur den fotogrammetriska bearbetningen skapas en digital ytmodell över den synliga ytan. Volymen beräknas som skillnaden mellan denna yta och en referensnivå — antingen en definierad basplan, marknivån runt upplaget eller en tidigare inmätning. Resultatet blir en beräknad volym i kubikmeter med tillhörande redovisning.',
   },
   {
     question: 'Hur noggrann är en volymberäkning med drönare?',
@@ -43,7 +43,7 @@ const faqItems = [
   {
     question: 'Vad får jag levererat efter en volymberäkning?',
     answer:
-      'Du får en volymrapport med beräknade massor, vald referensnivå och metod, samt visualiseringar som höjdkarta och tvärsnitt. På begäran levereras även underliggande punktmoln och terrängmodell i CAD-vänliga format.',
+      'Du får en volymrapport med beräknade volymer, vald referensnivå och metod, samt visualiseringar som höjdkarta och tvärsnitt. På begäran levereras även underliggande punktmoln och ytmodell i överenskomna format.',
   },
   {
     question: 'Hur hanteras massor där marken under är dold?',
@@ -67,7 +67,7 @@ export default function VolymberakningPage() {
             serviceSchema({
               name: 'Volymberäkning med drönare',
               description:
-                'Volymberäkning med drönare för upplag, täkter och schakt. Massor beräknas ur punktmoln och digital terrängmodell med spårbar metod.',
+                "Få volymer redovisade i kubikmeter utifrån drönarmätning av den synliga ytan. Vi bestämmer referensyta och redovisning tillsammans med er och sammanställer resultatet i en volymrapport för lageruppföljning, planering och jämförelse mellan mättillfällen.",
               url: '/tjanster/volymberakning',
               serviceType: 'Volymberäkning',
             })
@@ -90,9 +90,9 @@ export default function VolymberakningPage() {
 
       <Hero
         eyebrow="Drönarmätning för företag"
-        headline="Volymberäkning med drönare — upplag, täkter och schakt"
-        subheadline="Volymberäkning med drönare ger objektiva massor för upplag, täkter, schakt och fyllningar. Vi beräknar volymerna ur punktmoln och digital terrängmodell med en spårbar metod och redovisar resultatet i kubikmeter — rikstäckande i hela Sverige."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        headline="Volymberäkning med drönare – mät upplag, schakt och fyllningar"
+        subheadline="Få volymer redovisade i kubikmeter utifrån drönarmätning av den synliga ytan. Vi bestämmer referensyta och redovisning tillsammans med er och sammanställer resultatet i en volymrapport för lageruppföljning, planering och jämförelse mellan mättillfällen."
+        ctaPrimary={{ label: "Begär offert på volymberäkning", href: '/kontakt?service=volymberakning' }}
         ctaSecondary={{ label: 'Så beräknas volymen', href: '#process' }}
       />
 
@@ -105,15 +105,51 @@ export default function VolymberakningPage() {
         ]}
       />
 
+      <Deliverables
+        headline="Leveransens delar – omfattning enligt offert"
+        items={[
+          {
+            title: 'Volymrapport',
+            description:
+              'Beräknade volymer i kubikmeter per objekt, med vald referensnivå och metod tydligt redovisad.',
+          },
+          {
+            title: 'Höjdkarta',
+            description:
+              'Färgkodad höjdkarta som visar hur massorna är fördelade över ytan.',
+          },
+          {
+            title: 'Tvärsnitt & profiler',
+            description:
+              'Sektioner genom upplag eller schakt som underlag för kontroll och kommunikation.',
+          },
+          {
+            title: 'Ytmodell enligt överenskommelse',
+            description:
+              'På begäran och enligt offert: modellen som volymen beräknats ur, i överenskommet format. En modell av upplagets yta är inte samma sak som marken under.',
+          },
+          {
+            title: 'Punktmoln',
+            description:
+              'På begäran och enligt offert: underliggande punktmoln i LAS/LAZ för egna analyser.',
+          },
+          {
+            title: 'Differensanalys',
+            description:
+              'Vid avtalad återkommande mätning: jämförelse mot tidigare inmätning som visar förändrade volymer.',
+          },
+        ]}
+      />
+
       <BenefitsGrid
         headline="Varför volymberäkning med drönare?"
-        subtitle="Objektiva och upprepbara massor som underlag för lager, fakturering och uppföljning."
+        subtitle="Spårbart volymunderlag för lageruppföljning, planering och jämförelse."
         benefits={[
           {
             icon: 'chart',
-            title: 'Objektiva massor',
+            title: 'Volymer i kubikmeter',
             description:
-              'Volymen beräknas ur mätdata istället för uppskattningar, vilket ger ett opartiskt underlag för båda parter.',
+              'Volymen beräknas ur mätdata mot en bestämd referensyta. Metod och förutsättningar redovisas så att resultatet kan granskas.',
           },
           {
             icon: 'clock',
@@ -123,9 +159,9 @@ export default function VolymberakningPage() {
           },
           {
             icon: 'shield',
-            title: 'Säkert utan markarbete',
+            title: 'Minskad åtkomst på upplag',
             description:
-              'Ingen behöver klättra på högar eller röra sig i täkter och schakt — hela ytan mäts från luften.',
+              'Drönaren mäter synliga ytor från luften. Behov av markkontroll och tillträde bedöms under planeringen.',
           },
           {
             icon: 'file',
@@ -149,6 +185,7 @@ export default function VolymberakningPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="Så beräknas volymen"
         steps={[
           {
@@ -167,7 +204,7 @@ export default function VolymberakningPage() {
             number: 3,
             title: 'Terrängmodell',
             description:
-              'Bilderna bearbetas till punktmoln och en digital terrängmodell över upplaget eller schaktet.',
+              'Bilderna bearbetas till punktmoln och en ytmodell över det synliga upplaget eller schaktet.',
           },
           {
             number: 4,
@@ -179,46 +216,12 @@ export default function VolymberakningPage() {
             number: 5,
             title: 'Volymrapport',
             description:
-              'Ni får massorna i kubikmeter tillsammans med metod, referensnivå och visualiseringar för full spårbarhet.',
+              'Ni får volymerna i kubikmeter tillsammans med metod, referensnivå och visualiseringar för full spårbarhet.',
           },
         ]}
       />
 
-      <Deliverables
-        headline="Det här ingår i leveransen"
-        items={[
-          {
-            title: 'Volymrapport',
-            description:
-              'Beräknade massor i kubikmeter per objekt, med vald referensnivå och metod tydligt redovisad.',
-          },
-          {
-            title: 'Höjdkarta',
-            description:
-              'Färgkodad höjdkarta som visar hur massorna är fördelade över ytan.',
-          },
-          {
-            title: 'Tvärsnitt & profiler',
-            description:
-              'Sektioner genom upplag eller schakt som underlag för kontroll och kommunikation.',
-          },
-          {
-            title: 'Digital terrängmodell',
-            description:
-              'Ytmodellen (DTM/DSM) som volymen beräknats ur, i CAD-vänligt format.',
-          },
-          {
-            title: 'Punktmoln',
-            description:
-              'Det underliggande punktmolnet (LAS/LAZ) för egna analyser och vidare bearbetning.',
-          },
-          {
-            title: 'Differensanalys',
-            description:
-              'Vid återkommande uppdrag: jämförelse mot tidigare inmätning som visar förändrade massor.',
-          },
-        ]}
-      />
+
 
       <FaqAccordion headline="Vanliga frågor om volymberäkning" items={faqItems} />
 
@@ -256,8 +259,8 @@ export default function VolymberakningPage() {
       <CtaBand
         headline="Behöver ni beräkna en volym?"
         description="Berätta om upplaget, täkten eller schaktet så föreslår vi ett upplägg för inmätning och volymredovisning."
-        ctaLabel="Begär offert"
-        ctaHref="/kontakt"
+        ctaLabel="Begär offert på volymberäkning"
+        ctaHref="/kontakt?service=volymberakning"
       />
     </>
   )

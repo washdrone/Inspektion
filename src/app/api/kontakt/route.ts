@@ -1,3 +1,4 @@
+import { validService } from '@/lib/contact-services'
 import { NextRequest, NextResponse } from 'next/server'
 
 const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'info@surveydrone.se'
@@ -6,12 +7,27 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
 
+    if (!body || typeof body !== 'object' || Array.isArray(body)) {
+      return NextResponse.json({ error: 'Ogiltig förfrågan.' }, { status: 400 })
+    }
+
     // Honeypot check
     if (body.website) {
       return NextResponse.json({ ok: true })
     }
 
-    const { name, company, email, service, message } = body
+    const limits: Record<string, number> = { name: 120, company: 200, email: 254, service: 100, message: 5000 }
+    if (Object.entries(limits).some(([key, limit]) => body[key] != null && (typeof body[key] !== 'string' || body[key].length > limit))) {
+      return NextResponse.json({ error: 'Kontrollera formulärets uppgifter.' }, { status: 400 })
+    }
+    const name = (body.name ?? '').trim()
+    const company = (body.company ?? '').trim()
+    const email = (body.email ?? '').trim()
+    const service = body.service ?? ''
+    const message = (body.message ?? '').trim()
+    if (!validService(service)) {
+      return NextResponse.json({ error: 'Välj en tjänst i formuläret.' }, { status: 400 })
+    }
 
     // Basic validation
     if (!name || !company || !email) {
@@ -57,22 +73,14 @@ export async function POST(request: NextRequest) {
       })
 
       if (!res.ok) {
-        console.error('Resend API error:', await res.text())
+        console.error('Contact delivery rejected', { status: res.status })
         return NextResponse.json(
           { error: 'Kunde inte skicka meddelandet. Försök igen.' },
           { status: 500 }
         )
       }
     } else {
-      // Fallback: log to console when Resend is not configured
-      console.log('New contact form submission (email not configured):', {
-        name,
-        company,
-        email,
-        service,
-        message,
-        timestamp: new Date().toISOString(),
-      })
+      return NextResponse.json({ error: 'Formuläret är tillfälligt otillgängligt. Kontakta info@surveydrone.se.' }, { status: 503 })
     }
 
     return NextResponse.json({ ok: true })

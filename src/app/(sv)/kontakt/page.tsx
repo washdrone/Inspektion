@@ -5,13 +5,13 @@ import { ContactForm } from '@/components/ContactForm'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Begär offert — Drönarinspektion | SurveyDrone',
+  title: 'Begär offert på drönarinspektion och inmätning',
   description:
-    'Begär en kostnadsfri offert för visuell och termisk drönarinspektion. SurveyDrone — EASA-certifierade piloter i hela Sverige.',
+    'Begär offert på drönarinspektion, inmätning eller volymberäkning. Beskriv objekt, ort och önskad leverans. SurveyDrone arbetar i hela Sverige.',
   path: '/kontakt',
 })
 
-export default function KontaktPage() {
+export default function KontaktPage({ searchParams }: { searchParams: { service?: string | string[] } }) {
   return (
     <>
       <Breadcrumbs
@@ -34,6 +34,7 @@ export default function KontaktPage() {
               </p>
               <div className="mt-8">
                 <ContactForm
+                  serviceContext={typeof searchParams.service === 'string' ? searchParams.service : undefined}
                   headline="Kontaktformulär"
                   subtitle="Fält markerade med * är obligatoriska."
                 />
@@ -74,11 +75,11 @@ export default function KontaktPage() {
                   </li>
                   <li className="flex gap-3">
                     <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-brand-700">3</span>
-                    <span>Flygning genomförs. Ni behöver inte vara på plats.</span>
+                    <span>Uppdraget genomförs enligt överenskommen plan. Tillträde och eventuell medverkan stäms av i förväg.</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-brand-700">4</span>
-                    <span>Rapport med analyser och åtgärdsförslag levereras enligt tidplanen i offerten.</span>
+                    <span>Rapport eller mätunderlag levereras med det innehåll och enligt den tidplan som anges i offerten.</span>
                   </li>
                 </ol>
               </div>

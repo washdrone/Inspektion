@@ -13,7 +13,7 @@ import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Fasadinspektion med drönare — Guide till metod, skador och fördelar',
+  title: 'Guide till fasadinspektion med drönare',
   description:
     'Hur fungerar fasadinspektion med drönare? Vilka skador kan upptäckas, hur ersätter drönaren ställning och när passar metoden bäst? En komplett guide för fastighetsägare.',
   path: '/fasadinspektion',
@@ -93,9 +93,9 @@ export default function FasadinspektionSeoPage() {
       />
 
       <Hero
-        headline="Fasadinspektion med drönare — så fungerar det"
+        headline="Fasadinspektion med drönare – metod och användning"
         subheadline="Vad innebär fasadinspektion med drönare, vilka skador kan upptäckas och hur skiljer sig metoden från traditionell ställningsbaserad inspektion? En guide för dig som förvaltar byggnader eller planerar fasadunderhåll."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        ctaPrimary={{ label: 'Se tjänst och leverans', href: '/tjanster/fasadinspektion' }}
         ctaSecondary={{ label: 'Så fungerar det', href: '#process' }}
       />
 
@@ -254,6 +254,7 @@ export default function FasadinspektionSeoPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="Så genomförs en fasadinspektion"
         steps={[
           {

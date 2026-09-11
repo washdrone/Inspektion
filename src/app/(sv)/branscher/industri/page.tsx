@@ -64,7 +64,7 @@ export default function IndustriPage() {
             serviceSchema({
               name: 'Industriell drönarinspektion',
               description:
-                'Professionell drönarinspektion av industrianläggningar, tankar, torn och rörledningar. Termisk och visuell inspektion utan driftstopp.',
+                'Professionell drönarinspektion av industrianläggningar, tankar, torn och rörledningar. Termisk och visuell inspektion med avstämda driftförutsättningar.',
               url: '/branscher/industri',
             })
           ),
@@ -85,11 +85,11 @@ export default function IndustriPage() {
 
       <Hero
         headline="Drönarinspektion för processindustrin"
-        subheadline="Inspektera cisterner, skorstenar, rörbryggor och svåråtkomliga konstruktioner utan ställningar och utan driftstopp. Vi har erfarenhet av ex-klassade zoner och arbetar efter era säkerhetsrutiner."
+        subheadline="Inspektera cisterner, skorstenar, rörbryggor och svåråtkomliga konstruktioner med planering efter tillträde och verksamhetens drift. Vi har erfarenhet av ex-klassade zoner och arbetar efter era säkerhetsrutiner."
         ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
         ctaSecondary={{ label: 'Industriell inspektion', href: '/tjanster/industriinspektion' }}
         stats={[
-          { value: '0', label: 'Driftstopp krävs' },
+          { value: 'Planerad', label: 'Drift och tillträde' },
           { value: '0', label: 'Arbete på höjd' },
           { value: 'Hela', label: 'Sverige' },
           { value: 'EASA', label: 'Certifierade piloter' },

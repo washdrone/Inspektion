@@ -95,7 +95,7 @@ export default function FasadinspektionPage() {
       <Hero
         headline="Fasadinspektion med drönare — utan ställning"
         subheadline="Upptäck sprickor, putssläpp, fuktskador och köldbryggor på byggnaders fasader. Våra EASA-certifierade piloter dokumenterar hela fasaden med högupplösta bilder och termisk analys — snabbt och utan kostsam ställning."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        ctaPrimary={{ label: 'Begär offert', href: '/kontakt?service=fasadinspektion' }}
         ctaSecondary={{ label: 'Se hur det fungerar', href: '#process' }}
       />
 
@@ -152,6 +152,7 @@ export default function FasadinspektionPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="Så genomförs en fasadinspektion"
         steps={[
           {
@@ -255,7 +256,7 @@ export default function FasadinspektionPage() {
         headline="Boka fasadinspektion"
         description="Få en komplett bild av er fasads skick — kontakta oss för offert."
         ctaLabel="Begär offert"
-        ctaHref="/kontakt"
+        ctaHref="/kontakt?service=fasadinspektion"
       />
     </>
   )

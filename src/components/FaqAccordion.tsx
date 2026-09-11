@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useId } from 'react'
 import { trackEvent } from '@/lib/analytics'
 import { useReveal } from '@/hooks/useReveal'
 
@@ -15,6 +15,7 @@ interface FaqAccordionProps {
 }
 
 export function FaqAccordion({ headline, items }: FaqAccordionProps) {
+  const accordionId = useId()
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const { ref, visible } = useReveal()
 
@@ -53,6 +54,7 @@ export function FaqAccordion({ headline, items }: FaqAccordionProps) {
                 onClick={() => toggle(i)}
                 className="flex w-full items-center justify-between px-6 py-5 text-left rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2"
                 aria-expanded={openIndex === i}
+                aria-controls={`${accordionId}-${i}`}
               >
                 <span className="pr-4 font-semibold text-dark-900">{item.question}</span>
                 <div className={`flex h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0 items-center justify-center rounded-full transition-all duration-300 ${openIndex === i ? 'bg-brand-500 text-white rotate-180' : 'bg-dark-50 text-dark-500'}`}>
@@ -62,12 +64,14 @@ export function FaqAccordion({ headline, items }: FaqAccordionProps) {
                 </div>
               </button>
               <div
+                id={`${accordionId}-${i}`}
+                aria-hidden={openIndex !== i}
                 className="faq-answer"
                 data-open={openIndex === i ? 'true' : 'false'}
               >
                 <div className="faq-answer-inner">
                   <div className="px-6 pb-5">
-                    <p className="text-sm leading-relaxed text-dark-500">{item.answer}</p>
+                    <p className="text-base leading-relaxed text-dark-600">{item.answer}</p>
                   </div>
                 </div>
               </div>

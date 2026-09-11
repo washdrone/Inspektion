@@ -1,6 +1,8 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { languagePairFor } from '@/lib/i18n'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { SERVICE_LINKS, INDUSTRY_LINKS } from '@/lib/constants'
 import { SERVICE_LINKS_EN, INDUSTRY_LINKS_EN } from '@/lib/constants-en'
@@ -9,6 +11,10 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
   const serviceLinks = locale === 'en' ? SERVICE_LINKS_EN : SERVICE_LINKS
   const industryLinks = locale === 'en' ? INDUSTRY_LINKS_EN : INDUSTRY_LINKS
   const isEn = locale === 'en'
+  const pathname = usePathname()
+  const pair = languagePairFor(pathname)
+  const svHref = pair?.sv ?? '/'
+  const enHref = pair?.en ?? '/en'
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
@@ -138,7 +144,7 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
               </svg>
             </button>
             {servicesOpen && (
-              <div className="absolute left-0 top-full z-50 w-60 rounded-2xl border border-white/10 bg-dark-800/95 py-2 shadow-xl backdrop-blur-md">
+              <div className="absolute left-0 top-full z-50 max-h-[calc(100dvh-6rem)] overflow-y-auto w-72 rounded-2xl border border-white/10 bg-dark-800/95 py-2 shadow-xl backdrop-blur-md">
                 {serviceLinks.map((link) => (
                   <Link
                     key={link.href}
@@ -204,8 +210,8 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
           </Link>
           {/* Language selector */}
           <div className="ml-2 flex items-center gap-0.5 rounded-full border border-white/15 px-1 py-0.5 text-xs font-medium">
-            <Link href="/" className={`rounded-full px-2 py-1 transition-colors ${!isEn ? 'bg-white/15 text-white' : 'text-white/50 hover:text-white'}`}>SV</Link>
-            <Link href="/en" className={`rounded-full px-2 py-1 transition-colors ${isEn ? 'bg-white/15 text-white' : 'text-white/50 hover:text-white'}`}>EN</Link>
+            <Link href={svHref} hrefLang="sv" className={`rounded-full px-2 py-1 transition-colors ${!isEn ? 'bg-white/15 text-white' : 'text-white/50 hover:text-white'}`}>SV</Link>
+            <Link href={enHref} hrefLang="en" className={`rounded-full px-2 py-1 transition-colors ${isEn ? 'bg-white/15 text-white' : 'text-white/50 hover:text-white'}`}>EN</Link>
           </div>
           <Link href={isEn ? '/en/contact' : '/kontakt'} className="btn-primary ml-3">
             {isEn ? 'Get a Quote' : 'Begär offert'}
@@ -246,6 +252,7 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
             ? 'translate-y-0 opacity-100'
             : 'pointer-events-none -translate-y-2 opacity-0'
         }`}
+        hidden={!mobileMenuOpen}
         role="dialog"
         aria-label={isEn ? 'Mobile menu' : 'Mobilmeny'}
       >
@@ -280,8 +287,8 @@ export function Header({ locale = 'sv' }: { locale?: 'sv' | 'en' }) {
           </div>
           <div className="flex items-center justify-center gap-3 pt-4">
             <div className="flex items-center gap-0.5 rounded-full border border-white/15 px-1 py-0.5 text-sm font-medium">
-              <Link href="/" className={`rounded-full px-3 py-1 transition-colors ${!isEn ? 'bg-white/15 text-white' : 'text-white/50 hover:text-white'}`} onClick={() => setMobileMenuOpen(false)}>SV</Link>
-              <Link href="/en" className={`rounded-full px-3 py-1 transition-colors ${isEn ? 'bg-white/15 text-white' : 'text-white/50 hover:text-white'}`} onClick={() => setMobileMenuOpen(false)}>EN</Link>
+              <Link href={svHref} hrefLang="sv" className={`rounded-full px-3 py-1 transition-colors ${!isEn ? 'bg-white/15 text-white' : 'text-white/50 hover:text-white'}`} onClick={() => setMobileMenuOpen(false)}>SV</Link>
+              <Link href={enHref} hrefLang="en" className={`rounded-full px-3 py-1 transition-colors ${isEn ? 'bg-white/15 text-white' : 'text-white/50 hover:text-white'}`} onClick={() => setMobileMenuOpen(false)}>EN</Link>
             </div>
           </div>
           <div className="pt-3">

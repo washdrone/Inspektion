@@ -96,8 +96,8 @@ export default function DigitalTvillingPage() {
       <Hero
         eyebrow="Kartläggning & 3D för företag"
         headline="Digital tvilling av byggnader och anläggningar"
-        subheadline="En digital tvilling är en måttriktig kopia av ert objekt som byggs om vid återkommande flygningar och därmed speglar nuläget. Genom att jämföra mättillfällena ser ni exakt vad som förändrats — underlag för förvaltning, produktionsuppföljning och gemensam bild mellan parter. Rikstäckande i hela Sverige."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        subheadline="En digital tvilling är en måttriktig kopia av ert objekt som byggs om vid återkommande flygningar och därmed speglar nuläget. Genom att jämföra mättillfällena kan ni följa dokumenterade förändringar — underlag för förvaltning, produktionsuppföljning och gemensam bild mellan parter. Rikstäckande i hela Sverige."
+        ctaPrimary={{ label: 'Begär offert', href: '/kontakt?service=digital-tvilling' }}
         ctaSecondary={{ label: 'Så byggs tvillingen', href: '#process' }}
       />
 
@@ -154,6 +154,7 @@ export default function DigitalTvillingPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="Så byggs och underhålls tvillingen"
         steps={[
           {
@@ -262,7 +263,7 @@ export default function DigitalTvillingPage() {
         headline="Vill ni följa ert objekt över tid?"
         description="Berätta om anläggningen och hur ofta den förändras så föreslår vi ett upplägg för mätintervall och leverans."
         ctaLabel="Begär offert"
-        ctaHref="/kontakt"
+        ctaHref="/kontakt?service=digital-tvilling"
       />
     </>
   )

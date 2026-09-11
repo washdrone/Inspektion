@@ -95,7 +95,7 @@ export default function IndustriinspektionPage() {
       <Hero
         headline="Industriinspektion med drönare — säkert och effektivt"
         subheadline="Inspektera skorstenar, cisterner, rörledningar och andra svåråtkomliga industriella objekt utan ställning, klättrare eller produktionsstopp. Våra EASA-certifierade piloter har erfarenhet av ex-klassade miljöer."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        ctaPrimary={{ label: 'Begär offert', href: '/kontakt?service=industriinspektion' }}
         ctaSecondary={{ label: 'Se hur det fungerar', href: '#process' }}
       />
 
@@ -152,6 +152,7 @@ export default function IndustriinspektionPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="Så genomförs en industriinspektion"
         steps={[
           {
@@ -255,7 +256,7 @@ export default function IndustriinspektionPage() {
         headline="Inspektera era anläggningar säkert"
         description="Boka en industriinspektion med drönare — kontakta oss för offert och planering."
         ctaLabel="Begär offert"
-        ctaHref="/kontakt"
+        ctaHref="/kontakt?service=industriinspektion"
       />
     </>
   )

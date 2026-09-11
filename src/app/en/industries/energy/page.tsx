@@ -92,7 +92,7 @@ export default function EnergyPage() {
         ctaPrimary={{ label: 'Request a quote', href: '/en/contact' }}
         ctaSecondary={{ label: 'Solar panel inspection', href: '/en/services/solar-panel-inspection' }}
         stats={[
-          { value: '0', label: 'Production downtime' },
+          { value: 'Agreed', label: 'Operating conditions' },
           { value: 'Fast', label: 'Report delivery' },
           { value: 'All of', label: 'Sweden' },
           { value: 'EASA', label: 'Certified pilots' },
@@ -177,7 +177,7 @@ export default function EnergyPage() {
           {
             title: 'Fully radiometric data',
             description:
-              'Industry-leading thermal camera with fully radiometric data collection provides exact temperature values for every pixel.',
+              'Industry-leading thermal camera with fully radiometric data collection provides temperature values subject to measurement conditions for every pixel.',
             icon: 'camera',
           },
           {

@@ -59,7 +59,7 @@ const terms = [
   {
     id: 'radiometrisk-kamera',
     term: 'Radiometrisk kamera',
-    definition: 'En termisk kamera som mäter och lagrar exakta temperaturvärden för varje pixel i bilden. Till skillnad från enklare värmekameror ger fullradiometrisk datainsamling möjlighet till kvantitativ analys och noggranna temperaturmätningar i efterbearbetningen.',
+    definition: 'En termisk kamera som mäter och lagrar temperaturvärden per pixel, med mätosäkerhet och metodförutsättningar i bilden. Till skillnad från enklare värmekameror ger fullradiometrisk datainsamling möjlighet till kvantitativ analys och noggranna temperaturmätningar i efterbearbetningen.',
   },
   {
     id: 'rtk-positionering',

@@ -9,15 +9,16 @@ interface Step {
 }
 
 interface ProcessStepsProps {
+  id?: string
   headline: string
   steps: Step[]
 }
 
-export function ProcessSteps({ headline, steps }: ProcessStepsProps) {
+export function ProcessSteps({ id, headline, steps }: ProcessStepsProps) {
   const { ref, visible } = useReveal()
 
   return (
-    <section ref={ref} className="section-padding section-dark">
+    <section id={id} ref={ref} className="section-padding section-dark">
       <div className="container-content">
         <h2
           className="text-center text-heading-lg text-white sm:text-display transition-all duration-700"
@@ -25,7 +26,7 @@ export function ProcessSteps({ headline, steps }: ProcessStepsProps) {
         >
           {headline}
         </h2>
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        <div className={`mt-14 grid gap-8 sm:grid-cols-2 ${steps.length === 4 ? 'lg:grid-cols-4' : 'md:grid-cols-3 lg:grid-cols-5'}`}>
           {steps.map((step, i) => (
             <div
               key={step.number}
@@ -44,7 +45,7 @@ export function ProcessSteps({ headline, steps }: ProcessStepsProps) {
                   {String(step.number).padStart(2, '0')}
                 </div>
                 <h3 className="mt-5 text-lg font-semibold text-white">{step.title}</h3>
-                <p className="mt-2 text-sm text-dark-400">{step.description}</p>
+                <p className="mt-2 text-base text-dark-300">{step.description}</p>
               </div>
             </div>
           ))}

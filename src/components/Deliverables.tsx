@@ -42,7 +42,7 @@ export function Deliverables({ headline, items }: DeliverablesProps) {
               </div>
               <div>
                 <h3 className="text-base font-semibold text-dark-900">{item.title}</h3>
-                <p className="mt-1 text-body-sm text-dark-500">{item.description}</p>
+                <p className="mt-1 text-base text-dark-500">{item.description}</p>
               </div>
             </div>
           ))}

@@ -23,7 +23,7 @@ const faqItems = [
   {
     question: 'Vad är fotogrammetri med drönare?',
     answer:
-      'Fotogrammetri är en mätmetod där hundratals till tusentals överlappande flygbilder bearbetas till ett mätbart digitalt underlag. Resultatet är punktmoln och 3D-modeller där du kan mäta avstånd, ytor och volymer direkt i modellen — en exakt digital tvilling av byggnaden eller området.',
+      'Fotogrammetri är en mätmetod där hundratals till tusentals överlappande flygbilder bearbetas till ett mätbart digitalt underlag. Resultatet är punktmoln och 3D-modeller där du kan mäta avstånd, ytor och volymer direkt i modellen — en mätbar digital modell av byggnaden eller området.',
   },
   {
     question: 'Vad är skillnaden mellan punktmoln och 3D-modell?',
@@ -92,7 +92,7 @@ export default function FotogrammetriPage() {
         eyebrow="Kartläggning & 3D för företag"
         headline="Fotogrammetri med drönare — mätbara 3D-modeller och punktmoln"
         subheadline="Fotogrammetri med drönare omvandlar överlappande flygbilder till mätbara 3D-modeller och punktmoln av byggnader och områden. Du får ett beslutsunderlag i SWEREF 99 där avstånd, ytor och volymer kan mätas direkt — rikstäckande i hela Sverige."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        ctaPrimary={{ label: 'Begär offert', href: '/kontakt?service=fotogrammetri-3d-modell' }}
         ctaSecondary={{ label: 'Så skapas modellen', href: '#process' }}
       />
 
@@ -149,6 +149,7 @@ export default function FotogrammetriPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="Så skapas 3D-modellen"
         steps={[
           {
@@ -257,7 +258,7 @@ export default function FotogrammetriPage() {
         headline="Behöver ni en 3D-modell eller ett punktmoln?"
         description="Berätta om objektet och hur modellen ska användas så föreslår vi rätt detaljeringsgrad och leveransformat."
         ctaLabel="Begär offert"
-        ctaHref="/kontakt"
+        ctaHref="/kontakt?service=fotogrammetri-3d-modell"
       />
     </>
   )

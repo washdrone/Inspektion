@@ -19,6 +19,8 @@ export function createMetadata({
   locale?: 'sv' | 'en'
   alternateLocalePath?: string
 }): Metadata {
+  const cleanTitle = title.replace(/(?:\s*\|\s*SurveyDrone)+\s*$/i, '').trim()
+  const fullTitle = /\bSurveyDrone\b/i.test(cleanTitle) ? cleanTitle : `${cleanTitle} | ${SITE_NAME}`
   const url = `${BASE_URL}${path}`
   const ogLocale = locale === 'en' ? 'en_US' : 'sv_SE'
   const pair = languagePairFor(path)
@@ -37,14 +39,14 @@ export function createMetadata({
   }
 
   return {
-    title,
+    title: { absolute: fullTitle },
     description,
     alternates: {
       canonical: url,
       languages: Object.keys(languages).length > 0 ? languages : undefined,
     },
     openGraph: {
-      title: `${title} | ${SITE_NAME}`,
+      title: fullTitle,
       description,
       url,
       siteName: SITE_NAME,
@@ -53,7 +55,7 @@ export function createMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${title} | ${SITE_NAME}`,
+      title: fullTitle,
       description,
     },
     robots: noIndex ? { index: false, follow: false } : undefined,

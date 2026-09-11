@@ -109,7 +109,7 @@ export default function MoistureInspectionPage() {
       <Hero
         headline="Moisture Inspection with Drone — Find Hidden Leaks"
         subheadline="Locate moisture infiltration, leaks and water accumulation in roofs and facades with thermal camera from the air. Our EASA-certified pilots map moisture problems quickly and without opening the construction."
-        ctaPrimary={{ label: 'Get a Quote', href: '/en/contact' }}
+        ctaPrimary={{ label: 'Get a Quote', href: '/en/contact?service=moisture-inspection' }}
         ctaSecondary={{ label: 'See How It Works', href: '#process' }}
       />
 
@@ -165,6 +165,7 @@ export default function MoistureInspectionPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="How a moisture inspection is carried out"
         steps={[
           {
@@ -236,7 +237,7 @@ export default function MoistureInspectionPage() {
         headline="Find moisture problems before they grow"
         description="Book a moisture inspection with drone — contact us for a quote."
         ctaLabel="Get a Quote"
-        ctaHref="/en/contact"
+        ctaHref="/en/contact?service=moisture-inspection"
       />
 
       <RelatedServices

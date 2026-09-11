@@ -30,10 +30,9 @@ export default function OmOssPage() {
             </h1>
             <div className="mt-8 space-y-6 text-dark-600 text-body-lg leading-relaxed">
               <p>
-                SurveyDrone utför professionella drönarinspektioner med branschledande termisk kamera
-                och högupplöst bildteknik. Vi hjälper fastighetsägare, förvaltare, energibolag,
+                SurveyDrone utför drönarinspektion, inmätning och 3D-kartläggning. Vi hjälper fastighetsägare, förvaltare, energibolag,
                 industri och offentlig sektor att inspektera tak, fasader, solceller och anläggningar
-                — snabbare, säkrare och mer kostnadseffektivt än traditionella metoder.
+                och ta fram dokumentation för underhåll, projektering och uppföljning.
               </p>
               <p>
                 Våra piloter är EASA-certifierade fjärrpiloter med erfarenhet av arbete i krävande
@@ -41,9 +40,9 @@ export default function OmOssPage() {
                 hela Sverige.
               </p>
               <p>
-                All datainsamling sker med fullradiometrisk termisk kamera och RTK/GNSS-positionering
-                med centimeternoggrannhet. Det ger exakta, georefererade resultat som kan jämföras
-                mellan inspektionstillfällen.
+                Vi väljer visuell kamera, termisk kamera eller LiDAR efter uppdraget.
+                Metod, referenssystem, kvalitetskrav och leveransformat stäms av utifrån
+                vad resultatet ska användas till.
               </p>
             </div>
           </div>
@@ -133,7 +132,7 @@ export default function OmOssPage() {
                 },
                 {
                   title: 'Takinspektion',
-                  desc: 'Inspektera tak utan ställningar eller risk för fall. Alla taktyper och material.',
+                  desc: 'Inspektera tak från luften och dokumentera synliga ytor för fortsatt underhåll.',
                   href: '/tjanster/takinspektion',
                 },
                 {
@@ -148,7 +147,7 @@ export default function OmOssPage() {
                 },
                 {
                   title: 'Industriinspektion',
-                  desc: 'Inspektera svåråtkomliga anläggningar utan driftstopp eller ställningsarbete.',
+                  desc: 'Inspektera svåråtkomliga anläggningar med planering efter verksamhetens drift och tillträdeskrav.',
                   href: '/tjanster/industriinspektion',
                 },
                 {
@@ -174,7 +173,7 @@ export default function OmOssPage() {
       <section className="section-padding">
         <div className="container-narrow">
           <h2 className="text-center section-heading">
-            Vår approach
+            Så arbetar vi
           </h2>
           <div className="mt-8 space-y-6 text-dark-600">
             <p>
@@ -183,9 +182,9 @@ export default function OmOssPage() {
               anmärkningsvärt säger vi det. Hittar vi allvarliga brister prioriterar vi dem tydligt.
             </p>
             <p>
-              Vi kommunicerar utrustning generellt eftersom tekniken utvecklas snabbt. Det som spelar
-              roll är resultatet: georefererade, fullradiometriska data av hög kvalitet som ni kan
-              agera på.
+              Utrustningen ovan används för olika uppdrag. Vi beskriver i offerten vilken
+              leverans ni får och vilka förutsättningar som gäller. Vid återkommande uppdrag
+              behöver metod och referensunderlag ge meningsfulla jämförelser över tid.
             </p>
           </div>
         </div>
@@ -193,7 +192,7 @@ export default function OmOssPage() {
 
       <CtaBand
         headline="Vill ni veta mer?"
-        description="Kontakta oss för att diskutera ert inspektionsbehov. Vi svarar inom en arbetsdag."
+        description="Kontakta oss för att diskutera ert inspektionsbehov. Vi återkommer så snart vi kan."
         ctaLabel="Kontakta oss"
       />
     </>

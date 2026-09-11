@@ -167,7 +167,7 @@ export default function ForsakringPage() {
           {
             title: 'Snabb skadebedömning',
             description:
-              'Drönarinspektionen genomförs snabbt och rapporten levereras normalt inom ett par arbetsdagar. Kortare handläggningstid för skadeärendet.',
+              'Omfattning och rapporttid stäms av med er. Dokumentationen kan användas som underlag vid fortsatt handläggning.',
             icon: 'clock',
           },
           {

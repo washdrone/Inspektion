@@ -10,7 +10,7 @@ import { RelatedServices } from '@/components/RelatedServices'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Vad kostar drönarinspektion? — Prisguide och kostnadsfaktorer',
+  title: 'Vad kostar drönarinspektion? Frågor inför beställning',
   description:
     'Vad kostar en drönarinspektion? Priset beror på objektets storlek, inspektionstyp, geografiskt läge och komplexitet. Begär kostnadsfri offert från SurveyDrone.',
   path: '/vad-kostar-dronarinspektion',

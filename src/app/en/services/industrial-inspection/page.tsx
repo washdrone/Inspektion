@@ -109,7 +109,7 @@ export default function IndustrialInspectionPage() {
       <Hero
         headline="Industrial Inspection with Drone — Facilities Safely"
         subheadline="Inspect chimneys, tanks, pipelines and hard-to-reach industrial objects with drone. Thermal and visual analysis by EASA-certified pilots with experience in ex-classified environments."
-        ctaPrimary={{ label: 'Get a Quote', href: '/en/contact' }}
+        ctaPrimary={{ label: 'Get a Quote', href: '/en/contact?service=industrial-inspection' }}
         ctaSecondary={{ label: 'See How It Works', href: '#process' }}
       />
 
@@ -165,6 +165,7 @@ export default function IndustrialInspectionPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="How industrial inspection works"
         steps={[
           {
@@ -236,7 +237,7 @@ export default function IndustrialInspectionPage() {
         headline="Need an industrial inspection?"
         description="Contact us for a free quote. We inspect facilities across all of Sweden."
         ctaLabel="Get a Quote"
-        ctaHref="/en/contact"
+        ctaHref="/en/contact?service=industrial-inspection"
       />
 
       <RelatedServices

@@ -95,7 +95,7 @@ export default function FuktinspektionPage() {
       <Hero
         headline="Fuktinspektion med drönare — hitta dolda läckor"
         subheadline="Lokalisera fuktinträngning, läckor och vattenansamlingar i tak och fasad med termisk kamera. Våra EASA-certifierade piloter kartlägger fuktproblem snabbt och utan att öppna konstruktionen."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        ctaPrimary={{ label: 'Begär offert', href: '/kontakt?service=fuktinspektion' }}
         ctaSecondary={{ label: 'Se hur det fungerar', href: '#process' }}
       />
 
@@ -152,6 +152,7 @@ export default function FuktinspektionPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="Så genomförs en fuktinspektion"
         steps={[
           {
@@ -255,7 +256,7 @@ export default function FuktinspektionPage() {
         headline="Hitta fuktproblem innan de växer"
         description="Boka en fuktinspektion med drönare — kontakta oss för offert."
         ctaLabel="Begär offert"
-        ctaHref="/kontakt"
+        ctaHref="/kontakt?service=fuktinspektion"
       />
     </>
   )

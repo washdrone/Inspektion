@@ -23,7 +23,7 @@ const faqItems = [
   {
     question: 'Vad är fotogrammetri?',
     answer:
-      'Fotogrammetri är en teknik där överlappande flygbilder bearbetas med specialiserad programvara för att skapa exakta 3D-modeller, ortofoto och punktmoln. Resultatet är ett mätbart digitalt underlag av verkligheten.',
+      'Fotogrammetri är en teknik där överlappande flygbilder bearbetas med specialiserad programvara för att skapa mätbara 3D-modeller, ortofoto och punktmoln. Resultatet är ett mätbart digitalt underlag av verkligheten.',
   },
   {
     question: 'Vad är ett ortofoto?',
@@ -95,8 +95,8 @@ export default function KartlaggningPage() {
       <Hero
         eyebrow="Kartläggning & 3D för företag"
         headline="3D-kartläggning med drönare — fotogrammetri och ortofoto"
-        subheadline="Skapa exakta 3D-modeller, ortofoto och punktmoln med RTK/GNSS-positionering med centimeternoggrannhet. Våra EASA-certifierade piloter levererar mätbara digitala underlag för projektering, byggdokumentation och förvaltning."
-        ctaPrimary={{ label: 'Begär offert', href: '/kontakt' }}
+        subheadline="Skapa mätbara 3D-modeller, ortofoto och punktmoln med RTK/GNSS-positionering med centimeternoggrannhet. Våra EASA-certifierade piloter levererar mätbara digitala underlag för projektering, byggdokumentation och förvaltning."
+        ctaPrimary={{ label: 'Begär offert', href: '/kontakt?service=3d-kartlaggning' }}
         ctaSecondary={{ label: 'Se hur det fungerar', href: '#process' }}
       />
 
@@ -153,6 +153,7 @@ export default function KartlaggningPage() {
       />
 
       <ProcessSteps
+        id="process"
         headline="Så genomförs en 3D-kartläggning"
         steps={[
           {
@@ -256,7 +257,7 @@ export default function KartlaggningPage() {
         headline="Starta ert kartläggningsprojekt"
         description="Kontakta oss för att diskutera er 3D-kartläggning — vi skräddarsyr leveransen efter era behov."
         ctaLabel="Begär offert"
-        ctaHref="/kontakt"
+        ctaHref="/kontakt?service=3d-kartlaggning"
       />
     </>
   )

@@ -1,7 +1,4 @@
-'use client'
-
 import Link from 'next/link'
-import { useReveal } from '@/hooks/useReveal'
 
 interface RelatedService {
   title: string
@@ -18,28 +15,21 @@ export function RelatedServices({
   headline = 'Relaterade tjänster',
   services,
 }: RelatedServicesProps) {
-  const { ref, visible } = useReveal()
 
   return (
-    <section ref={ref} className="section-padding section-muted">
+    <section className="section-padding section-muted">
       <div className="container-content">
         <h2
-          className="text-center text-heading-lg sm:text-display transition-all duration-700"
-          style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(30px)' }}
+          className="text-center text-heading-lg sm:text-display"
         >
           {headline}
         </h2>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, i) => (
+          {services.map((service) => (
             <Link
               key={service.href}
               href={service.href}
-              className="card group transition-all duration-700"
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? 'translateY(0)' : 'translateY(30px)',
-                transitionDelay: `${i * 100 + 200}ms`,
-              }}
+              className="card group"
             >
               <h3 className="text-lg font-semibold text-dark-900 group-hover:text-brand-600">
                 {service.title}

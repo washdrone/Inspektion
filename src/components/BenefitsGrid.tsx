@@ -1,7 +1,3 @@
-'use client'
-
-import { useReveal } from '@/hooks/useReveal'
-
 interface Benefit {
   title: string
   description: string
@@ -51,14 +47,12 @@ interface BenefitsGridProps {
 
 export function BenefitsGrid({ headline, subtitle, benefits, variant = 'light' }: BenefitsGridProps) {
   const isDark = variant === 'dark'
-  const { ref, visible } = useReveal()
 
   return (
-    <section ref={ref} className={`section-padding ${isDark ? 'section-dark' : ''}`}>
+    <section className={`section-padding ${isDark ? 'section-dark' : ''}`}>
       <div className="container-content">
         <div
-          className="text-center transition-all duration-700"
-          style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(30px)' }}
+          className="text-center"
         >
           <h2 className={`text-heading-lg sm:text-display ${isDark ? 'text-white' : ''}`}>{headline}</h2>
           {subtitle && <p className={`mt-4 text-body-lg ${isDark ? 'text-dark-300' : 'text-dark-500'}`}>{subtitle}</p>}
@@ -67,12 +61,7 @@ export function BenefitsGrid({ headline, subtitle, benefits, variant = 'light' }
           {benefits.map((benefit, i) => (
             <div
               key={i}
-              className={`${isDark ? 'card-dark' : 'card'} transition-all duration-700`}
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? 'translateY(0)' : 'translateY(30px)',
-                transitionDelay: `${i * 80 + 200}ms`,
-              }}
+              className={`${isDark ? 'card-dark' : 'card'}`}
             >
               <div className={`flex h-10 w-10 items-center justify-center rounded-xl ${isDark ? 'bg-brand-500/15 text-brand-400' : 'bg-brand-50 text-brand-600'}`}>
                 {icons[benefit.icon]}

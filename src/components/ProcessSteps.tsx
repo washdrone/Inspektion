@@ -1,7 +1,3 @@
-'use client'
-
-import { useReveal } from '@/hooks/useReveal'
-
 interface Step {
   number: number
   title: string
@@ -15,14 +11,12 @@ interface ProcessStepsProps {
 }
 
 export function ProcessSteps({ id, headline, steps }: ProcessStepsProps) {
-  const { ref, visible } = useReveal()
 
   return (
-    <section id={id} ref={ref} className="section-padding section-dark">
+    <section id={id} className="section-padding section-dark">
       <div className="container-content">
         <h2
-          className="text-center text-heading-lg text-white sm:text-display transition-all duration-700"
-          style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(30px)' }}
+          className="text-center text-heading-lg text-white sm:text-display"
         >
           {headline}
         </h2>
@@ -30,12 +24,7 @@ export function ProcessSteps({ id, headline, steps }: ProcessStepsProps) {
           {steps.map((step, i) => (
             <div
               key={step.number}
-              className="relative transition-all duration-700"
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? 'translateY(0)' : 'translateY(30px)',
-                transitionDelay: `${i * 120 + 200}ms`,
-              }}
+              className="relative"
             >
               {i < steps.length - 1 && (
                 <div className="absolute top-5 left-[calc(50%+24px)] right-0 hidden h-px bg-gradient-to-r from-brand-500/40 to-transparent lg:block" aria-hidden="true" />

@@ -1,7 +1,4 @@
-'use client'
-
 import Link from 'next/link'
-import { useReveal } from '@/hooks/useReveal'
 
 interface Industry {
   name: string
@@ -15,14 +12,12 @@ interface IndustriesServedProps {
 }
 
 export function IndustriesServed({ headline, industries }: IndustriesServedProps) {
-  const { ref, visible } = useReveal()
 
   return (
-    <section ref={ref} className="section-padding section-muted">
+    <section className="section-padding section-muted">
       <div className="container-content">
         <h2
-          className="text-center text-heading-lg sm:text-display transition-all duration-700"
-          style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(30px)' }}
+          className="text-center text-heading-lg sm:text-display"
         >
           {headline}
         </h2>
@@ -35,18 +30,11 @@ export function IndustriesServed({ headline, industries }: IndustriesServedProps
               </>
             )
 
-            const style = {
-              opacity: visible ? 1 : 0,
-              transform: visible ? 'translateY(0)' : 'translateY(30px)',
-              transitionDelay: `${i * 80 + 200}ms`,
-            }
-
             return ind.href ? (
               <Link
                 key={i}
                 href={ind.href}
-                className="card group transition-all duration-700"
-                style={style}
+                className="card group"
               >
                 {content}
                 <span className="mt-3 inline-flex items-center text-sm font-semibold text-brand-600">
@@ -65,8 +53,7 @@ export function IndustriesServed({ headline, industries }: IndustriesServedProps
             ) : (
               <div
                 key={i}
-                className="card transition-all duration-700"
-                style={style}
+                className="card"
               >
                 {content}
               </div>

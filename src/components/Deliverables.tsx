@@ -1,6 +1,3 @@
-'use client'
-
-import { useReveal } from '@/hooks/useReveal'
 import { ServiceImage } from '@/components/ServiceImage'
 import type { ServiceImageKey } from '@/lib/service-images'
 
@@ -16,14 +13,12 @@ interface DeliverablesProps {
 }
 
 export function Deliverables({ headline, items, image }: DeliverablesProps) {
-  const { ref, visible } = useReveal()
 
   return (
-    <section ref={ref} className="section-padding section-muted">
+    <section className="section-padding section-muted">
       <div className="container-content">
         <h2
-          className="text-center text-heading-lg sm:text-display transition-all duration-700"
-          style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(30px)' }}
+          className="text-center text-heading-lg sm:text-display"
         >
           {headline}
         </h2>
@@ -32,12 +27,7 @@ export function Deliverables({ headline, items, image }: DeliverablesProps) {
           {items.map((item, i) => (
             <div
               key={i}
-              className="card flex gap-4 transition-all duration-700"
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? 'translateY(0)' : 'translateY(30px)',
-                transitionDelay: `${i * 100 + 200}ms`,
-              }}
+              className="card flex gap-4"
             >
               <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-brand-500/10 text-brand-600">
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
